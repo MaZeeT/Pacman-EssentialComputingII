@@ -1,5 +1,6 @@
 package SnakeGUI;
 
+import SnakeModel.Position;
 import javafx.scene.paint.Color;
 
 /**
@@ -7,24 +8,22 @@ import javafx.scene.paint.Color;
  */
 public class Item {
     private Color Color;
-    private int x;
-    private int y;
+    private Position position;
 
-    public Item(Color color, int x, int y) {
+
+    public Item(Color color, Position position) {
         Color = color;
-        this.x = x;
-        this.y = y;
+        this.position = position;
+
     }
 
     public Color getColor() {
         return Color;
     }
 
-    public int getX() {
-        return x;
+    public Position getPosition() {
+        return position;
     }
 
-    public int getY() {
-        return y;
-    }
+
 }

@@ -1,6 +1,7 @@
 package SnakeGUI;
 
 
+import SnakeModel.Position;
 import javafx.animation.AnimationTimer;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -65,8 +66,8 @@ public class Controller {
     }
 
     private void AddItems() {
-        items.add(new Item(Color.GREEN, 3,3));
-        items.add(new Item(Color.RED, 12,9));
+        items.add(new Item(Color.GREEN, new Position(5,6)));
+        items.add(new Item(Color.RED, new Position(12,9)));
 
 
     }
@@ -142,7 +143,9 @@ public class Controller {
         for (Item item : items)
         {
             g.setFill(item.getColor());
-            g.fillRoundRect(item.getX() * fieldWidth, item.getY() * fieldHeight, fieldWidth, fieldHeight, 5,5);
+            int x = item.getPosition().getX();
+            int y = item.getPosition().getY();
+            g.fillRoundRect(x * fieldWidth, y * fieldHeight, fieldWidth, fieldHeight, 5,5);
         }
 
         // draw 'player'
