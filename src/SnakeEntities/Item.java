@@ -3,16 +3,11 @@ package SnakeEntities;
 import SnakeComponents.Position;
 import javafx.scene.paint.Color;
 
-/**
- * Created by Ebbe Vang on 19-01-2017.
- */
-public class Item implements GameObject {
-    private Color Color;
-    private Position position;
+public class Item extends GameObject {
 
 
     public Item(Color color, Position position) {
-        Color = color;
+        this.color = color;
         this.position = position;
     }
 
@@ -20,13 +15,7 @@ public class Item implements GameObject {
 
     }
 
-    public Color getColor() {
-        return Color;
-    }
 
-    public Position getPosition() {
-        return position;
-    }
 
 
 }

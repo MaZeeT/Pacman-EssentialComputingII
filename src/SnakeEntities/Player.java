@@ -3,21 +3,19 @@ package SnakeEntities;
 import SnakeComponents.PlayerControl;
 import SnakeComponents.Position;
 
-public class Player implements GameObject {
+public class Player extends GameObject {
 
-    private Position position;
-    private PlayerControl control;
 
-    Player(Position position, PlayerControl control){
+    //private PlayerControl control;
+
+    public Player(Position position/*, PlayerControl control*/) {
         this.position = position;
-        this.control = control;
+       // this.control = control;
     }
 
     public void update() {
 
     }
 
-    public Position getPosition(){
-        return position;
-    }
+
 }

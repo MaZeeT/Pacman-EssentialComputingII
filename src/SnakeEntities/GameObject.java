@@ -1,10 +1,30 @@
 package SnakeEntities;
 
-/**
- * Created by Ebbe Vang on 23-01-2017.
- */
+import SnakeComponents.Position;
+import javafx.scene.paint.Color;
 
-public interface GameObject {
-    void update();
+public abstract class GameObject {
+
+    protected Position position;
+    protected Color color;
+
+
+    protected abstract void update();
+
+    public Color getColor() {
+        return color;
+    }
+
+    public void setColor(Color color) {
+        this.color = color;
+    }
+
+    public Position getPosition() {
+        return position;
+    }
+
+    public void setPosition(Position position) {
+        this.position = position;
+    }
 
 }
