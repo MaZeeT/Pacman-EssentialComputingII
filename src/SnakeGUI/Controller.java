@@ -1,7 +1,8 @@
 package SnakeGUI;
 
 
-import SnakeModel.Position;
+import SnakeEntities.Item;
+import SnakeComponents.Position;
 import javafx.animation.AnimationTimer;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;

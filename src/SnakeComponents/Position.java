@@ -1,4 +1,4 @@
-package SnakeModel;
+package SnakeComponents;
 
 public class Position {
 

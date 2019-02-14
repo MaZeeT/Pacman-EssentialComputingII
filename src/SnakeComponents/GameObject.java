@@ -1,4 +1,4 @@
-package SnakeLogic;
+package SnakeComponents;
 
 /**
  * Created by Ebbe Vang on 23-01-2017.
