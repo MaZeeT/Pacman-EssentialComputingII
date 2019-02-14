@@ -1,4 +1,4 @@
-package SnakeComponents;
+package SnakeEntities;
 
 /**
  * Created by Ebbe Vang on 23-01-2017.

@@ -1,6 +1,5 @@
 package SnakeEntities;
 
-import SnakeComponents.GameObject;
 import SnakeComponents.PlayerControl;
 import SnakeComponents.Position;
 
