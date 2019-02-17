@@ -11,7 +11,7 @@ import javafx.scene.paint.Color;
 
 import java.util.*;
 
-public class GameManager {
+public class GameManager{
 
     private View view;
     private ArrayList<GameObject> items = new ArrayList<>();
