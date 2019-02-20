@@ -1,10 +1,10 @@
 package SnakeLogic;
 
-import SnakeComponents.PlayerControl;
-import SnakeComponents.Position;
-import SnakeEntities.GameObject;
-import SnakeEntities.Item;
-import SnakeEntities.Player;
+import SnakeLogic.SnakeComponents.PlayerControl;
+import SnakeLogic.SnakeComponents.Position;
+import SnakeLogic.SnakeComponents.UserControl;
+import SnakeLogic.SnakeEntities.GameObject;
+import SnakeLogic.SnakeEntities.Item;
 import SnakeGUI.View;
 import javafx.animation.AnimationTimer;
 import javafx.scene.paint.Color;
@@ -15,12 +15,13 @@ public class GameManager{
 
     private View view;
     private ArrayList<GameObject> items = new ArrayList<>();
-    private PlayerControl pc = new PlayerControl();
+    private UserControl uc = new PlayerControl();
+    protected char direction;
 
 
     public GameManager(View view) {
         this.view = view;
-        AddItems();
+        addItems();
         view.setItemsToRender(items);
     }
 
@@ -31,7 +32,7 @@ public class GameManager{
         return new Position(x, y);
     }
 
-    private void AddItems() {
+    private void addItems() {
         items.add(new Item(Color.GREEN, getRandomPosition()));
         items.add(new Item(Color.RED, getRandomPosition()));
     }
@@ -54,7 +55,7 @@ public class GameManager{
             public void handle(long now) {
                 if (now > lastUpdate + refreshRate * 1000000) {
                     lastUpdate = now;
-                    pc.update(now);
+                    direction = uc.getDirection();
                 }
             }
         }.start();

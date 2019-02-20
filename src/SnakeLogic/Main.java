@@ -1,9 +1,8 @@
 package SnakeLogic;
 
-import SnakeComponents.PlayerControl;
-import SnakeEntities.Player;
-import SnakeGUI.Controller;
-import SnakeGUI.View;
+import SnakeLogic.SnakeComponents.PlayerControl;
+import SnakeLogic.SnakeEntities.Player;
+import SnakeGUI.Manager;
 import javafx.application.Application;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
@@ -14,15 +13,13 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        View view = new View();
-        GameManager gameManager = new GameManager(view);
-        Controller controller = new Controller(view);
+        Manager gui = new Manager();
+        GameManager gameManager = new GameManager(gui.getView());
         Player player = new Player(gameManager.getRandomPosition());
-        view.setPlayer(player);
         PlayerControl pc = new PlayerControl();
 
         primaryStage.setTitle("Snake");
-        Scene scene = new Scene(view.pane, 800, 600);
+        Scene scene = new Scene(gui.getView().pane, 800, 600);
 
         scene.setOnKeyPressed(new EventHandler<KeyEvent>() {
             @Override
