@@ -1,8 +1,8 @@
 package SnakeGUI;
 
-import SnakeComponents.Position;
-import SnakeEntities.GameObject;
-import SnakeEntities.Player;
+import SnakeLogic.SnakeComponents.Position;
+import SnakeLogic.SnakeEntities.GameObject;
+import SnakeLogic.SnakeEntities.Player;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Button;
@@ -15,7 +15,7 @@ import java.util.ArrayList;
 
 public class View {
 
-    Button btnStart = new Button("start");
+    protected Button btnStart = new Button("start");
     Label labelStatus = new Label("Label");
     HBox hBox = new HBox();
     Canvas canvas = new Canvas(600.0, 400.0);

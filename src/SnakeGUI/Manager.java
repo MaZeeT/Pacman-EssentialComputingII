@@ -1,14 +1,21 @@
-package SnakeLogic;
+package SnakeGUI;
 
-import SnakeEntities.GameObject;
+import SnakeLogic.SnakeEntities.GameObject;
 
 import java.util.ArrayList;
 
-public class Model implements IModel {
+public class Manager implements IManager {
+
+    private View view = new View();
+    private Controller controller = new Controller(view);
 
     private ArrayList<GameObject> items;
 
     public void startGame() {
+
+    }
+
+    public void update(){
 
     }
 
@@ -21,8 +28,8 @@ public class Model implements IModel {
         return items;
     }
 
-    public Model getModel(){
-        return this;
+    public View getView(){
+        return this.view;
     }
 
 
