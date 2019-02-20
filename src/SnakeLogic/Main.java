@@ -3,6 +3,7 @@ package SnakeLogic;
 import SnakeUserControl.PlayerControl;
 import SnakeEntities.Player;
 import SnakeGUI.Manager;
+import SnakeUserControl.UserControl;
 import javafx.application.Application;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
@@ -16,7 +17,7 @@ public class Main extends Application {
         Manager gui = new Manager();
         GameManager gameManager = new GameManager(gui.getView());
         Player player = new Player(gameManager.getRandomPosition());
-        PlayerControl pc = new PlayerControl();
+        UserControl userControl = new PlayerControl();
 
         primaryStage.setTitle("Snake");
         Scene scene = new Scene(gui.getView().pane, 800, 600);
@@ -24,7 +25,7 @@ public class Main extends Application {
         scene.setOnKeyPressed(new EventHandler<KeyEvent>() {
             @Override
             public void handle(KeyEvent event) {
-                pc.keyPressed(event.getCode());
+                userControl.keyPressed(event.getCode());
             }
         });
 
