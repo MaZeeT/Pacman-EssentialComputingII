@@ -1,10 +1,11 @@
 package SnakeLogic;
 
-import SnakeComponents.PlayerControl;
+import SnakeUserControl.PlayerControl;
 import SnakeComponents.Position;
-import SnakeComponents.UserControl;
+import SnakeUserControl.UserControl;
 import SnakeEntities.GameObject;
 import SnakeEntities.Item;
+import SnakeEntities.Player;
 import SnakeGUI.View;
 import javafx.animation.AnimationTimer;
 import javafx.scene.paint.Color;
@@ -16,6 +17,8 @@ public class GameManager{
     private View view;
     private ArrayList<GameObject> items = new ArrayList<>();
     private UserControl uc = new PlayerControl();
+    private GameObject player = new Player(new Position(4,5));
+
     protected char direction;
 
 

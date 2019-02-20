@@ -1,6 +1,6 @@
 package SnakeLogic;
 
-import SnakeComponents.PlayerControl;
+import SnakeUserControl.PlayerControl;
 import SnakeEntities.Player;
 import SnakeGUI.Manager;
 import javafx.application.Application;
