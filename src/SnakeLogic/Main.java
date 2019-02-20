@@ -1,7 +1,6 @@
 package SnakeLogic;
 
 import SnakeUserControl.PlayerControl;
-import SnakeEntities.Player;
 import SnakeGUI.Manager;
 import SnakeUserControl.UserControl;
 import javafx.application.Application;
@@ -14,7 +13,6 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-
 
         // Interfaced modules
         Manager gui = new Manager();
@@ -35,9 +33,7 @@ public class Main extends Application {
         primaryStage.setTitle("Snake");
         primaryStage.setScene(scene);
         primaryStage.show();
-
     }
-
 
     public static void main(String[] args) {
         launch(args);
