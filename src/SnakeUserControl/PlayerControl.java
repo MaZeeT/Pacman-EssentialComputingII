@@ -18,13 +18,13 @@ public class PlayerControl implements UserControl{
                 direction = 's';
                 break;
             case A:
-                direction = 'w';
+                direction = 'a';
                 break;
             case D:
-                direction = 'e';
+                direction = 'd';
                 break;
             case W:
-                direction = 'n';
+                direction = 'w';
                 break;
         }
     }
