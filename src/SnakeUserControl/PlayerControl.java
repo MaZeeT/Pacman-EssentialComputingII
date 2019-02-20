@@ -1,4 +1,4 @@
-package SnakeComponents;
+package SnakeUserControl;
 
 import javafx.scene.input.KeyCode;
 

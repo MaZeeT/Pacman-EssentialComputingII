@@ -1,4 +1,4 @@
-package SnakeComponents;
+package SnakeUserControl;
 
 public interface UserControl {
     char getDirection();
