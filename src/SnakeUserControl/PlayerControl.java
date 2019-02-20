@@ -3,14 +3,14 @@ package SnakeUserControl;
 import javafx.scene.input.KeyCode;
 
 public class PlayerControl implements UserControl{
-    public KeyCode keyPressed = KeyCode.BACK_SPACE;
+    private KeyCode keyPressed = KeyCode.BACK_SPACE;
 
     public void keyPressed(KeyCode keyCode) {
         System.out.println("key pressed: " + keyCode);
         keyPressed = keyCode;
     }
 
-    char direction;
+    private char direction;
 
     private void update() {
         switch (keyPressed) {
@@ -30,7 +30,6 @@ public class PlayerControl implements UserControl{
     }
 
     public char getDirection() {
-        keyPressed(keyPressed);
         update();
         return direction;
     }
