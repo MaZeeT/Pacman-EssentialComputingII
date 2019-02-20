@@ -8,7 +8,7 @@ public class Controller {
     View view;
     Button btnStart;
 
-    public Controller(View view) {
+    Controller(View view) {
         this.view = view;
         this.btnStart = view.btnStart;
         setUpBtn(this.btnStart);
@@ -23,7 +23,7 @@ public class Controller {
         });
     }
 
-    public void start() {
+    private void start() {
         System.out.println("btn clicked");
         view.drawCanvas();
     }
