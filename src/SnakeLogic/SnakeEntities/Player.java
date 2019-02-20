@@ -1,7 +1,6 @@
-package SnakeEntities;
+package SnakeLogic.SnakeEntities;
 
-import SnakeComponents.PlayerControl;
-import SnakeComponents.Position;
+import SnakeLogic.SnakeComponents.Position;
 
 public class Player extends GameObject {
 
