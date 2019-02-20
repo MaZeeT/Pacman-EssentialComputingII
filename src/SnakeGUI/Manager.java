@@ -1,6 +1,6 @@
 package SnakeGUI;
 
-import SnakeLogic.SnakeEntities.GameObject;
+import SnakeEntities.GameObject;
 
 import java.util.ArrayList;
 

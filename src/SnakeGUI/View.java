@@ -1,8 +1,8 @@
 package SnakeGUI;
 
-import SnakeLogic.SnakeComponents.Position;
-import SnakeLogic.SnakeEntities.GameObject;
-import SnakeLogic.SnakeEntities.Player;
+import SnakeComponents.Position;
+import SnakeEntities.GameObject;
+import SnakeEntities.Player;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Button;
