@@ -16,8 +16,9 @@ public class GameManager{
 
     private View view;
     private ArrayList<GameObject> items = new ArrayList<>();
-    private UserControl uc = new PlayerControl();
     private GameObject player = new Player(new Position(4,5));
+
+
 
     protected char direction;
 
@@ -58,9 +59,13 @@ public class GameManager{
             public void handle(long now) {
                 if (now > lastUpdate + refreshRate * 1000000) {
                     lastUpdate = now;
-                    direction = uc.getDirection();
                 }
             }
         }.start();
+    }
+
+    public void setDirection(char direction) {
+        this.direction = direction;
+        System.out.println(direction);
     }
 }

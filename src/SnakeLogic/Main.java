@@ -14,21 +14,25 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
+
+
+        // Interfaced modules
         Manager gui = new Manager();
-        GameManager gameManager = new GameManager(gui.getView());
-        Player player = new Player(gameManager.getRandomPosition());
         UserControl userControl = new PlayerControl();
 
-        primaryStage.setTitle("Snake");
-        Scene scene = new Scene(gui.getView().pane, 800, 600);
+        // Game logic
+        GameManager gameManager = new GameManager(gui.getView());
 
+        // Setup scene and stage
+        Scene scene = new Scene(gui.getView().pane, 800, 600);
         scene.setOnKeyPressed(new EventHandler<KeyEvent>() {
             @Override
             public void handle(KeyEvent event) {
                 userControl.keyPressed(event.getCode());
+                gameManager.setDirection(userControl.getDirection());
             }
         });
-
+        primaryStage.setTitle("Snake");
         primaryStage.setScene(scene);
         primaryStage.show();
 
