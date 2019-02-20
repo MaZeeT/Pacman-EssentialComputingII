@@ -1,6 +1,6 @@
-package SnakeLogic.SnakeEntities;
+package SnakeEntities;
 
-import SnakeLogic.SnakeComponents.Position;
+import SnakeComponents.Position;
 import javafx.scene.paint.Color;
 
 public class Item extends GameObject {
@@ -13,9 +13,6 @@ public class Item extends GameObject {
 
     public void update() {
 
+
     }
-
-
-
-
 }

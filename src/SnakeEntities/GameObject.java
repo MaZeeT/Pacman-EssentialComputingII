@@ -1,6 +1,6 @@
-package SnakeLogic.SnakeEntities;
+package SnakeEntities;
 
-import SnakeLogic.SnakeComponents.Position;
+import SnakeComponents.Position;
 import javafx.scene.paint.Color;
 
 public abstract class GameObject {
