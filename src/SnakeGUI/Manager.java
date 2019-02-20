@@ -9,8 +9,6 @@ public class Manager implements IManager {
     private View view = new View();
     private Controller controller = new Controller(view);
 
-    private ArrayList<GameObject> items;
-
     public void startGame() {
 
     }
@@ -24,8 +22,8 @@ public class Manager implements IManager {
         gamePaused = !gamePaused;
     }
 
-    public ArrayList<GameObject> getGameObjects(){
-        return items;
+    public void setGameObects(ArrayList<GameObject> gameObjects){
+        view.setItemsToRender(gameObjects);
     }
 
     public View getView(){

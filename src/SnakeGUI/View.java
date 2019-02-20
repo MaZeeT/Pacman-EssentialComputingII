@@ -19,7 +19,6 @@ public class View {
     public BorderPane pane = new BorderPane();
 
     private ArrayList<GameObject> items = new ArrayList<>();
-    private Player player;
 
     View() {
         hBox.getChildren().addAll(btnStart, labelStatus);
@@ -29,12 +28,8 @@ public class View {
         drawCanvas();
     }
 
-    public void setPlayer(Player player) {
-        this.player = player;
-    }
-
-    public void setItemsToRender(ArrayList<GameObject> items) {
-        this.items = items;
+    public void setItemsToRender(ArrayList<GameObject> gameObjects) {
+        this.items = gameObjects;
     }
 
 
@@ -67,7 +62,8 @@ public class View {
             int y = item.getPosition().getY();
             g.fillRoundRect(x * fieldWidth, y * fieldHeight, fieldWidth, fieldHeight, 5, 5);
         }
-        player = new Player(new Position(1, 2));
+
+        Player player = new Player(new Position(1, 2));
         // draw 'player'
         g.setFill(Color.BLACK);
         g.fillRoundRect(player.getPosition().getX() * fieldWidth, player.getPosition().getY() * fieldHeight, fieldWidth, fieldHeight, 3, 3);

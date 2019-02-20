@@ -1,8 +1,6 @@
 package SnakeLogic;
 
-import SnakeUserControl.PlayerControl;
 import SnakeComponents.Position;
-import SnakeUserControl.UserControl;
 import SnakeEntities.GameObject;
 import SnakeEntities.Item;
 import SnakeEntities.Player;
@@ -15,8 +13,10 @@ import java.util.*;
 public class GameManager{
 
     private View view;
-    private ArrayList<GameObject> items = new ArrayList<>();
+    private ArrayList<GameObject> gameObjects = new ArrayList<>();
     private GameObject player = new Player(new Position(4,5));
+    private int amountItems = 0;
+    private int maxItems = 2;
 
 
 
@@ -25,22 +25,41 @@ public class GameManager{
 
     public GameManager(View view) {
         this.view = view;
-        addItems();
-        view.setItemsToRender(items);
+        addNewItem(amountItems, maxItems);
+        gameObjects.add(player);
     }
 
-    public Position getRandomPosition() {
+    public void update(){
+        addNewItem(amountItems,maxItems);
+    }
+
+    private void addNewItem(int amountItems, int maxItems){
+        if (amountItems < maxItems) {
+            gameObjects.add(new Item(getRandomColor(),getRandomPosition()));
+            this.amountItems++;
+        }
+
+    }
+
+    private void removeItem(int index){
+        gameObjects.remove(index);
+    }
+
+    private Position getRandomPosition() {
         Random random = new Random();
         int x = random.nextInt(view.width);
         int y = random.nextInt(view.height);
         return new Position(x, y);
     }
 
-    private void addItems() {
-        items.add(new Item(Color.GREEN, getRandomPosition()));
-        items.add(new Item(Color.RED, getRandomPosition()));
+    private Color getRandomColor(){
+        Random random = new Random();
+        return Color.GREEN;
     }
 
+    private void collideWithItem(Item item){
+
+    }
 
     private int gameLoopDelay = 500;
     private float refreshRate = 300;
@@ -67,5 +86,9 @@ public class GameManager{
     public void setDirection(char direction) {
         this.direction = direction;
         System.out.println(direction);
+    }
+
+    public ArrayList<GameObject> getGameObjects(){
+        return gameObjects;
     }
 }

@@ -20,6 +20,7 @@ public class Main extends Application {
 
         // Game logic
         GameManager gameManager = new GameManager(gui.getView());
+        gui.setGameObects(gameManager.getGameObjects());
 
         // Setup scene and stage
         Scene scene = new Scene(gui.getView().pane, 800, 600);
@@ -33,6 +34,18 @@ public class Main extends Application {
         primaryStage.setTitle("Snake");
         primaryStage.setScene(scene);
         primaryStage.show();
+
+        new Thread() { //this check for modifications of the external datafile
+            public void run() {
+                for (; ; ) {
+                    try {
+                        gameManager.update();
+                        sleep(100);
+                    } catch (Exception e) {
+                    }
+                }
+            }
+        }.start();
     }
 
     public static void main(String[] args) {

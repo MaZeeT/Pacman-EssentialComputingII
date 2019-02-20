@@ -10,5 +10,5 @@ public interface IManager {
 
     void pauseGame();
 
-    ArrayList<GameObject> getGameObjects();
+    void setGameObects(ArrayList<GameObject> gameObjects);
 }
