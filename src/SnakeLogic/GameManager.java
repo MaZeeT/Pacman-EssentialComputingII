@@ -20,7 +20,7 @@ public class GameManager{
 
 
 
-    protected char direction;
+    char direction;
 
 
     public GameManager(View view) {

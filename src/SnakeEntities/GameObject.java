@@ -5,8 +5,8 @@ import javafx.scene.paint.Color;
 
 public abstract class GameObject {
 
-    protected Position position;
-    protected Color color;
+    Position position;
+    Color color;
 
 
     protected abstract void update();
