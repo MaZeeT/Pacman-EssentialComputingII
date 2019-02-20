@@ -1,4 +1,4 @@
-package SnakeComponents;
+package SnakeLogic.SnakeComponents;
 
 public class Position {
 

@@ -1,9 +1,8 @@
-package SnakeComponents;
+package SnakeLogic.SnakeComponents;
 
-import SnakeEntities.GameObject;
 import javafx.scene.input.KeyCode;
 
-public class PlayerControl {
+public class PlayerControl implements UserControl{
     public KeyCode keyPressed = KeyCode.BACK_SPACE;
 
     public void keyPressed(KeyCode keyCode) {
@@ -11,30 +10,29 @@ public class PlayerControl {
         keyPressed = keyCode;
     }
 
-    public int X;
-    public int Y;
+    char direction;
 
-    /**
-     * Game loop - executed continously during the game
-     *
-     * @param now game time in nano seconds
-     */
     public void update(long now) {
         switch (keyPressed) {
             case S:
-                this.Y++;
+                direction = 's';
                 break;
             case A:
-                this.X--;
+                direction = 'w';
                 break;
             case D:
-                this.X++;
+                direction = 'e';
                 break;
             case W:
-                this.Y--;
+                direction = 'n';
                 break;
         }
     }
 
+    public char getDirection() {
+        keyPressed(keyPressed);
+        update(0);
+        return direction;
+    }
 
 }
