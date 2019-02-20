@@ -1,7 +1,7 @@
 package SnakeLogic;
 
-import SnakeLogic.SnakeComponents.PlayerControl;
-import SnakeLogic.SnakeEntities.Player;
+import SnakeComponents.PlayerControl;
+import SnakeEntities.Player;
 import SnakeGUI.Manager;
 import javafx.application.Application;
 import javafx.event.EventHandler;

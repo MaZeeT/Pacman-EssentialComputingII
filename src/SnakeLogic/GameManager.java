@@ -1,10 +1,10 @@
 package SnakeLogic;
 
-import SnakeLogic.SnakeComponents.PlayerControl;
-import SnakeLogic.SnakeComponents.Position;
-import SnakeLogic.SnakeComponents.UserControl;
-import SnakeLogic.SnakeEntities.GameObject;
-import SnakeLogic.SnakeEntities.Item;
+import SnakeComponents.PlayerControl;
+import SnakeComponents.Position;
+import SnakeComponents.UserControl;
+import SnakeEntities.GameObject;
+import SnakeEntities.Item;
 import SnakeGUI.View;
 import javafx.animation.AnimationTimer;
 import javafx.scene.paint.Color;
