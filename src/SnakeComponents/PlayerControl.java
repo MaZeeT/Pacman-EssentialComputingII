@@ -1,4 +1,4 @@
-package SnakeLogic.SnakeComponents;
+package SnakeComponents;
 
 import javafx.scene.input.KeyCode;
 
@@ -12,7 +12,7 @@ public class PlayerControl implements UserControl{
 
     char direction;
 
-    public void update(long now) {
+    private void update() {
         switch (keyPressed) {
             case S:
                 direction = 's';
@@ -31,7 +31,7 @@ public class PlayerControl implements UserControl{
 
     public char getDirection() {
         keyPressed(keyPressed);
-        update(0);
+        update();
         return direction;
     }
 
