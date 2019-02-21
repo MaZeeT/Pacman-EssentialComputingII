@@ -1,14 +1,12 @@
 package SnakeGUI;
 
-import SnakeComponents.Position;
 import SnakeEntities.GameObject;
-import SnakeEntities.Player;
 import javafx.scene.canvas.*;
 import javafx.scene.control.*;
 import javafx.scene.layout.*;
-import javafx.scene.paint.Color;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class View {
 
@@ -18,7 +16,7 @@ public class View {
     private Canvas canvas = new Canvas(600.0, 400.0);
     public BorderPane pane = new BorderPane();
 
-    private ArrayList<GameObject> items = new ArrayList<>();
+    private List<GameObject> renderableGameObjects = new ArrayList<>();
 
     View() {
         hBox.getChildren().addAll(btnStart, labelStatus);
@@ -28,8 +26,8 @@ public class View {
         drawCanvas();
     }
 
-    public void setItemsToRender(ArrayList<GameObject> gameObjects) {
-        this.items = gameObjects;
+    public void setItemsToRender(List<GameObject> gameObjects) {
+        this.renderableGameObjects = gameObjects;
     }
 
 
@@ -55,17 +53,12 @@ public class View {
 
         g.clearRect(0, 0, width * fieldWidth, height * fieldHeight);
 
-        // draw items
-        for (GameObject item : items) {
-            g.setFill(item.getColor());
-            int x = item.getPosition().getX();
-            int y = item.getPosition().getY();
+        // draw renderableGameObjects
+        for (GameObject gameObject : renderableGameObjects) {
+            g.setFill(gameObject.getColor());
+            int x = gameObject.getPosition().getX();
+            int y = gameObject.getPosition().getY();
             g.fillRoundRect(x * fieldWidth, y * fieldHeight, fieldWidth, fieldHeight, 5, 5);
         }
-
-        Player player = new Player(new Position(1, 2));
-        // draw 'player'
-        g.setFill(Color.BLACK);
-        g.fillRoundRect(player.getPosition().getX() * fieldWidth, player.getPosition().getY() * fieldHeight, fieldWidth, fieldHeight, 3, 3);
     }
 }

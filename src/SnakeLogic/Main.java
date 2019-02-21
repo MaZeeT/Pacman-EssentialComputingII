@@ -20,7 +20,7 @@ public class Main extends Application {
 
         // Game logic
         GameManager gameManager = new GameManager(gui.getView());
-        gui.setGameObects(gameManager.getGameObjects());
+        gui.setGameObects(gameManager.getRenderableGameObjects());
 
         // Setup scene and stage
         Scene scene = new Scene(gui.getView().pane, 800, 600);

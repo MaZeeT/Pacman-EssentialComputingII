@@ -13,7 +13,9 @@ import java.util.*;
 public class GameManager{
 
     private View view;
-    private ArrayList<GameObject> gameObjects = new ArrayList<>();
+    private List<GameObject> renderableGameObjects = new ArrayList<>();
+    private List<GameObject> items = new ArrayList<>();
+    private List<GameObject> players = new ArrayList<>();
     private GameObject player = new Player(new Position(4,5));
     private int amountItems = 0;
     private int maxItems = 2;
@@ -26,23 +28,30 @@ public class GameManager{
     public GameManager(View view) {
         this.view = view;
         addNewItem(amountItems, maxItems);
-        gameObjects.add(player);
+        players.add(player);
     }
 
     public void update(){
         addNewItem(amountItems,maxItems);
+        updateRenderables();
+    }
+
+    private void updateRenderables(){
+        renderableGameObjects.clear();
+        renderableGameObjects.addAll(items);
+        renderableGameObjects.addAll(players);
     }
 
     private void addNewItem(int amountItems, int maxItems){
         if (amountItems < maxItems) {
-            gameObjects.add(new Item(getRandomColor(),getRandomPosition()));
+            items.add(new Item(getRandomColor(),getRandomPosition()));
             this.amountItems++;
         }
 
     }
 
     private void removeItem(int index){
-        gameObjects.remove(index);
+        items.remove(index);
     }
 
     private Position getRandomPosition() {
@@ -88,7 +97,7 @@ public class GameManager{
         System.out.println(direction);
     }
 
-    public ArrayList<GameObject> getGameObjects(){
-        return gameObjects;
+    public List<GameObject> getRenderableGameObjects(){
+        return renderableGameObjects;
     }
 }

@@ -2,7 +2,7 @@ package SnakeGUI;
 
 import SnakeEntities.GameObject;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public interface IManager {
 
@@ -10,5 +10,5 @@ public interface IManager {
 
     void pauseGame();
 
-    void setGameObects(ArrayList<GameObject> gameObjects);
+    void setGameObects(List<GameObject> renderableGameObjects);
 }
