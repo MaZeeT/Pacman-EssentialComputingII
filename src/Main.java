@@ -1,5 +1,5 @@
-package SnakeLogic;
-
+import SnakeGUI.IManager;
+import SnakeLogic.GameManager;
 import SnakeUserControl.PlayerControl;
 import SnakeGUI.Manager;
 import SnakeUserControl.UserControl;
@@ -15,12 +15,12 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception {
 
         // Interfaced modules
-        Manager gui = new Manager();
+        IManager gui = new Manager();
         UserControl userControl = new PlayerControl();
 
         // Game logic
         GameManager gameManager = new GameManager(gui.getView());
-        gui.setGameObects(gameManager.getRenderableGameObjects());
+        gui.setGameObjects(gameManager.getRenderableGameObjects());
 
         // Setup scene and stage
         Scene scene = new Scene(gui.getView().pane, 800, 600);

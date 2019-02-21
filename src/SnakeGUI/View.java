@@ -26,10 +26,9 @@ public class View {
         drawCanvas();
     }
 
-    public void setItemsToRender(List<GameObject> gameObjects) {
+    void setRenderables(List<GameObject> gameObjects) {
         this.renderableGameObjects = gameObjects;
     }
-
 
     private double fieldHeight;
     private double fieldWidth;

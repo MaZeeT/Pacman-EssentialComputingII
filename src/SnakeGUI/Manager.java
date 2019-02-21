@@ -2,7 +2,6 @@ package SnakeGUI;
 
 import SnakeEntities.GameObject;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Manager implements IManager {
@@ -23,8 +22,8 @@ public class Manager implements IManager {
         gamePaused = !gamePaused;
     }
 
-    public void setGameObects(List<GameObject> renderableGameObjects){
-        view.setItemsToRender(renderableGameObjects);
+    public void setGameObjects(List<GameObject> renderableGameObjects){
+        view.setRenderables(renderableGameObjects);
     }
 
     public View getView(){

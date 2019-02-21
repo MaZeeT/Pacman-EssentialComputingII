@@ -10,5 +10,7 @@ public interface IManager {
 
     void pauseGame();
 
-    void setGameObects(List<GameObject> renderableGameObjects);
+    void setGameObjects(List<GameObject> renderableGameObjects);
+
+    View getView();
 }
