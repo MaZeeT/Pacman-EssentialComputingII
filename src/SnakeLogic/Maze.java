@@ -21,7 +21,13 @@ public class Maze {
 
     private void generateWalls(){
         for (int i = 0; i<= width; i++){
-            list.add(new Wall(0,i));
+            list.add(new Wall(i,0));
+            list.add(new Wall(i,height));
+        }
+
+        for (int i = 0; i<= height; i++){
+            list.add(new Wall(0,width));
+            list.add(new Wall(height,width));
         }
     }
 

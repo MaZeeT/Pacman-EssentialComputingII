@@ -32,7 +32,7 @@ public class GameManager{
         this.view = view;
         addNewItem(amountItems, maxItems);
         players.add(player);
-        maze = new Maze(2,7);
+        maze = new Maze(10,15);
         walls = maze.getMaze();
     }
 
