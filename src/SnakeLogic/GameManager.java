@@ -13,9 +13,12 @@ import java.util.*;
 public class GameManager{
 
     private View view;
+    private Maze maze;
     private List<GameObject> renderableGameObjects = new ArrayList<>();
     private List<GameObject> items = new ArrayList<>();
+    private List<GameObject> walls;
     private List<GameObject> players = new ArrayList<>();
+
     private GameObject player = new Player(new Position(4,5));
     private int amountItems = 0;
     private int maxItems = 2;
@@ -29,16 +32,20 @@ public class GameManager{
         this.view = view;
         addNewItem(amountItems, maxItems);
         players.add(player);
+        maze = new Maze(2,7);
+        walls = maze.getMaze();
     }
 
     public void update(){
         addNewItem(amountItems,maxItems);
+        //player.
         updateRenderables();
     }
 
     private void updateRenderables(){
         renderableGameObjects.clear();
         renderableGameObjects.addAll(items);
+        renderableGameObjects.addAll(walls);
         renderableGameObjects.addAll(players);
     }
 
@@ -68,28 +75,6 @@ public class GameManager{
 
     private void collideWithItem(Item item){
 
-    }
-
-    private int gameLoopDelay = 500;
-    private float refreshRate = 300;
-
-    /**
-     * Executed when JavaFX is initialized. Used to setup the Snake game
-     */
-    public void initialize() {
-        view.calculateFields();
-        view.drawCanvas();
-
-        // Start and control game loop
-        new AnimationTimer() {
-            long lastUpdate;
-
-            public void handle(long now) {
-                if (now > lastUpdate + refreshRate * 1000000) {
-                    lastUpdate = now;
-                }
-            }
-        }.start();
     }
 
     public void setDirection(char direction) {
