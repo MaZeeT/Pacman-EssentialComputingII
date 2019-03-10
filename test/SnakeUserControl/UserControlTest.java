@@ -12,8 +12,6 @@ public class UserControlTest {
     @Before
     public void setUp(){
         uc = new PlayerControl();
-
-
     }
 
     @Test
