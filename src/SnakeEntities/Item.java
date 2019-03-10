@@ -5,14 +5,12 @@ import javafx.scene.paint.Color;
 
 public class Item extends GameObject {
 
-
-    public Item(Color color, Position position) {
-        this.color = color;
+    public Item(Position position) {
         this.position = position;
+        this.color = Color.RED;
     }
 
-    public void update() {
-
-
+    public boolean update() {
+        return false;
     }
 }
