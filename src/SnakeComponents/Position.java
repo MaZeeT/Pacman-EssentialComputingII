@@ -27,17 +27,17 @@ public class Position implements Comparable<Position> {
     }
 
     @Override
-    public int compareTo(Position pos) {
+    public int compareTo(Position otherPos) {
         int rtn = 0;
-        if (x == pos.getX() && y == pos.getY()){
+        if (x == otherPos.getX() && y == otherPos.getY()){
             return 0;
         }
-        if (x < pos.getX()) rtn = -1;
-        if (x > pos.getX()) rtn = +1;
+        if (x < otherPos.getX()) rtn = +1;
+        if (x > otherPos.getX()) rtn = -1;
 
         if(rtn == 0) {
-            if (y < pos.getY()) rtn = -1;
-            if (y > pos.getY()) rtn = +1;
+            if (y < otherPos.getY()) rtn = +1;
+            if (y > otherPos.getY()) rtn = -1;
         }
 
         return rtn;

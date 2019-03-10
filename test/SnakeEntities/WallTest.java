@@ -50,4 +50,27 @@ public class WallTest {
         assertEquals(expected, actual);
     }
 
+    @Test
+    public void compareEqual() {
+        Wall wall = new Wall(defPos);
+        int expected = 0;
+        int actual = defWall.compareTo(wall);
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void compareToLower() {
+        Wall wall = new Wall(new Position(defX-1,defY-1));
+        int expected = -1;
+        int actual = defWall.compareTo(wall);
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void compareToHigher() {
+        Wall wall = new Wall(new Position(defX+1,defY+1));
+        int expected = 1;
+        int actual = defWall.compareTo(wall);
+        assertEquals(expected, actual);
+    }
 }
