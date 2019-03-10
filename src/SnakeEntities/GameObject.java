@@ -4,10 +4,8 @@ import SnakeComponents.Position;
 import javafx.scene.paint.Color;
 
 public abstract class GameObject {
-
     Position position;
     Color color;
-
 
     protected abstract void update();
 
@@ -26,5 +24,4 @@ public abstract class GameObject {
     public void setPosition(Position position) {
         this.position = position;
     }
-
 }
