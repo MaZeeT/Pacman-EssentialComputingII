@@ -29,8 +29,4 @@ public class Manager implements IManager {
     public View getView(){
         return this.view;
     }
-
-
-
-
 }

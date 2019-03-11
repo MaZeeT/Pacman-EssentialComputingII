@@ -5,7 +5,7 @@ import SnakeEntities.GameObject;
 import SnakeEntities.Item;
 import SnakeEntities.Player;
 import SnakeGUI.View;
-import javafx.animation.AnimationTimer;
+import SnakeMaze.Maze;
 import javafx.scene.paint.Color;
 
 import java.util.*;
@@ -19,7 +19,8 @@ public class GameManager{
     private List<GameObject> walls;
     private List<GameObject> players = new ArrayList<>();
 
-    private GameObject player = new Player(new Position(4,5));
+    private Player player = new Player(new Position(4,5));
+
     private int amountItems = 0;
     private int maxItems = 2;
 
@@ -32,14 +33,37 @@ public class GameManager{
         this.view = view;
         addNewItem(amountItems, maxItems);
         players.add(player);
-        maze = new Maze(10,15);
+        maze = new Maze(10,10);
+        maze.generateMaze();
         walls = maze.getMaze();
+
     }
 
     public void update(){
         addNewItem(amountItems,maxItems);
+        movement(direction, player);
         //player.
         updateRenderables();
+    }
+
+    private void movement(char dir, Player player){
+        switch (dir)
+        {
+            case 'w':
+                player.moveUp();
+                System.out.println("up");
+                break;
+            case 's':
+                player.moveDown();
+                break;
+            case 'a':
+                player.moveLeft();
+                break;
+            case 'd':
+                player.moveRight();
+                break;
+        }
+
     }
 
     private void updateRenderables(){
@@ -51,10 +75,9 @@ public class GameManager{
 
     private void addNewItem(int amountItems, int maxItems){
         if (amountItems < maxItems) {
-            items.add(new Item(getRandomColor(),getRandomPosition()));
+            items.add(new Item(getRandomPosition()));
             this.amountItems++;
         }
-
     }
 
     private void removeItem(int index){
@@ -66,11 +89,6 @@ public class GameManager{
         int x = random.nextInt(view.width);
         int y = random.nextInt(view.height);
         return new Position(x, y);
-    }
-
-    private Color getRandomColor(){
-        Random random = new Random();
-        return Color.GREEN;
     }
 
     private void collideWithItem(Item item){

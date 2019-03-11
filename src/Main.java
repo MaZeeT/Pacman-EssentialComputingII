@@ -27,8 +27,9 @@ public class Main extends Application {
         scene.setOnKeyPressed(new EventHandler<KeyEvent>() {
             @Override
             public void handle(KeyEvent event) {
-                userControl.keyPressed(event.getCode());
-                gameManager.setDirection(userControl.getDirection());
+                userControl.getDirection(event.getCode());
+                //userControl.keyPressed(event.getCode());
+                gameManager.setDirection(userControl.getDirection(event.getCode()));
             }
         });
         primaryStage.setTitle("Snake");

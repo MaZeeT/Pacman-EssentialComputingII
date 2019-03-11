@@ -4,9 +4,9 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.control.Button;
 
-public class Controller {
-    View view;
-    Button btnStart;
+class Controller {
+    private View view;
+    private Button btnStart;
 
     Controller(View view) {
         this.view = view;
