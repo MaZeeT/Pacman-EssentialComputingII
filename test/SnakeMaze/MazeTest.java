@@ -47,10 +47,22 @@ public class MazeTest {
         int x = 15;
         int y = 15;
         IMaze m = new Maze(x, y);
-        m.generateMaze();
 
         int expected = x * 2 + y * 2 - 4 + 5 + 4;
-        int actual = m.getMaze().size();
+        int actual = m.generateMaze();
         assertEquals(expected, actual);
     }
+
+    @Test
+    public void listSizeComparedToGenerateReturn() {
+        int x = 15;
+        int y = 15;
+        IMaze m = new Maze(x, y);
+        m.generateMaze();
+
+        int expected = m.getMaze().size();
+        int actual = m.generateMaze();
+        assertEquals(expected, actual);
+    }
+
 }
