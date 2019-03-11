@@ -20,7 +20,6 @@ public class Main extends Application {
 
         // Game logic
         GameManager gameManager = new GameManager(gui.getView());
-        gui.setGameObjects(gameManager.getGameObjects());
 
         // Setup scene and stage
         Scene scene = new Scene(gui.getView().pane, 800, 600);
@@ -41,7 +40,8 @@ public class Main extends Application {
                 for (; ; ) {
                     try {
                         gameManager.update();
-                        sleep(100);
+                        gui.update(gameManager.getGameObjects());
+                        sleep(500);
                     } catch (Exception e) {
                     }
                 }

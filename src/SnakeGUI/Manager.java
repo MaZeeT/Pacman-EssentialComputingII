@@ -7,23 +7,21 @@ import java.util.List;
 public class Manager implements IManager {
 
     private View view = new View();
-    private Controller controller = new Controller(view);
+    private Controller controller = new Controller(this, view.btnStart, view.btnPause);
+
+    public void update(List<GameObject> gameObjects){
+        view.setGameObjects(gameObjects);
+        view.drawCanvas();
+    }
 
     public void startGame() {
-
+        view.label.setText("Playing");
+        System.out.println("Start btn pressed");
     }
 
-    public void update(){
-
-    }
-
-    private boolean gamePaused = false;
     public void pauseGame(){
-        gamePaused = !gamePaused;
-    }
-
-    public void setGameObjects(List<GameObject> renderableGameObjects){
-        view.setRenderables(renderableGameObjects);
+        view.label.setText("Paused");
+        System.out.println("Pause btn pressed");
     }
 
     public View getView(){

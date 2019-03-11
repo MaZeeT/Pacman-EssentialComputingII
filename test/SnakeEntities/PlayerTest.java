@@ -59,6 +59,16 @@ public class PlayerTest {
     }
 
     @Test
+    public void move() {
+        Position pos = new Position(defX+1,defY);
+
+        int expected = 0;
+        int actual = defPlayer.moveRight().compareTo(pos);
+        assertEquals(expected, actual);
+    }
+
+
+    @Test
     public void manipulationOfStoredPosition() {
 
         int expected = 0;

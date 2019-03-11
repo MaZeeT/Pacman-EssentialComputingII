@@ -10,24 +10,25 @@ import java.util.List;
 
 public class View {
 
-    Button btnStart = new Button("start");
-    private Label labelStatus = new Label("Label");
+    Button btnStart = new Button("Start");
+    Button btnPause = new Button("Pause");
+    Label label = new Label("Begin");
     private HBox hBox = new HBox();
     private Canvas canvas = new Canvas(600.0, 400.0);
     public BorderPane pane = new BorderPane();
 
-    private List<GameObject> renderableGameObjects = new ArrayList<>();
+    private List<GameObject> gameObjects = new ArrayList<>();
 
     View() {
-        hBox.getChildren().addAll(btnStart, labelStatus);
+        hBox.getChildren().addAll(btnStart, btnPause, label);
         pane.setTop(hBox);
         pane.setCenter(canvas);
         calculateFields();
         drawCanvas();
     }
 
-    void setRenderables(List<GameObject> gameObjects) {
-        this.renderableGameObjects = gameObjects;
+    void setGameObjects(List<GameObject> gameObjects) {
+        this.gameObjects = gameObjects;
     }
 
     private double fieldHeight;
@@ -39,7 +40,7 @@ public class View {
     /**
      * Calculate height and width of each field
      */
-    public void calculateFields() {
+    private void calculateFields() {
         this.fieldHeight = canvas.getHeight() / this.height;
         this.fieldWidth = canvas.getWidth() / this.width;
     }
@@ -47,13 +48,13 @@ public class View {
     /**
      * Draw the canvas - used in the gameloop
      */
-    public void drawCanvas() {
+    void drawCanvas() {
         GraphicsContext g = canvas.getGraphicsContext2D();
 
         g.clearRect(0, 0, width * fieldWidth, height * fieldHeight);
 
-        // draw renderableGameObjects
-        for (GameObject gameObject : renderableGameObjects) {
+        // draw gameObjects
+        for (GameObject gameObject : gameObjects) {
             g.setFill(gameObject.getColor());
             int x = gameObject.getPosition().getX();
             int y = gameObject.getPosition().getY();

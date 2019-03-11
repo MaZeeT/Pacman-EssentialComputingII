@@ -13,15 +13,14 @@ public class GameManager {
 
     private View view;
     private Maze maze;
-    private List<GameObject> gameObjects = new ArrayList<>();
     private List<GameObject> items = new ArrayList<>();
     private List<GameObject> walls;
-    private List<GameObject> players = new ArrayList<>();
+    private List<GameObject> snake = new ArrayList<>();
 
-    private Player player = new Player(new Position(4, 5));
+    private Player player = new Player(new Position(4, 2));
 
     private int amountItems = 0;
-    private int maxItems = 2;
+    private int maxItems = 0;
 
 
     char direction;
@@ -29,8 +28,8 @@ public class GameManager {
 
     public GameManager(View view) {
         this.view = view;
-        addNewItem(amountItems, maxItems);
-        players.add(player);
+        addNewItem(items, maxItems);
+        snake.add(player);
         maze = new Maze(10, 10);
         maze.generateMaze();
         walls = maze.getMaze();
@@ -38,10 +37,10 @@ public class GameManager {
     }
 
     public void update() {
-        addNewItem(amountItems, maxItems);
+        //addNewItem(items, maxItems);
         movement(direction, player);
-        //player.
-        updateRenderables();
+        System.out.println(player.getPosition().getX() + " " + player.getPosition().getY());
+
     }
 
     private void movement(char dir, Player player) {
@@ -63,24 +62,31 @@ public class GameManager {
 
     }
 
-    private void updateRenderables() {
-        gameObjects.clear();
-        gameObjects.addAll(items);
-        gameObjects.addAll(walls);
-        gameObjects.addAll(players);
-    }
 
-    private void addNewItem(int amountItems, int maxItems) {
-        if (amountItems < maxItems) {
-            items.add(new Item(getRandomPosition()));
-            this.amountItems++;
+    private void addNewItem(List<GameObject> items, int maxItems) {
+        if (items.size() < maxItems) {
+            Position pos;
+            pos = getRandomPosition();
+            for (GameObject item : items) {
+                if (item.getPosition().compareTo(pos) != 0) {
+                    items.add(new Item(pos));
+                }
+            }
         }
     }
 
+
+    // unused functions
     private void removeItem(int index) {
         items.remove(index);
     }
 
+    private void collideWithItem(Item item) {
+
+    }
+
+
+    // get and set
     private Position getRandomPosition() {
         Random random = new Random();
         int x = random.nextInt(view.width);
@@ -88,17 +94,22 @@ public class GameManager {
         return new Position(x, y);
     }
 
-    private void collideWithItem(Item item) {
-
-    }
-
     public void setDirection(char direction) {
         this.direction = direction;
         System.out.println(direction);
     }
 
-    public List<GameObject> getGameObjects() {
-        return gameObjects;
 
+    //export gameObjects for GUI
+    private List<GameObject> combineGameObjects() {
+        List<GameObject> gameObjects = new ArrayList<>();
+        gameObjects.addAll(items);
+        gameObjects.addAll(walls);
+        gameObjects.addAll(snake);
+        return gameObjects;
+    }
+
+    public List<GameObject> getGameObjects() {
+        return combineGameObjects();
     }
 }

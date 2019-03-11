@@ -21,7 +21,7 @@ public class Player extends GameObject {
 
     public Position moveDown() {
         position.setY(position.getY() + 1);
-        return getPosition();
+        return position;
     }
 
     public Position moveLeft() {

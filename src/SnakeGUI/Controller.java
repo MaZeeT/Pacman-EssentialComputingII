@@ -5,26 +5,32 @@ import javafx.event.EventHandler;
 import javafx.scene.control.Button;
 
 class Controller {
-    private View view;
+    private Manager manager;
     private Button btnStart;
+    private Button btnPause;
 
-    Controller(View view) {
-        this.view = view;
-        this.btnStart = view.btnStart;
-        setUpBtn(this.btnStart);
+    Controller(Manager manager, Button start, Button pause) {
+        this.manager = manager;
+        this.btnStart = start;
+        this.btnPause = pause;
     }
 
-    private void setUpBtn(Button btn) {
-        btn.setOnAction(new EventHandler<ActionEvent>() {
+    private void start() {
+        btnStart.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                start();
+                manager.startGame();
             }
         });
     }
 
-    private void start() {
-        System.out.println("btn clicked");
-        view.drawCanvas();
+    private void pause(){
+        btnPause.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                manager.pauseGame();
+            }
+        });
     }
+
 }
