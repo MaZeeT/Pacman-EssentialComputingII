@@ -6,24 +6,22 @@ import SnakeEntities.Item;
 import SnakeEntities.Player;
 import SnakeGUI.View;
 import SnakeMaze.Maze;
-import javafx.scene.paint.Color;
 
 import java.util.*;
 
-public class GameManager{
+public class GameManager {
 
     private View view;
     private Maze maze;
-    private List<GameObject> renderableGameObjects = new ArrayList<>();
+    private List<GameObject> gameObjects = new ArrayList<>();
     private List<GameObject> items = new ArrayList<>();
     private List<GameObject> walls;
     private List<GameObject> players = new ArrayList<>();
 
-    private Player player = new Player(new Position(4,5));
+    private Player player = new Player(new Position(4, 5));
 
     private int amountItems = 0;
     private int maxItems = 2;
-
 
 
     char direction;
@@ -33,22 +31,21 @@ public class GameManager{
         this.view = view;
         addNewItem(amountItems, maxItems);
         players.add(player);
-        maze = new Maze(10,10);
+        maze = new Maze(10, 10);
         maze.generateMaze();
         walls = maze.getMaze();
 
     }
 
-    public void update(){
-        addNewItem(amountItems,maxItems);
+    public void update() {
+        addNewItem(amountItems, maxItems);
         movement(direction, player);
         //player.
         updateRenderables();
     }
 
-    private void movement(char dir, Player player){
-        switch (dir)
-        {
+    private void movement(char dir, Player player) {
+        switch (dir) {
             case 'w':
                 player.moveUp();
                 System.out.println("up");
@@ -66,21 +63,21 @@ public class GameManager{
 
     }
 
-    private void updateRenderables(){
-        renderableGameObjects.clear();
-        renderableGameObjects.addAll(items);
-        renderableGameObjects.addAll(walls);
-        renderableGameObjects.addAll(players);
+    private void updateRenderables() {
+        gameObjects.clear();
+        gameObjects.addAll(items);
+        gameObjects.addAll(walls);
+        gameObjects.addAll(players);
     }
 
-    private void addNewItem(int amountItems, int maxItems){
+    private void addNewItem(int amountItems, int maxItems) {
         if (amountItems < maxItems) {
             items.add(new Item(getRandomPosition()));
             this.amountItems++;
         }
     }
 
-    private void removeItem(int index){
+    private void removeItem(int index) {
         items.remove(index);
     }
 
@@ -91,7 +88,7 @@ public class GameManager{
         return new Position(x, y);
     }
 
-    private void collideWithItem(Item item){
+    private void collideWithItem(Item item) {
 
     }
 
@@ -100,7 +97,8 @@ public class GameManager{
         System.out.println(direction);
     }
 
-    public List<GameObject> getRenderableGameObjects(){
-        return renderableGameObjects;
+    public List<GameObject> getGameObjects() {
+        return gameObjects;
+
     }
 }
