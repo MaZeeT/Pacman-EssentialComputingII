@@ -8,7 +8,7 @@ import java.util.List;
 
 public class Maze implements IMaze {
 
-    int r = 0;
+    private int r = 0;
     private int sizeX;
     private int sizeY;
     private List<GameObject> list = new ArrayList<>();
