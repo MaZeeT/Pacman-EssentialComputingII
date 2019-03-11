@@ -44,12 +44,12 @@ public class MazeTest {
 
     @Test
     public void makeMaze() {
-        int x = 9;
-        int y = 9;
+        int x = 15;
+        int y = 15;
         IMaze m = new Maze(x, y);
         m.generateMaze();
 
-        int expected = x * 2 + y * 2 - 4 + 5;
+        int expected = x * 2 + y * 2 - 4 + 5 + 4;
         int actual = m.getMaze().size();
         assertEquals(expected, actual);
     }
