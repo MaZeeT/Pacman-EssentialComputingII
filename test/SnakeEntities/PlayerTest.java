@@ -67,12 +67,101 @@ public class PlayerTest {
         assertEquals(expected, actual);
     }
 
-
     @Test
-    public void manipulationOfStoredPosition() {
+    public void checkUp() {
+        Position pos = new Position(defX,defY-1);
 
         int expected = 0;
-        int actual = defPlayer.moveRight().compareTo(defPos);
+        int actual = defPlayer.checkUp().compareTo(pos);
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void checkUp2() {
+        int expected = -1;
+        int actual = defPos.compareTo(defPlayer.checkUp());
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void checkDown() {
+        Position pos = new Position(defX,defY+1);
+
+        int expected = 0;
+        int actual = defPlayer.checkDown().compareTo(pos);
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void checkDown2() {
+        int expected = +1;
+        int actual = defPos.compareTo(defPlayer.checkDown());
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void checkLeft() {
+        Position pos = new Position(defX-1,defY);
+
+        int expected = 0;
+        int actual = defPlayer.checkLeft().compareTo(pos);
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void checkLeft2() {
+        int expected = -1;
+        int actual = defPos.compareTo(defPlayer.checkLeft());
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void checkRight() {
+        Position pos = new Position(defX+1,defY);
+
+        int expected = 0;
+        int actual = defPlayer.checkRight().compareTo(pos);
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void checkRight2() {
+        int expected = +1;
+        int actual = defPos.compareTo(defPlayer.checkRight());
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void manipulationOfStoredPositionUp() {
+
+        int expected = 0;
+        int actual = defPlayer.moveUp().compareTo(defPos);
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void manipulationOfStoredPositionDown() {
+
+        int expected = 0;
+        int actual = defPlayer.moveDown().compareTo(defPos);
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void manipulationOfStoredPositionLeft() {
+
+        int expected = 0;
+        int actual = defPlayer.moveLeft().compareTo(defPos);
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void manipulationOfStoredPositionRight() {
+       Position pos= defPlayer.moveRight();
+        pos.compareTo(defPos);
+
+        int expected = 0;
+        int actual = pos.compareTo(defPos);
         assertEquals(expected, actual);
     }
 
