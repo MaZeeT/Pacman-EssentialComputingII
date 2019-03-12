@@ -19,11 +19,8 @@ public class GameManager {
 
     private Player player = new Player(new Position(4, 2));
 
-    private int amountItems = 0;
-    private int maxItems = 0;
-
-
-    char direction;
+    private int maxItems = 2;
+    private char direction;
 
 
     public GameManager(View view) {
@@ -37,31 +34,59 @@ public class GameManager {
     }
 
     public void update() {
-        //addNewItem(items, maxItems);
         movement(direction, player);
         System.out.println(player.getPosition().getX() + " " + player.getPosition().getY());
-
+        addNewItem(items, maxItems);
     }
 
     private void movement(char dir, Player player) {
         switch (dir) {
             case 'w':
-                player.moveUp();
-                System.out.println("up");
+                if (!isPositionInList(walls, player.checkUp())) player.moveUp();
+                else {
+                    System.out.println("Path Blocked");
+                    setDirection('d');
+                    update();
+                }
                 break;
+
             case 's':
-                player.moveDown();
+                if (!isPositionInList(walls, player.checkDown())) player.moveDown();
+                else {
+                    System.out.println("Path Blocked");
+                    setDirection('a');
+                    update();
+                }
                 break;
+
             case 'a':
-                player.moveLeft();
+                if (!isPositionInList(walls, player.checkLeft())) player.moveLeft();
+                else {
+                    System.out.println("Path Blocked");
+                    setDirection('w');
+                    update();
+                }
                 break;
+
             case 'd':
-                player.moveRight();
+                if (!isPositionInList(walls, player.checkRight())) player.moveRight();
+                else {
+                    System.out.println("Path Blocked");
+                    setDirection('s');
+                    update();
+                }
                 break;
         }
-
     }
 
+    private boolean isPositionInList(List<GameObject> gameObjects, Position position) {
+        for (GameObject gameObject : gameObjects) {
+            if (gameObject.getPosition().compareTo(position) == 0) {
+                return true;
+            }
+        }
+        return false;
+    }
 
     private void addNewItem(List<GameObject> items, int maxItems) {
         if (items.size() < maxItems) {

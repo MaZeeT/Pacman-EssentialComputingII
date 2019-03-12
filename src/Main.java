@@ -27,7 +27,6 @@ public class Main extends Application {
             @Override
             public void handle(KeyEvent event) {
                 userControl.getDirection(event.getCode());
-                //userControl.keyPressed(event.getCode());
                 gameManager.setDirection(userControl.getDirection(event.getCode()));
             }
         });
@@ -35,6 +34,7 @@ public class Main extends Application {
         primaryStage.setScene(scene);
         primaryStage.show();
 
+        // thread to run updates
         new Thread() { //this check for modifications of the external datafile
             public void run() {
                 for (; ; ) {
