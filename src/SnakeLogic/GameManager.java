@@ -4,7 +4,6 @@ import SnakeComponents.Position;
 import SnakeEntities.GameObject;
 import SnakeEntities.Item;
 import SnakeEntities.Player;
-import SnakeGUI.View;
 import SnakeLogic.Movement.MoveClockWise;
 import SnakeMaze.IMaze;
 import SnakeMaze.Maze;
@@ -39,7 +38,7 @@ public class GameManager {
     public void update() {
         movement.move(direction);
         direction = movement.getDirection();
-        System.out.println(player.getPosition().getX() + " " + player.getPosition().getY());
+        //System.out.println(player.getPosition().getX() + " " + player.getPosition().getY());
         addNewItem(items, maxItems);
     }
 

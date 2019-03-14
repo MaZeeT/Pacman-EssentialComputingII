@@ -16,11 +16,6 @@ public class Wall extends GameObject implements Comparable<Wall>{
     }
 
     @Override
-    public boolean update() {
-        return false;
-    }
-
-    @Override
     public int compareTo(Wall other) {
         return position.compareTo(other.getPosition());
     }

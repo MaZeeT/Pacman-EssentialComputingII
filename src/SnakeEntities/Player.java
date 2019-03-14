@@ -10,10 +10,6 @@ public class Player extends GameObject {
         this.color = Color.BLACK;
     }
 
-    public boolean update() {
-        return false;
-    }
-
     public Position moveUp() {
         position.setY(position.getY() - 1);
         return getPosition();

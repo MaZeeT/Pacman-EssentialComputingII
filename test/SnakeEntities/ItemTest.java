@@ -29,10 +29,4 @@ public class ItemTest {
         assertEquals(expected, actual);
     }
 
-    @Test
-    public void update() {
-        boolean expected = false;
-        boolean actual = defItem.update();
-        assertEquals(expected, actual);
-    }
 }

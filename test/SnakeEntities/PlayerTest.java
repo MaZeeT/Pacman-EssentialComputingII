@@ -164,11 +164,4 @@ public class PlayerTest {
         int actual = pos.compareTo(defPos);
         assertEquals(expected, actual);
     }
-
-    @Test
-    public void update() {
-        boolean expected = false;
-        boolean actual = defPlayer.update();
-        assertEquals(expected, actual);
-    }
 }

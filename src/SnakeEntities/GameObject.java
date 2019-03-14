@@ -7,8 +7,6 @@ public abstract class GameObject {
     Position position;
     Color color;
 
-    public abstract boolean update();
-
     public Color getColor() {
         return color;
     }

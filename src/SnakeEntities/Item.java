@@ -9,8 +9,4 @@ public class Item extends GameObject {
         this.position = position;
         this.color = Color.RED;
     }
-
-    public boolean update() {
-        return false;
-    }
 }

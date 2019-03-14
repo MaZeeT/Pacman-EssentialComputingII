@@ -44,13 +44,6 @@ public class WallTest {
     }
 
     @Test
-    public void update() {
-        boolean expected = false;
-        boolean actual = defWall.update();
-        assertEquals(expected, actual);
-    }
-
-    @Test
     public void compareEqual() {
         Wall wall = new Wall(defPos);
         int expected = 0;
