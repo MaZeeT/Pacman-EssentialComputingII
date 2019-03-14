@@ -5,6 +5,7 @@ import SnakeEntities.GameObject;
 import SnakeEntities.Item;
 import SnakeEntities.Player;
 import SnakeGUI.View;
+import SnakeLogic.Movement.MoveClockWise;
 import SnakeMaze.IMaze;
 import SnakeMaze.Maze;
 
@@ -21,6 +22,7 @@ public class GameManager {
     private char direction;
     private int width;
     private int height;
+    private MoveClockWise movement;
 
     public GameManager(int width, int height) {
         this.width = width;
@@ -30,63 +32,17 @@ public class GameManager {
         IMaze maze = new Maze(10, 10);
         maze.generateMaze();
         walls = maze.getMaze();
+        movement = new MoveClockWise(player,walls);
     }
 
 
     public void update() {
-        movement(direction, player);
+        movement.move(direction);
+        direction = movement.getDirection();
         System.out.println(player.getPosition().getX() + " " + player.getPosition().getY());
         addNewItem(items, maxItems);
     }
 
-    private void movement(char dir, Player player) {
-        switch (dir) {
-            case 'w':
-                if (!isPositionInList(walls, player.checkUp())) player.moveUp();
-                else {
-                    System.out.println("Path Blocked");
-                    setDirection('d');
-                    update();
-                }
-                break;
-
-            case 's':
-                if (!isPositionInList(walls, player.checkDown())) player.moveDown();
-                else {
-                    System.out.println("Path Blocked");
-                    setDirection('a');
-                    update();
-                }
-                break;
-
-            case 'a':
-                if (!isPositionInList(walls, player.checkLeft())) player.moveLeft();
-                else {
-                    System.out.println("Path Blocked");
-                    setDirection('w');
-                    update();
-                }
-                break;
-
-            case 'd':
-                if (!isPositionInList(walls, player.checkRight())) player.moveRight();
-                else {
-                    System.out.println("Path Blocked");
-                    setDirection('s');
-                    update();
-                }
-                break;
-        }
-    }
-
-    private boolean isPositionInList(List<GameObject> gameObjects, Position position) {
-        for (GameObject gameObject : gameObjects) {
-            if (gameObject.getPosition().compareTo(position) == 0) {
-                return true;
-            }
-        }
-        return false;
-    }
 
     private void addNewItem(List<GameObject> items, int maxItems) {
         if (items.size() < maxItems) {
