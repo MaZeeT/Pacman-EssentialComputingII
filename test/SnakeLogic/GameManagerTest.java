@@ -28,11 +28,11 @@ public class GameManagerTest {
 
     @Test
     public void getGameObjects() {
-        List<GameObject> actual;
-        List<GameObject> expected;
+        int actual;
+        int expected;
 
-        actual = gameManager.getGameObjects();
-        //expected = new ArrayList<GameObject>();
+        actual = gameManager.getGameObjects().size();
+        expected = 5;
         assertNotNull(actual);
     }
 }

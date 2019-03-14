@@ -5,33 +5,33 @@ import SnakeEntities.GameObject;
 import SnakeEntities.Item;
 import SnakeEntities.Player;
 import SnakeGUI.View;
+import SnakeMaze.IMaze;
 import SnakeMaze.Maze;
 
 import java.util.*;
 
 public class GameManager {
 
-    private View view;
-    private Maze maze;
-    private List<GameObject> items = new ArrayList<>();
     private List<GameObject> walls;
+    private List<GameObject> items = new ArrayList<>();
     private List<GameObject> snake = new ArrayList<>();
-
     private Player player = new Player(new Position(4, 2));
 
     private int maxItems = 2;
     private char direction;
-
+    private int width;
+    private int height;
 
     public GameManager(View view) {
-        this.view = view;
+        width = view.width;
+        height = view.height;
         addNewItem(items, maxItems);
         snake.add(player);
-        maze = new Maze(10, 10);
+        IMaze maze = new Maze(10, 10);
         maze.generateMaze();
         walls = maze.getMaze();
-
     }
+
 
     public void update() {
         movement(direction, player);
@@ -114,8 +114,8 @@ public class GameManager {
     // get and set
     private Position getRandomPosition() {
         Random random = new Random();
-        int x = random.nextInt(view.width);
-        int y = random.nextInt(view.height);
+        int x = random.nextInt(width);
+        int y = random.nextInt(height);
         return new Position(x, y);
     }
 
