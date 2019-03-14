@@ -6,8 +6,13 @@ import java.util.List;
 
 public class Manager implements IManager {
 
-    private View view = new View();
-    private Controller controller = new Controller(this, view.btnStart, view.btnPause);
+    private View view ;
+    private Controller controller;
+
+    public Manager(int width, int height){
+        this.view = new View(width,height);
+        this.controller = new Controller(this, view.btnStart, view.btnPause);
+    }
 
     public void update(List<GameObject> gameObjects){
         view.setGameObjects(gameObjects);

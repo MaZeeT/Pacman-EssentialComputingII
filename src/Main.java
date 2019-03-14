@@ -14,12 +14,15 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
 
+        int width = 30;
+        int height = 20;
+
         // Interfaced modules
-        IManager gui = new Manager();
+        IManager gui = new Manager(width,height);
         UserControl userControl = new PlayerControl();
 
         // Game logic
-        GameManager gameManager = new GameManager(gui.getView());
+        GameManager gameManager = new GameManager(width,height);
 
         // Setup scene and stage
         Scene scene = new Scene(gui.getView().pane, 800, 600);

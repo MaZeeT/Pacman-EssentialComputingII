@@ -19,7 +19,15 @@ public class View {
 
     private List<GameObject> gameObjects = new ArrayList<>();
 
-    View() {
+    private double fieldHeight;
+    private double fieldWidth;
+    private int width;
+    private int height;
+
+
+    View(int width, int height) {
+        this.width = width;
+        this.height = height;
         hBox.getChildren().addAll(btnStart, btnPause, label);
         pane.setTop(hBox);
         pane.setCenter(canvas);
@@ -31,10 +39,6 @@ public class View {
         this.gameObjects = gameObjects;
     }
 
-    private double fieldHeight;
-    private double fieldWidth;
-    public int width = 30;
-    public int height = 20;
 
 
     /**

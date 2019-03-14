@@ -22,9 +22,9 @@ public class GameManager {
     private int width;
     private int height;
 
-    public GameManager(View view) {
-        width = view.width;
-        height = view.height;
+    public GameManager(int width, int height) {
+        this.width = width;
+        this.height = height;
         addNewItem(items, maxItems);
         snake.add(player);
         IMaze maze = new Maze(10, 10);
@@ -124,6 +124,9 @@ public class GameManager {
         System.out.println(direction);
     }
 
+    public char getDirection(){
+        return this.direction;
+    }
 
     //export gameObjects for GUI
     private List<GameObject> combineGameObjects() {
@@ -137,4 +140,6 @@ public class GameManager {
     public List<GameObject> getGameObjects() {
         return combineGameObjects();
     }
+
+
 }
