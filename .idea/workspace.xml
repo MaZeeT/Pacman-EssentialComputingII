@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="added DepthFirst dataStructure">
-      <change afterPath="$PROJECT_DIR$/src/SnakeLogic/Movement/IMovement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SnakeLogic/Movement/MoveClockWise.java" afterDir="false" />
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="attempt to move Movement into its own class">
+      <change afterPath="$PROJECT_DIR$/src/SnakeDataStructures/BreadthFirst.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/SnakeDataStructures/BreadthFirstTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SnakeLogic/GameManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SnakeLogic/GameManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/SnakeDataStructures/DepthFirstTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/SnakeDataStructures/DepthFirstTest.java" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -21,10 +21,13 @@
     <SUITE FILE_PATH="coverage/snakeFX$DepthFirstTest.ic" NAME="DepthFirstTest Coverage Results" MODIFIED="1552562828790" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>SnakeDataStructures.*</FILTER>
     </SUITE>
+    <SUITE FILE_PATH="coverage/snakeFX$BreadthFirstTest.ic" NAME="BreadthFirstTest Coverage Results" MODIFIED="1552597202063" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>SnakeDataStructures.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/snakeFX$MazeTest.ic" NAME="MazeTest Coverage Results" MODIFIED="1552302981848" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>SnakeMaze.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/snakeFX$All_in_snakeFX.ic" NAME="All in snakeFX Coverage Results" MODIFIED="1552563693285" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/snakeFX$All_in_snakeFX.ic" NAME="All in snakeFX Coverage Results" MODIFIED="1552597243377" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/snakeFX$PlayerTest.ic" NAME="PlayerTest Coverage Results" MODIFIED="1552391890481" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>SnakeEntities.*</FILTER>
     </SUITE>
@@ -106,28 +109,22 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SnakeLogic/GameManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+            <state relative-caret-position="170">
+              <caret line="19" selection-start-line="19" selection-end-line="19" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3535#3536#0" expanded="true" />
-                <element signature="e#3561#3562#0" expanded="true" />
-                <element signature="e#3771#3772#0" expanded="true" />
-                <element signature="e#3814#3815#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SnakeLogic/Movement/MoveClockWise.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret lean-forward="true" />
+            <state relative-caret-position="187">
+              <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#496#497#0" expanded="true" />
-                <element signature="e#521#522#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -136,8 +133,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SnakeLogic/Movement/IMovement.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+            <state relative-caret-position="51">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
             </state>
           </provider>
         </entry>
@@ -146,7 +143,7 @@
         <entry file="file://$PROJECT_DIR$/src/SnakeDataStructures/IDataStructure.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="204">
-              <caret line="12" column="23" lean-forward="true" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+              <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -154,13 +151,38 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SnakeDataStructures/DepthFirst.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="21" lean-forward="true" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
+            <state relative-caret-position="136">
+              <caret line="8" column="50" selection-start-line="8" selection-start-column="50" selection-end-line="8" selection-end-column="50" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#744#745#0" expanded="true" />
-                <element signature="e#779#780#0" expanded="true" />
-                <element signature="e#787#788#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/SnakeDataStructures/BreadthFirst.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret lean-forward="true" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#681#682#0" expanded="true" />
+                <element signature="e#804#805#0" expanded="true" />
+                <element signature="e#839#840#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/SnakeDataStructures/BreadthFirstTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="356">
+              <caret line="48" column="8" lean-forward="true" selection-start-line="48" selection-start-column="8" selection-end-line="48" selection-end-column="8" />
+              <folding>
+                <element signature="e#247#248#0" expanded="true" />
+                <element signature="e#286#287#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -169,9 +191,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/SnakeDataStructures/DepthFirstTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="13" column="21" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
+            <state>
+              <caret column="28" lean-forward="true" selection-start-column="28" selection-end-column="28" />
               <folding>
+                <element signature="e#240#241#0" expanded="true" />
                 <element signature="e#279#280#0" expanded="true" />
               </folding>
             </state>
@@ -181,7 +204,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/SnakeEntities/PlayerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
+            <state relative-caret-position="408">
               <caret line="28" selection-start-line="28" selection-end-line="30" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -193,8 +216,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SnakeEntities/Player.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="407">
-              <caret line="50" column="21" lean-forward="true" selection-start-line="50" selection-start-column="21" selection-end-line="50" selection-end-column="21" />
+            <state relative-caret-position="799">
+              <caret line="50" column="21" selection-start-line="50" selection-start-column="21" selection-end-line="50" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#275#276#0" expanded="true" />
@@ -210,9 +233,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="JUnit4 Test Class" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
@@ -232,7 +255,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/sample/sample.fxml" />
         <option value="$PROJECT_DIR$/src/sample/Items.java" />
         <option value="$PROJECT_DIR$/src/sample/Item.java" />
         <option value="$PROJECT_DIR$/src/sample/stylesheet.css" />
@@ -277,11 +299,13 @@
         <option value="$PROJECT_DIR$/src/SnakeGUI/Manager.java" />
         <option value="$PROJECT_DIR$/test/SnakeLogic/GameManagerTest.java" />
         <option value="$PROJECT_DIR$/src/SnakeDataStructures/IDataStructure.java" />
-        <option value="$PROJECT_DIR$/src/SnakeDataStructures/DepthFirst.java" />
-        <option value="$PROJECT_DIR$/test/SnakeDataStructures/DepthFirstTest.java" />
         <option value="$PROJECT_DIR$/src/SnakeLogic/Movement/IMovement.java" />
         <option value="$PROJECT_DIR$/src/SnakeLogic/Movement/MoveClockWise.java" />
         <option value="$PROJECT_DIR$/src/SnakeLogic/GameManager.java" />
+        <option value="$PROJECT_DIR$/test/SnakeDataStructures/DepthFirstTest.java" />
+        <option value="$PROJECT_DIR$/src/SnakeDataStructures/DepthFirst.java" />
+        <option value="$PROJECT_DIR$/src/SnakeDataStructures/BreadthFirst.java" />
+        <option value="$PROJECT_DIR$/test/SnakeDataStructures/BreadthFirstTest.java" />
       </list>
     </option>
   </component>
@@ -290,7 +314,7 @@
     <option name="x" value="400" />
     <option name="y" value="110" />
     <option name="width" value="1520" />
-    <option name="height" value="878" />
+    <option name="height" value="880" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -346,6 +370,13 @@
               <item name="snakeFX" type="b2602c69:ProjectViewProjectNode" />
               <item name="snakeFX" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="SnakeLogic" type="462c0819:PsiDirectoryNode" />
+              <item name="Movement" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="snakeFX" type="b2602c69:ProjectViewProjectNode" />
+              <item name="snakeFX" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="SnakeMaze" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -364,6 +395,12 @@
               <item name="snakeFX" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="SnakeComponents" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="snakeFX" type="b2602c69:ProjectViewProjectNode" />
+              <item name="snakeFX" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="SnakeDataStructures" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="snakeFX" type="b2602c69:ProjectViewProjectNode" />
@@ -410,7 +447,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552563750831" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552597242924" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="dynamic.classpath" value="false" />
@@ -593,7 +630,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DepthFirstTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BreadthFirstTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="snakeFX" />
       <extension name="coverage">
         <pattern>
@@ -602,7 +639,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="SnakeDataStructures" />
-      <option name="MAIN_CLASS_NAME" value="SnakeDataStructures.DepthFirstTest" />
+      <option name="MAIN_CLASS_NAME" value="SnakeDataStructures.BreadthFirstTest" />
       <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="TEST_SEARCH_SCOPE">
@@ -612,7 +649,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DepthFirstTest.addAndContainsFalse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BreadthFirstTest.addAndContainsFalse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="snakeFX" />
       <extension name="coverage">
         <pattern>
@@ -621,7 +658,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="SnakeDataStructures" />
-      <option name="MAIN_CLASS_NAME" value="SnakeDataStructures.DepthFirstTest" />
+      <option name="MAIN_CLASS_NAME" value="SnakeDataStructures.BreadthFirstTest" />
       <option name="METHOD_NAME" value="addAndContainsFalse" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -632,7 +669,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DepthFirstTest.checkNext" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BreadthFirstTest.addAndContainsTrue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="snakeFX" />
       <extension name="coverage">
         <pattern>
@@ -641,7 +678,27 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="SnakeDataStructures" />
-      <option name="MAIN_CLASS_NAME" value="SnakeDataStructures.DepthFirstTest" />
+      <option name="MAIN_CLASS_NAME" value="SnakeDataStructures.BreadthFirstTest" />
+      <option name="METHOD_NAME" value="addAndContainsTrue" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BreadthFirstTest.checkNext" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="snakeFX" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="SnakeDataStructures.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="SnakeDataStructures" />
+      <option name="MAIN_CLASS_NAME" value="SnakeDataStructures.BreadthFirstTest" />
       <option name="METHOD_NAME" value="checkNext" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -652,7 +709,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DepthFirstTest.checkNext2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BreadthFirstTest.getNext2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="snakeFX" />
       <extension name="coverage">
         <pattern>
@@ -661,27 +718,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="SnakeDataStructures" />
-      <option name="MAIN_CLASS_NAME" value="SnakeDataStructures.DepthFirstTest" />
-      <option name="METHOD_NAME" value="checkNext2" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DepthFirstTest.getNext2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="snakeFX" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="SnakeDataStructures.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="SnakeDataStructures" />
-      <option name="MAIN_CLASS_NAME" value="SnakeDataStructures.DepthFirstTest" />
+      <option name="MAIN_CLASS_NAME" value="SnakeDataStructures.BreadthFirstTest" />
       <option name="METHOD_NAME" value="getNext2" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -769,19 +806,19 @@
     <list>
       <item itemvalue="Application.Main" />
       <item itemvalue="JUnit.All in snakeFX" />
-      <item itemvalue="JUnit.DepthFirstTest.addAndContainsFalse" />
-      <item itemvalue="JUnit.DepthFirstTest.checkNext" />
-      <item itemvalue="JUnit.DepthFirstTest.checkNext2" />
-      <item itemvalue="JUnit.DepthFirstTest.getNext2" />
-      <item itemvalue="JUnit.DepthFirstTest" />
+      <item itemvalue="JUnit.BreadthFirstTest" />
+      <item itemvalue="JUnit.BreadthFirstTest.getNext2" />
+      <item itemvalue="JUnit.BreadthFirstTest.addAndContainsTrue" />
+      <item itemvalue="JUnit.BreadthFirstTest.addAndContainsFalse" />
+      <item itemvalue="JUnit.BreadthFirstTest.checkNext" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.DepthFirstTest" />
-        <item itemvalue="JUnit.DepthFirstTest.getNext2" />
-        <item itemvalue="JUnit.DepthFirstTest.checkNext2" />
-        <item itemvalue="JUnit.DepthFirstTest.checkNext" />
-        <item itemvalue="JUnit.DepthFirstTest.addAndContainsFalse" />
+        <item itemvalue="JUnit.BreadthFirstTest" />
+        <item itemvalue="JUnit.BreadthFirstTest.checkNext" />
+        <item itemvalue="JUnit.BreadthFirstTest.addAndContainsFalse" />
+        <item itemvalue="JUnit.BreadthFirstTest.addAndContainsTrue" />
+        <item itemvalue="JUnit.BreadthFirstTest.getNext2" />
       </list>
     </recent_temporary>
   </component>
@@ -819,7 +856,9 @@
       <workItem from="1552308004712" duration="17670000" />
       <workItem from="1552380774469" duration="8924000" />
       <workItem from="1552479846159" duration="1772000" />
-      <workItem from="1552547265868" duration="12237000" />
+      <workItem from="1552547265868" duration="12330000" />
+      <workItem from="1552572922283" duration="412000" />
+      <workItem from="1552595765444" duration="1394000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <created>1550140629795</created>
@@ -1157,43 +1196,50 @@
       <option name="project" value="LOCAL" />
       <updated>1552562981937</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="attempt to move Movement into its own class">
+      <created>1552563840968</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1552563840968</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="DepthFirstTest_contains - 2019.03.14 at 12h 20m 45s.xml">
-      <configuration name="DepthFirstTest.contains" configurationId="JUnit" />
+    <history-entry file="BreadthFirstTest - 2019.03.14 at 21h 43m 23s.xml">
+      <configuration name="BreadthFirstTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DepthFirstTest_addAndContainsFalse - 2019.03.14 at 12h 21m 38s.xml">
-      <configuration name="DepthFirstTest.addAndContainsFalse" configurationId="JUnit" />
+    <history-entry file="BreadthFirstTest - 2019.03.14 at 21h 51m 30s.xml">
+      <configuration name="BreadthFirstTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DepthFirstTest_addAndContainsFalse - 2019.03.14 at 12h 21m 49s.xml">
-      <configuration name="DepthFirstTest.addAndContainsFalse" configurationId="JUnit" />
+    <history-entry file="BreadthFirstTest_getNext2 - 2019.03.14 at 21h 51m 56s.xml">
+      <configuration name="BreadthFirstTest.getNext2" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DepthFirstTest_checkNext - 2019.03.14 at 12h 23m 34s.xml">
-      <configuration name="DepthFirstTest.checkNext" configurationId="JUnit" />
+    <history-entry file="BreadthFirstTest_addAndContainsTrue - 2019.03.14 at 21h 53m 40s.xml">
+      <configuration name="BreadthFirstTest.addAndContainsTrue" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DepthFirstTest_checkNext2 - 2019.03.14 at 12h 24m 22s.xml">
-      <configuration name="DepthFirstTest.checkNext2" configurationId="JUnit" />
+    <history-entry file="BreadthFirstTest_addAndContainsFalse - 2019.03.14 at 21h 53m 48s.xml">
+      <configuration name="BreadthFirstTest.addAndContainsFalse" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DepthFirstTest_getNext2 - 2019.03.14 at 12h 26m 49s.xml">
-      <configuration name="DepthFirstTest.getNext2" configurationId="JUnit" />
+    <history-entry file="BreadthFirstTest_checkNext - 2019.03.14 at 21h 53m 58s.xml">
+      <configuration name="BreadthFirstTest.checkNext" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DepthFirstTest_getNext2 - 2019.03.14 at 12h 26m 57s.xml">
-      <configuration name="DepthFirstTest.getNext2" configurationId="JUnit" />
+    <history-entry file="BreadthFirstTest_checkNext - 2019.03.14 at 21h 54m 24s.xml">
+      <configuration name="BreadthFirstTest.checkNext" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DepthFirstTest - 2019.03.14 at 12h 27m 31s.xml">
-      <configuration name="DepthFirstTest" configurationId="JUnit" />
+    <history-entry file="BreadthFirstTest - 2019.03.14 at 21h 56m 44s.xml">
+      <configuration name="BreadthFirstTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_snakeFX - 2019.03.14 at 12h 38m 15s.xml">
-      <configuration name="All in snakeFX" configurationId="JUnit" />
+    <history-entry file="BreadthFirstTest - 2019.03.14 at 21h 58m 03s.xml">
+      <configuration name="BreadthFirstTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_snakeFX - 2019.03.14 at 12h 42m 03s.xml">
-      <configuration name="All in snakeFX" configurationId="JUnit" />
+    <history-entry file="BreadthFirstTest - 2019.03.14 at 21h 59m 02s.xml">
+      <configuration name="BreadthFirstTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="141972000" />
+    <option name="totallyTimeSpent" value="143871000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="840" extended-state="6" />
@@ -1204,7 +1250,7 @@
       <window_info id="Favorites" order="2" weight="0.3295302" />
       <window_info id="Capture Tool" order="3" />
       <window_info id="Nl-Palette" order="4" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" sideWeight="0.6703755" visible="true" weight="0.20939597" />
+      <window_info content_ui="combo" id="Project" order="5" sideWeight="0.6703755" visible="true" weight="0.2147651" />
       <window_info id="Palette&#9;" order="6" />
       <window_info id="Structure" order="7" weight="0.24966443" />
       <window_info anchor="bottom" id="Application Servers" order="0" />
@@ -1216,7 +1262,7 @@
       <window_info anchor="bottom" id="Messages" order="6" weight="0.32485875" />
       <window_info anchor="bottom" id="Message" order="7" />
       <window_info anchor="bottom" id="Find" order="8" weight="0.32827735" />
-      <window_info anchor="bottom" id="Run" order="9" visible="true" weight="0.30932203" />
+      <window_info active="true" anchor="bottom" id="Run" order="9" visible="true" weight="0.30932203" />
       <window_info anchor="bottom" id="Debug" order="10" weight="0.39869988" />
       <window_info anchor="bottom" id="Cvs" order="11" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="12" weight="0.4" />
@@ -1292,7 +1338,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added input to main" />
     <MESSAGE value="change to wasd from nswe" />
     <MESSAGE value="update to logic" />
     <MESSAGE value="update to player control" />
@@ -1317,7 +1362,8 @@
     <MESSAGE value="clean up of GameManager" />
     <MESSAGE value="a few update" />
     <MESSAGE value="added DepthFirst dataStructure" />
-    <option name="LAST_COMMIT_MESSAGE" value="added DepthFirst dataStructure" />
+    <MESSAGE value="attempt to move Movement into its own class" />
+    <option name="LAST_COMMIT_MESSAGE" value="attempt to move Movement into its own class" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -1574,10 +1620,54 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/SnakeLogic/GameManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SnakeLogic/Movement/MoveClockWise.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SnakeLogic/Movement/IMovement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SnakeDataStructures/IDataStructure.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/SnakeEntities/PlayerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="28" selection-start-line="28" selection-end-line="30" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/SnakeEntities/Player.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="50" column="21" lean-forward="true" selection-start-line="50" selection-start-column="21" selection-end-line="50" selection-end-column="21" />
+        <state relative-caret-position="799">
+          <caret line="50" column="21" selection-start-line="50" selection-start-column="21" selection-end-line="50" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#275#276#0" expanded="true" />
@@ -1586,28 +1676,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SnakeDataStructures/IDataStructure.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="23" lean-forward="true" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/SnakeEntities/PlayerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="28" selection-start-line="28" selection-end-line="30" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/SnakeDataStructures/DepthFirstTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="13" column="21" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
+        <state>
+          <caret column="28" lean-forward="true" selection-start-column="28" selection-end-column="28" />
           <folding>
+            <element signature="e#240#241#0" expanded="true" />
             <element signature="e#279#280#0" expanded="true" />
           </folding>
         </state>
@@ -1615,46 +1689,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SnakeDataStructures/DepthFirst.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="21" lean-forward="true" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
+        <state relative-caret-position="136">
+          <caret line="8" column="50" selection-start-line="8" selection-start-column="50" selection-end-line="8" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#744#745#0" expanded="true" />
-            <element signature="e#779#780#0" expanded="true" />
-            <element signature="e#787#788#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SnakeLogic/Movement/IMovement.java">
+    <entry file="file://$PROJECT_DIR$/test/SnakeDataStructures/BreadthFirstTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SnakeLogic/GameManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        <state relative-caret-position="356">
+          <caret line="48" column="8" lean-forward="true" selection-start-line="48" selection-start-column="8" selection-end-line="48" selection-end-column="8" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3535#3536#0" expanded="true" />
-            <element signature="e#3561#3562#0" expanded="true" />
-            <element signature="e#3771#3772#0" expanded="true" />
-            <element signature="e#3814#3815#0" expanded="true" />
+            <element signature="e#247#248#0" expanded="true" />
+            <element signature="e#286#287#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SnakeLogic/Movement/MoveClockWise.java">
+    <entry file="file://$PROJECT_DIR$/src/SnakeDataStructures/BreadthFirst.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret lean-forward="true" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#496#497#0" expanded="true" />
-            <element signature="e#521#522#0" expanded="true" />
+            <element signature="e#681#682#0" expanded="true" />
+            <element signature="e#804#805#0" expanded="true" />
+            <element signature="e#839#840#0" expanded="true" />
           </folding>
         </state>
       </provider>

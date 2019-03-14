@@ -6,20 +6,21 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class DepthFirstTest {
+public class BreadthFirstTest {
 
-    IDataStructure filo;
+
+    IDataStructure fifo;
 
     @Before
     public void setUp() {
-        filo = new DepthFirst();
+        fifo = new BreadthFirst();
     }
 
     @Test
     public void addAndContainsTrue() {
         Position pos = new Position(2, 3);
-        filo.add(pos);
-        boolean actual = filo.contains(pos);
+        fifo.add(pos);
+        boolean actual = fifo.contains(pos);
         boolean expected = true;
         assertEquals(expected, actual);
     }
@@ -27,8 +28,8 @@ public class DepthFirstTest {
     @Test
     public void addAndContainsFalse() {
         Position pos = new Position(2, 3);
-        filo.add(pos);
-        boolean actual = filo.contains(new Position(3, 3));
+        fifo.add(pos);
+        boolean actual = fifo.contains(new Position(3, 3));
         boolean expected = false;
         assertEquals(expected, actual);
     }
@@ -39,12 +40,12 @@ public class DepthFirstTest {
         Position pos1 = new Position(1, 1);
         Position pos2 = new Position(2, 2);
         Position pos3 = new Position(3, 3);
-        filo.add(pos1);
-        filo.add(pos2);
-        filo.add(pos3);
+        fifo.add(pos1);
+        fifo.add(pos2);
+        fifo.add(pos3);
 
-        Position actual = filo.checkNext();
-        Position expected = pos3;
+        Position actual = fifo.checkNext();
+        Position expected = pos1;
         assertEquals(expected, actual);
     }
 
@@ -53,13 +54,13 @@ public class DepthFirstTest {
         Position pos1 = new Position(1, 1);
         Position pos2 = new Position(2, 2);
         Position pos3 = new Position(3, 3);
-        filo.add(pos1);
-        filo.add(pos2);
-        filo.add(pos3);
-        filo.checkNext();
-        filo.checkNext();
-        Position actual = filo.checkNext();
-        Position expected = pos3;
+        fifo.add(pos1);
+        fifo.add(pos2);
+        fifo.add(pos3);
+        fifo.checkNext();
+        fifo.checkNext();
+        Position actual = fifo.checkNext();
+        Position expected = pos1;
         assertEquals(expected, actual);
     }
 
@@ -68,12 +69,12 @@ public class DepthFirstTest {
         Position pos1 = new Position(1, 1);
         Position pos2 = new Position(2, 2);
         Position pos3 = new Position(3, 3);
-        filo.add(pos1);
-        filo.add(pos2);
-        filo.add(pos3);
+        fifo.add(pos1);
+        fifo.add(pos2);
+        fifo.add(pos3);
 
-        Position actual = filo.getNext();
-        Position expected = pos3;
+        Position actual = fifo.getNext();
+        Position expected = pos1;
         assertEquals(expected, actual);
     }
 
@@ -82,15 +83,14 @@ public class DepthFirstTest {
         Position pos1 = new Position(1, 1);
         Position pos2 = new Position(2, 2);
         Position pos3 = new Position(3, 3);
-        filo.add(pos1);
-        filo.add(pos2);
-        filo.add(pos3);
-        filo.getNext();
-        filo.getNext();
+        fifo.add(pos1);
+        fifo.add(pos2);
+        fifo.add(pos3);
+        fifo.getNext();
+        fifo.getNext();
 
-        Position actual = filo.getNext();
-        Position expected = pos1;
+        Position actual = fifo.getNext();
+        Position expected = pos3;
         assertEquals(expected, actual);
     }
-
 }
