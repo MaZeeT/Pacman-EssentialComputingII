@@ -15,7 +15,7 @@ public class GameManager {
     private List<GameObject> walls;
     private List<GameObject> items = new ArrayList<>();
     private List<GameObject> snake = new ArrayList<>();
-    private Player player = new Player(new Position(4, 2));
+    private Player player = new Player(new Position(5, 3));
 
     private int maxItems = 2;
     private char direction;

@@ -6,10 +6,10 @@ import SnakeEntities.Player;
 
 import java.util.List;
 
-public class MoveClockWise {
-    char dir;
-    Player player;
-    List<GameObject> walls;
+public class MoveClockWise implements IMovement {
+    private char dir;
+    private Player player;
+    private List<GameObject> walls;
 
     public MoveClockWise(Player player, List<GameObject> walls) {
         this.player = player;
@@ -21,14 +21,14 @@ public class MoveClockWise {
         movement(player);
     }
 
-    public char getDirection(){
+    public char getDirection() {
         return dir;
     }
 
     private void movement(Player player) {
         switch (dir) {
             case 'w':
-                if (!isPositionInList(walls, player.checkUp())) player.moveUp();
+                if (collide(walls, player.checkUp())) player.moveUp();
                 else {
                     System.out.println("Path Blocked");
                     dir = 'd';
@@ -37,7 +37,7 @@ public class MoveClockWise {
                 break;
 
             case 's':
-                if (!isPositionInList(walls, player.checkDown())) player.moveDown();
+                if (collide(walls, player.checkDown())) player.moveDown();
                 else {
                     System.out.println("Path Blocked");
                     dir = 'a';
@@ -46,7 +46,7 @@ public class MoveClockWise {
                 break;
 
             case 'a':
-                if (!isPositionInList(walls, player.checkLeft())) player.moveLeft();
+                if (collide(walls, player.checkLeft())) player.moveLeft();
                 else {
                     System.out.println("Path Blocked");
                     dir = 'w';
@@ -55,7 +55,7 @@ public class MoveClockWise {
                 break;
 
             case 'd':
-                if (!isPositionInList(walls, player.checkRight())) player.moveRight();
+                if (collide(walls, player.checkRight())) player.moveRight();
                 else {
                     System.out.println("Path Blocked");
                     dir = 's';
@@ -66,13 +66,12 @@ public class MoveClockWise {
     }
 
 
-    private boolean isPositionInList(List<GameObject> gameObjects, Position position) {
+    private boolean collide(List<GameObject> gameObjects, Position position) {
         for (GameObject gameObject : gameObjects) {
             if (gameObject.getPosition().compareTo(position) == 0) {
-                return true;
+                return false;
             }
         }
-        return false;
+        return true;
     }
-
 }
