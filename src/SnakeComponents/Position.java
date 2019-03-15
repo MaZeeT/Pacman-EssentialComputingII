@@ -1,31 +1,80 @@
 package SnakeComponents;
 
+/**
+ * This class is to specify a position in two dimensions (2D).
+ * The first dimension is x, and second dimension is y.
+ *
+ * @author MaZeeT
+ */
 public class Position implements Comparable<Position> {
 
+    /**
+     * The position in the first dimension
+     */
     private int x;
+
+    /**
+     * The position in the second dimension
+     */
     private int y;
 
+    /**
+     * Stores the two given dimensions.
+     *
+     * @param x The x position.
+     * @param y The y position.
+     */
     public Position(int x, int y) {
         this.x = x;
         this.y = y;
     }
 
+    /**
+     * return the x position.
+     *
+     * @return Return the x position.
+     */
     public int getX() {
         return x;
     }
 
+    /**
+     * return the y position.
+     *
+     * @return Return the y position.
+     */
     public int getY() {
         return y;
     }
+
+    /**
+     * modify the x position.
+     *
+     * @param x Modify the stored x position to the given x position
+     */
 
     public void setX(int x) {
         this.x = x;
     }
 
+    /**
+     * modify the y position.
+     *
+     * @param y Modify the stored y position to the given y position
+     */
     public void setY(int y) {
         this.y = y;
     }
 
+    /**
+     * Compare the position obj with each other.
+     * If one have a lower position in the x or y dimensions -1 will be returned.
+     * If one have a higher position in the x or y dimensions +1 will be returned.
+     * If both positions have equal x and y dimensions 0 will be returned.
+     *
+     * @param otherPos The other compared position.
+     * @return Return -1, 0, +1 depending on if the other position is greater, equal, or lower than the original position.
+     */
     @Override
     public int compareTo(Position otherPos) {
         int rtn = 0;
