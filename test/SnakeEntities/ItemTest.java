@@ -7,17 +7,13 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class ItemTest {
-
     private Item defItem;
     private Position defPos;
-    private int defX;
-    private int defY;
-
 
     @Before
     public void setUp() {
-        defX = 2;
-        defY = 3;
+        int defX = 2;
+        int defY = 3;
         defPos = new Position(defX, defY);
         defItem = new Item(defPos);
     }

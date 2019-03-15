@@ -23,10 +23,8 @@ public class WallTest {
 
     @Test
     public void constructorPosition() {
-        Position pos = new Position(defX, defY);
-        Wall wall = new Wall(pos);
-
-        Position expected = pos;
+        Position expected = new Position(defX, defY);
+        Wall wall = new Wall(expected);
         Position actual = wall.getPosition();
         assertEquals(expected, actual);
     }
@@ -53,7 +51,7 @@ public class WallTest {
 
     @Test
     public void compareToLower() {
-        Wall wall = new Wall(new Position(defX-1,defY-1));
+        Wall wall = new Wall(new Position(defX - 1, defY - 1));
         int expected = -1;
         int actual = defWall.compareTo(wall);
         assertEquals(expected, actual);
@@ -61,7 +59,7 @@ public class WallTest {
 
     @Test
     public void compareToHigher() {
-        Wall wall = new Wall(new Position(defX+1,defY+1));
+        Wall wall = new Wall(new Position(defX + 1, defY + 1));
         int expected = 1;
         int actual = defWall.compareTo(wall);
         assertEquals(expected, actual);

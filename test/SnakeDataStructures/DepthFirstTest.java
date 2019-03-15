@@ -8,7 +8,7 @@ import static org.junit.Assert.*;
 
 public class DepthFirstTest {
 
-    IDataStructure filo;
+    private IDataStructure filo;
 
     @Before
     public void setUp() {

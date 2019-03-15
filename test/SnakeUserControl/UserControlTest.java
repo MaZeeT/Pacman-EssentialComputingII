@@ -10,7 +10,7 @@ public class UserControlTest {
     private UserControl uc;
 
     @Before
-    public void setUp(){
+    public void setUp() {
         uc = new PlayerControl();
     }
 

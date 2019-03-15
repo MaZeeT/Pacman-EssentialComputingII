@@ -15,7 +15,7 @@ public class PlayerTest {
 
 
     @Before
-    public void setUp(){
+    public void setUp() {
         defX = 2;
         defY = 3;
         defPos = new Position(defX, defY);
@@ -24,7 +24,7 @@ public class PlayerTest {
 
     @Test
     public void moveUp() {
-        Position pos = new Position(defX,defY-1);
+        Position pos = new Position(defX, defY - 1);
 
         int expected = 0;
         int actual = defPlayer.moveUp().compareTo(pos);
@@ -33,7 +33,7 @@ public class PlayerTest {
 
     @Test
     public void moveDown() {
-        Position pos = new Position(defX,defY+1);
+        Position pos = new Position(defX, defY + 1);
 
         int expected = 0;
         int actual = defPlayer.moveDown().compareTo(pos);
@@ -42,7 +42,7 @@ public class PlayerTest {
 
     @Test
     public void moveLeft() {
-        Position pos = new Position(defX-1,defY);
+        Position pos = new Position(defX - 1, defY);
 
         int expected = 0;
         int actual = defPlayer.moveLeft().compareTo(pos);
@@ -51,7 +51,7 @@ public class PlayerTest {
 
     @Test
     public void moveRight() {
-        Position pos = new Position(defX+1,defY);
+        Position pos = new Position(defX + 1, defY);
 
         int expected = 0;
         int actual = defPlayer.moveRight().compareTo(pos);
@@ -60,7 +60,7 @@ public class PlayerTest {
 
     @Test
     public void move() {
-        Position pos = new Position(defX+1,defY);
+        Position pos = new Position(defX + 1, defY);
 
         int expected = 0;
         int actual = defPlayer.moveRight().compareTo(pos);
@@ -69,7 +69,7 @@ public class PlayerTest {
 
     @Test
     public void checkUp() {
-        Position pos = new Position(defX,defY-1);
+        Position pos = new Position(defX, defY - 1);
 
         int expected = 0;
         int actual = defPlayer.checkUp().compareTo(pos);
@@ -85,7 +85,7 @@ public class PlayerTest {
 
     @Test
     public void checkDown() {
-        Position pos = new Position(defX,defY+1);
+        Position pos = new Position(defX, defY + 1);
 
         int expected = 0;
         int actual = defPlayer.checkDown().compareTo(pos);
@@ -101,7 +101,7 @@ public class PlayerTest {
 
     @Test
     public void checkLeft() {
-        Position pos = new Position(defX-1,defY);
+        Position pos = new Position(defX - 1, defY);
 
         int expected = 0;
         int actual = defPlayer.checkLeft().compareTo(pos);
@@ -117,7 +117,7 @@ public class PlayerTest {
 
     @Test
     public void checkRight() {
-        Position pos = new Position(defX+1,defY);
+        Position pos = new Position(defX + 1, defY);
 
         int expected = 0;
         int actual = defPlayer.checkRight().compareTo(pos);
@@ -157,11 +157,9 @@ public class PlayerTest {
 
     @Test
     public void manipulationOfStoredPositionRight() {
-       Position pos= defPlayer.moveRight();
-        pos.compareTo(defPos);
 
         int expected = 0;
-        int actual = pos.compareTo(defPos);
+        int actual = defPlayer.moveRight().compareTo(defPos);
         assertEquals(expected, actual);
     }
 }

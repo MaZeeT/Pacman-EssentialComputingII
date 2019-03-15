@@ -18,7 +18,7 @@ public class GameObjectTest {
     private Position wallPos;
 
     @Before
-    public void setUp(){
+    public void setUp() {
         itemPos = new Position(2, 5);
         playerPos = new Position(1, 3);
         wallPos = new Position(3, 4);

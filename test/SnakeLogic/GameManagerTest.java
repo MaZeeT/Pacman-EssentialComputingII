@@ -4,7 +4,6 @@ import SnakeEntities.GameObject;
 import org.junit.Before;
 import org.junit.Test;
 
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,7 +24,7 @@ public class GameManagerTest {
         List<GameObject> old = new ArrayList<>();
         old.addAll(gameManager.getGameObjects());
 
-        for (int i = 0; i<100; i++){
+        for (int i = 0; i < 100; i++) {
             gameManager.update();
         }
         List<GameObject> expected = old;
@@ -39,13 +38,11 @@ public class GameManagerTest {
         gameManager.setDirection(expected);
         char actual = gameManager.getDirection();
         assertEquals(expected, actual);
-        }
-
+    }
 
 
     @Test
     public void getGameObjects() {
-
         List<GameObject> actual = gameManager.getGameObjects();
         assertNotNull(actual);
     }

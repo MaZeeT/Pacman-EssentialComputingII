@@ -8,8 +8,7 @@ import static org.junit.Assert.*;
 
 public class BreadthFirstTest {
 
-
-    IDataStructure fifo;
+    private IDataStructure fifo;
 
     @Before
     public void setUp() {
