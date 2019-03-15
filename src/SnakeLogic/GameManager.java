@@ -39,7 +39,7 @@ public class GameManager {
     }
 
     // update loop to make the game run
-    void update() {
+    public void update() {
         movement.move(direction);
         direction = movement.getDirection();
         addNewItem(items, maxItems);
@@ -95,7 +95,7 @@ public class GameManager {
         return gameObjects;
     }
 
-    List<GameObject> getGameObjects() {
+    public List<GameObject> getGameObjects() {
         return combineGameObjects();
     }
 

@@ -1,7 +1,6 @@
 import SnakeGUI.IManager;
 import SnakeGUI.Manager;
 import SnakeLogic.GameManager;
-import SnakeLogic.UpdateProcess;
 import SnakeUserControl.PlayerControl;
 import SnakeUserControl.UserControl;
 import javafx.event.EventHandler;
@@ -14,7 +13,7 @@ public class Launcher {
     private UserControl userControl;
     private IManager gui;
 
-    public Launcher(int width, int height, int runSpeed) {
+    Launcher(int width, int height, int runSpeed) {
         // Interfaced modules
         gui = new Manager(width, height);
         userControl = new PlayerControl();
