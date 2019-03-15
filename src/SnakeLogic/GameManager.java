@@ -10,7 +10,7 @@ import SnakeMaze.Maze;
 
 import java.util.*;
 
-class GameManager {
+public class GameManager {
 
     private List<GameObject> walls;
     private List<GameObject> items = new ArrayList<>();
@@ -22,7 +22,7 @@ class GameManager {
     private int height;
     private MoveClockWise movement;
 
-    GameManager(int width, int height) {
+    public GameManager(int width, int height) {
         this.width = width;
         this.height = height;
 
@@ -77,7 +77,7 @@ class GameManager {
         return new Position(x, y);
     }
 
-    void setDirection(char direction) {
+    public void setDirection(char direction) {
         this.direction = direction;
         System.out.println(direction);
     }

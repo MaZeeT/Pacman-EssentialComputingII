@@ -2,12 +2,12 @@ package SnakeLogic;
 
 import SnakeGUI.IManager;
 
-class UpdateProcess extends Thread {
+public class UpdateProcess extends Thread {
     private GameManager gameManager;
     private IManager gui;
     private int speed;
 
-    UpdateProcess(GameManager gameManager, IManager gui, int speed) {
+    public UpdateProcess(GameManager gameManager, IManager gui, int speed) {
         this.gameManager = gameManager;
         this.gui = gui;
         this.speed = speed;

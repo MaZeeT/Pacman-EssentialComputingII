@@ -1,4 +1,3 @@
-import SnakeLogic.Launcher;
 import javafx.application.Application;
 import javafx.stage.Stage;
 

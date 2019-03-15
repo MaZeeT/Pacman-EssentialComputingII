@@ -1,7 +1,7 @@
-package SnakeLogic;
-
 import SnakeGUI.IManager;
 import SnakeGUI.Manager;
+import SnakeLogic.GameManager;
+import SnakeLogic.UpdateProcess;
 import SnakeUserControl.PlayerControl;
 import SnakeUserControl.UserControl;
 import javafx.event.EventHandler;
