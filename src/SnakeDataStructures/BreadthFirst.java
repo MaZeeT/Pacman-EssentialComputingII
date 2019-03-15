@@ -2,7 +2,11 @@ package SnakeDataStructures;
 
 import SnakeComponents.Position;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
+
 
 public class BreadthFirst implements IDataStructure {
     private Queue<Position> queue = new LinkedList<>();
@@ -19,7 +23,6 @@ public class BreadthFirst implements IDataStructure {
         if (!contains(position)) {
             visitedList.add(position);
             queue.offer(position);
-
         }
     }
 
@@ -30,6 +33,5 @@ public class BreadthFirst implements IDataStructure {
     public Position getNext() {
         return queue.poll();
     }
-
 
 }

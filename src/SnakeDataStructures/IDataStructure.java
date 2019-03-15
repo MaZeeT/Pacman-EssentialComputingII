@@ -12,5 +12,4 @@ public interface IDataStructure {
 
     Position getNext();
 
-
 }
