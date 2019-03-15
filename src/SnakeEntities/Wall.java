@@ -3,7 +3,7 @@ package SnakeEntities;
 import SnakeComponents.Position;
 import javafx.scene.paint.Color;
 
-public class Wall extends GameObject implements Comparable<Wall>{
+public class Wall extends GameObject implements Comparable<Wall> {
 
     public Wall(int x, int y) {
         this.position = new Position(x, y);

@@ -65,7 +65,6 @@ public class MoveClockWise implements IMovement {
         }
     }
 
-
     private boolean collide(List<GameObject> gameObjects, Position position) {
         for (GameObject gameObject : gameObjects) {
             if (gameObject.getPosition().compareTo(position) == 0) {

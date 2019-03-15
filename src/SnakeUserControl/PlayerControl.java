@@ -2,7 +2,7 @@ package SnakeUserControl;
 
 import javafx.scene.input.KeyCode;
 
-public class PlayerControl implements UserControl{
+public class PlayerControl implements UserControl {
 
     private char direction(KeyCode key) {
         char direction = ' ';

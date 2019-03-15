@@ -10,12 +10,11 @@ import SnakeMaze.Maze;
 
 import java.util.*;
 
-public class GameManager {
+class GameManager {
 
     private List<GameObject> walls;
     private List<GameObject> items = new ArrayList<>();
     private List<GameObject> snake = new ArrayList<>();
-    private Player player = new Player(new Position(5, 3));
 
     private int maxItems = 2;
     private char direction;
@@ -23,22 +22,26 @@ public class GameManager {
     private int height;
     private MoveClockWise movement;
 
-    public GameManager(int width, int height) {
+    GameManager(int width, int height) {
         this.width = width;
         this.height = height;
-        addNewItem(items, maxItems);
+
+        Player player = new Player(new Position(5, 3));
         snake.add(player);
+
+        addNewItem(items, maxItems);
+
         IMaze maze = new Maze(10, 10);
         maze.generateMaze();
         walls = maze.getMaze();
-        movement = new MoveClockWise(player,walls);
+
+        movement = new MoveClockWise(player, walls);
     }
 
-
-    public void update() {
+    // update loop to make the game run
+    void update() {
         movement.move(direction);
         direction = movement.getDirection();
-        //System.out.println(player.getPosition().getX() + " " + player.getPosition().getY());
         addNewItem(items, maxItems);
     }
 
@@ -55,7 +58,7 @@ public class GameManager {
         }
     }
 
-
+/*
     // unused functions
     private void removeItem(int index) {
         items.remove(index);
@@ -64,7 +67,7 @@ public class GameManager {
     private void collideWithItem(Item item) {
 
     }
-
+*/
 
     // get and set
     private Position getRandomPosition() {
@@ -74,12 +77,12 @@ public class GameManager {
         return new Position(x, y);
     }
 
-    public void setDirection(char direction) {
+    void setDirection(char direction) {
         this.direction = direction;
         System.out.println(direction);
     }
 
-    public char getDirection(){
+    char getDirection() {
         return this.direction;
     }
 
@@ -92,9 +95,8 @@ public class GameManager {
         return gameObjects;
     }
 
-    public List<GameObject> getGameObjects() {
+    List<GameObject> getGameObjects() {
         return combineGameObjects();
     }
-
 
 }

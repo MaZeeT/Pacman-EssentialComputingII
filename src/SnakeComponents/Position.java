@@ -5,16 +5,16 @@ public class Position implements Comparable<Position> {
     private int x;
     private int y;
 
-    public Position(int x, int y){
+    public Position(int x, int y) {
         this.x = x;
         this.y = y;
     }
 
-    public int getX(){
+    public int getX() {
         return x;
     }
 
-    public int getY(){
+    public int getY() {
         return y;
     }
 
@@ -29,13 +29,13 @@ public class Position implements Comparable<Position> {
     @Override
     public int compareTo(Position otherPos) {
         int rtn = 0;
-        if (x == otherPos.getX() && y == otherPos.getY()){
+        if (x == otherPos.getX() && y == otherPos.getY()) {
             return 0;
         }
         if (x < otherPos.getX()) rtn = +1;
         if (x > otherPos.getX()) rtn = -1;
 
-        if(rtn == 0) {
+        if (rtn == 0) {
             if (y < otherPos.getY()) rtn = +1;
             if (y > otherPos.getY()) rtn = -1;
         }
