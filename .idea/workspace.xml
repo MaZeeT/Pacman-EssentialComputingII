@@ -4,10 +4,17 @@
     <option name="ANALYZE_TEST_SOURCES" value="false" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="settings for javaDoc">
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="small updates">
+      <change afterPath="$PROJECT_DIR$/src/SnakeMaze/ArrayTo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SnakeMaze/MazeWithExit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/SnakeMaze/ArrayToTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SnakeDataStructures/BreadthFirst.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SnakeDataStructures/BreadthFirst.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SnakeDataStructures/IDataStructure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SnakeDataStructures/IDataStructure.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SnakeEntities/GameObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SnakeEntities/GameObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SnakeEntities/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SnakeEntities/WayPoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SnakeEntities/Wall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SnakeEntities/Wall.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SnakeLogic/GameManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SnakeLogic/GameManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/SnakeEntities/GameObjectTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/SnakeEntities/GameObjectTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/SnakeEntities/ItemTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/SnakeEntities/WayPointTest.java" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -108,26 +115,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/SnakeDataStructures/BreadthFirst.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="22" lean-forward="true" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
-              <folding>
-                <element signature="e#646#647#0" expanded="true" />
-                <element signature="e#681#682#0" expanded="true" />
-                <element signature="e#714#715#0" expanded="true" />
-                <element signature="e#749#750#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SnakeDataStructures/DepthFirst.java">
+        <entry file="file://$PROJECT_DIR$/src/SnakeEntities/WayPoint.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="155">
-              <caret line="10" column="59" selection-start-line="10" selection-start-column="59" selection-end-line="10" selection-end-column="59" />
+            <state relative-caret-position="204">
+              <caret line="12" selection-start-line="12" selection-end-line="12" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -136,10 +128,112 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SnakeDataStructures/IDataStructure.java">
+        <entry file="file://$PROJECT_DIR$/test/SnakeEntities/GameObjectTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" selection-start-line="13" selection-end-line="13" />
+            <state relative-caret-position="1955">
+              <caret line="120" lean-forward="true" selection-start-line="120" selection-end-line="120" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/SnakeEntities/WayPointTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="22" selection-start-line="22" selection-end-line="24" selection-end-column="39" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/SnakeMaze/ArrayTo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="183">
+              <caret line="11" column="22" lean-forward="true" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/SnakeMaze/MazeWithExit.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="493">
+              <caret line="31" column="8" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="17" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#476#477#0" expanded="true" />
+                <element signature="e#503#504#0" expanded="true" />
+                <element signature="e#695#696#0" expanded="true" />
+                <element signature="e#719#720#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/SnakeMaze/MazeTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="502">
+              <caret line="51" column="23" selection-start-line="51" selection-start-column="23" selection-end-line="51" selection-end-column="23" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/SnakeLogic/GameManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="33" column="38" selection-start-line="33" selection-start-column="38" selection-end-line="33" selection-end-column="38" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/SnakeMaze/Maze.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="557">
+              <caret line="35" column="10" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="10" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1270#1271#0" expanded="true" />
+                <element signature="e#1297#1298#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/SnakeMaze/IMaze.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/SnakeMaze/ArrayToTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="251">
+              <caret line="21" selection-start-line="21" selection-end-line="28" selection-end-column="10" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -151,10 +245,20 @@
       <list>
         <option value="CSS File" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="JUnit4 Test Class" />
+        <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>item</find>
+      <find>exit</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>exit</replace>
+      <replace>wayPoint</replace>
+    </replaceStrings>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -172,10 +276,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/SnakeGUI/Item.java" />
-        <option value="$PROJECT_DIR$/src/SnakeGUI/Main.java" />
-        <option value="$PROJECT_DIR$/src/SnakeModel/Player.java" />
-        <option value="$PROJECT_DIR$/src/SnakeLogic/GameObject.java" />
         <option value="$PROJECT_DIR$/src/SnakeLogic/Position.java" />
         <option value="$PROJECT_DIR$/src/SnakeLogic/Manager.java" />
         <option value="$PROJECT_DIR$/src/SnakeComponents/UserControl.java" />
@@ -188,29 +288,22 @@
         <option value="$PROJECT_DIR$/test/SnakeUserControl/PlayerControlTest.java" />
         <option value="$PROJECT_DIR$/src/SnakeLogic/Maze.java" />
         <option value="$PROJECT_DIR$/test/SnakeComponents/PositionTest.java" />
-        <option value="$PROJECT_DIR$/src/SnakeMaze/IMaze.java" />
-        <option value="$PROJECT_DIR$/src/SnakeMaze/Maze.java" />
-        <option value="$PROJECT_DIR$/test/SnakeMaze/MazeTest.java" />
         <option value="$PROJECT_DIR$/src/SnakeGUI/IManager.java" />
         <option value="$PROJECT_DIR$/src/SnakeGUI/Controller.java" />
         <option value="$PROJECT_DIR$/src/SnakeGUI/View.java" />
         <option value="$PROJECT_DIR$/src/SnakeEntities/Player.java" />
-        <option value="$PROJECT_DIR$/src/SnakeEntities/GameObject.java" />
         <option value="$PROJECT_DIR$/src/SnakeEntities/Item.java" />
         <option value="$PROJECT_DIR$/src/SnakeLogic/Movement/IMovement.java" />
         <option value="$PROJECT_DIR$/test/SnakeLogic/Movement/MoveClockWiseTest.java" />
         <option value="$PROJECT_DIR$/test/SnakeLogic/LauncherTest.java" />
         <option value="$PROJECT_DIR$/test/SnakeLogic/UpdateProcessTest.java" />
         <option value="$PROJECT_DIR$/src/SnakeGUI/Manager.java" />
-        <option value="$PROJECT_DIR$/src/SnakeComponents/Position.java" />
         <option value="$PROJECT_DIR$/src/SnakeDataStructures/DepthFirst.java" />
-        <option value="$PROJECT_DIR$/src/SnakeEntities/Wall.java" />
         <option value="$PROJECT_DIR$/src/SnakeLogic/Movement/MoveClockWise.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/SnakeUserControl/PlayerControl.java" />
         <option value="$PROJECT_DIR$/src/SnakeLogic/Launcher.java" />
         <option value="$PROJECT_DIR$/test/SnakeUserControl/UserControlTest.java" />
-        <option value="$PROJECT_DIR$/test/SnakeEntities/GameObjectTest.java" />
         <option value="$PROJECT_DIR$/test/SnakeEntities/ItemTest.java" />
         <option value="$PROJECT_DIR$/test/SnakeEntities/PlayerTest.java" />
         <option value="$PROJECT_DIR$/test/SnakeEntities/WallTest.java" />
@@ -218,11 +311,22 @@
         <option value="$PROJECT_DIR$/test/SnakeDataStructures/BreadthFirstTest.java" />
         <option value="$PROJECT_DIR$/test/SnakeLogic/GameManagerTest.java" />
         <option value="$PROJECT_DIR$/src/SnakeLogic/UpdateProcess.java" />
-        <option value="$PROJECT_DIR$/src/SnakeLogic/GameManager.java" />
         <option value="$PROJECT_DIR$/src/UpdateProcess.java" />
         <option value="$PROJECT_DIR$/src/Launcher.java" />
         <option value="$PROJECT_DIR$/src/SnakeDataStructures/IDataStructure.java" />
         <option value="$PROJECT_DIR$/src/SnakeDataStructures/BreadthFirst.java" />
+        <option value="$PROJECT_DIR$/src/SnakeComponents/Position.java" />
+        <option value="$PROJECT_DIR$/src/SnakeEntities/Exit.java" />
+        <option value="$PROJECT_DIR$/src/SnakeMaze/ArrayTo.java" />
+        <option value="$PROJECT_DIR$/src/SnakeEntities/GameObject.java" />
+        <option value="$PROJECT_DIR$/src/SnakeEntities/Wall.java" />
+        <option value="$PROJECT_DIR$/test/SnakeMaze/ArrayToTest.java" />
+        <option value="$PROJECT_DIR$/src/SnakeLogic/GameManager.java" />
+        <option value="$PROJECT_DIR$/src/SnakeMaze/Maze.java" />
+        <option value="$PROJECT_DIR$/src/SnakeMaze/IMaze.java" />
+        <option value="$PROJECT_DIR$/test/SnakeEntities/GameObjectTest.java" />
+        <option value="$PROJECT_DIR$/test/SnakeMaze/MazeTest.java" />
+        <option value="$PROJECT_DIR$/src/SnakeMaze/MazeWithExit.java" />
       </list>
     </option>
   </component>
@@ -270,7 +374,31 @@
             <path>
               <item name="snakeFX" type="b2602c69:ProjectViewProjectNode" />
               <item name="snakeFX" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="SnakeEntities" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="snakeFX" type="b2602c69:ProjectViewProjectNode" />
+              <item name="snakeFX" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="SnakeLogic" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="snakeFX" type="b2602c69:ProjectViewProjectNode" />
+              <item name="snakeFX" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="SnakeMaze" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="snakeFX" type="b2602c69:ProjectViewProjectNode" />
+              <item name="snakeFX" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="snakeFX" type="b2602c69:ProjectViewProjectNode" />
+              <item name="snakeFX" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="SnakeEntities" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -291,7 +419,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552611249683" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552780480055" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="dynamic.classpath" value="false" />
@@ -310,10 +438,10 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="SnakeMaze" />
       <recent name="SnakeLogic" />
       <recent name="SnakeLogic.Movement" />
       <recent name="SnakeDataStructures" />
-      <recent name="SnakeMaze" />
       <recent name="SnakeEntities" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -341,7 +469,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.All in snakeFX">
+  <component name="RunManager" selected="JUnit.MazeTest">
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="" />
       <option name="DEPLOY" value="true" />
@@ -474,36 +602,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LauncherTest.getScene" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ArrayToTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="snakeFX" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value=".*" />
+          <option name="PATTERN" value="SnakeMaze.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="SnakeLogic" />
-      <option name="MAIN_CLASS_NAME" value="SnakeLogic.LauncherTest" />
-      <option name="METHOD_NAME" value="getScene" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PlayerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="snakeFX" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="SnakeEntities.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="SnakeEntities" />
-      <option name="MAIN_CLASS_NAME" value="SnakeEntities.PlayerTest" />
+      <option name="PACKAGE_NAME" value="SnakeMaze" />
+      <option name="MAIN_CLASS_NAME" value="SnakeMaze.ArrayToTest" />
       <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="TEST_SEARCH_SCOPE">
@@ -513,17 +621,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PlayerTest.manipulationOfStoredPositionRight" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ArrayToTest.ArrayToListSize" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="snakeFX" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="SnakeEntities.*" />
+          <option name="PATTERN" value="SnakeMaze.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="SnakeEntities" />
-      <option name="MAIN_CLASS_NAME" value="SnakeEntities.PlayerTest" />
-      <option name="METHOD_NAME" value="manipulationOfStoredPositionRight" />
+      <option name="PACKAGE_NAME" value="SnakeMaze" />
+      <option name="MAIN_CLASS_NAME" value="SnakeMaze.ArrayToTest" />
+      <option name="METHOD_NAME" value="ArrayToListSize" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="TEST_SEARCH_SCOPE">
@@ -533,17 +641,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UpdateProcessTest.isRunningTrue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ArrayToTest.ArrayToListWayPoint" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="snakeFX" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value=".*" />
+          <option name="PATTERN" value="SnakeMaze.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="SnakeLogic" />
-      <option name="MAIN_CLASS_NAME" value="SnakeLogic.UpdateProcessTest" />
-      <option name="METHOD_NAME" value="isRunningTrue" />
+      <option name="PACKAGE_NAME" value="SnakeMaze" />
+      <option name="MAIN_CLASS_NAME" value="SnakeMaze.ArrayToTest" />
+      <option name="METHOD_NAME" value="ArrayToListWayPoint" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="TEST_SEARCH_SCOPE">
@@ -553,17 +661,36 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WallTest.constructorPosition" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MazeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="snakeFX" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="SnakeEntities.*" />
+          <option name="PATTERN" value="SnakeMaze.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="SnakeEntities" />
-      <option name="MAIN_CLASS_NAME" value="SnakeEntities.WallTest" />
-      <option name="METHOD_NAME" value="constructorPosition" />
+      <option name="PACKAGE_NAME" value="SnakeMaze" />
+      <option name="MAIN_CLASS_NAME" value="SnakeMaze.MazeTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MazeTest.makeMaze" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="snakeFX" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="SnakeMaze.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="SnakeMaze" />
+      <option name="MAIN_CLASS_NAME" value="SnakeMaze.MazeTest" />
+      <option name="METHOD_NAME" value="makeMaze" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="TEST_SEARCH_SCOPE">
@@ -650,19 +777,19 @@
     <list>
       <item itemvalue="Application.Main" />
       <item itemvalue="JUnit.All in snakeFX" />
-      <item itemvalue="JUnit.LauncherTest.getScene" />
-      <item itemvalue="JUnit.UpdateProcessTest.isRunningTrue" />
-      <item itemvalue="JUnit.PlayerTest.manipulationOfStoredPositionRight" />
-      <item itemvalue="JUnit.PlayerTest" />
-      <item itemvalue="JUnit.WallTest.constructorPosition" />
+      <item itemvalue="JUnit.ArrayToTest.ArrayToListSize" />
+      <item itemvalue="JUnit.ArrayToTest" />
+      <item itemvalue="JUnit.ArrayToTest.ArrayToListWayPoint" />
+      <item itemvalue="JUnit.MazeTest.makeMaze" />
+      <item itemvalue="JUnit.MazeTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.WallTest.constructorPosition" />
-        <item itemvalue="JUnit.PlayerTest" />
-        <item itemvalue="JUnit.PlayerTest.manipulationOfStoredPositionRight" />
-        <item itemvalue="JUnit.LauncherTest.getScene" />
-        <item itemvalue="JUnit.UpdateProcessTest.isRunningTrue" />
+        <item itemvalue="JUnit.MazeTest" />
+        <item itemvalue="JUnit.MazeTest.makeMaze" />
+        <item itemvalue="JUnit.ArrayToTest.ArrayToListWayPoint" />
+        <item itemvalue="JUnit.ArrayToTest.ArrayToListSize" />
+        <item itemvalue="JUnit.ArrayToTest" />
       </list>
     </recent_temporary>
   </component>
@@ -704,13 +831,8 @@
       <workItem from="1552572922283" duration="412000" />
       <workItem from="1552595765444" duration="1394000" />
       <workItem from="1552603630409" duration="7532000" />
-    </task>
-    <task id="LOCAL-00007" summary="Update to gameManager">
-      <created>1550657444999</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1550657444999</updated>
+      <workItem from="1552689770269" duration="2151000" />
+      <workItem from="1552771733618" duration="4452000" />
     </task>
     <task id="LOCAL-00008" summary="Update Player">
       <created>1550658248580</created>
@@ -1048,43 +1170,50 @@
       <option name="project" value="LOCAL" />
       <updated>1552656150259</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="small updates">
+      <created>1552658048432</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1552658048432</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="UpdateProcessTest_isRunningTrue - 2019.03.15 at 01h 21m 22s.xml">
-      <configuration name="UpdateProcessTest.isRunningTrue" configurationId="JUnit" />
+    <history-entry file="ArrayToTest - 2019.03.17 at 00h 29m 28s.xml">
+      <configuration name="ArrayToTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LauncherTest_getScene - 2019.03.15 at 01h 23m 43s.xml">
-      <configuration name="LauncherTest.getScene" configurationId="JUnit" />
+    <history-entry file="ArrayToTest_ArrayToListSize - 2019.03.17 at 00h 29m 50s.xml">
+      <configuration name="ArrayToTest.ArrayToListSize" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_snakeFX - 2019.03.15 at 01h 25m 14s.xml">
+    <history-entry file="All_in_snakeFX - 2019.03.17 at 00h 34m 49s.xml">
       <configuration name="All in snakeFX" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PlayerTest_manipulationOfStoredPositionRight - 2019.03.15 at 01h 39m 07s.xml">
-      <configuration name="PlayerTest.manipulationOfStoredPositionRight" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PlayerTest_manipulationOfStoredPositionRight - 2019.03.15 at 01h 39m 16s.xml">
-      <configuration name="PlayerTest.manipulationOfStoredPositionRight" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PlayerTest_manipulationOfStoredPositionRight - 2019.03.15 at 01h 39m 55s.xml">
-      <configuration name="PlayerTest.manipulationOfStoredPositionRight" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PlayerTest - 2019.03.15 at 01h 40m 11s.xml">
-      <configuration name="PlayerTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="WallTest_constructorPosition - 2019.03.15 at 01h 41m 17s.xml">
-      <configuration name="WallTest.constructorPosition" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_snakeFX - 2019.03.15 at 01h 44m 24s.xml">
+    <history-entry file="All_in_snakeFX - 2019.03.17 at 00h 36m 14s.xml">
       <configuration name="All in snakeFX" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_snakeFX - 2019.03.15 at 01h 48m 20s.xml">
-      <configuration name="All in snakeFX" configurationId="JUnit" />
+    <history-entry file="ArrayToTest_ArrayToListWayPoint - 2019.03.17 at 00h 38m 59s.xml">
+      <configuration name="ArrayToTest.ArrayToListWayPoint" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ArrayToTest_ArrayToListWayPoint - 2019.03.17 at 00h 39m 13s.xml">
+      <configuration name="ArrayToTest.ArrayToListWayPoint" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ArrayToTest_ArrayToListWayPoint - 2019.03.17 at 00h 40m 05s.xml">
+      <configuration name="ArrayToTest.ArrayToListWayPoint" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ArrayToTest_ArrayToListWayPoint - 2019.03.17 at 00h 40m 12s.xml">
+      <configuration name="ArrayToTest.ArrayToListWayPoint" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MazeTest - 2019.03.17 at 00h 51m 10s.xml">
+      <configuration name="MazeTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MazeTest - 2019.03.17 at 00h 51m 58s.xml">
+      <configuration name="MazeTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="152952000" />
+    <option name="totallyTimeSpent" value="160121000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1095,7 +1224,7 @@
       <window_info id="Favorites" order="2" weight="0.3295302" />
       <window_info id="Capture Tool" order="3" />
       <window_info id="Nl-Palette" order="4" />
-      <window_info content_ui="combo" id="Project" order="5" sideWeight="0.6703755" visible="true" weight="0.18176973" />
+      <window_info content_ui="combo" id="Project" order="5" sideWeight="0.6703755" visible="true" weight="0.18550107" />
       <window_info id="Palette&#9;" order="6" />
       <window_info id="Structure" order="7" weight="0.24966443" />
       <window_info anchor="bottom" id="Application Servers" order="0" />
@@ -1104,10 +1233,10 @@
       <window_info anchor="bottom" id="Event Log" order="3" />
       <window_info anchor="bottom" id="Problems" order="4" />
       <window_info anchor="bottom" id="Version Control" order="5" weight="0.32827735" />
-      <window_info anchor="bottom" id="Messages" order="6" weight="0.32467532" />
+      <window_info active="true" anchor="bottom" id="Messages" order="6" visible="true" weight="0.32467532" />
       <window_info anchor="bottom" id="Message" order="7" />
       <window_info anchor="bottom" id="Find" order="8" weight="0.32792208" />
-      <window_info active="true" anchor="bottom" id="Run" order="9" visible="true" weight="0.30844155" />
+      <window_info anchor="bottom" id="Run" order="9" weight="0.30844155" />
       <window_info anchor="bottom" id="Debug" order="10" weight="0.39869988" />
       <window_info anchor="bottom" id="Cvs" order="11" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="12" weight="0.4" />
@@ -1130,46 +1259,6 @@
       <window_info anchor="right" id="Maven" order="11" />
       <window_info anchor="right" id="Coverage" order="12" side_tool="true" weight="0.16257995" />
     </layout>
-    <layout-to-restore>
-      <window_info id="Image Layers" order="0" />
-      <window_info id="UI Designer" order="1" />
-      <window_info id="Favorites" order="2" />
-      <window_info id="Capture Tool" order="3" />
-      <window_info id="Nl-Palette" order="4" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" sideWeight="0.6703755" visible="true" weight="0.16510066" />
-      <window_info id="Palette&#9;" order="6" />
-      <window_info id="Structure" order="7" weight="0.25" />
-      <window_info anchor="bottom" id="Application Servers" order="0" />
-      <window_info anchor="bottom" id="Changes" order="1" />
-      <window_info anchor="bottom" id="Profiler" order="2" />
-      <window_info anchor="bottom" id="Event Log" order="3" />
-      <window_info anchor="bottom" id="Problems" order="4" />
-      <window_info anchor="bottom" id="Version Control" order="5" weight="0.32909605" />
-      <window_info anchor="bottom" id="Messages" order="6" weight="0.3261105" />
-      <window_info anchor="bottom" id="Message" order="7" />
-      <window_info anchor="bottom" id="Find" order="8" weight="0.32827735" />
-      <window_info anchor="bottom" id="Run" order="9" weight="0.15254237" />
-      <window_info anchor="bottom" id="Debug" order="10" weight="0.39905363" />
-      <window_info anchor="bottom" id="Cvs" order="11" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="12" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="13" />
-      <window_info anchor="bottom" id="Terminal" order="14" />
-      <window_info anchor="bottom" id="Statistic" order="15" />
-      <window_info anchor="bottom" id="Database Changes" order="16" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Docker" order="17" show_stripe_button="false" />
-      <window_info anchor="right" id="Palette" order="0" />
-      <window_info anchor="right" id="JetGradle" order="1" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="2" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info anchor="right" id="Database" order="4" />
-      <window_info anchor="right" id="Designer" order="5" />
-      <window_info anchor="right" id="Ant Build" order="6" weight="0.25" />
-      <window_info anchor="right" id="Capture Analysis" order="7" />
-      <window_info anchor="right" id="Theme Preview" order="8" />
-      <window_info anchor="right" id="Properties" order="9" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="10" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="11" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -1183,7 +1272,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="position: test + compare method added" />
     <MESSAGE value="UserControl: Class + test updated and passing" />
     <MESSAGE value="added maze + wall classes" />
     <MESSAGE value="GameObject cleaned + 100% test" />
@@ -1208,7 +1296,8 @@
     <MESSAGE value="a little move-a-round" />
     <MESSAGE value="added javadoc" />
     <MESSAGE value="settings for javaDoc" />
-    <option name="LAST_COMMIT_MESSAGE" value="settings for javaDoc" />
+    <MESSAGE value="small updates" />
+    <option name="LAST_COMMIT_MESSAGE" value="small updates" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -1241,8 +1330,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_102/javafx-src.zip!/javafx/scene/Node.java" />
-    <entry file="file://$PROJECT_DIR$/out/production/snakeFX/sample/Main.class" />
     <entry file="file://$PROJECT_DIR$/src/notes.txt" />
     <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/javafx.graphics/javafx/scene/input/KeyCode.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1309,36 +1396,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SnakeEntities/Item.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SnakeEntities/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SnakeEntities/Wall.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/SnakeLogic/Movement/MoveClockWise.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="901">
@@ -1355,38 +1412,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SnakeEntities/GameObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SnakeMaze/IMaze.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SnakeMaze/Maze.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1270#1271#0" expanded="true" />
-            <element signature="e#1297#1298#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1419,30 +1444,6 @@
             <element signature="imports" expanded="true" />
             <element signature="e#282#283#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/SnakeMaze/MazeTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/SnakeEntities/GameObjectTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1028">
-          <caret line="15" column="29" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/SnakeEntities/ItemTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -1481,42 +1482,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SnakeLogic/GameManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1496">
-          <caret line="90" column="36" selection-start-line="90" selection-start-column="36" selection-end-line="90" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SnakeComponents/Position.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="8" column="55" lean-forward="true" selection-start-line="8" selection-start-column="55" selection-end-line="8" selection-end-column="55" />
-          <folding>
-            <element signature="docComment;class#Position#0" />
-            <element signature="docComment;field#x#0;class#Position#0" />
-            <element signature="docComment;field#y#0;class#Position#0" />
-            <element signature="docComment;method#Position#0;class#Position#0" />
-            <element signature="docComment;method#getX#0;class#Position#0" />
-            <element signature="e#371#372#0" expanded="true" />
-            <element signature="e#395#396#0" expanded="true" />
-            <element signature="docComment;method#getY#0;class#Position#0" />
-            <element signature="e#420#421#0" expanded="true" />
-            <element signature="e#444#445#0" expanded="true" />
-            <element signature="docComment;method#setX#0;class#Position#0" />
-            <element signature="e#864#865#0" expanded="true" />
-            <element signature="e#890#891#0" expanded="true" />
-            <element signature="docComment;method#setY#0;class#Position#0" />
-            <element signature="e#921#922#0" expanded="true" />
-            <element signature="e#947#948#0" expanded="true" />
-            <element signature="docComment;method#compareTo#0;class#Position#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1563,16 +1528,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SnakeDataStructures/IDataStructure.java">
+    <entry file="file://$PROJECT_DIR$/src/SnakeDataStructures/BreadthFirst.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        <state relative-caret-position="289">
+          <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SnakeDataStructures/DepthFirst.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
+        <state relative-caret-position="102">
           <caret line="10" column="59" selection-start-line="10" selection-start-column="59" selection-end-line="10" selection-end-column="59" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1580,15 +1548,151 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SnakeDataStructures/BreadthFirst.java">
+    <entry file="file://$PROJECT_DIR$/src/SnakeDataStructures/IDataStructure.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="22" lean-forward="true" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+        <state relative-caret-position="221">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SnakeComponents/Position.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SnakeEntities/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
           <folding>
-            <element signature="e#646#647#0" expanded="true" />
-            <element signature="e#681#682#0" expanded="true" />
-            <element signature="e#714#715#0" expanded="true" />
-            <element signature="e#749#750#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SnakeEntities/Wall.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="36" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SnakeEntities/GameObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="16" lean-forward="true" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#518#519#0" expanded="true" />
+            <element signature="e#580#581#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SnakeEntities/WayPoint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/SnakeEntities/WayPointTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" selection-start-line="22" selection-end-line="24" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SnakeMaze/ArrayTo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="11" column="22" lean-forward="true" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/SnakeMaze/ArrayToTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="21" selection-start-line="21" selection-end-line="28" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SnakeLogic/GameManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="33" column="38" selection-start-line="33" selection-start-column="38" selection-end-line="33" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SnakeMaze/Maze.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="557">
+          <caret line="35" column="10" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1270#1271#0" expanded="true" />
+            <element signature="e#1297#1298#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SnakeMaze/IMaze.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/SnakeEntities/GameObjectTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1955">
+          <caret line="120" lean-forward="true" selection-start-line="120" selection-end-line="120" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/SnakeMaze/MazeTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="502">
+          <caret line="51" column="23" selection-start-line="51" selection-start-column="23" selection-end-line="51" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SnakeMaze/MazeWithExit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="31" column="8" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#476#477#0" expanded="true" />
+            <element signature="e#503#504#0" expanded="true" />
+            <element signature="e#695#696#0" expanded="true" />
+            <element signature="e#719#720#0" expanded="true" />
           </folding>
         </state>
       </provider>
