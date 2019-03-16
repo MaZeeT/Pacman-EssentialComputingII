@@ -2,7 +2,7 @@ package SnakeLogic;
 
 import SnakeComponents.Position;
 import SnakeEntities.GameObject;
-import SnakeEntities.Item;
+import SnakeEntities.WayPoint;
 import SnakeEntities.Player;
 import SnakeLogic.Movement.MoveClockWise;
 import SnakeMaze.IMaze;
@@ -13,10 +13,10 @@ import java.util.*;
 public class GameManager {
 
     private List<GameObject> walls;
-    private List<GameObject> items = new ArrayList<>();
+    private List<GameObject> wayPoints = new ArrayList<>();
     private List<GameObject> snake = new ArrayList<>();
 
-    private int maxItems = 2;
+    private int maxWayPoints = 2;
     private char direction;
     private int width;
     private int height;
@@ -29,10 +29,9 @@ public class GameManager {
         Player player = new Player(new Position(5, 3));
         snake.add(player);
 
-        addNewItem(items, maxItems);
+        addNewWayPoint(wayPoints, maxWayPoints);
 
         IMaze maze = new Maze(10, 10);
-        maze.generateMaze();
         walls = maze.getMaze();
 
         movement = new MoveClockWise(player, walls);
@@ -42,17 +41,17 @@ public class GameManager {
     public void update() {
         movement.move(direction);
         direction = movement.getDirection();
-        addNewItem(items, maxItems);
+        addNewWayPoint(wayPoints, maxWayPoints);
     }
 
 
-    private void addNewItem(List<GameObject> items, int maxItems) {
-        if (items.size() < maxItems) {
+    private void addNewWayPoint(List<GameObject> wayPoints, int maxWayPoints) {
+        if (wayPoints.size() < maxWayPoints) {
             Position pos;
             pos = getRandomPosition();
-            for (GameObject item : items) {
-                if (item.getPosition().compareTo(pos) != 0) {
-                    items.add(new Item(pos));
+            for (GameObject wayPoint : wayPoints) {
+                if (wayPoint.getPosition().compareTo(pos) != 0) {
+                    wayPoints.add(new WayPoint(pos));
                 }
             }
         }
@@ -60,11 +59,11 @@ public class GameManager {
 
 /*
     // unused functions
-    private void removeItem(int index) {
-        items.remove(index);
+    private void removeWayPoint(int index) {
+        wayPoints.remove(index);
     }
 
-    private void collideWithItem(Item item) {
+    private void collideWithWayPoint(WayPoint wayPoint) {
 
     }
 */
@@ -89,7 +88,7 @@ public class GameManager {
     //export gameObjects for GUI
     private List<GameObject> combineGameObjects() {
         List<GameObject> gameObjects = new ArrayList<>();
-        gameObjects.addAll(items);
+        gameObjects.addAll(wayPoints);
         gameObjects.addAll(walls);
         gameObjects.addAll(snake);
         return gameObjects;

@@ -9,31 +9,31 @@ import static org.junit.Assert.*;
 
 public class GameObjectTest {
 
-    private GameObject item;
+    private GameObject wayPoint;
     private GameObject player;
     private GameObject wall;
 
-    private Position itemPos;
+    private Position wayPointPos;
     private Position playerPos;
     private Position wallPos;
 
     @Before
     public void setUp() {
-        itemPos = new Position(2, 5);
+        wayPointPos = new Position(2, 5);
         playerPos = new Position(1, 3);
         wallPos = new Position(3, 4);
 
-        item = new Item(itemPos);
+        wayPoint = new WayPoint(wayPointPos);
         player = new Player(playerPos);
         wall = new Wall(wallPos);
     }
 
 
     @Test
-    public void getItemPosition() {
-        Position itemExpected = itemPos;
-        Position itemActual = item.getPosition();
-        assertEquals(itemExpected, itemActual);
+    public void getWayPointPosition() {
+        Position wayPointExpected = wayPointPos;
+        Position wayPointActual = wayPoint.getPosition();
+        assertEquals(wayPointExpected, wayPointActual);
     }
 
     @Test
@@ -52,11 +52,11 @@ public class GameObjectTest {
 
 
     @Test
-    public void setItemPosition() {
-        Position itemExpected = new Position(1, 3);
-        item.setPosition(itemExpected);
-        Position itemActual = item.getPosition();
-        assertEquals(itemExpected, itemActual);
+    public void setWayPointPosition() {
+        Position wayPointExpected = new Position(1, 3);
+        wayPoint.setPosition(wayPointExpected);
+        Position wayPointActual = wayPoint.getPosition();
+        assertEquals(wayPointExpected, wayPointActual);
     }
 
     @Test
@@ -79,10 +79,10 @@ public class GameObjectTest {
     @Test
     public void getColor() {
 
-        //test item
-        Color itemExpected = Color.RED;
-        Color itemActual = item.getColor();
-        assertEquals(itemExpected, itemActual);
+        //test wayPoint
+        Color wayPointExpected = Color.YELLOW;
+        Color wayPointActual = wayPoint.getColor();
+        assertEquals(wayPointExpected, wayPointActual);
 
         //test player
         Color playerExpected = Color.BLACK;
@@ -99,11 +99,11 @@ public class GameObjectTest {
     @Test
     public void setColor() {
 
-        //test item
-        Color itemExpected = Color.BLUE;
-        item.setColor(itemExpected);
-        Color itemActual = item.getColor();
-        assertEquals(itemExpected, itemActual);
+        //test wayPoint
+        Color wayPointExpected = Color.BLUE;
+        wayPoint.setColor(wayPointExpected);
+        Color wayPointActual = wayPoint.getColor();
+        assertEquals(wayPointExpected, wayPointActual);
 
         //test player
         Color playerExpected = Color.GREEN;
