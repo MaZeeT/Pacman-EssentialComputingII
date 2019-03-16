@@ -3,7 +3,7 @@ package SnakeEntities;
 import SnakeComponents.Position;
 import javafx.scene.paint.Color;
 
-public abstract class GameObject {
+public abstract class GameObject implements Comparable<GameObject>{
     Position position;
     Color color;
 
@@ -21,5 +21,10 @@ public abstract class GameObject {
 
     public void setPosition(Position position) {
         this.position = position;
+    }
+
+    @Override
+    public int compareTo(GameObject other) {
+        return position.compareTo(other.getPosition());
     }
 }
