@@ -1,6 +1,8 @@
 package SnakeMaze;
 
 import SnakeEntities.GameObject;
+import SnakeEntities.Player;
+import SnakeEntities.WayPoint;
 
 import java.util.List;
 
@@ -25,6 +27,16 @@ public class MazeWithExit implements IMaze {
     @Override
     public List<GameObject> getMaze() {
         return list;
+    }
+
+    @Override
+    public Player getPlayer() {
+        return null;
+    }
+
+    @Override
+    public WayPoint getWayPoint() {
+        return null;
     }
 
     @Override

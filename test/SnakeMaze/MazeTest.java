@@ -1,5 +1,8 @@
 package SnakeMaze;
 
+import SnakeComponents.Position;
+import SnakeEntities.Player;
+import SnakeEntities.WayPoint;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -71,4 +74,41 @@ public class MazeTest {
         assertEquals(expected, actual);
     }
 
+    @Test
+    public void getPlayer() {
+        int x = 15;
+        int y = 15;
+        IMaze m = new Maze(x, y);
+        m.generateMaze();
+        Player testPlayer = new Player(new Position(5, 7));
+
+        int expected = 0;
+        int actual = m.getPlayer().compareTo(testPlayer);
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void getWayPoint() {
+        int x = 15;
+        int y = 15;
+        IMaze m = new Maze(x, y);
+        m.generateMaze();
+        WayPoint testWayPoint = new WayPoint(new Position(7, 5));
+
+        int expected = 0;
+        int actual = m.getWayPoint().compareTo(testWayPoint);
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void getMaze() {
+        int x = 15;
+        int y = 15;
+        IMaze m = new Maze(x, y);
+        m.generateMaze();
+
+        int expected = m.getMaze().size();
+        int actual = m.generateMaze();
+        assertEquals(expected, actual);
+    }
 }
