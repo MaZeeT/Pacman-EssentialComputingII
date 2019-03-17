@@ -1,4 +1,4 @@
-package SnakeLogic.Movement;
+package SnakeLogic.Crawler;
 
 import SnakeComponents.Position;
 import SnakeEntities.Player;
@@ -11,7 +11,7 @@ import static org.junit.Assert.*;
 
 public class MoveClockWiseTest {
 
-    private IMovement movement;
+    private ICrawler movement;
 
     @Before
     public void setUp() {

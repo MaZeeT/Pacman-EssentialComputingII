@@ -20,7 +20,6 @@ public class GameManagerTest {
 
     @Test
     public void update() {
-        //gameManager.setDirection('s');
         List<GameObject> old = new ArrayList<>();
         old.addAll(gameManager.getGameObjects());
 

@@ -1,4 +1,4 @@
-package SnakeLogic.Movement;
+package SnakeLogic.Crawler;
 
 import SnakeComponents.Position;
 import SnakeEntities.GameObject;
@@ -6,7 +6,7 @@ import SnakeEntities.Player;
 
 import java.util.List;
 
-public class MoveClockWise implements IMovement {
+public class MoveClockWise implements ICrawler {
     private char dir;
     private Player player;
     private List<GameObject> walls;
