@@ -80,7 +80,7 @@ public class GameObjectTest {
     public void getColor() {
 
         //test wayPoint
-        Color wayPointExpected = Color.YELLOW;
+        Color wayPointExpected = Color.GREEN;
         Color wayPointActual = wayPoint.getColor();
         assertEquals(wayPointExpected, wayPointActual);
 
