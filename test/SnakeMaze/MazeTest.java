@@ -48,7 +48,13 @@ public class MazeTest {
         int y = 15;
         IMaze m = new Maze(x, y);
 
-        int expected = x * 2 + y * 2 - 4 + 5 + 4;
+        int expected =
+                x * 2 + y * 2 //walls
+                        - 4 // corner overlays
+                        + 5 // the middle walls
+                        + 4 // bumped in corners
+                        + 2 // player and wayPoint
+                ;
         int actual = m.generateMaze();
         assertEquals(expected, actual);
     }
