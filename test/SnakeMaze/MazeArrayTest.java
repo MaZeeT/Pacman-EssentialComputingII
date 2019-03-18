@@ -13,13 +13,13 @@ import java.util.List;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 
-public class ArrayGetTest {
+public class MazeArrayTest {
     private int[][] array;
-    private ArrayGet arrayGet;
+    private MazeArrayBased arrayGet;
 
     @Before
     public void setUp() {
-        arrayGet = new ArrayGet(5, 6);
+        arrayGet = new MazeArrayTestable(5, 6);
 
         array = new int[][]{
                 {1, 1, 1, 1, 1},
@@ -44,7 +44,7 @@ public class ArrayGetTest {
 
     @Test
     public void ArrayGetNullPlayer() {
-        ArrayGet arrGet = new ArrayGet(3, 3);
+        MazeArrayBased arrGet = new MazeArrayTestable(3, 3);
         int[][] arr = new int[][]{
                 {1, 1, 1},
                 {1, 1, 3},
@@ -67,7 +67,7 @@ public class ArrayGetTest {
 
     @Test
     public void ArrayGetNullWayPoint() {
-        ArrayGet arrGet = new ArrayGet(3, 3);
+        MazeArrayBased arrGet = new MazeArrayTestable(3, 3);
         int[][] arr = new int[][]{
                 {1, 1, 1},
                 {1, 1, 2},
@@ -93,7 +93,7 @@ public class ArrayGetTest {
 
     @Test
     public void walls() {
-        ArrayGet arrGet = new ArrayGet(3, 3);
+        MazeArrayBased arrGet = new MazeArrayTestable(3, 3);
         int[][] arr = new int[][]{
                 {1, 1, 1},
                 {1, 1, 1},
@@ -103,6 +103,12 @@ public class ArrayGetTest {
         int expected = 9;
         int actual = arrGet.walls(arr).size();
         assertEquals(expected, actual);
+    }
+
+    @Test
+    public void generateMaze() {
+        MazeArrayBased arrGet = new MazeArrayTestable(3, 3);
+        arrGet.generateMaze();
     }
 
 }

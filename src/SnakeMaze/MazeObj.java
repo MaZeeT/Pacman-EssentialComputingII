@@ -7,21 +7,17 @@ import SnakeEntities.Wall;
 import SnakeEntities.WayPoint;
 
 import java.util.ArrayList;
-import java.util.List;
 
-public class MazeObj implements IMaze {
+public class MazeObj extends Maze{
 
     private int sizeX;
     private int sizeY;
-    private List<GameObject> gameObjects = new ArrayList<>();
-    private List<GameObject> walls = new ArrayList<>();
     private GameObject[][] maze;
-    private Player player;
-    private WayPoint wayPoint;
 
     public MazeObj(int width, int height) {
         this.sizeX = width;
         this.sizeY = height;
+        this.walls = new ArrayList<>();
         maze = new GameObject[sizeX][sizeY];
         generateWalls();
         //generateMaze();
@@ -40,6 +36,7 @@ public class MazeObj implements IMaze {
         }
     }
 
+    @Override
     public void generateMaze() {
         for (int i = 3; i < 8; i++) {
             addWall(i, i);
@@ -66,7 +63,6 @@ public class MazeObj implements IMaze {
         if (maze[x][y] == null) {
             player = new Player(new Position(x, y));
             maze[x][y] = player;
-           //walls.add(player);
         }
     }
 
@@ -74,36 +70,7 @@ public class MazeObj implements IMaze {
         if (maze[x][y] == null) {
             wayPoint = new WayPoint(new Position(x, y));
             maze[x][y] = wayPoint;
-            //walls.add(wayPoint);
         }
     }
 
-    public List<GameObject> getWalls() {
-        return walls;
-    }
-
-    public Player getPlayer() {
-        return player;
-    }
-
-    public WayPoint getWayPoint() {
-        return wayPoint;
-    }
-
-    public List<GameObject> getMaze() {
-        if (!gameObjects.contains(player)) gameObjects.add(player);
-        if (!gameObjects.contains(wayPoint)) gameObjects.add(wayPoint);
-        for (GameObject wall : walls){
-            if (!gameObjects.contains(wall)) gameObjects.add(wall);
-        }
-        return gameObjects;
-    }
-
-    public List<Position> getMazePositions() {
-        List<Position> list = new ArrayList<>();
-        for (GameObject gameObject : getMaze()) {
-            list.add(gameObject.getPosition());
-        }
-        return list;
-    }
 }

@@ -9,12 +9,12 @@ import SnakeEntities.WayPoint;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ArrayGet {
+public abstract class MazeArrayBased extends Maze{
 
-    private int height;
-    private int width;
+     int height;
+     int width;
 
-    public ArrayGet(int width, int height) {
+    public MazeArrayBased(int width, int height) {
         this.width = width;
         this.height = height;
     }

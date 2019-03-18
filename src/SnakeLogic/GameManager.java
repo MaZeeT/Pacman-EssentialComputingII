@@ -6,6 +6,7 @@ import SnakeLogic.Crawler.DepthFirstCrawler;
 import SnakeLogic.Crawler.MoveClockWise;
 import SnakeMaze.IMaze;
 import SnakeMaze.MazeObj;
+import SnakeMaze.MazeWithExit;
 
 import java.util.*;
 
@@ -25,9 +26,9 @@ public class GameManager {
         this.width = width;
         this.height = height;
 
-        IMaze maze = new MazeObj(10, 10);
-        maze.generateMaze(); //TODO remove generateMaze from outside the class
-        //IMaze maze = new MazeWithExit();
+        //IMaze maze = new MazeObj(10, 10);
+        //maze.generateMaze(); //TODO remove generateMaze from outside the class
+        IMaze maze = new MazeWithExit(6,7);
 
         walls = maze.getWalls();
 
