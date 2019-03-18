@@ -9,7 +9,7 @@ import SnakeEntities.WayPoint;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Maze implements IMaze {
+public class MazeObj implements IMaze {
 
     private int sizeX;
     private int sizeY;
@@ -19,7 +19,7 @@ public class Maze implements IMaze {
     private Player player;
     private WayPoint wayPoint;
 
-    public Maze(int width, int height) {
+    public MazeObj(int width, int height) {
         this.sizeX = width;
         this.sizeY = height;
         maze = new GameObject[sizeX][sizeY];

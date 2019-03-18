@@ -8,7 +8,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class MazeTest {
+public class MazeObjTest {
     private IMaze maze;
     private int defX;
     private int defY;
@@ -19,7 +19,7 @@ public class MazeTest {
     public void setUp() {
         defX = 3;
         defY = 3;
-        maze = new Maze(defX, defY);
+        maze = new MazeObj(defX, defY);
     }
 
     @Test
@@ -34,7 +34,7 @@ public class MazeTest {
         int x = 15;
         int y = 20;
         int expected = x * 2 + y * 2 - 4;
-        int actual = new Maze(x, y).getWalls().size();
+        int actual = new MazeObj(x, y).getWalls().size();
         assertEquals(expected, actual);
     }
 
@@ -43,7 +43,7 @@ public class MazeTest {
         int x = 2;
         int y = 2;
         int expected = x * 2 + y * 2 - 4;
-        int actual = new Maze(x, y).getWalls().size();
+        int actual = new MazeObj(x, y).getWalls().size();
         assertEquals(expected, actual);
     }
 
@@ -51,7 +51,7 @@ public class MazeTest {
     public void makeMaze() {
         int x = 15;
         int y = 15;
-        IMaze m = new Maze(x, y);
+        IMaze m = new MazeObj(x, y);
         m.generateMaze();
 
         int expected =
@@ -70,7 +70,7 @@ public class MazeTest {
     public void listSizeComparedToGenerateReturn() {
         int x = 15;
         int y = 15;
-        IMaze m = new Maze(x, y);
+        IMaze m = new MazeObj(x, y);
         m.generateMaze();
 
         int expected = m.getWalls().size();
@@ -82,7 +82,7 @@ public class MazeTest {
     public void getPlayer() {
         int x = 15;
         int y = 15;
-        IMaze m = new Maze(x, y);
+        IMaze m = new MazeObj(x, y);
         m.generateMaze();
         Player testPlayer = new Player(new Position(5, 7));
 
@@ -95,7 +95,7 @@ public class MazeTest {
     public void getWayPoint() {
         int x = 15;
         int y = 15;
-        IMaze m = new Maze(x, y);
+        IMaze m = new MazeObj(x, y);
         m.generateMaze();
         WayPoint testWayPoint = new WayPoint(new Position(7, 5));
 
@@ -108,7 +108,7 @@ public class MazeTest {
     public void listSizeGameObjectComparedPositions() {
         int x = 15;
         int y = 15;
-        IMaze m = new Maze(x, y);
+        IMaze m = new MazeObj(x, y);
         m.generateMaze();
 
         int expected = m.getMaze().size();
