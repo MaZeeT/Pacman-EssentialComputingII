@@ -5,13 +5,18 @@ import SnakeEntities.GameObject;
 import SnakeEntities.Player;
 import SnakeEntities.WayPoint;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class MazeWithExit implements IMaze {
-    private List<GameObject> list;
+    private List<GameObject> gameObjects = new ArrayList<>();
+    private List<GameObject> walls;
+    private Player player;
+    private WayPoint wayPoint;
+
 
     public MazeWithExit() {
-        ArrayTo arrayTo = new ArrayTo();
+        ArrayGet arrayGet = new ArrayGet(6,7);
         int[][] maze = new int[][]{
                 {1, 1, 1, 1, 1, 1},
                 {1, 2, 1, 0, 0, 3},
@@ -21,38 +26,48 @@ public class MazeWithExit implements IMaze {
                 {1, 0, 0, 0, 0, 1},
                 {1, 1, 1, 1, 1, 1}
         };
-        list = arrayTo.list(maze);
+        walls = arrayGet.walls(maze);
+        player = arrayGet.player(maze);
+        wayPoint = arrayGet.wayPoint(maze);
     }
 
 
     @Override
     public List<GameObject> getMaze() {
-        return list;
+        if (!gameObjects.contains(player)) gameObjects.add(player);
+        if (!gameObjects.contains(wayPoint)) gameObjects.add(wayPoint);
+        for (GameObject wall : walls){
+            if (!gameObjects.contains(wall)) gameObjects.add(wall);
+        }
+        return gameObjects;
     }
 
     @Override
     public List<Position> getMazePositions() {
-        return null;
+        List<Position> list = new ArrayList<>();
+        for (GameObject gameObject : walls) {
+            list.add(gameObject.getPosition());
+        }
+        return list;
     }
 
     @Override
     public Player getPlayer() {
-        return null;
+        return player;
     }
 
     @Override
     public WayPoint getWayPoint() {
-        return null;
+        return wayPoint;
     }
 
     @Override
     public List<GameObject> getWalls() {
-        return null;
+        return walls;
     }
 
     @Override
-    public int generateMaze() {
-        return 0;
+    public void generateMaze() {
     }
 
 }

@@ -74,7 +74,7 @@ public class MazeTest {
         m.generateMaze();
 
         int expected = m.getWalls().size();
-        int actual = m.getMaze().size();
+        int actual = m.getMaze().size() -2;
         assertEquals(expected, actual);
     }
 
@@ -101,6 +101,18 @@ public class MazeTest {
 
         int expected = 0;
         int actual = m.getWayPoint().compareTo(testWayPoint);
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void listSizeGameObjectComparedPositions() {
+        int x = 15;
+        int y = 15;
+        IMaze m = new Maze(x, y);
+        m.generateMaze();
+
+        int expected = m.getMaze().size();
+        int actual = m.getMazePositions().size();
         assertEquals(expected, actual);
     }
 

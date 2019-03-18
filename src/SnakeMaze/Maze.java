@@ -11,7 +11,6 @@ import java.util.List;
 
 public class Maze implements IMaze {
 
-    private int r = 0;
     private int sizeX;
     private int sizeY;
     private List<GameObject> gameObjects = new ArrayList<>();
@@ -41,7 +40,7 @@ public class Maze implements IMaze {
         }
     }
 
-    public int generateMaze() {
+    public void generateMaze() {
         for (int i = 3; i < 8; i++) {
             addWall(i, i);
         }
@@ -53,8 +52,6 @@ public class Maze implements IMaze {
         addPlayer(5, 7);
         //addPlayer(2,2);
         addWayPoint(7, 5);
-
-        return r;
     }
 
     private void addWall(int x, int y) {
@@ -62,7 +59,6 @@ public class Maze implements IMaze {
             Wall w = new Wall(x, y);
             maze[x][y] = w;
             walls.add(w);
-            r++;
         }
     }
 
@@ -70,8 +66,7 @@ public class Maze implements IMaze {
         if (maze[x][y] == null) {
             player = new Player(new Position(x, y));
             maze[x][y] = player;
-            walls.add(player);
-            r++;
+           //walls.add(player);
         }
     }
 
@@ -79,8 +74,7 @@ public class Maze implements IMaze {
         if (maze[x][y] == null) {
             wayPoint = new WayPoint(new Position(x, y));
             maze[x][y] = wayPoint;
-            walls.add(wayPoint);
-            r++;
+            //walls.add(wayPoint);
         }
     }
 
@@ -107,7 +101,7 @@ public class Maze implements IMaze {
 
     public List<Position> getMazePositions() {
         List<Position> list = new ArrayList<>();
-        for (GameObject gameObject : walls) {
+        for (GameObject gameObject : getMaze()) {
             list.add(gameObject.getPosition());
         }
         return list;

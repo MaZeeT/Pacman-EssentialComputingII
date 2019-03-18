@@ -20,5 +20,5 @@ public interface IMaze {
 
     List<GameObject> getWalls();
 
-    int generateMaze();
+    void generateMaze();
 }
