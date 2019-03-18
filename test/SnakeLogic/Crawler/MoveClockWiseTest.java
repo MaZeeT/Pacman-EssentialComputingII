@@ -12,12 +12,14 @@ import static org.junit.Assert.*;
 public class MoveClockWiseTest {
 
     private ICrawler movement;
+    private Player player;
 
     @Before
     public void setUp() {
-        Player player = new Player(new Position(5, 3));
         IMaze maze = new Maze(10, 10);
-        movement = new MoveClockWise(player, maze.getMaze());
+        maze.generateMaze();    //TODO remove generateMaze from outside the class
+        player = maze.getPlayer();
+        movement = new MoveClockWise(maze);
     }
 
     @Test
@@ -30,6 +32,7 @@ public class MoveClockWiseTest {
 
     @Test
     public void moveUpTurnRight() {
+        player.setPosition(new Position(1, 3));
         char expected = 'd';
         for (int i = 0; i <= 3; i++) movement.move('w');
         char actual = movement.getDirection();
@@ -38,24 +41,27 @@ public class MoveClockWiseTest {
 
     @Test
     public void moveRightTurnDown() {
+        player.setPosition(new Position(6, 1));
         char expected = 's';
-        for (int i = 0; i <= 5; i++) movement.move('d');
+        for (int i = 0; i <= 3; i++) movement.move('d');
         char actual = movement.getDirection();
         assertEquals(expected, actual);
     }
 
     @Test
     public void moveDownTurnLeft() {
+        player.setPosition(new Position(5, 7));
         char expected = 'a';
-        for (int i = 0; i <= 5; i++) movement.move('s');
+        for (int i = 0; i <= 3; i++) movement.move('s');
         char actual = movement.getDirection();
         assertEquals(expected, actual);
     }
 
     @Test
     public void moveLeftTurnUp() {
+        player.setPosition(new Position(3, 8));
         char expected = 'w';
-        for (int i = 0; i <= 4; i++) movement.move('a');
+        for (int i = 0; i <= 3; i++) movement.move('a');
         char actual = movement.getDirection();
         assertEquals(expected, actual);
     }

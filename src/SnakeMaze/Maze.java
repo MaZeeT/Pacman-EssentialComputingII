@@ -14,7 +14,8 @@ public class Maze implements IMaze {
     private int r = 0;
     private int sizeX;
     private int sizeY;
-    private List<GameObject> list = new ArrayList<>();
+    private List<GameObject> gameObjects = new ArrayList<>();
+    private List<GameObject> walls = new ArrayList<>();
     private GameObject[][] maze;
     private Player player;
     private WayPoint wayPoint;
@@ -24,6 +25,8 @@ public class Maze implements IMaze {
         this.sizeY = height;
         maze = new GameObject[sizeX][sizeY];
         generateWalls();
+        //generateMaze();
+        // TODO remove generateMaze from outside the class
     }
 
     private void generateWalls() {
@@ -47,8 +50,9 @@ public class Maze implements IMaze {
         addWall(1, sizeY - 2);
         addWall(sizeX - 2, 1);
         addWall(sizeX - 2, sizeY - 2);
-        addPlayer(5,7);
-        addWayPoint(7,5);
+        addPlayer(5, 7);
+        //addPlayer(2,2);
+        addWayPoint(7, 5);
 
         return r;
     }
@@ -57,36 +61,55 @@ public class Maze implements IMaze {
         if (maze[x][y] == null) {
             Wall w = new Wall(x, y);
             maze[x][y] = w;
-            list.add(w);
+            walls.add(w);
             r++;
         }
     }
+
     private void addPlayer(int x, int y) {
         if (maze[x][y] == null) {
-            player = new Player(new Position(x,y));
+            player = new Player(new Position(x, y));
             maze[x][y] = player;
-            list.add(player);
+            walls.add(player);
             r++;
         }
     }
+
     private void addWayPoint(int x, int y) {
         if (maze[x][y] == null) {
-            wayPoint = new WayPoint(new Position(x,y));
+            wayPoint = new WayPoint(new Position(x, y));
             maze[x][y] = wayPoint;
-            list.add(wayPoint);
+            walls.add(wayPoint);
             r++;
         }
     }
 
-    public List<GameObject> getMaze() {
-        return list;
+    public List<GameObject> getWalls() {
+        return walls;
     }
 
-    public Player getPlayer(){
+    public Player getPlayer() {
         return player;
     }
 
-    public WayPoint getWayPoint(){
+    public WayPoint getWayPoint() {
         return wayPoint;
+    }
+
+    public List<GameObject> getMaze() {
+        if (!gameObjects.contains(player)) gameObjects.add(player);
+        if (!gameObjects.contains(wayPoint)) gameObjects.add(wayPoint);
+        for (GameObject wall : walls){
+            if (!gameObjects.contains(wall)) gameObjects.add(wall);
+        }
+        return gameObjects;
+    }
+
+    public List<Position> getMazePositions() {
+        List<Position> list = new ArrayList<>();
+        for (GameObject gameObject : walls) {
+            list.add(gameObject.getPosition());
+        }
+        return list;
     }
 }

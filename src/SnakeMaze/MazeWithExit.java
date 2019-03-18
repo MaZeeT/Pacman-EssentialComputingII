@@ -1,5 +1,6 @@
 package SnakeMaze;
 
+import SnakeComponents.Position;
 import SnakeEntities.GameObject;
 import SnakeEntities.Player;
 import SnakeEntities.WayPoint;
@@ -30,12 +31,22 @@ public class MazeWithExit implements IMaze {
     }
 
     @Override
+    public List<Position> getMazePositions() {
+        return null;
+    }
+
+    @Override
     public Player getPlayer() {
         return null;
     }
 
     @Override
     public WayPoint getWayPoint() {
+        return null;
+    }
+
+    @Override
+    public List<GameObject> getWalls() {
         return null;
     }
 

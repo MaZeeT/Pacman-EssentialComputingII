@@ -2,6 +2,7 @@ package SnakeLogic;
 
 import SnakeEntities.GameObject;
 import SnakeEntities.Player;
+import SnakeLogic.Crawler.DepthFirstCrawler;
 import SnakeLogic.Crawler.MoveClockWise;
 import SnakeMaze.IMaze;
 import SnakeMaze.Maze;
@@ -18,13 +19,14 @@ public class GameManager {
     private int width;
     private int height;
     private MoveClockWise movement;
+    private DepthFirstCrawler crawler;
 
     public GameManager(int width, int height) {
         this.width = width;
         this.height = height;
 
         IMaze maze = new Maze(10, 10);
-        maze.generateMaze();
+        maze.generateMaze(); //TODO remove generateMaze from outside the class
         //IMaze maze = new MazeWithExit();
 
         walls = maze.getMaze();
@@ -33,13 +35,16 @@ public class GameManager {
         snake.add(player);
         wayPoints.add(maze.getWayPoint());
 
-        movement = new MoveClockWise(player, walls);
+        movement = new MoveClockWise(maze);
+        crawler = new DepthFirstCrawler(maze);
     }
 
     // update loop to make the game run
     public void update() {
         movement.move(direction);
         direction = movement.getDirection();
+
+        //crawler.update();
     }
 
     // get and set
@@ -58,6 +63,7 @@ public class GameManager {
         gameObjects.addAll(wayPoints);
         gameObjects.addAll(walls);
         gameObjects.addAll(snake);
+
         return gameObjects;
     }
 

@@ -13,6 +13,8 @@ public class MazeTest {
     private int defX;
     private int defY;
 
+
+    //TODO remove generateMaze from outside the class
     @Before
     public void setUp() {
         defX = 3;
@@ -23,7 +25,7 @@ public class MazeTest {
     @Test
     public void amountOfWalls() {
         int expected = defX * 2 + defY * 2 - 4;
-        int actual = maze.getMaze().size();
+        int actual = maze.getWalls().size();
         assertEquals(expected, actual);
     }
 
@@ -32,7 +34,7 @@ public class MazeTest {
         int x = 15;
         int y = 20;
         int expected = x * 2 + y * 2 - 4;
-        int actual = new Maze(x, y).getMaze().size();
+        int actual = new Maze(x, y).getWalls().size();
         assertEquals(expected, actual);
     }
 
@@ -41,7 +43,7 @@ public class MazeTest {
         int x = 2;
         int y = 2;
         int expected = x * 2 + y * 2 - 4;
-        int actual = new Maze(x, y).getMaze().size();
+        int actual = new Maze(x, y).getWalls().size();
         assertEquals(expected, actual);
     }
 
@@ -50,6 +52,7 @@ public class MazeTest {
         int x = 15;
         int y = 15;
         IMaze m = new Maze(x, y);
+        m.generateMaze();
 
         int expected =
                 x * 2 + y * 2 //walls
@@ -58,10 +61,11 @@ public class MazeTest {
                         + 4 // bumped in corners
                         + 2 // player and wayPoint
                 ;
-        int actual = m.generateMaze();
+        int actual = m.getMaze().size();
         assertEquals(expected, actual);
     }
 
+    //TODO this test looks a little off, size from wall and maze...
     @Test
     public void listSizeComparedToGenerateReturn() {
         int x = 15;
@@ -69,8 +73,8 @@ public class MazeTest {
         IMaze m = new Maze(x, y);
         m.generateMaze();
 
-        int expected = m.getMaze().size();
-        int actual = m.generateMaze();
+        int expected = m.getWalls().size();
+        int actual = m.getMaze().size();
         assertEquals(expected, actual);
     }
 
@@ -100,15 +104,4 @@ public class MazeTest {
         assertEquals(expected, actual);
     }
 
-    @Test
-    public void getMaze() {
-        int x = 15;
-        int y = 15;
-        IMaze m = new Maze(x, y);
-        m.generateMaze();
-
-        int expected = m.getMaze().size();
-        int actual = m.generateMaze();
-        assertEquals(expected, actual);
-    }
 }
