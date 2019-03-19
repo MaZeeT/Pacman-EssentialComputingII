@@ -42,7 +42,7 @@ public class GameManager {
         wayPoints.add(maze.getWayPoint());
 
         movement = new MoveClockWise(maze);
-        crawler = new Crawler(maze, new BreadthFirst());
+        crawler = new Crawler(maze, new DepthFirst());
     }
 
     // update loop to make the game run
