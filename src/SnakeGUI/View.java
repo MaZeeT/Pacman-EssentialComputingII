@@ -8,6 +8,10 @@ import javafx.scene.layout.*;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * The purpose of this class is to handle the output of the GUI. It will render to the scene which is passed to the primanyStage.
+ * @author MaZeeT.
+ */
 public class View {
 
     Button btnStart = new Button("Start");
@@ -24,7 +28,11 @@ public class View {
     private int width;
     private int height;
 
-
+    /**
+     * Constructor to set the size of the scene and make a initial render.
+     * @param width The width of the scene.
+     * @param height The height of the scene.
+     */
     View(int width, int height) {
         this.width = width;
         this.height = height;
@@ -35,6 +43,10 @@ public class View {
         drawCanvas();
     }
 
+    /**
+     * Set the list to the gameObject list coming from outside the GUI.
+     * @param gameObjects The list of renderables gameObjects.
+     */
     void setGameObjects(List<GameObject> gameObjects) {
         this.gameObjects = gameObjects;
     }
@@ -42,7 +54,7 @@ public class View {
 
 
     /**
-     * Calculate height and width of each field
+     * Calculate height and width of each field.
      */
     private void calculateFields() {
         this.fieldHeight = canvas.getHeight() / this.height;
@@ -50,14 +62,12 @@ public class View {
     }
 
     /**
-     * Draw the canvas - used in the gameloop
+     * Draw the canvas.
      */
     void drawCanvas() {
         GraphicsContext g = canvas.getGraphicsContext2D();
-
         g.clearRect(0, 0, width * fieldWidth, height * fieldHeight);
 
-        // draw gameObjects
         for (GameObject gameObject : gameObjects) {
             g.setFill(gameObject.getColor());
             int x = gameObject.getPosition().getX();
