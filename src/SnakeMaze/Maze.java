@@ -8,6 +8,7 @@ import SnakeEntities.WayPoint;
 import java.util.ArrayList;
 import java.util.List;
 
+//TODO write javaDoc
 public abstract class Maze implements IMaze {
 
     List<GameObject> walls;

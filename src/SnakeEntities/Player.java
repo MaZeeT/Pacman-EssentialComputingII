@@ -3,6 +3,7 @@ package SnakeEntities;
 import SnakeComponents.Position;
 import javafx.scene.paint.Color;
 
+//TODO write javaDoc
 public class Player extends GameObject {
 
     public Player(Position position) {

@@ -3,6 +3,7 @@ package SnakeEntities;
 import SnakeComponents.Position;
 import javafx.scene.paint.Color;
 
+//TODO write javaDoc
 public abstract class GameObject implements Comparable<GameObject>{
     Position position;
     Color color;

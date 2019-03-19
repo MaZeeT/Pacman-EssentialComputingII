@@ -4,6 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.control.Button;
 
+//TODO write javaDoc
 class Controller {
     private Manager manager;
     private Button btnStart;

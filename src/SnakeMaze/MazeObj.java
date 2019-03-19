@@ -4,6 +4,7 @@ import SnakeEntities.GameObject;
 
 import java.util.ArrayList;
 
+//TODO write javaDoc
 public class MazeObj extends MazeObjBased{
 
     private int sizeX;

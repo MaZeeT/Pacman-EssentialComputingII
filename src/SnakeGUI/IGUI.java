@@ -4,7 +4,8 @@ import SnakeEntities.GameObject;
 
 import java.util.List;
 
-public interface IManager {
+//TODO write javaDoc
+public interface IGUI {
 
     void startGame();
 

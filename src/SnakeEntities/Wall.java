@@ -3,6 +3,7 @@ package SnakeEntities;
 import SnakeComponents.Position;
 import javafx.scene.paint.Color;
 
+//TODO write javaDoc
 public class Wall extends GameObject{
 
     public Wall(int x, int y) {

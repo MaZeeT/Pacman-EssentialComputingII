@@ -6,6 +6,7 @@ import SnakeEntities.Player;
 import SnakeEntities.Wall;
 import SnakeEntities.WayPoint;
 
+//TODO write javaDoc
 abstract class MazeObjBased extends Maze {
 
     GameObject[][] maze;

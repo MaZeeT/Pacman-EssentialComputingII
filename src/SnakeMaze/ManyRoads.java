@@ -1,5 +1,6 @@
 package SnakeMaze;
 
+//TODO write javaDoc
 public class ManyRoads extends MazeArrayBased {
 
     public ManyRoads() {

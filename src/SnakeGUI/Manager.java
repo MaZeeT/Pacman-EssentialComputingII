@@ -4,7 +4,8 @@ import SnakeEntities.GameObject;
 
 import java.util.List;
 
-public class Manager implements IManager {
+//TODO write javaDoc
+public class Manager implements IGUI {
 
     private View view ;
     private Controller controller;

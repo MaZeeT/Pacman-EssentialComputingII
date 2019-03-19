@@ -10,6 +10,7 @@ import javafx.scene.paint.Color;
 
 import java.util.List;
 
+//TODO write javaDoc
 public class Crawler {
 
     private Player player;

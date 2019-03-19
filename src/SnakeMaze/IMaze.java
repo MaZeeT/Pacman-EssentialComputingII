@@ -7,6 +7,7 @@ import SnakeEntities.WayPoint;
 
 import java.util.List;
 
+//TODO write javaDoc
 public interface IMaze {
 
     List<GameObject> getMaze();

@@ -8,6 +8,7 @@ import SnakeMaze.IMaze;
 
 import java.util.List;
 
+//TODO write javaDoc
 public class MoveClockWise implements ICrawler {
     private char dir;
     private Player player;

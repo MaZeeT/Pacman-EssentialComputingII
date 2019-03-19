@@ -12,6 +12,7 @@ import SnakeMaze.MazeObj;
 
 import java.util.*;
 
+//TODO write javaDoc
 public class GameManager {
 
     private List<GameObject> walls;
@@ -41,7 +42,7 @@ public class GameManager {
         wayPoints.add(maze.getWayPoint());
 
         movement = new MoveClockWise(maze);
-        crawler = new Crawler(maze, new DepthFirst());
+        crawler = new Crawler(maze, new BreadthFirst());
     }
 
     // update loop to make the game run

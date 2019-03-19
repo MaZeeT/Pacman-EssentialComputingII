@@ -9,6 +9,7 @@ import SnakeEntities.WayPoint;
 import java.util.ArrayList;
 import java.util.List;
 
+//TODO write javaDoc
 abstract class MazeArrayBased extends Maze {
 
     int height;
