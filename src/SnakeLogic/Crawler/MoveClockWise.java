@@ -3,6 +3,7 @@ package SnakeLogic.Crawler;
 import SnakeComponents.Position;
 import SnakeEntities.GameObject;
 import SnakeEntities.Player;
+import SnakeLogic.Crawler.ICrawler;
 import SnakeMaze.IMaze;
 
 import java.util.List;

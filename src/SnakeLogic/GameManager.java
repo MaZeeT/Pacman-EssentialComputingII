@@ -7,6 +7,7 @@ import SnakeEntities.Player;
 import SnakeLogic.Crawler.Crawler;
 import SnakeLogic.Crawler.MoveClockWise;
 import SnakeMaze.IMaze;
+import SnakeMaze.ManyRoads;
 import SnakeMaze.MazeObj;
 
 import java.util.*;
@@ -29,8 +30,9 @@ public class GameManager {
         this.width = width;
         this.height = height;
 
-         IMaze maze = new MazeObj(10, 10);
+        //IMaze maze = new MazeObj(10, 10);
         //IMaze maze = new MazeWithExit();
+        IMaze maze = new ManyRoads();
 
         walls = maze.getWalls();
 
