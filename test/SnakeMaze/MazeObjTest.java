@@ -13,8 +13,6 @@ public class MazeObjTest {
     private int defX;
     private int defY;
 
-
-    //TODO remove generateMaze from outside the class
     @Before
     public void setUp() {
         defX = 8;

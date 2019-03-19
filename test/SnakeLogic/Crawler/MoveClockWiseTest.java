@@ -17,7 +17,6 @@ public class MoveClockWiseTest {
     @Before
     public void setUp() {
         IMaze maze = new MazeObj(10, 10);
-    //    maze.generateMaze();    //TODO remove generateMaze from outside the class
         player = maze.getPlayer();
         movement = new MoveClockWise(maze);
     }
