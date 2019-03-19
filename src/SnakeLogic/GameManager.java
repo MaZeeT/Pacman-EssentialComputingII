@@ -26,8 +26,8 @@ public class GameManager {
         this.width = width;
         this.height = height;
 
-        IMaze maze = new MazeObj(10, 10);
-        //IMaze maze = new MazeWithExit();
+       // IMaze maze = new MazeObj(10, 10);
+        IMaze maze = new MazeWithExit();
 
         walls = maze.getWalls();
 

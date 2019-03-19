@@ -37,10 +37,10 @@ public class MazeObjTest {
         int expected =
                 x * 2 + y * 2 //walls
                         - 4 // corner overlays
-                        + 2 // player and wayPoint
+
                 ;
         Maze mazeObj = new MazeObjTestable(x, y);
-        int actual = mazeObj.getMaze().size();
+        int actual = mazeObj.getWalls().size();
         assertEquals(expected, actual);
     }
 

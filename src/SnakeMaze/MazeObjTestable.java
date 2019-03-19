@@ -4,12 +4,12 @@ import SnakeEntities.GameObject;
 
 import java.util.ArrayList;
 
-public class MazeObjTestable extends MazeObjBased {
+class MazeObjTestable extends MazeObjBased {
 
     private int width;
     private int height;
 
-    public MazeObjTestable(int width, int height){
+    MazeObjTestable(int width, int height) {
         this.width = width;
         this.height = height;
         this.maze = new GameObject[width][height];
@@ -20,12 +20,12 @@ public class MazeObjTestable extends MazeObjBased {
     }
 
     private void borders() {
-        for (int i = 0; i <= width-1; i++) {
+        for (int i = 0; i <= width - 1; i++) {
             addWall(i, 0);
             addWall(i, height - 1);
         }
 
-        for (int i = 0; i <= height-1; i++) {
+        for (int i = 0; i <= height - 1; i++) {
             addWall(0, i);
             addWall(width - 1, i);
         }

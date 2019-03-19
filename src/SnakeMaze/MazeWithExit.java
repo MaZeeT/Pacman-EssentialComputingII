@@ -22,6 +22,4 @@ public class MazeWithExit extends MazeArrayBased{
         wayPoint = wayPoint(maze);
     }
 
-
-
 }

@@ -10,17 +10,17 @@ import java.util.List;
 
 public abstract class Maze implements IMaze {
 
-    List<GameObject> gameObjects = new ArrayList<>();
     List<GameObject> walls;
     Player player;
     WayPoint wayPoint;
 
     public List<GameObject> getMaze() {
-        if (!gameObjects.contains(player)) gameObjects.add(player);
-        if (!gameObjects.contains(wayPoint)) gameObjects.add(wayPoint);
+        List<GameObject> gameObjects = new ArrayList<>();
         for (GameObject wall : walls) {
             if (!gameObjects.contains(wall)) gameObjects.add(wall);
         }
+        gameObjects.add(player);
+        gameObjects.add(wayPoint);
         return gameObjects;
     }
 

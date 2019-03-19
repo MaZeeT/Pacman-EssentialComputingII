@@ -9,21 +9,21 @@ import SnakeEntities.WayPoint;
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class MazeArrayBased extends Maze{
+abstract class MazeArrayBased extends Maze {
 
-     int height;
-     int width;
+    int height;
+    int width;
 
-    MazeArrayBased(){
+    MazeArrayBased() {
 
     }
 
-    public MazeArrayBased(int width, int height) {
+    MazeArrayBased(int width, int height) {
         this.width = width;
         this.height = height;
     }
 
-    public WayPoint wayPoint(int[][] arr) {
+    WayPoint wayPoint(int[][] arr) {
         for (int j = 0; j < width; j++) {
             for (int i = 0; i < height; i++) {
                 if (arr[i][j] == 3) return new WayPoint(new Position(i, j));
@@ -32,7 +32,7 @@ public abstract class MazeArrayBased extends Maze{
         return null;
     }
 
-    public Player player(int[][] arr) {
+    Player player(int[][] arr) {
         for (int j = 0; j < width; j++) {
             for (int i = 0; i < height; i++) {
                 if (arr[i][j] == 2) return new Player(new Position(i, j));
@@ -41,7 +41,7 @@ public abstract class MazeArrayBased extends Maze{
         return null;
     }
 
-    public List<GameObject> walls(int[][] arr) {
+    List<GameObject> walls(int[][] arr) {
         List<GameObject> walls = new ArrayList<>();
         for (int j = 0; j < width; j++) {
             for (int i = 0; i < height; i++) {

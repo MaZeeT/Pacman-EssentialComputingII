@@ -10,11 +10,11 @@ import java.util.List;
 public class MoveClockWise implements ICrawler {
     private char dir;
     private Player player;
-    private List<GameObject> walls;
+    private List<GameObject> maze;
 
     public MoveClockWise(IMaze maze) {
         this.player = maze.getPlayer();
-        this.walls = maze.getWalls();
+        this.maze = maze.getMaze();
     }
 
     public void move(char dir) {
@@ -29,7 +29,7 @@ public class MoveClockWise implements ICrawler {
     private void movement(Player player) {
         switch (dir) {
             case 'w':
-                if (collide(walls, player.checkUp())) player.moveUp();
+                if (collide(maze, player.checkUp())) player.moveUp();
                 else {
                     System.out.println("Path Blocked");
                     dir = 'd';
@@ -38,7 +38,7 @@ public class MoveClockWise implements ICrawler {
                 break;
 
             case 's':
-                if (collide(walls, player.checkDown())) player.moveDown();
+                if (collide(maze, player.checkDown())) player.moveDown();
                 else {
                     System.out.println("Path Blocked");
                     dir = 'a';
@@ -47,7 +47,7 @@ public class MoveClockWise implements ICrawler {
                 break;
 
             case 'a':
-                if (collide(walls, player.checkLeft())) player.moveLeft();
+                if (collide(maze, player.checkLeft())) player.moveLeft();
                 else {
                     System.out.println("Path Blocked");
                     dir = 'w';
@@ -56,7 +56,7 @@ public class MoveClockWise implements ICrawler {
                 break;
 
             case 'd':
-                if (collide(walls, player.checkRight())) player.moveRight();
+                if (collide(maze, player.checkRight())) player.moveRight();
                 else {
                     System.out.println("Path Blocked");
                     dir = 's';
