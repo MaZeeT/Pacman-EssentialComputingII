@@ -27,11 +27,19 @@ public class BreadthFirst implements IDataStructure {
     }
 
     public Position checkNext() {
-        return queue.peek();
+        if (!queue.isEmpty()) {
+            return queue.peek();
+        } else {
+            return null;
+        }
     }
 
     public Position getNext() {
-        return queue.poll();
+        if (!queue.isEmpty()) {
+            return queue.poll();
+        } else {
+            return null;
+        }
     }
 
 }

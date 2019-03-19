@@ -25,11 +25,19 @@ public class DepthFirst implements IDataStructure {
     }
 
     public Position checkNext() {
-        return stack.peek();
+        if (!stack.empty()) {
+            return stack.peek();
+        } else {
+            return null;
+        }
     }
 
     public Position getNext() {
-        return stack.pop();
+        if  (!stack.empty()){
+            return stack.pop();
+        }else{
+            return null;
+        }
     }
 
 }

@@ -64,6 +64,13 @@ public class BreadthFirstTest {
     }
 
     @Test
+    public void checkNextNull() {
+        Position actual = fifo.checkNext();
+        Position expected = null;
+        assertEquals(expected, actual);
+    }
+
+    @Test
     public void getNext() {
         Position pos1 = new Position(1, 1);
         Position pos2 = new Position(2, 2);
@@ -90,6 +97,24 @@ public class BreadthFirstTest {
 
         Position actual = fifo.getNext();
         Position expected = pos3;
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void getNextNull() {
+        Position actual = fifo.getNext();
+        Position expected = null;
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void getNextNull2() {
+        Position pos1 = new Position(1, 1);
+        fifo.add(pos1);
+        fifo.getNext();
+
+        Position actual = fifo.getNext();
+        Position expected = null;
         assertEquals(expected, actual);
     }
 }

@@ -1,12 +1,13 @@
 package SnakeLogic;
 
+import SnakeDataStructures.BreadthFirst;
+import SnakeDataStructures.DepthFirst;
 import SnakeEntities.GameObject;
 import SnakeEntities.Player;
-import SnakeLogic.Crawler.DepthFirstCrawler;
+import SnakeLogic.Crawler.Crawler;
 import SnakeLogic.Crawler.MoveClockWise;
 import SnakeMaze.IMaze;
 import SnakeMaze.MazeObj;
-import SnakeMaze.MazeWithExit;
 
 import java.util.*;
 
@@ -20,7 +21,7 @@ public class GameManager {
     private int width;
     private int height;
     private MoveClockWise movement;
-    private DepthFirstCrawler crawler;
+    private Crawler crawler;
 
     private boolean crawl = true;
 
@@ -28,8 +29,8 @@ public class GameManager {
         this.width = width;
         this.height = height;
 
-        // IMaze maze = new MazeObj(10, 10);
-        IMaze maze = new MazeWithExit();
+         IMaze maze = new MazeObj(10, 10);
+        //IMaze maze = new MazeWithExit();
 
         walls = maze.getWalls();
 
@@ -38,7 +39,7 @@ public class GameManager {
         wayPoints.add(maze.getWayPoint());
 
         movement = new MoveClockWise(maze);
-        crawler = new DepthFirstCrawler(maze);
+        crawler = new Crawler(maze, new DepthFirst());
     }
 
     // update loop to make the game run

@@ -1,7 +1,6 @@
 package SnakeLogic.Crawler;
 
 import SnakeComponents.Position;
-import SnakeDataStructures.DepthFirst;
 import SnakeDataStructures.IDataStructure;
 import SnakeEntities.GameObject;
 import SnakeEntities.Player;
@@ -11,24 +10,29 @@ import javafx.scene.paint.Color;
 
 import java.util.List;
 
-public class DepthFirstCrawler {
+public class Crawler {
 
     private Player player;
     private List<GameObject> gameObjects;
     private List<Position> gameObjectPositions;
-    private IDataStructure depthFirst = new DepthFirst();
+    private IDataStructure depthFirst;
 
 
-    public DepthFirstCrawler(IMaze maze) {
+    public Crawler(IMaze maze, IDataStructure dataStructure) {
         this.player = maze.getPlayer();
         this.gameObjects = maze.getMaze();
         this.gameObjectPositions = maze.getMazePositions();
+        this.depthFirst = dataStructure;
     }
 
     public void update() {
         gameObjects.add(visited(player.getPosition()));
         checkNearby(player);
-        player.setPosition(depthFirst.getNext());
+        if (depthFirst.checkNext() != null){
+
+            player.setPosition(depthFirst.getNext());
+        }
+
     }
 
     private Wall visited(Position position) {

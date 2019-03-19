@@ -64,6 +64,13 @@ public class DepthFirstTest {
     }
 
     @Test
+    public void checkNextNull() {
+        Position actual = filo.checkNext();
+        Position expected = null;
+        assertEquals(expected, actual);
+    }
+
+    @Test
     public void getNext() {
         Position pos1 = new Position(1, 1);
         Position pos2 = new Position(2, 2);
@@ -90,6 +97,24 @@ public class DepthFirstTest {
 
         Position actual = filo.getNext();
         Position expected = pos1;
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void getNextNull() {
+        Position actual = filo.getNext();
+        Position expected = null;
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void getNextNull2() {
+        Position pos1 = new Position(1, 1);
+        filo.add(pos1);
+        filo.getNext();
+
+        Position actual = filo.getNext();
+        Position expected = null;
         assertEquals(expected, actual);
     }
 
