@@ -105,10 +105,4 @@ public class MazeArrayTest {
         assertEquals(expected, actual);
     }
 
-    @Test
-    public void generateMaze() {
-        MazeArrayBased arrGet = new MazeArrayTestable(3, 3);
-        arrGet.generateMaze();
-    }
-
 }

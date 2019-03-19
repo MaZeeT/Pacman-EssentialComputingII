@@ -6,8 +6,5 @@ public class MazeArrayTestable extends MazeArrayBased {
         super(width,height);
     }
 
-    @Override
-    public void generateMaze() {
 
-    }
 }

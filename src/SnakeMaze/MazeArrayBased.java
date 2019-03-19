@@ -14,6 +14,10 @@ public abstract class MazeArrayBased extends Maze{
      int height;
      int width;
 
+    MazeArrayBased(){
+
+    }
+
     public MazeArrayBased(int width, int height) {
         this.width = width;
         this.height = height;

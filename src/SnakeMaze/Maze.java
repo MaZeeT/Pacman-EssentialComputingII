@@ -48,8 +48,4 @@ public abstract class Maze implements IMaze {
         return walls;
     }
 
-
-    //TODO is this method needed at all ?
-    public abstract void generateMaze();
-
 }

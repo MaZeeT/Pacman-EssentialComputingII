@@ -3,10 +3,11 @@ package SnakeMaze;
 public class MazeWithExit extends MazeArrayBased{
 
 
-    public MazeWithExit(int width, int height) {
-        super(width,height);
+    public MazeWithExit() {
+        super();
+        this.width = 6;
+        this.height = 7;
 
-        //MazeArrayBased arrayGet = new MazeArrayBased(6,7);
         int[][] maze = new int[][]{
                 {1, 1, 1, 1, 1, 1},
                 {1, 2, 1, 0, 0, 3},
@@ -21,8 +22,6 @@ public class MazeWithExit extends MazeArrayBased{
         wayPoint = wayPoint(maze);
     }
 
-    @Override
-    public void generateMaze() {
-    }
+
 
 }
