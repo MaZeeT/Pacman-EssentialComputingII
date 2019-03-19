@@ -8,14 +8,7 @@ package SnakeComponents;
  */
 public class Position implements Comparable<Position> {
 
-    /**
-     * The position in the first dimension
-     */
     private int x;
-
-    /**
-     * The position in the second dimension
-     */
     private int y;
 
     /**
