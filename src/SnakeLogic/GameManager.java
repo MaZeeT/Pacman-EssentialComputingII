@@ -22,11 +22,13 @@ public class GameManager {
     private MoveClockWise movement;
     private DepthFirstCrawler crawler;
 
+    private boolean crawl = true;
+
     public GameManager(int width, int height) {
         this.width = width;
         this.height = height;
 
-       // IMaze maze = new MazeObj(10, 10);
+        // IMaze maze = new MazeObj(10, 10);
         IMaze maze = new MazeWithExit();
 
         walls = maze.getWalls();
@@ -44,7 +46,7 @@ public class GameManager {
         movement.move(direction);
         direction = movement.getDirection();
 
-        //crawler.update();
+        if (crawl) crawler.update();
     }
 
     // get and set

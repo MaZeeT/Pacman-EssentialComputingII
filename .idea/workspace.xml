@@ -4,17 +4,10 @@
     <option name="ANALYZE_TEST_SOURCES" value="false" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="clean up of TODO">
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="MoveClockWise now works with waypoints">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SnakeLogic/Crawler/MoveClockWise.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SnakeLogic/Crawler/MoveClockWise.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SnakeLogic/Crawler/DepthFirstCrawler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SnakeLogic/Crawler/DepthFirstCrawler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SnakeLogic/GameManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SnakeLogic/GameManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SnakeMaze/Maze.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SnakeMaze/Maze.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SnakeMaze/MazeArrayBased.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SnakeMaze/MazeArrayBased.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SnakeMaze/MazeArrayTestable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SnakeMaze/MazeArrayTestable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SnakeMaze/MazeObjBased.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SnakeMaze/MazeObjBased.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SnakeMaze/MazeObjTestable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SnakeMaze/MazeObjTestable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SnakeMaze/MazeWithExit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SnakeMaze/MazeWithExit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/SnakeMaze/MazeObjTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/SnakeMaze/MazeObjTest.java" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -127,11 +120,11 @@
       <content type="file-editors">
         <state>
           <leaf>
-            <file pinned="false" current-in-tab="false">
+            <file pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/src/SnakeLogic/Crawler/DepthFirstCrawler.java">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="314">
-                    <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+                  <state relative-caret-position="340">
+                    <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
                     <folding>
                       <element signature="imports" expanded="true" />
                     </folding>
@@ -139,11 +132,11 @@
                 </provider>
               </entry>
             </file>
-            <file pinned="false" current-in-tab="true">
+            <file pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/src/SnakeMaze/Maze.java">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="272">
-                    <caret line="16" column="39" lean-forward="true" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
+                  <state relative-caret-position="204">
+                    <caret line="12" column="27" lean-forward="true" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
                     <folding>
                       <element signature="imports" expanded="true" />
                     </folding>
@@ -159,11 +152,11 @@
       <content type="file-editors">
         <state>
           <leaf>
-            <file pinned="false" current-in-tab="false">
+            <file pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/src/SnakeDataStructures/DepthFirst.java">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="340">
-                    <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
+                  <state relative-caret-position="527">
+                    <caret line="31" column="27" lean-forward="true" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="27" />
                     <folding>
                       <element signature="imports" expanded="true" />
                       <element signature="e#692#693#0" expanded="true" />
@@ -175,11 +168,11 @@
                 </provider>
               </entry>
             </file>
-            <file pinned="false" current-in-tab="true">
+            <file pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/src/SnakeLogic/Crawler/MoveClockWise.java">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="59">
-                    <caret line="31" column="69" lean-forward="true" selection-start-line="31" selection-start-column="69" selection-end-line="31" selection-end-column="69" />
+                  <state relative-caret-position="187">
+                    <caret line="11" column="26" lean-forward="true" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
                     <folding>
                       <element signature="imports" expanded="true" />
                     </folding>
@@ -212,8 +205,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SnakeUserControl/PlayerControl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="9" lean-forward="true" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+            <state relative-caret-position="68">
+              <caret line="4" column="19" lean-forward="true" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Launcher.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="147">
+              <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -221,8 +226,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/SnakeLogic/GameManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="34" column="26" lean-forward="true" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
+            <state relative-caret-position="306">
+              <caret line="48" column="25" selection-start-line="48" selection-start-column="25" selection-end-line="48" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1438#1439#0" expanded="true" />
@@ -230,6 +235,15 @@
                 <element signature="e#1811#1812#0" expanded="true" />
                 <element signature="e#1854#1855#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/SnakeUserControl/UserControl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="39" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -266,15 +280,6 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/SnakeLogic/Crawler/MoveClockWiseTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
             </state>
           </provider>
         </entry>
@@ -333,7 +338,6 @@
         <option value="$PROJECT_DIR$/test/SnakeLogic/LauncherTest.java" />
         <option value="$PROJECT_DIR$/test/SnakeLogic/UpdateProcessTest.java" />
         <option value="$PROJECT_DIR$/src/SnakeGUI/Manager.java" />
-        <option value="$PROJECT_DIR$/src/SnakeDataStructures/DepthFirst.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/SnakeUserControl/PlayerControl.java" />
         <option value="$PROJECT_DIR$/src/SnakeLogic/Launcher.java" />
@@ -357,7 +361,6 @@
         <option value="$PROJECT_DIR$/src/SnakeLogic/Movement/MoveClockWise.java" />
         <option value="$PROJECT_DIR$/test/SnakeLogic/GameManagerTest.java" />
         <option value="$PROJECT_DIR$/src/SnakeLogic/Movement/ICrawler.java" />
-        <option value="$PROJECT_DIR$/src/SnakeLogic/Crawler/DepthFirstCrawler.java" />
         <option value="$PROJECT_DIR$/test/SnakeMaze/ArrayToTest.java" />
         <option value="$PROJECT_DIR$/src/SnakeMaze/ArrayTo.java" />
         <option value="$PROJECT_DIR$/test/SnakeMaze/MazeTest.java" />
@@ -377,8 +380,10 @@
         <option value="$PROJECT_DIR$/src/SnakeMaze/MazeWithExit.java" />
         <option value="$PROJECT_DIR$/test/SnakeMaze/MazeObjTest.java" />
         <option value="$PROJECT_DIR$/src/SnakeMaze/Maze.java" />
-        <option value="$PROJECT_DIR$/src/SnakeLogic/GameManager.java" />
         <option value="$PROJECT_DIR$/src/SnakeLogic/Crawler/MoveClockWise.java" />
+        <option value="$PROJECT_DIR$/src/SnakeLogic/GameManager.java" />
+        <option value="$PROJECT_DIR$/src/SnakeLogic/Crawler/DepthFirstCrawler.java" />
+        <option value="$PROJECT_DIR$/src/SnakeDataStructures/DepthFirst.java" />
       </list>
     </option>
   </component>
@@ -408,6 +413,12 @@
               <item name="snakeFX" type="b2602c69:ProjectViewProjectNode" />
               <item name="snakeFX" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="snakeFX" type="b2602c69:ProjectViewProjectNode" />
+              <item name="snakeFX" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="SnakeDataStructures" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="snakeFX" type="b2602c69:ProjectViewProjectNode" />
@@ -472,7 +483,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552957434027" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552958413693" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="dynamic.classpath" value="false" />
@@ -890,14 +901,7 @@
       <workItem from="1552771733618" duration="7887000" />
       <workItem from="1552817982985" duration="13558000" />
       <workItem from="1552904515388" duration="1807000" />
-      <workItem from="1552924813897" duration="27628000" />
-    </task>
-    <task id="LOCAL-00022" summary="clean up">
-      <created>1550697481890</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1550697481890</updated>
+      <workItem from="1552924813897" duration="28651000" />
     </task>
     <task id="LOCAL-00023" summary="clean up">
       <created>1550697565447</created>
@@ -1235,25 +1239,17 @@
       <option name="project" value="LOCAL" />
       <updated>1552956070951</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL-00071" summary="MoveClockWise now works with waypoints">
+      <created>1552957498352</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1552957498352</updated>
+    </task>
+    <option name="localTasksCounter" value="72" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="MazeObjTest_amountOfWallsHigh - 2019.03.19 at 01h 51m 00s.xml">
-      <configuration name="MazeObjTest.amountOfWallsHigh" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MazeObjTest_amountOfWallsHigh - 2019.03.19 at 01h 51m 37s.xml">
-      <configuration name="MazeObjTest.amountOfWallsHigh" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MazeObjTest_makeMaze - 2019.03.19 at 01h 51m 47s.xml">
-      <configuration name="MazeObjTest.makeMaze" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MazeObjTest_listSizeGameObjectComparedPositions - 2019.03.19 at 01h 52m 52s.xml">
-      <configuration name="MazeObjTest.listSizeGameObjectComparedPositions" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_snakeFX - 2019.03.19 at 01h 53m 11s.xml">
-      <configuration name="All in snakeFX" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="All_in_snakeFX - 2019.03.19 at 01h 54m 53s.xml">
       <configuration name="All in snakeFX" configurationId="JUnit" />
     </history-entry>
@@ -1269,9 +1265,24 @@
     <history-entry file="All_in_snakeFX - 2019.03.19 at 02h 03m 19s.xml">
       <configuration name="All in snakeFX" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="All_in_snakeFX - 2019.03.19 at 02h 03m 54s.xml">
+      <configuration name="All in snakeFX" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_snakeFX - 2019.03.19 at 02h 17m 11s.xml">
+      <configuration name="All in snakeFX" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_snakeFX - 2019.03.19 at 02h 17m 54s.xml">
+      <configuration name="All in snakeFX" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_snakeFX - 2019.03.19 at 02h 18m 54s.xml">
+      <configuration name="All in snakeFX" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_snakeFX - 2019.03.19 at 02h 20m 16s.xml">
+      <configuration name="All in snakeFX" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="206549000" />
+    <option name="totallyTimeSpent" value="207572000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1324,7 +1335,7 @@
       <window_info anchor="right" id="Properties" order="9" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="10" weight="0.25" />
       <window_info anchor="right" id="Maven" order="11" />
-      <window_info anchor="right" id="Coverage" order="12" side_tool="true" weight="0.16257995" />
+      <window_info anchor="right" id="Coverage" order="12" side_tool="true" visible="true" weight="0.16257995" />
     </layout>
     <layout-to-restore>
       <window_info id="Image Layers" order="0" />
@@ -1380,7 +1391,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="clean up of GameManager" />
     <MESSAGE value="a few update" />
     <MESSAGE value="added DepthFirst dataStructure" />
     <MESSAGE value="attempt to move Movement into its own class" />
@@ -1405,7 +1415,8 @@
     <MESSAGE value="Array based mazes have been moved into a hierarchy with abstract parent classes" />
     <MESSAGE value="done with breaking mazes up into types and correcting test" />
     <MESSAGE value="clean up of TODO" />
-    <option name="LAST_COMMIT_MESSAGE" value="clean up of TODO" />
+    <MESSAGE value="MoveClockWise now works with waypoints" />
+    <option name="LAST_COMMIT_MESSAGE" value="MoveClockWise now works with waypoints" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -1491,13 +1502,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SnakeUserControl/UserControl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="39" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/SnakeComponents/PositionTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -1569,16 +1573,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SnakeDataStructures/BreadthFirst.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/SnakeComponents/Position.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -1615,16 +1609,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Launcher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/SnakeLogic/Crawler/ICrawler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -1636,30 +1620,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SnakeDataStructures/DepthFirst.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#692#693#0" expanded="true" />
-            <element signature="e#727#728#0" expanded="true" />
-            <element signature="e#760#761#0" expanded="true" />
-            <element signature="e#794#795#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SnakeLogic/Crawler/DepthFirstCrawler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1807,11 +1767,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SnakeMaze/Maze.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="39" lean-forward="true" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
+        <state relative-caret-position="204">
+          <caret line="12" column="27" lean-forward="true" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SnakeUserControl/UserControl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="39" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SnakeUserControl/PlayerControl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="19" lean-forward="true" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -1825,17 +1799,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SnakeUserControl/PlayerControl.java">
+    <entry file="file://$PROJECT_DIR$/src/Launcher.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="9" lean-forward="true" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+        <state relative-caret-position="147">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SnakeDataStructures/BreadthFirst.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SnakeLogic/Crawler/MoveClockWise.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="59">
-          <caret line="31" column="69" lean-forward="true" selection-start-line="31" selection-start-column="69" selection-end-line="31" selection-end-column="69" />
+        <state relative-caret-position="187">
+          <caret line="11" column="26" lean-forward="true" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SnakeDataStructures/DepthFirst.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="31" column="27" lean-forward="true" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#692#693#0" expanded="true" />
+            <element signature="e#727#728#0" expanded="true" />
+            <element signature="e#760#761#0" expanded="true" />
+            <element signature="e#794#795#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SnakeLogic/Crawler/DepthFirstCrawler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1844,8 +1855,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SnakeLogic/GameManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="34" column="26" lean-forward="true" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
+        <state relative-caret-position="306">
+          <caret line="48" column="25" selection-start-line="48" selection-start-column="25" selection-end-line="48" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1438#1439#0" expanded="true" />

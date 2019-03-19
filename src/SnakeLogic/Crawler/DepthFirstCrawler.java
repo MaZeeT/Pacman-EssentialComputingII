@@ -27,8 +27,8 @@ public class DepthFirstCrawler {
 
     public void update() {
         gameObjects.add(visited(player.getPosition()));
-        player.setPosition(depthFirst.getNext());
         checkNearby(player);
+        player.setPosition(depthFirst.getNext());
     }
 
     private Wall visited(Position position) {
