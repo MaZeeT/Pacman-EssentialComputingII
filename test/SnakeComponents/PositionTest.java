@@ -103,4 +103,53 @@ public class PositionTest {
         int actual = -1;
         assertEquals(expected, actual);
     }
+
+    @Test
+    public void isEqual() {
+        Position pos1 = new Position(defX, defY);
+        Position pos2 = new Position(defX, defY);
+
+        boolean expected = true;
+        boolean actual = pos1.equals(pos2);
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void isNotEqual() {
+        Position pos1 = new Position(defX, defY);
+        Position pos2 = new Position(defX+1, defY+1);
+
+        boolean expected = false;
+        boolean actual = pos1.equals(pos2);
+        assertEquals(expected, actual);
+    }
+    @Test
+    public void isEqualWrongType() {
+        Position pos1 = new Position(defX, defY);
+        String string = "test";
+
+        boolean expected = false;
+        boolean actual = pos1.equals(string);
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void equalHashcode() {
+        Position pos1 = new Position(defX, defY);
+        Position pos2 = new Position(defX+1, defY+1);
+
+        boolean expected = false;
+        boolean actual = pos1.hashCode() == pos2.hashCode();
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void notEqualHashcode() {
+        Position pos1 = new Position(defX, defY);
+        Position pos2 = new Position(defX, defY);
+
+        boolean expected = true;
+        boolean actual = pos1.hashCode() == pos2.hashCode();
+        assertEquals(expected, actual);
+    }
 }

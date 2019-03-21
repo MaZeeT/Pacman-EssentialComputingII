@@ -1,5 +1,7 @@
 package SnakeComponents;
 
+import java.util.Arrays;
+
 /**
  * This class is to specify a position in two dimensions (2D).
  * The first dimension is x, and second dimension is y.
@@ -83,5 +85,33 @@ public class Position implements Comparable<Position> {
         }
 
         return rtn;
+    }
+
+    /**
+     * Override the equals function, where it will check if x and y is equal to the compared x and y of the object.
+     *
+     * @param obj The object the Position is trying to compare to.
+     * @return Returns a boolean to show if the obj is equal to the position or not.
+     */
+    @Override
+    public boolean equals(Object obj) {
+        try {
+            Position other = (Position) obj;
+            return (x == other.x && y == other.y);
+        } catch (ClassCastException e) {
+            return false;
+        }
+    }
+
+
+    /**
+     * Calculate the hashcode of the position based on the given x and y position.
+     *
+     * @return Return a hashcode based on the x and y position.
+     */
+    @Override
+    public int hashCode() {
+        final int[] numbers = {x, y};
+        return Arrays.hashCode(numbers);
     }
 }
