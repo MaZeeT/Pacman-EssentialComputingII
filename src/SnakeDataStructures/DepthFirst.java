@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
-//TODO write javaDoc
+//TODO write javaDoc AND make generic by replacing Position with T
 public class DepthFirst implements IDataStructure {
     private Stack<Position> stack = new Stack<>();
     private List<Position> visitedList = new ArrayList<>();

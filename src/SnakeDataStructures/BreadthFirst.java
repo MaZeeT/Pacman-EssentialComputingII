@@ -7,7 +7,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
-//TODO write javaDoc
+//TODO write javaDoc AND make generic by replacing Position with T
 public class BreadthFirst implements IDataStructure {
     private Queue<Position> queue = new LinkedList<>();
     private List<Position> visitedList = new ArrayList<>();

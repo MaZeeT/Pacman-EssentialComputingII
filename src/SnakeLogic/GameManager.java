@@ -6,6 +6,7 @@ import SnakeEntities.GameObject;
 import SnakeEntities.Player;
 import SnakeLogic.Crawler.Crawler;
 import SnakeLogic.Crawler.MoveClockWise;
+import SnakeMaze.ForkRoad;
 import SnakeMaze.IMaze;
 import SnakeMaze.ManyRoads;
 import SnakeMaze.MazeObj;
@@ -33,7 +34,7 @@ public class GameManager {
 
         //IMaze maze = new MazeObj(10, 10);
         //IMaze maze = new MazeWithExit();
-        IMaze maze = new ManyRoads();
+        IMaze maze = new ForkRoad();
 
         walls = maze.getWalls();
 
