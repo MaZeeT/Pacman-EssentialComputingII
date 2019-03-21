@@ -34,7 +34,7 @@ public class GameManager {
 
         //IMaze maze = new MazeObj(10, 10);
         //IMaze maze = new MazeWithExit();
-        IMaze maze = new ForkRoad();
+        IMaze maze = new ManyRoads();
 
         walls = maze.getWalls();
 
@@ -43,7 +43,7 @@ public class GameManager {
         wayPoints.add(maze.getWayPoint());
 
         movement = new MoveClockWise(maze);
-        crawler = new Crawler(maze, new DepthFirst());
+        crawler = new Crawler(maze, new BreadthFirst());
     }
 
     // update loop to make the game run
