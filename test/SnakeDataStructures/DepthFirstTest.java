@@ -8,7 +8,6 @@ import static org.junit.Assert.*;
 
 public class DepthFirstTest extends DataStructuresTest {
 
-
     @Before
     public void setUp() {
         dataStructure = new DepthFirst();
