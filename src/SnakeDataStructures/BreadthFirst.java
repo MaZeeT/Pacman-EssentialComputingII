@@ -13,10 +13,7 @@ public class BreadthFirst implements IDataStructure {
     private List<Position> visitedList = new ArrayList<>();
 
     public boolean contains(Position position) {
-        for (Position pos : visitedList) {
-            if (pos.compareTo(position) == 0) return true;
-        }
-        return false;
+        return visitedList.contains(position);
     }
 
     public void add(Position position) {
