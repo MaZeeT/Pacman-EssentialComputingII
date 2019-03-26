@@ -20,7 +20,7 @@ import java.util.List;
  *
  * @author MaZeeT
  */
-public class Crawler {
+public class Crawler { //TODO add a crawler test class.
 
     private Player player;
     private List<GameObject> gameObjects;
@@ -52,7 +52,6 @@ public class Crawler {
         gameObjects.add(visited(player.getPosition()));
         checkNearby(player);
         if (dataStructure.checkNext() != null) {
-
             player.setPosition(dataStructure.getNext());
         }
     }
