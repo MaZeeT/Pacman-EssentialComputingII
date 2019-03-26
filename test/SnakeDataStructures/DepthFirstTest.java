@@ -6,44 +6,24 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class DepthFirstTest {
+public class DepthFirstTest extends DataStructuresTest {
 
-    private IDataStructure filo;
 
     @Before
     public void setUp() {
-        filo = new DepthFirst();
+        dataStructure = new DepthFirst();
     }
-
-    @Test
-    public void addAndContainsTrue() {
-        Position pos = new Position(2, 3);
-        filo.add(pos);
-        boolean actual = filo.contains(pos);
-        boolean expected = true;
-        assertEquals(expected, actual);
-    }
-
-    @Test
-    public void addAndContainsFalse() {
-        Position pos = new Position(2, 3);
-        filo.add(pos);
-        boolean actual = filo.contains(new Position(3, 3));
-        boolean expected = false;
-        assertEquals(expected, actual);
-    }
-
 
     @Test
     public void checkNext() {
         Position pos1 = new Position(1, 1);
         Position pos2 = new Position(2, 2);
         Position pos3 = new Position(3, 3);
-        filo.add(pos1);
-        filo.add(pos2);
-        filo.add(pos3);
+        dataStructure.add(pos1);
+        dataStructure.add(pos2);
+        dataStructure.add(pos3);
 
-        Position actual = filo.checkNext();
+        Position actual = dataStructure.checkNext();
         Position expected = pos3;
         assertEquals(expected, actual);
     }
@@ -53,20 +33,13 @@ public class DepthFirstTest {
         Position pos1 = new Position(1, 1);
         Position pos2 = new Position(2, 2);
         Position pos3 = new Position(3, 3);
-        filo.add(pos1);
-        filo.add(pos2);
-        filo.add(pos3);
-        filo.checkNext();
-        filo.checkNext();
-        Position actual = filo.checkNext();
+        dataStructure.add(pos1);
+        dataStructure.add(pos2);
+        dataStructure.add(pos3);
+        dataStructure.checkNext();
+        dataStructure.checkNext();
+        Position actual = dataStructure.checkNext();
         Position expected = pos3;
-        assertEquals(expected, actual);
-    }
-
-    @Test
-    public void checkNextNull() {
-        Position actual = filo.checkNext();
-        Position expected = null;
         assertEquals(expected, actual);
     }
 
@@ -75,11 +48,11 @@ public class DepthFirstTest {
         Position pos1 = new Position(1, 1);
         Position pos2 = new Position(2, 2);
         Position pos3 = new Position(3, 3);
-        filo.add(pos1);
-        filo.add(pos2);
-        filo.add(pos3);
+        dataStructure.add(pos1);
+        dataStructure.add(pos2);
+        dataStructure.add(pos3);
 
-        Position actual = filo.getNext();
+        Position actual = dataStructure.getNext();
         Position expected = pos3;
         assertEquals(expected, actual);
     }
@@ -89,32 +62,14 @@ public class DepthFirstTest {
         Position pos1 = new Position(1, 1);
         Position pos2 = new Position(2, 2);
         Position pos3 = new Position(3, 3);
-        filo.add(pos1);
-        filo.add(pos2);
-        filo.add(pos3);
-        filo.getNext();
-        filo.getNext();
+        dataStructure.add(pos1);
+        dataStructure.add(pos2);
+        dataStructure.add(pos3);
+        dataStructure.getNext();
+        dataStructure.getNext();
 
-        Position actual = filo.getNext();
+        Position actual = dataStructure.getNext();
         Position expected = pos1;
-        assertEquals(expected, actual);
-    }
-
-    @Test
-    public void getNextNull() {
-        Position actual = filo.getNext();
-        Position expected = null;
-        assertEquals(expected, actual);
-    }
-
-    @Test
-    public void getNextNull2() {
-        Position pos1 = new Position(1, 1);
-        filo.add(pos1);
-        filo.getNext();
-
-        Position actual = filo.getNext();
-        Position expected = null;
         assertEquals(expected, actual);
     }
 

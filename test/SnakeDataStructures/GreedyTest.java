@@ -6,11 +6,16 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class BreadthFirstTest extends DataStructuresTest{
+public class GreedyTest extends DataStructuresTest{
+
+    private Position target;
+
+    //TODO look into tests with the target in between the different points.
 
     @Before
-    public void setUp() {
-        dataStructure = new BreadthFirst();
+    public void setUp(){
+        target = new Position(9,9); // move this position to 2,2 to break the tests.
+        dataStructure = new Greedy(target);
     }
 
     @Test
@@ -23,7 +28,7 @@ public class BreadthFirstTest extends DataStructuresTest{
         dataStructure.add(pos3);
 
         Position actual = dataStructure.checkNext();
-        Position expected = pos1;
+        Position expected = pos3;
         assertEquals(expected, actual);
     }
 
@@ -38,7 +43,7 @@ public class BreadthFirstTest extends DataStructuresTest{
         dataStructure.checkNext();
         dataStructure.checkNext();
         Position actual = dataStructure.checkNext();
-        Position expected = pos1;
+        Position expected = pos3;
         assertEquals(expected, actual);
     }
 
@@ -52,7 +57,7 @@ public class BreadthFirstTest extends DataStructuresTest{
         dataStructure.add(pos3);
 
         Position actual = dataStructure.getNext();
-        Position expected = pos1;
+        Position expected = pos3;
         assertEquals(expected, actual);
     }
 
@@ -68,7 +73,7 @@ public class BreadthFirstTest extends DataStructuresTest{
         dataStructure.getNext();
 
         Position actual = dataStructure.getNext();
-        Position expected = pos3;
+        Position expected = pos1;
         assertEquals(expected, actual);
     }
 
