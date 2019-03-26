@@ -5,6 +5,11 @@ import SnakeEntities.WayPoint;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import static java.util.Collections.reverseOrder;
+import static java.util.Collections.sort;
 import static org.junit.Assert.*;
 
 public class PositionManhattanTest extends PositionTest
@@ -197,6 +202,30 @@ public class PositionManhattanTest extends PositionTest
 
         int expected = +1;
         int actual = pos1.compareTo(pos2);
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void sortPositionManhattan() {
+        List<PositionManhattan> arr = new ArrayList<>();
+        arr.add(new PositionManhattan(1,3));
+        arr.add(new PositionManhattan(4,4));
+        arr.add(new PositionManhattan(1,2));
+        arr.add(new PositionManhattan(2,3));
+        arr.add(new PositionManhattan(3,3));
+        arr.add(new PositionManhattan(4,3));
+        arr.add(new PositionManhattan(5,4));
+        PositionManhattan pos = new PositionManhattan(6, 6);
+        arr.add(pos);
+
+        for (PositionManhattan arrPos : arr){
+            arrPos.getDistanceTo(new Position(9,9));
+        }
+
+        sort(arr, reverseOrder());
+
+        PositionManhattan expected = pos;
+        PositionManhattan actual = arr.get(0);
         assertEquals(expected, actual);
     }
 

@@ -7,15 +7,15 @@ import static org.junit.Assert.*;
 
 public class PositionTest {
 
-     int defX;
-     int defY;
-     Position pos;
+    int defX;
+    int defY;
+    Position pos;
 
     @Before
-    public void setUp(){
+    public void setUp() {
         defX = 2;
         defY = 4;
-        pos = new Position(defX,defY);
+        pos = new Position(defX, defY);
     }
 
     @Test
@@ -50,7 +50,7 @@ public class PositionTest {
 
     @Test
     public void compareEqual() {
-        Position newPos = new Position(defX,defY);
+        Position newPos = new Position(defX, defY);
         int expected = pos.compareTo(newPos);
         int actual = 0;
         assertEquals(expected, actual);
@@ -58,7 +58,7 @@ public class PositionTest {
 
     @Test
     public void compareToHigherX() {
-        Position newPos = new Position(defX+1,defY);
+        Position newPos = new Position(defX + 1, defY);
         int expected = pos.compareTo(newPos);
         int actual = +1;
         assertEquals(expected, actual);
@@ -66,7 +66,7 @@ public class PositionTest {
 
     @Test
     public void compareToLowerX() {
-        Position newPos = new Position(defX-1,defY);
+        Position newPos = new Position(defX - 1, defY);
         int expected = pos.compareTo(newPos);
         int actual = -1;
         assertEquals(expected, actual);
@@ -74,7 +74,7 @@ public class PositionTest {
 
     @Test
     public void compareToHigherY() {
-        Position newPos = new Position(defX,defY+1);
+        Position newPos = new Position(defX, defY + 1);
         int expected = pos.compareTo(newPos);
         int actual = +1;
         assertEquals(expected, actual);
@@ -82,7 +82,7 @@ public class PositionTest {
 
     @Test
     public void compareToLowerY() {
-        Position newPos = new Position(defX,defY-1);
+        Position newPos = new Position(defX, defY - 1);
         int expected = pos.compareTo(newPos);
         int actual = -1;
         assertEquals(expected, actual);
@@ -90,7 +90,7 @@ public class PositionTest {
 
     @Test
     public void compareToHigherXY() {
-        Position newPos = new Position(defX+1,defY+1);
+        Position newPos = new Position(defX + 1, defY + 1);
         int expected = pos.compareTo(newPos);
         int actual = +1;
         assertEquals(expected, actual);
@@ -98,7 +98,7 @@ public class PositionTest {
 
     @Test
     public void compareToLowerXY() {
-        Position newPos = new Position(defX-1,defY-1);
+        Position newPos = new Position(defX - 1, defY - 1);
         int expected = pos.compareTo(newPos);
         int actual = -1;
         assertEquals(expected, actual);
@@ -117,7 +117,7 @@ public class PositionTest {
     @Test
     public void isNotEqual() {
         Position pos1 = new Position(defX, defY);
-        Position pos2 = new Position(defX+1, defY+1);
+        Position pos2 = new Position(defX + 1, defY + 1);
 
         boolean expected = false;
         boolean actual = pos1.equals(pos2);
@@ -137,7 +137,7 @@ public class PositionTest {
     @Test
     public void equalHashcode() {
         Position pos1 = new Position(defX, defY);
-        Position pos2 = new Position(defX+1, defY+1);
+        Position pos2 = new Position(defX + 1, defY + 1);
 
         boolean expected = false;
         boolean actual = pos1.hashCode() == pos2.hashCode();
