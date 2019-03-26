@@ -51,7 +51,6 @@ public class PositionManhattan extends Position {
         return distance;
     }
 
-
     /**
      * This will calculate the distance in a Manhattan way, based on a given position.
      *

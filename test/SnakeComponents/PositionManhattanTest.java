@@ -131,4 +131,14 @@ public class PositionManhattanTest {
         assertEquals(expected, actual);
     }
 
+    @Test
+    public void positiveNegativeDistance() {
+        PositionManhattan pos1 = new PositionManhattan(1, 1);
+        PositionManhattan pos2 = new PositionManhattan(5, 5);
+
+        int expected = pos1.getDistanceTo(pos2);
+        int actual = pos2.getDistanceTo(pos1);
+        assertEquals(expected, actual);
+    }
+
 }
