@@ -11,11 +11,12 @@ import javafx.scene.paint.Color;
 import java.util.List;
 
 /**
- * The purpose of this class is to be enable the player to crawl around in a given maze.
+ * The purpose of this class is to be enable the {@link Player} to crawl around in a given {@link SnakeMaze.Maze}.
  * This is done by storing each possible steps in a data structure and make a decision about which step to take next.
- * This crawler works with dataStructures that implements the {@link IDataStructure} interface.
+ * This {@link Crawler} works with dataStructures that implements the {@link IDataStructure} interface.
  * The {@link SnakeDataStructures.DepthFirst} dataStructure will give a depth first approach.
  * The {@link SnakeDataStructures.BreadthFirst} dataStructure will give a Breadth first approach.
+ * //TODO add the greedy dataStructure.
  *
  * @author MaZeeT
  */
@@ -27,11 +28,12 @@ public class Crawler {
     private IDataStructure dataStructure;
 
     /**
-     * The constructor of the Crawler class,
-     * This take a maze and a dataStructure as an input, and links some of the objects inside the maze to some of the private variables of this class.
+     * The constructor of the {@link Crawler} class,
+     * This take a {@link SnakeMaze.Maze} and a dataStructure as an input,
+     * and links some of the objects inside the {@link SnakeMaze.Maze} to some of the private variables of this class.
      *
-     * @param maze          The maze where the crawler will move in.
-     * @param dataStructure The dataStructure that will hold the positions the crawler will travel thought.
+     * @param maze          The {@link SnakeMaze.Maze} where the {@link Crawler} will move in.
+     * @param dataStructure The dataStructure that will hold the {@link Position}s the {@link Crawler} will move to.
      */
     public Crawler(IMaze maze, IDataStructure dataStructure) {
         this.player = maze.getPlayer();
@@ -42,9 +44,9 @@ public class Crawler {
 
     /**
      * This function is called on each update "tick".
-     * First the location of the player is added as a visited wall,
-     * and nearby positions of the player is checked and added to the dataStructure.
-     * If the dataStructure is not empty, the players position will be checked to the next in the dataStructure.
+     * First the {@link Position} of the {@link Player} is added as a visited wall,
+     * and nearby positions of the {@link Player} is checked and added to the dataStructure.
+     * If the dataStructure is not empty, the {@link Player}'s position will be checked to the next in the dataStructure.
      */
     public void update() {
         gameObjects.add(visited(player.getPosition()));
@@ -56,10 +58,10 @@ public class Crawler {
     }
 
     /**
-     * Instantiate a new Wall object, set the color to YELLOW and return the new Wall object.
+     * Instantiate a new {@link Wall} object, set the color to YELLOW and return the new {@link Wall} object.
      *
-     * @param position The position the new wall need to be instantiated at.
-     * @return Return a new YELLOW Wall object
+     * @param position The {@link Position} of the new instantiated {@link Wall}.
+     * @return Return a new YELLOW {@link Wall} object
      */
     private Wall visited(Position position) {
         Wall wall = new Wall(position);
@@ -68,29 +70,26 @@ public class Crawler {
     }
 
     /**
-     * Check all the positions around the player, and call the "addNearby" on each position.
+     * Check all the {@link Position} around the player, and call the "addToDataStructure" on each {@link Position}.
      *
-     * @param player The player that need to check nearby positions.
+     * @param player The crawling {@link Player}.
      */
     private void checkNearby(Player player) {
-        addNearby(player.checkUp());
-        addNearby(player.checkLeft());
-        addNearby(player.checkDown());
-        addNearby(player.checkRight());
+        addToDataStructure(player.checkUp());
+        addToDataStructure(player.checkLeft());
+        addToDataStructure(player.checkDown());
+        addToDataStructure(player.checkRight());
+
     }
 
     /**
-     * Checks if a given position is in the list of gameObjectPositions, and adds it if thegiven position isn't included.
+     * Checks if a given {@link Position} is in the list of gameObjectPositions, and adds the {@link Position} if not.
      *
-     * @param position A given position that need to be added to the list of positions.
+     * @param position The {@link Position} that will be added to the gameObjectPosition list.
      */
-    private void addNearby(Position position) {
-        for (Position pos : gameObjectPositions) {
-            if (pos.compareTo(position) == 0) return;
-        }
-        if (!dataStructure.contains(position)) {
+    private void addToDataStructure(Position position) {
+        if (!gameObjectPositions.contains(position))
             dataStructure.add(position);
-        }
     }
 
 }
