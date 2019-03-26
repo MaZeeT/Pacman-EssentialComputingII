@@ -21,7 +21,7 @@ public class GameManager {
     private MoveClockWise movement;
     private Crawler crawler;
 
-    private boolean crawl = true;
+    private boolean crawl = false;
 
     public GameManager(IMaze maze, IDataStructure dataStructure) {
         walls = maze.getWalls();

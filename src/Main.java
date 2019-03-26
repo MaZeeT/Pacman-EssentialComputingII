@@ -7,7 +7,7 @@ import javafx.stage.Stage;
  * @author MaZeeT
  */
 public class Main extends Application {
-//TODO code reuse of the tests, some of the tests can be inherited to increase code reuse. example Greedy and BreadthFirst tests, and some of the tests in DepthFirst also.
+//TODO code reuse of the tests, some of the tests can be inherited to increase code reuse.
 
     /**
      * instantiate the program and make a window for the program to show to.

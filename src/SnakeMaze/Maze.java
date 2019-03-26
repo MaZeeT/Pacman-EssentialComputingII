@@ -17,7 +17,7 @@ public abstract class Maze implements IMaze {
 
     public List<GameObject> getMaze() {
         List<GameObject> gameObjects = new ArrayList<>();
-        for (GameObject wall : walls) {
+        for (GameObject wall : walls) { //TODO rewrite class to include walls.contain(wall) method.
             if (!gameObjects.contains(wall)) gameObjects.add(wall);
         }
         gameObjects.add(player);
