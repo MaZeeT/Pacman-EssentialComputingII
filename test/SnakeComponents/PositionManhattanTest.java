@@ -7,7 +7,8 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class PositionManhattanTest {
+public class PositionManhattanTest extends PositionTest
+{
 
     private WayPoint wayPoint;
     private Player player;
@@ -16,6 +17,7 @@ public class PositionManhattanTest {
     public void setUp() {
         wayPoint = new WayPoint(new Position(1, 1));
         player = new Player(new Position(3, 3));
+        this.pos = new PositionManhattan(this.defX,this.defY);
     }
 
     @Test
@@ -132,12 +134,69 @@ public class PositionManhattanTest {
     }
 
     @Test
+    public void getDistance() {
+        PositionManhattan manhattan = new PositionManhattan(5, 5);
+        manhattan.getDistanceTo(player.getPosition());
+
+        int expected = 4;
+        int actual = manhattan.getDistance();
+        assertEquals(expected, actual);
+    }
+
+    @Test
     public void positiveNegativeDistance() {
         PositionManhattan pos1 = new PositionManhattan(1, 1);
         PositionManhattan pos2 = new PositionManhattan(5, 5);
 
         int expected = pos1.getDistanceTo(pos2);
         int actual = pos2.getDistanceTo(pos1);
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void compareToDistanceHigher() {
+        PositionManhattan pos1 = new PositionManhattan(7, 7);
+        PositionManhattan pos2 = new PositionManhattan(5, 5);
+        pos1.getDistanceTo(wayPoint.getPosition());
+        pos2.getDistanceTo(wayPoint.getPosition());
+
+        int expected = -1;
+        int actual = pos1.compareTo(pos2);
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void compareToDistanceLower() {
+        PositionManhattan pos1 = new PositionManhattan(2, 1);
+        PositionManhattan pos2 = new PositionManhattan(2, 2);
+        pos1.getDistanceTo(wayPoint.getPosition());
+        pos2.getDistanceTo(wayPoint.getPosition());
+
+        int expected = -1;
+        int actual = pos2.compareTo(pos1);
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void compareToDistanceSameHigherX() {
+        PositionManhattan pos1 = new PositionManhattan(2, 1);
+        PositionManhattan pos2 = new PositionManhattan(1, 2);
+        pos1.getDistanceTo(wayPoint.getPosition());
+        pos2.getDistanceTo(wayPoint.getPosition());
+
+        int expected = -1;
+        int actual = pos1.compareTo(pos2);
+        assertEquals(expected, actual);
+    }
+    @Test
+    public void compareToDistanceSameHigherY() {
+        PositionManhattan pos1 = new PositionManhattan(1, 2);
+        PositionManhattan pos2 = new PositionManhattan(2, 1);
+        pos1.getDistanceTo(wayPoint.getPosition());
+        pos2.getDistanceTo(wayPoint.getPosition());
+
+        int expected = +1;
+        int actual = pos1.compareTo(pos2);
         assertEquals(expected, actual);
     }
 

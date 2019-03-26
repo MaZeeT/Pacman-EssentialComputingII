@@ -7,9 +7,9 @@ import static org.junit.Assert.*;
 
 public class PositionTest {
 
-    private int defX;
-    private int defY;
-    private Position pos;
+     int defX;
+     int defY;
+     Position pos;
 
     @Before
     public void setUp(){
@@ -123,6 +123,7 @@ public class PositionTest {
         boolean actual = pos1.equals(pos2);
         assertEquals(expected, actual);
     }
+
     @Test
     public void isEqualWrongType() {
         Position pos1 = new Position(defX, defY);
@@ -152,4 +153,5 @@ public class PositionTest {
         boolean actual = pos1.hashCode() == pos2.hashCode();
         assertEquals(expected, actual);
     }
+
 }
