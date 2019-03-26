@@ -11,7 +11,7 @@ import static org.junit.Assert.*;
 
 public class MoveClockWiseTest {
 
-    private ICrawler movement;
+    private MoveClockWise movement;
     private Player player;
 
     @Before

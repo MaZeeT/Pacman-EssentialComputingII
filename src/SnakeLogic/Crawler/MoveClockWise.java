@@ -3,13 +3,12 @@ package SnakeLogic.Crawler;
 import SnakeComponents.Position;
 import SnakeEntities.GameObject;
 import SnakeEntities.Player;
-import SnakeLogic.Crawler.ICrawler;
 import SnakeMaze.IMaze;
 
 import java.util.List;
 
 //TODO write javaDoc
-public class MoveClockWise implements ICrawler {
+public class MoveClockWise{
     private char dir;
     private Player player;
     private List<GameObject> maze;
