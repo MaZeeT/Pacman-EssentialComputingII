@@ -2,6 +2,7 @@ package SnakeLogic;
 
 import SnakeDataStructures.BreadthFirst;
 import SnakeDataStructures.DepthFirst;
+import SnakeDataStructures.Greedy;
 import SnakeEntities.GameObject;
 import SnakeEntities.Player;
 import SnakeLogic.Crawler.Crawler;
@@ -43,7 +44,7 @@ public class GameManager {
         wayPoints.add(maze.getWayPoint());
 
         movement = new MoveClockWise(maze);
-        crawler = new Crawler(maze, new BreadthFirst());
+        crawler = new Crawler(maze, new Greedy(maze.getWayPoint().getPosition()));
     }
 
     // update loop to make the game run

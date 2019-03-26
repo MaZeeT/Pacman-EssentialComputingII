@@ -16,7 +16,7 @@ import java.util.List;
  * This {@link Crawler} works with dataStructures that implements the {@link IDataStructure} interface.
  * The {@link SnakeDataStructures.DepthFirst} dataStructure will give a depth first approach.
  * The {@link SnakeDataStructures.BreadthFirst} dataStructure will give a Breadth first approach.
- * //TODO add the greedy dataStructure.
+ * The {@link SnakeDataStructures.Greedy} dataStructure will take the best possible single step each update.
  *
  * @author MaZeeT
  */
@@ -79,7 +79,6 @@ public class Crawler {
         addToDataStructure(player.checkLeft());
         addToDataStructure(player.checkDown());
         addToDataStructure(player.checkRight());
-
     }
 
     /**

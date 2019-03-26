@@ -83,7 +83,6 @@ public class Position implements Comparable<Position> {
             if (y < otherPos.getY()) rtn = +1;
             if (y > otherPos.getY()) rtn = -1;
         }
-
         return rtn;
     }
 
@@ -103,7 +102,6 @@ public class Position implements Comparable<Position> {
         }
     }
 
-
     /**
      * Calculate the hashcode of the position based on the given x and y position.
      *
@@ -114,4 +112,5 @@ public class Position implements Comparable<Position> {
         final int[] numbers = {x, y};
         return Arrays.hashCode(numbers);
     }
+
 }
