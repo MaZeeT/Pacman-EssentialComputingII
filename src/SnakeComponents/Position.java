@@ -10,8 +10,8 @@ import java.util.Arrays;
  */
 public class Position implements Comparable<Position> {
 
-    private int x;
-    private int y;
+     int x;
+     int y;
 
     /**
      * Stores the two given dimensions.
