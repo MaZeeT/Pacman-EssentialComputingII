@@ -1,6 +1,11 @@
+import SnakeDataStructures.BreadthFirst;
+import SnakeDataStructures.DepthFirst;
+import SnakeDataStructures.Greedy;
+import SnakeDataStructures.IDataStructure;
 import SnakeGUI.IGUI;
 import SnakeGUI.Manager;
 import SnakeLogic.GameManager;
+import SnakeMaze.*;
 import SnakeUserControl.PlayerControl;
 import SnakeUserControl.UserControl;
 import javafx.event.EventHandler;
@@ -17,14 +22,16 @@ import javafx.scene.layout.Pane;
  */
 public class Launcher {
     private Scene scene;
+    private IMaze maze;
+    private IDataStructure dataStructure;
 
     //TODO finish javaDoc for constructor
 
     /**
      * Instantiate the different elements of the program and starts the thread that updates the program based on runSpeed.
      *
-     * @param width placeholder //TODO replace
-     * @param height placeholder //TODO replace
+     * @param width    placeholder //TODO replace
+     * @param height   placeholder //TODO replace
      * @param runSpeed The time in milliseconds between each call to update in {@link UpdateProcess}.
      */
     Launcher(int width, int height, int runSpeed) {
@@ -32,8 +39,21 @@ public class Launcher {
         IGUI gui = new Manager(width, height);
         UserControl userControl = new PlayerControl();
 
+        // Options for setting maze.
+        // 0 for MazeObj.
+        // 1 for MazeWithExit.
+        // 2 for ManyRoads.
+        // 3 for ForkRoad.
+        maze = setMaze(3);
+
+        // Options for setting dataStructure.
+        // 0 for DepthFirst.
+        // 1 for BreadthFirst.
+        // 2 for Greedy.
+        dataStructure = setDataStructure(0);
+
         // Game logic
-        GameManager gameManager = new GameManager(width, height);
+        GameManager gameManager = new GameManager(maze, dataStructure);
 
         // Setup scene and stage
         this.scene = setupScene(gui.getView().pane, userControl, gameManager);
@@ -70,5 +90,43 @@ public class Launcher {
      */
     public Scene getScene() {
         return scene;
+    }
+
+    /**
+     * This method make it possible to select the wanted maze by using an int as parameter.
+     *
+     * @param index The index of a given maze.
+     *              0 for MazeObj.
+     *              1 for MazeWithExit.
+     *              2 for ManyRoads.
+     *              3 for ForkRoad.
+     * @return Returns the selected maze.
+     */
+    private IMaze setMaze(int index) {
+        if (index == 0) return new MazeObj(10, 10);
+        if (index == 1) return new MazeWithExit();
+        if (index == 2) return new ManyRoads();
+        if (index == 3) return new ForkRoad();
+
+        //Default
+        return new ManyRoads();
+    }
+
+    /**
+     * This method make it possible to select the wanted dataStructure by using an int as parameter.
+     *
+     * @param index The index of a given dataStructure.
+     *              0 for DepthFirst.
+     *              1 for BreadthFirst.
+     *              2 for Greedy.
+     * @return Returns the selected dataStructure.
+     */
+    private IDataStructure setDataStructure(int index) {
+        if (index == 0) return new DepthFirst();
+        if (index == 1) return new BreadthFirst();
+        if (index == 2) return new Greedy(this.maze.getWayPoint().getPosition());
+
+        //Default
+        return new DepthFirst();
     }
 }

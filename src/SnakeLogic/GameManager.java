@@ -1,16 +1,12 @@
 package SnakeLogic;
 
-import SnakeDataStructures.BreadthFirst;
-import SnakeDataStructures.DepthFirst;
-import SnakeDataStructures.Greedy;
+import SnakeDataStructures.IDataStructure;
 import SnakeEntities.GameObject;
 import SnakeEntities.Player;
 import SnakeLogic.Crawler.Crawler;
 import SnakeLogic.Crawler.MoveClockWise;
-import SnakeMaze.ForkRoad;
 import SnakeMaze.IMaze;
-import SnakeMaze.ManyRoads;
-import SnakeMaze.MazeObj;
+
 
 import java.util.*;
 
@@ -22,21 +18,12 @@ public class GameManager {
     private List<GameObject> snake = new ArrayList<>();
 
     private char direction;
-    private int width;
-    private int height;
     private MoveClockWise movement;
     private Crawler crawler;
 
     private boolean crawl = true;
 
-    public GameManager(int width, int height) {
-        this.width = width;
-        this.height = height;
-
-        //IMaze maze = new MazeObj(10, 10);
-        //IMaze maze = new MazeWithExit();
-        IMaze maze = new ManyRoads();
-
+    public GameManager(IMaze maze, IDataStructure dataStructure) {
         walls = maze.getWalls();
 
         Player player = maze.getPlayer();
@@ -44,7 +31,7 @@ public class GameManager {
         wayPoints.add(maze.getWayPoint());
 
         movement = new MoveClockWise(maze);
-        crawler = new Crawler(maze, new Greedy(maze.getWayPoint().getPosition()));
+        crawler = new Crawler(maze, dataStructure);
     }
 
     // update loop to make the game run

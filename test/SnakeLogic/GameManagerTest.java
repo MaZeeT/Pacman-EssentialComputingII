@@ -1,6 +1,10 @@
 package SnakeLogic;
 
+import SnakeDataStructures.DepthFirst;
+import SnakeDataStructures.IDataStructure;
 import SnakeEntities.GameObject;
+import SnakeMaze.ForkRoad;
+import SnakeMaze.IMaze;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -15,7 +19,9 @@ public class GameManagerTest {
 
     @Before
     public void setUp() {
-        gameManager = new GameManager(30, 20);
+        IMaze maze = new ForkRoad();
+        IDataStructure dataStructure = new DepthFirst();
+        gameManager = new GameManager(maze, dataStructure);
     }
 
     @Test
