@@ -1,11 +1,18 @@
 package Maze;
 
-import Entities.GameObject;
+import Entities.*;
 
 import java.util.ArrayList;
 
 //TODO write javaDoc
-public class MazeObj extends MazeObjBased{
+
+/**
+ * The purpose of this class is to add a new maze with 2 rooms with a large amount of free space.
+ * 1 room with the {@link Entities.Player} and the 2 room with the {@link Entities.WayPoint}.
+ *
+ * @author MaZeeT
+ */
+public class MazeObj extends MazeObjBased {
 
     private int sizeX;
     private int sizeY;
@@ -22,7 +29,7 @@ public class MazeObj extends MazeObjBased{
 
         borders();
         corners();
-        diagonalWall(3,8);
+        diagonalWall(3, 8);
     }
 
     private void borders() {
@@ -37,14 +44,22 @@ public class MazeObj extends MazeObjBased{
         }
     }
 
-    private void corners(){
+    /**
+     * Add a bumped in corner to the maze.
+     */
+    private void corners() {
         addWall(1, 1);
         addWall(1, sizeY - 2);
         addWall(sizeX - 2, 1);
         addWall(sizeX - 2, sizeY - 2);
     }
 
-    private void diagonalWall(int start, int end){
+    /**
+     * Add a diagonal line of {@link Wall}s to the maze.
+     * @param start the start of the line at index start,start.
+     * @param end the end of the line at index end,end.
+     */
+    private void diagonalWall(int start, int end) {
         for (int i = start; i < end; i++) {
             addWall(i, i);
         }
