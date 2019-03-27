@@ -1,15 +1,27 @@
 package Maze;
 
-import Entities.GameObject;
+import Entities.*;
 
 import java.util.ArrayList;
 
-//TODO write javaDoc
+/**
+ * The purpose of this class is to provide a default maze to instantiate the direct super test with.
+ * By instantiating this class your are able to run tests against the superclass.
+ *
+ * @author MaZeeT
+ */
 class MazeObjTestable extends MazeObjBased {
 
     private int width;
     private int height;
 
+    /**
+     * This constructor takes a width and a height to define the size of the maze.
+     * It will than add a {@link Player}, a {@link WayPoint} and a border of {@link Wall}s to the maze.
+     *
+     * @param width  The width of the maze.
+     * @param height The height of the maze.
+     */
     MazeObjTestable(int width, int height) {
         this.width = width;
         this.height = height;
@@ -20,6 +32,9 @@ class MazeObjTestable extends MazeObjBased {
         borders();
     }
 
+    /**
+     * Instantiate a border of {@link Wall}s around the maze, when called.
+     */
     private void borders() {
         for (int i = 0; i <= width - 1; i++) {
             addWall(i, 0);
@@ -31,6 +46,5 @@ class MazeObjTestable extends MazeObjBased {
             addWall(width - 1, i);
         }
     }
-
 
 }
