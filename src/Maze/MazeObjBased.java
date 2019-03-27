@@ -55,4 +55,19 @@ abstract class MazeObjBased extends Maze {
         }
     }
 
+    /**
+     * A default method to instantiate a border of {@link Wall}s around the maze.
+     */
+    void borders(int sizeX, int sizeY) {
+        for (int i = 0; i < sizeX; i++) {
+            addWall(i, 0);
+            addWall(i, sizeY - 1);
+        }
+
+        for (int i = 0; i < sizeY; i++) {
+            addWall(0, i);
+            addWall(sizeX - 1, i);
+        }
+    }
+
 }
