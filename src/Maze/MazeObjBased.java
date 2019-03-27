@@ -1,16 +1,25 @@
 package Maze;
 
 import Components.Position;
-import Entities.GameObject;
-import Entities.Player;
-import Entities.Wall;
-import Entities.WayPoint;
+import Entities.*;
 
-//TODO write javaDoc
+/**
+ * The purpose of this class is to provide som helper methods to its sub classes.
+ * The helper methods are made for mazes based on instantiation of {@link GameObject}s to build the maze.
+ *
+ * @author MaZeeT
+ */
 abstract class MazeObjBased extends Maze {
 
     GameObject[][] maze;
 
+    /**
+     * This will add a new instantiation of a {@link WayPoint} to the 2D array in this class,
+     * link it to the super classes "wayPoint" variable.
+     *
+     * @param x The x position in the maze.
+     * @param y The y position in the maze.
+     */
     void addWayPoint(int x, int y) {
         if (maze[x][y] == null) {
             wayPoint = new WayPoint(new Position(x, y));
@@ -18,6 +27,13 @@ abstract class MazeObjBased extends Maze {
         }
     }
 
+    /**
+     * This will add a new instantiation of a {@link Player} to the 2D array in this class,
+     * link it to the super classes "player" variable.
+     *
+     * @param x The x position in the maze.
+     * @param y The y position in the maze.
+     */
     void addPlayer(int x, int y) {
         if (maze[x][y] == null) {
             player = new Player(new Position(x, y));
@@ -25,6 +41,12 @@ abstract class MazeObjBased extends Maze {
         }
     }
 
+    /**
+     * This will add a new instantiation of a {@link Wall} to a list of walls and the 2D array in this class.
+     *
+     * @param x The x position in the maze.
+     * @param y The y position in the maze.
+     */
     void addWall(int x, int y) {
         if (maze[x][y] == null) {
             Wall w = new Wall(x, y);
@@ -32,4 +54,5 @@ abstract class MazeObjBased extends Maze {
             walls.add(w);
         }
     }
+
 }

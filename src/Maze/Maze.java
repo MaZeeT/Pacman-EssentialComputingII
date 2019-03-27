@@ -1,20 +1,32 @@
 package Maze;
 
 import Components.Position;
-import Entities.GameObject;
-import Entities.Player;
-import Entities.WayPoint;
+import Entities.*;
 
 import java.util.ArrayList;
 import java.util.List;
 
-//TODO write javaDoc
+
+/**
+ * The purpose of this class is to make some general methods which all mazes can utilize.
+ * All the methods in this class is based on the 3 fields.
+ * walls, a list of all {@link Wall}s in the maze.
+ * Player, the {@link Player} in the maze.
+ * WayPoint, the {@link WayPoint} in the maze, typical used as exit.
+ *
+ * @author MaZeeT
+ */
 public abstract class Maze implements IMaze {
 
     List<GameObject> walls;
     Player player;
     WayPoint wayPoint;
 
+    /**
+     * {@inheritDoc}
+     *
+     * @return {@inheritDoc}
+     */
     public List<GameObject> getMaze() {
         List<GameObject> gameObjects = new ArrayList<>();
         for (GameObject wall : walls) { //TODO rewrite class to include walls.contain(wall) method.
@@ -25,7 +37,11 @@ public abstract class Maze implements IMaze {
         return gameObjects;
     }
 
-
+    /**
+     * {@inheritDoc}
+     *
+     * @return {@inheritDoc}
+     */
     public List<Position> getMazePositions() {
         List<Position> list = new ArrayList<>();
         for (GameObject gameObject : getMaze()) {
@@ -34,17 +50,29 @@ public abstract class Maze implements IMaze {
         return list;
     }
 
-
+    /**
+     * {@inheritDoc}
+     *
+     * @return {@inheritDoc}
+     */
     public Player getPlayer() {
         return player;
     }
 
-
+    /**
+     * {@inheritDoc}
+     *
+     * @return {@inheritDoc}
+     */
     public WayPoint getWayPoint() {
         return wayPoint;
     }
 
-
+    /**
+     * {@inheritDoc}
+     *
+     * @return {@inheritDoc}
+     */
     public List<GameObject> getWalls() {
         return walls;
     }

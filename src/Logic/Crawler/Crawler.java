@@ -20,7 +20,7 @@ import java.util.List;
  *
  * @author MaZeeT
  */
-public class Crawler { //TODO add a crawler test class.
+public class Crawler {
 
     private Player player;
     private List<GameObject> gameObjects;
