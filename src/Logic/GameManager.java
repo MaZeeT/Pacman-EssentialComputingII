@@ -27,7 +27,7 @@ public class GameManager {
     private MoveClockWise movement;
     private Crawler crawler;
 
-    private boolean crawl = false;
+    private boolean crawl = true;
 
     /**
      * Constructor of this class. It takes a {@link IMaze} and a {@link IDataStructure} as input.

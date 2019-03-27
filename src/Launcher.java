@@ -44,13 +44,14 @@ public class Launcher {
         // 1 for MazeWithExit.
         // 2 for ManyRoads.
         // 3 for ForkRoad.
-        maze = setMaze(3);
+        // 4 for ForkRoad2 (good for greedy).
+        maze = setMaze(4);
 
         // Options for setting dataStructure.
         // 0 for DepthFirst.
         // 1 for BreadthFirst.
         // 2 for Greedy.
-        dataStructure = setDataStructure(0);
+        dataStructure = setDataStructure(2);
 
         // Game logic
         GameManager gameManager = new GameManager(maze, dataStructure);
@@ -107,6 +108,7 @@ public class Launcher {
         if (index == 1) return new MazeWithExit();
         if (index == 2) return new ManyRoads();
         if (index == 3) return new ForkRoad();
+        if (index == 4) return new ForkRoad2();
 
         //Default
         return new ManyRoads();

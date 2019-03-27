@@ -7,9 +7,9 @@ import org.junit.Test;
 
 import java.util.List;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
-public class ForkRoadTest {
+public class ForkRoad2Test {
 
     private Position playerPosition;
     private Position wayPointPosition;
@@ -17,7 +17,7 @@ public class ForkRoadTest {
 
     @Before
     public void setUp(){
-        IMaze maze = new ForkRoad();
+        IMaze maze = new ForkRoad2();
         this.playerPosition = maze.getPlayer().getPosition();
         this.wayPointPosition = maze.getWayPoint().getPosition();
         this.walls = maze.getWalls();
@@ -25,7 +25,7 @@ public class ForkRoadTest {
 
     @Test
     public void checkWalls(){
-        int expected = 67;
+        int expected = 61;
         int actual = walls.size();
         assertEquals(expected, actual);
     }

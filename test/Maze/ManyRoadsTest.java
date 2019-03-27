@@ -45,4 +45,5 @@ public class ManyRoadsTest{
         int actual = playerPosition.compareTo(position);
         assertEquals(expected, actual);
     }
+
 }
