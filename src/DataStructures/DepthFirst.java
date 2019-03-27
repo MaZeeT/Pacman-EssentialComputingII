@@ -2,40 +2,30 @@ package DataStructures;
 
 import Components.Position;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Stack;
 
 //TODO write javaDoc AND make generic by replacing Position with T
-public class DepthFirst implements IDataStructure {
+public class DepthFirst extends DataStructure {
     private Stack<Position> stack = new Stack<>();
-    private List<Position> visitedList = new ArrayList<>();
 
-    public boolean contains(Position position) {
-        return visitedList.contains(position);
+    @Override
+    void adding(Position pos) {
+        stack.push(pos);
     }
 
-    public void add(Position position) {
-        if (!contains(position)) {
-            visitedList.add(position);
-            stack.push(position);
-        }
+    @Override
+    Position check() {
+        return stack.peek();
     }
 
-    public Position checkNext() {
-        if (!stack.empty()) {
-            return stack.peek();
-        } else {
-            return null;
-        }
+    @Override
+    Position next() {
+        return stack.pop();
     }
 
-    public Position getNext() {
-        if  (!stack.empty()){
-            return stack.pop();
-        }else{
-            return null;
-        }
+    @Override
+    boolean isEmpty() {
+        return stack.empty();
     }
 
 }

@@ -2,41 +2,31 @@ package DataStructures;
 
 import Components.Position;
 
-import java.util.ArrayList;
 import java.util.LinkedList;
-import java.util.List;
 import java.util.Queue;
 
 //TODO write javaDoc AND make generic by replacing Position with T
-public class BreadthFirst implements IDataStructure {
+public class BreadthFirst extends DataStructure {
     private Queue<Position> queue = new LinkedList<>();
-    private List<Position> visitedList = new ArrayList<>();
 
-    public boolean contains(Position position) {
-        return visitedList.contains(position);
+    @Override
+    void adding(Position pos) {
+        queue.offer(pos);
     }
 
-    public void add(Position position) {
-        if (!contains(position)) {
-            visitedList.add(position);
-            queue.offer(position);
-        }
+    @Override
+    Position check() {
+        return queue.peek();
     }
 
-    public Position checkNext() {
-        if (!queue.isEmpty()) {
-            return queue.peek();
-        } else {
-            return null;
-        }
+    @Override
+    Position next() {
+        return queue.poll();
     }
 
-    public Position getNext() {
-        if (!queue.isEmpty()) {
-            return queue.poll();
-        } else {
-            return null;
-        }
+    @Override
+    boolean isEmpty() {
+        return queue.isEmpty();
     }
 
 }
