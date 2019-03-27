@@ -28,7 +28,7 @@ public class Crawler {
     private IDataStructure dataStructure;
 
     /**
-     * The constructor of the {@link Crawler} class,
+     * The constructor of the {@link Crawler} class.
      * This take a {@link Maze.Maze} and a dataStructure as an input,
      * and links some of the objects inside the {@link Maze.Maze} to some of the private variables of this class.
      *
