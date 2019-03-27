@@ -1,4 +1,4 @@
-package DataStructures.Nodes;
+package WorkInProgress.Nodes;
 
 public class NodeX<T> extends Node<T> {
     private Node<T>[] branches;

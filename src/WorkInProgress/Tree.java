@@ -1,6 +1,6 @@
-package DataStructures;
+package WorkInProgress;
 
-import DataStructures.Nodes.SimpleNode;
+import WorkInProgress.Nodes.SimpleNode;
 
 //TODO replace Position with T
 public class Tree<T> {
@@ -12,6 +12,5 @@ public class Tree<T> {
     public void add(T item){
         new SimpleNode<T>(item,null);
     }
-
 
 }

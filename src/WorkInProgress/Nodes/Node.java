@@ -1,4 +1,4 @@
-package DataStructures.Nodes;
+package WorkInProgress.Nodes;
 
 public abstract class Node<T> {
 
