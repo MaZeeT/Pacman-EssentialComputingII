@@ -12,7 +12,7 @@ public interface UserControl {
     /**
      * Get the input of the user in form of a char with a value of w (up), s (down), a (left) and d (right).
      *
-     * @param keyCode The keyCode from javaFX
+     * @param keyCode The keyCode from javaFX.
      * @return Returns the direction as a char.
      */
     char getDirection(KeyCode keyCode);
