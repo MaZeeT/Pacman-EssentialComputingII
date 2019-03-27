@@ -6,7 +6,23 @@
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="added TODO about a test class for the crawler.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SnakeDataStructures/IDataStructure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SnakeDataStructures/IDataStructure.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Launcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SnakeDataStructures/BreadthFirst.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataStructures/BreadthFirst.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SnakeDataStructures/DepthFirst.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataStructures/DepthFirst.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SnakeDataStructures/Greedy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataStructures/Greedy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SnakeDataStructures/IDataStructure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataStructures/IDataStructure.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SnakeDataStructures/Nodes/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataStructures/Nodes/Node.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SnakeDataStructures/Nodes/Node2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataStructures/Nodes/Node2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SnakeDataStructures/Nodes/NodeX.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataStructures/Nodes/NodeX.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SnakeDataStructures/Nodes/SimpleNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataStructures/Nodes/SimpleNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SnakeDataStructures/Tree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataStructures/Tree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SnakeLogic/Crawler/Crawler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SnakeLogic/Crawler/Crawler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SnakeLogic/GameManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SnakeLogic/GameManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/SnakeDataStructures/BreadthFirstTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/DataStructures/BreadthFirstTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/SnakeDataStructures/DataStructuresTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/DataStructures/DataStructuresTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/SnakeDataStructures/DepthFirstTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/DataStructures/DepthFirstTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/SnakeDataStructures/GreedyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/DataStructures/GreedyTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/SnakeLogic/GameManagerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/SnakeLogic/GameManagerTest.java" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -123,10 +139,47 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SnakeDataStructures/IDataStructure.java">
+        <entry file="file://$PROJECT_DIR$/src/DataStructures/Greedy.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="2" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
+            <state relative-caret-position="-108">
+              <caret line="49" column="46" selection-start-line="49" selection-start-column="46" selection-end-line="49" selection-end-column="46" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="docComment;method#contains#0;class#Greedy#0" />
+                <element signature="e#1309#1310#0" expanded="true" />
+                <element signature="e#1362#1363#0" expanded="true" />
+                <element signature="docComment;method#add#0;class#Greedy#0" />
+                <element signature="docComment;method#checkNext#0;class#Greedy#0" />
+                <element signature="docComment;method#getNext#0;class#Greedy#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/DataStructures/BreadthFirst.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="459">
+              <caret line="27" column="32" lean-forward="true" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#454#455#0" expanded="true" />
+                <element signature="e#507#508#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/DataStructures/DepthFirst.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="510">
+              <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#418#419#0" expanded="true" />
+                <element signature="e#471#472#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -162,11 +215,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SnakeUserControl/PlayerControl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="371">
-              <caret line="39" column="62" lean-forward="true" selection-start-line="39" selection-start-column="62" selection-end-line="39" selection-end-column="62" />
+            <state relative-caret-position="119">
+              <caret line="7" column="2" lean-forward="true" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -203,18 +256,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="221">
               <caret line="14" column="59" selection-start-line="14" selection-start-column="59" selection-end-line="14" selection-end-column="59" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SnakeEntities/WayPoint.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="33" lean-forward="true" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -259,7 +300,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/SnakeGUI/View.java" />
         <option value="$PROJECT_DIR$/src/SnakeMaze/MazeObjBased.java" />
         <option value="$PROJECT_DIR$/src/SnakeMaze/MazeObj.java" />
         <option value="$PROJECT_DIR$/src/SnakeMaze/MazeArrayTestable.java" />
@@ -272,7 +312,6 @@
         <option value="$PROJECT_DIR$/src/SnakeGUI/Controller.java" />
         <option value="$PROJECT_DIR$/src/SnakeGUI/IManager.java" />
         <option value="$PROJECT_DIR$/src/SnakeGUI/IGUI.java" />
-        <option value="$PROJECT_DIR$/src/SnakeUserControl/UserControl.java" />
         <option value="$PROJECT_DIR$/src/UpdateProcess.java" />
         <option value="$PROJECT_DIR$/test/SnakeMaze/ForkRoadTest.java" />
         <option value="$PROJECT_DIR$/src/SnakeDataStructures/Nodes/Node.java" />
@@ -310,6 +349,8 @@
         <option value="$PROJECT_DIR$/src/SnakeEntities/Player.java" />
         <option value="$PROJECT_DIR$/src/SnakeEntities/GameObject.java" />
         <option value="$PROJECT_DIR$/src/SnakeUserControl/PlayerControl.java" />
+        <option value="$PROJECT_DIR$/src/SnakeUserControl/UserControl.java" />
+        <option value="$PROJECT_DIR$/src/DataStructures/DepthFirst.java" />
       </list>
     </option>
   </component>
@@ -390,7 +431,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553686882155" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553692244178" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="dynamic.classpath" value="false" />
@@ -444,7 +485,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.All in snakeFX">
+  <component name="RunManager" selected="Application.Main">
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="" />
       <option name="DEPLOY" value="true" />
@@ -511,7 +552,7 @@
       <module name="snakeFX" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="SnakeGUI.*" />
+          <option name="PATTERN" value="GUI.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -581,12 +622,12 @@
       <module name="snakeFX" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="SnakeDataStructures.*" />
+          <option name="PATTERN" value="DataStructures.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="SnakeDataStructures" />
-      <option name="MAIN_CLASS_NAME" value="SnakeDataStructures.BreadthFirstTest" />
+      <option name="PACKAGE_NAME" value="DataStructures" />
+      <option name="MAIN_CLASS_NAME" value="DataStructures.BreadthFirstTest" />
       <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="TEST_SEARCH_SCOPE">
@@ -600,7 +641,7 @@
       <module name="snakeFX" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="SnakeDataStructures.*" />
+          <option name="PATTERN" value="DataStructures.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -619,7 +660,7 @@
       <module name="snakeFX" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="SnakeDataStructures.*" />
+          <option name="PATTERN" value="DataStructures.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -639,12 +680,12 @@
       <module name="snakeFX" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="SnakeDataStructures.*" />
+          <option name="PATTERN" value="DataStructures.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="SnakeDataStructures" />
-      <option name="MAIN_CLASS_NAME" value="SnakeDataStructures.DepthFirstTest" />
+      <option name="PACKAGE_NAME" value="DataStructures" />
+      <option name="MAIN_CLASS_NAME" value="DataStructures.DepthFirstTest" />
       <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="TEST_SEARCH_SCOPE">
@@ -658,12 +699,12 @@
       <module name="snakeFX" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="SnakeDataStructures.*" />
+          <option name="PATTERN" value="DataStructures.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="SnakeDataStructures" />
-      <option name="MAIN_CLASS_NAME" value="SnakeDataStructures.GreedyTest" />
+      <option name="PACKAGE_NAME" value="DataStructures" />
+      <option name="MAIN_CLASS_NAME" value="DataStructures.GreedyTest" />
       <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="TEST_SEARCH_SCOPE">
@@ -816,14 +857,7 @@
       <workItem from="1553412425320" duration="51000" />
       <workItem from="1553511414681" duration="8792000" />
       <workItem from="1553592677227" duration="36239000" />
-      <workItem from="1553667970567" duration="8592000" />
-    </task>
-    <task id="LOCAL-00050" summary="A bit of cleanup">
-      <created>1552603963340</created>
-      <option name="number" value="00050" />
-      <option name="presentableId" value="LOCAL-00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1552603963340</updated>
+      <workItem from="1553667970567" duration="11306000" />
     </task>
     <task id="LOCAL-00051" summary="Movement 100% tested">
       <created>1552605293192</created>
@@ -1161,7 +1195,14 @@
       <option name="project" value="LOCAL" />
       <updated>1553684782981</updated>
     </task>
-    <option name="localTasksCounter" value="99" />
+    <task id="LOCAL-00099" summary="added javaDoc">
+      <created>1553686977225</created>
+      <option name="number" value="00099" />
+      <option name="presentableId" value="LOCAL-00099" />
+      <option name="project" value="LOCAL" />
+      <updated>1553686977225</updated>
+    </task>
+    <option name="localTasksCounter" value="100" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1197,7 +1238,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="304214000" />
+    <option name="totallyTimeSpent" value="306928000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1210,14 +1251,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Image Layers" order="0" />
       <window_info id="UI Designer" order="1" />
       <window_info id="Favorites" order="2" weight="0.3295302" />
       <window_info id="Capture Tool" order="3" />
       <window_info id="Nl-Palette" order="4" />
-      <window_info content_ui="combo" id="Project" order="5" sideWeight="0.6703755" visible="true" weight="0.20948827" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" sideWeight="0.6703755" visible="true" weight="0.20948827" />
       <window_info id="Palette&#9;" order="6" />
       <window_info id="Structure" order="7" weight="0.24966443" />
       <window_info anchor="bottom" id="Application Servers" order="0" />
@@ -1229,11 +1269,11 @@
       <window_info anchor="bottom" id="Messages" order="6" weight="0.3225108" />
       <window_info anchor="bottom" id="Message" order="7" />
       <window_info anchor="bottom" id="Find" order="8" weight="0.32792208" />
-      <window_info active="true" anchor="bottom" id="Run" order="9" visible="true" weight="0.3073593" />
+      <window_info anchor="bottom" id="Run" order="9" weight="0.3073593" />
       <window_info anchor="bottom" id="Debug" order="10" weight="0.39869988" />
       <window_info anchor="bottom" id="Cvs" order="11" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="12" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="13" weight="0.32900432" />
+      <window_info anchor="bottom" id="TODO" order="13" visible="true" weight="0.32900432" />
       <window_info anchor="bottom" id="Terminal" order="14" weight="0.32900432" />
       <window_info anchor="bottom" id="Statistic" order="15" />
       <window_info anchor="bottom" id="Database Changes" order="16" show_stripe_button="false" />
@@ -1266,7 +1306,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added a new maze with a few roads to show Depth/Breadth first crawlers" />
-    <MESSAGE value="added javaDoc" />
     <MESSAGE value="added javaDoc and TODOs" />
     <MESSAGE value="delete the legacy note" />
     <MESSAGE value="implemented equals + hashcode in the Position class" />
@@ -1290,7 +1329,8 @@
     <MESSAGE value="added TODO about a test class for the crawler." />
     <MESSAGE value="add javaDoc" />
     <MESSAGE value="Added javaDocs to all Entities" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added javaDocs to all Entities" />
+    <MESSAGE value="added javaDoc" />
+    <option name="LAST_COMMIT_MESSAGE" value="added javaDoc" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -1323,14 +1363,14 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/SnakeDataStructures/Nodes/Node2.java">
+    <entry file="file://$PROJECT_DIR$/src/DataStructures/Nodes/Node2.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="21" selection-start-line="21" selection-end-line="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SnakeDataStructures/Nodes/SimpleNode.java">
+    <entry file="file://$PROJECT_DIR$/src/DataStructures/Nodes/SimpleNode.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="37" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
@@ -1344,7 +1384,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SnakeDataStructures/Nodes/Node.java">
+    <entry file="file://$PROJECT_DIR$/src/DataStructures/Nodes/Node.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="24" column="43" lean-forward="true" selection-start-line="24" selection-start-column="43" selection-end-line="24" selection-end-column="43" />
@@ -1368,7 +1408,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SnakeDataStructures/Tree.java">
+    <entry file="file://$PROJECT_DIR$/src/DataStructures/Tree.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="17" selection-start-line="17" selection-end-line="17" />
@@ -1470,7 +1510,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/SnakeDataStructures/DepthFirstTest.java">
+    <entry file="file://$PROJECT_DIR$/test/DataStructures/DepthFirstTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
@@ -1481,7 +1521,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/SnakeDataStructures/BreadthFirstTest.java">
+    <entry file="file://$PROJECT_DIR$/test/DataStructures/BreadthFirstTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-428">
           <caret line="21" column="32" lean-forward="true" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
@@ -1492,14 +1532,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/SnakeDataStructures/DataStructuresTest.java">
+    <entry file="file://$PROJECT_DIR$/test/DataStructures/DataStructuresTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/SnakeDataStructures/GreedyTest.java">
+    <entry file="file://$PROJECT_DIR$/test/DataStructures/GreedyTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-751">
           <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
@@ -1616,46 +1656,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SnakeDataStructures/Greedy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="28" lean-forward="true" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;method#contains#0;class#Greedy#0" />
-            <element signature="e#1309#1310#0" expanded="true" />
-            <element signature="e#1362#1363#0" expanded="true" />
-            <element signature="docComment;method#add#0;class#Greedy#0" />
-            <element signature="docComment;method#checkNext#0;class#Greedy#0" />
-            <element signature="docComment;method#getNext#0;class#Greedy#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SnakeDataStructures/BreadthFirst.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="25" column="25" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#454#455#0" expanded="true" />
-            <element signature="e#507#508#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SnakeDataStructures/DepthFirst.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#418#419#0" expanded="true" />
-            <element signature="e#471#472#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/SnakeLogic/Crawler/Crawler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
@@ -1682,7 +1682,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SnakeDataStructures/IDataStructure.java">
+    <entry file="file://$PROJECT_DIR$/src/DataStructures/IDataStructure.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="2" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
@@ -1764,6 +1764,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/SnakeUserControl/PlayerControl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="2" lean-forward="true" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/SnakeUserControl/UserControl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -1771,10 +1778,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SnakeUserControl/PlayerControl.java">
+    <entry file="file://$PROJECT_DIR$/src/DataStructures/Greedy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="371">
-          <caret line="39" column="62" lean-forward="true" selection-start-line="39" selection-start-column="62" selection-end-line="39" selection-end-column="62" />
+        <state relative-caret-position="-108">
+          <caret line="49" column="46" selection-start-line="49" selection-start-column="46" selection-end-line="49" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;method#contains#0;class#Greedy#0" />
+            <element signature="e#1309#1310#0" expanded="true" />
+            <element signature="e#1362#1363#0" expanded="true" />
+            <element signature="docComment;method#add#0;class#Greedy#0" />
+            <element signature="docComment;method#checkNext#0;class#Greedy#0" />
+            <element signature="docComment;method#getNext#0;class#Greedy#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataStructures/BreadthFirst.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="32" lean-forward="true" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#454#455#0" expanded="true" />
+            <element signature="e#507#508#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataStructures/DepthFirst.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#418#419#0" expanded="true" />
+            <element signature="e#471#472#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

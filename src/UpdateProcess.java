@@ -1,5 +1,5 @@
-import SnakeGUI.IGUI;
-import SnakeLogic.GameManager;
+import GUI.IGUI;
+import Logic.GameManager;
 
 /**
  * The purpose of this class is to make a thread to handle all the update calls the program need.
