@@ -1,25 +1,24 @@
 package DataStructures;
 
-import Components.Position;
-
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class DataStructure implements IDataStructure {
-    List<Position> visitedList = new ArrayList<>();
+//TODO write javaDoc
+public abstract class DataStructure<T> {
+    private List<T> visitedList = new ArrayList<>();
 
-    public boolean contains(Position item) {
+    public boolean contains(T item) {
         return visitedList.contains(item);
     }
 
-    public void add(Position item) {
+    public void add(T item) {
         if (!contains(item)) {
             visitedList.add(item);
             adding(item);
         }
     }
 
-    public Position checkNext() {
+    public T checkNext() {
         if (!isEmpty()) {
             return check();
         } else {
@@ -27,7 +26,7 @@ public abstract class DataStructure implements IDataStructure {
         }
     }
 
-    public Position getNext() {
+    public T getNext() {
         if (!isEmpty()) {
             return next();
         } else {
@@ -35,11 +34,11 @@ public abstract class DataStructure implements IDataStructure {
         }
     }
 
-    abstract void adding(Position item);
+    abstract void adding(T item);
 
-    abstract Position check();
+    abstract T check();
 
-    abstract Position next();
+    abstract T next();
 
     abstract boolean isEmpty();
 

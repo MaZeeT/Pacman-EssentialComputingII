@@ -1,40 +1,30 @@
 package DataStructures;
 
-import Components.Position;
-
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Stack;
 
-public class MyStack<T> {
-    List<T> visitedList = new ArrayList<>();
-    Stack<T> stack = new Stack<>();
 
-    public boolean contains(T item) {
-        return visitedList.contains(item);
+//TODO write javaDoc
+class MyStack<T> extends DataStructure<T> {
+    private Stack<T> stack = new Stack<>();
+
+    @Override
+    void adding(T item) {
+        stack.push(item);
     }
 
-    public void add(T item) {
-        if (!contains(item)) {
-            visitedList.add(item);
-            stack.push(item);
-        }
+    @Override
+    T check() {
+        return stack.peek();
     }
 
-    public T checkNext() {
-        if (!stack.empty()) {
-            return stack.peek();
-        } else {
-            return null;
-        }
+    @Override
+    T next() {
+        return stack.pop();
     }
 
-    public T getNext() {
-        if (!stack.empty()) {
-            return stack.pop();
-        } else {
-            return null;
-        }
+    @Override
+    boolean isEmpty() {
+        return stack.empty();
     }
 
 }

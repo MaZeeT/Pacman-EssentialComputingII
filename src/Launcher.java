@@ -1,7 +1,5 @@
-import DataStructures.BreadthFirst;
-import DataStructures.DepthFirst;
-import DataStructures.Greedy;
-import DataStructures.IDataStructure;
+import Components.Position;
+import DataStructures.*;
 import GUI.IGUI;
 import GUI.Manager;
 import Logic.GameManager;
