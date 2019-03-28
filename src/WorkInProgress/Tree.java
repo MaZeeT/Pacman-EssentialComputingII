@@ -2,7 +2,6 @@ package WorkInProgress;
 
 import WorkInProgress.Nodes.SimpleNode;
 
-//TODO replace Position with T
 public class Tree<T> {
     //NodeX<T> root = new NodeX<>();
 
