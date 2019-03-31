@@ -4,14 +4,20 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * The purpose of this class is to define a general way to store elements in a stack or a queue.
+ * The purpose of this class is to define a general way to store elements in {@link MyStack} or {@link MyQueue}.
  *
  * @param <T> The element that needs to be stored.
+ * @author MaZeeT
  */
 public abstract class DataStructure<T> {
     private List<T> visitedList = new ArrayList<>();
 
-    //todo add javaDoc to this method
+    /**
+     * Check to see if the given element is contained in this {@link java.util.Collection}.
+     *
+     * @param item The item that needs to be check against the {@link java.util.Collection}.
+     * @return Returns true if the item is in the {@link java.util.Collection}, and false if not.
+     */
     public boolean contains(T item) {
         return visitedList.contains(item);
     }
@@ -81,7 +87,7 @@ public abstract class DataStructure<T> {
     /**
      * This method is used to implement a boolean return to see if the {@link java.util.Collection} is empty or not.
      *
-     * @return Return true if the {@link java.util.Collection} is empty.
+     * @return Return true if the {@link java.util.Collection} is empty, and false if not.
      */
     abstract boolean isEmpty();
 

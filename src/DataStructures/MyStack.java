@@ -2,8 +2,13 @@ package DataStructures;
 
 import java.util.Stack;
 
-
-//TODO write javaDoc
+/**
+ * The purpose of this class is to implement a {@link java.util.Collection} as a {@link Stack}
+ * with a common superclass shared with a implementation of a {@link java.util.Queue}.
+ *
+ * @param <T> The type which the {@link Stack} should contain.
+ * @author MaZeeT
+ */
 class MyStack<T> extends DataStructure<T> {
     private Stack<T> stack = new Stack<>();
 
@@ -23,11 +28,17 @@ class MyStack<T> extends DataStructure<T> {
         return stack.peek();
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     T next() {
         return stack.pop();
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     boolean isEmpty() {
         return stack.empty();
