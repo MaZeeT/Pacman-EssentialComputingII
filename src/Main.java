@@ -18,7 +18,7 @@ public class Main extends Application {
         // launch the program and grabs the output gui as a scene
         Launcher launcher = new Launcher();
         primaryStage.setScene(launcher.getScene());
-        primaryStage.setTitle("Pacman");
+        primaryStage.setTitle("PacMan");
         primaryStage.show();
     }
 

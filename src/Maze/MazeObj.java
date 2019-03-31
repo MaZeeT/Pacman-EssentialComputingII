@@ -28,17 +28,16 @@ public class MazeObj extends MazeObjBased {
         this.sizeY = height;
         this.walls = new ArrayList<>();
         maze = new GameObject[sizeX][sizeY];
+        borders(sizeX, sizeY);
+        corners();
 
         addPlayer(5, 7);
         addWayPoint(7, 5);
-
-        borders(sizeX, sizeY);
-        corners();
         diagonalWall(3, 8);
     }
 
     /**
-     * Add a bumped in corner to the maze.
+     * Add a bumped in the corners to the maze.
      */
     private void corners() {
         addWall(1, 1);
