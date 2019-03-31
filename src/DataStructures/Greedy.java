@@ -1,13 +1,11 @@
 package DataStructures;
 
-import Components.Position;
-import Components.PositionManhattan;
+import Components.*;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import static java.util.Collections.reverseOrder;
-import static java.util.Collections.sort;
 
 /**
  * The purpose of this class is to make "greedy" behavior when selecting which moves to take.
@@ -20,7 +18,7 @@ import static java.util.Collections.sort;
 public class Greedy implements IDataStructure {
 
     private List<PositionManhattan> list = new ArrayList<>();
-    private List<PositionManhattan> visitedList = new ArrayList<>();
+    private List<Position> visitedList = new ArrayList<>();
     private Position target;
 
     public Greedy(Position targetPosition){
@@ -51,7 +49,7 @@ public class Greedy implements IDataStructure {
             pos.getDistanceTo(target);
             visitedList.add(pos);
             list.add(pos);
-            sort(list,reverseOrder());
+            list.sort(reverseOrder());
         }
     }
 

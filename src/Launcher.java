@@ -42,13 +42,13 @@ public class Launcher {
         // 2 for ManyRoads.
         // 3 for ForkRoad.
         // 4 for ForkRoad2 (good for greedy).
-        maze = setMaze(2);
+        maze = setMaze(4);
 
         // Options for setting dataStructure.
         // 0 for DepthFirst.
         // 1 for BreadthFirst.
         // 2 for Greedy.
-        dataStructure = setDataStructure(1);
+        dataStructure = setDataStructure(2);
 
         // Game logic
         GameManager gameManager = new GameManager(maze, dataStructure);
