@@ -11,6 +11,7 @@ import java.util.List;
 public abstract class DataStructure<T> {
     private List<T> visitedList = new ArrayList<>();
 
+    //todo add javaDoc to this method
     public boolean contains(T item) {
         return visitedList.contains(item);
     }
@@ -19,7 +20,7 @@ public abstract class DataStructure<T> {
      * The generic implementation of the add method. It will add the given element to the {@link java.util.Collection}.
      * This method relies on the abstract method adding in this abstract class to function properly.
      *
-     * @return Return the next element in the {@link java.util.Collection} and remove it from the {@link java.util.Collection}.
+     * @param item The given element to the {@link java.util.Collection}.
      */
     public void add(T item) {
         if (!contains(item)) {
@@ -59,7 +60,7 @@ public abstract class DataStructure<T> {
     /**
      * This method i used to add a new element to the implemented {@link java.util.Collection}.
      *
-     * @param item
+     * @param item Add the given element to the {@link java.util.Collection}.
      */
     abstract void adding(T item);
 

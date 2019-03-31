@@ -7,11 +7,17 @@ import java.util.Stack;
 class MyStack<T> extends DataStructure<T> {
     private Stack<T> stack = new Stack<>();
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     void adding(T item) {
         stack.push(item);
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     T check() {
         return stack.peek();
