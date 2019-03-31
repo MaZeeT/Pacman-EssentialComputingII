@@ -1,4 +1,3 @@
-import Components.Position;
 import DataStructures.*;
 import GUI.IGUI;
 import GUI.Manager;
