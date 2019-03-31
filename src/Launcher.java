@@ -18,37 +18,53 @@ import javafx.scene.layout.Pane;
  * @author MaZeeT
  */
 public class Launcher {
+    private int width;
+    private int height;
+    private int runSpeed;
+
     private Scene scene;
     private IMaze maze;
     private IDataStructure dataStructure;
 
-    //TODO finish javaDoc for constructor
+
 
     /**
-     * Instantiate the different elements of the program and starts the thread that updates the program based on runSpeed.
-     *
-     * @param width    placeholder //TODO replace
-     * @param height   placeholder //TODO replace
-     * @param runSpeed The time in milliseconds between each call to update in {@link UpdateProcess}.
+     * When this method is called all of the variable is initialized.
+     * The method is used to configure which maze and dataStructure the program shall run with,
+     * and the width and height of the maze. The runSpeed is also given here,
+     * which is the time between each update, so a lower runSpeed will make the game faster,
+     * and a higher runSpeed for a slower game.
      */
-    Launcher(int width, int height, int runSpeed) {
-        // Interfaced modules
-        IGUI gui = new Manager(width, height);
-        UserControl userControl = new PlayerControl();
+    private void configuration() {
+        //TODO check the use of the width and height and edit the above javeDoc
+        width = 30; // width of maze
+        height = 20; // height of maze
+        runSpeed = 500; // milliseconds between each update
 
         // Options for setting maze.
+        maze = setMaze(4);
         // 0 for MazeObj.
         // 1 for MazeWithExit.
         // 2 for ManyRoads.
         // 3 for ForkRoad.
         // 4 for ForkRoad2 (good for greedy).
-        maze = setMaze(4);
 
         // Options for setting dataStructure.
+        dataStructure = setDataStructure(2);
         // 0 for DepthFirst.
         // 1 for BreadthFirst.
         // 2 for Greedy.
-        dataStructure = setDataStructure(2);
+    }
+
+    /**
+     * Instantiate the different elements of the program and starts the thread that updates the program based on runSpeed.
+     */
+    Launcher() {
+        configuration();
+
+        // Interfaced modules
+        IGUI gui = new Manager(width, height);
+        UserControl userControl = new PlayerControl();
 
         // Game logic
         GameManager gameManager = new GameManager(maze, dataStructure);

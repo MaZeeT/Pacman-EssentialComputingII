@@ -15,15 +15,10 @@ public class Main extends Application {
      */
     @Override
     public void start(Stage primaryStage) {
-        int width = 30; // width of maze
-        int height = 20; // height of maze
-        int runSpeed = 500; // milliseconds between each update
-
         // launch the program and grabs the output gui as a scene
-        Launcher launcher = new Launcher(width, height, runSpeed);
+        Launcher launcher = new Launcher();
         primaryStage.setScene(launcher.getScene());
-
-        primaryStage.setTitle("Snake");
+        primaryStage.setTitle("Pacman");
         primaryStage.show();
     }
 
