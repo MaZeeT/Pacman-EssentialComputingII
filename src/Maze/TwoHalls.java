@@ -10,7 +10,7 @@ import java.util.ArrayList;
  *
  * @author MaZeeT
  */
-public class MazeObj extends MazeObjBased {
+public class TwoHalls extends MazeObjBased {
 
     private int sizeX;
     private int sizeY;
@@ -23,7 +23,7 @@ public class MazeObj extends MazeObjBased {
      * @param width  The width of the maze.
      * @param height The height of the maze.
      */
-    public MazeObj(int width, int height) {
+    public TwoHalls(int width, int height) {
         this.sizeX = width;
         this.sizeY = height;
         this.walls = new ArrayList<>();

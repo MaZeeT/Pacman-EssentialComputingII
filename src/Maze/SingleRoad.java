@@ -5,13 +5,13 @@ package Maze;
  *
  * @author MaZeeT
  */
-public class MazeWithExit extends MazeArrayBased {
+public class SingleRoad extends MazeArrayBased {
 
     /**
      * This constructor contains an 2D array to symbolize a maze.
      * The methods from {@link MazeArrayBased} are used to convert the array to different {@link Entities.GameObject}s.
      */
-    public MazeWithExit() {
+    public SingleRoad() {
         super();
         this.width = 6;
         this.height = 7;

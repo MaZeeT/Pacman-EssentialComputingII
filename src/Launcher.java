@@ -42,9 +42,9 @@ public class Launcher {
         runSpeed = 500; // milliseconds between each update
 
         // Options for setting maze.
-        maze = setMaze(4);
-        // 0 for MazeObj.
-        // 1 for MazeWithExit.
+        maze = setMaze(1);
+        // 0 for TwoHalls.
+        // 1 for SingleRoad.
         // 2 for ManyRoads.
         // 3 for ForkRoad.
         // 4 for ForkRoad2 (good for greedy).
@@ -110,15 +110,15 @@ public class Launcher {
      * This method make it possible to select the wanted maze by using an int as parameter.
      *
      * @param index The index of a given maze.
-     *              0 for MazeObj.
-     *              1 for MazeWithExit.
+     *              0 for TwoHalls.
+     *              1 for SingleRoad.
      *              2 for ManyRoads.
      *              3 for ForkRoad.
      * @return Returns the selected maze.
      */
     private IMaze setMaze(int index) {
-        if (index == 0) return new MazeObj(10, 10);
-        if (index == 1) return new MazeWithExit();
+        if (index == 0) return new TwoHalls(10, 10);
+        if (index == 1) return new SingleRoad();
         if (index == 2) return new ManyRoads();
         if (index == 3) return new ForkRoad();
         if (index == 4) return new ForkRoad2();

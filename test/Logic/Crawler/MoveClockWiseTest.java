@@ -3,7 +3,7 @@ package Logic.Crawler;
 import Components.Position;
 import Entities.Player;
 import Maze.IMaze;
-import Maze.MazeObj;
+import Maze.TwoHalls;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -16,7 +16,7 @@ public class MoveClockWiseTest {
 
     @Before
     public void setUp() {
-        IMaze maze = new MazeObj(10, 10);
+        IMaze maze = new TwoHalls(10, 10);
         player = maze.getPlayer();
         movement = new MoveClockWise(maze);
     }

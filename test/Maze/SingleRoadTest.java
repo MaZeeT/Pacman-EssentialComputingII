@@ -9,14 +9,14 @@ import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 
-public class MazeWithExitTest {
+public class SingleRoadTest {
     private Position playerPosition;
     private Position wayPointPosition;
     private List<GameObject> walls;
 
     @Before
     public void setUp(){
-       IMaze  maze = new MazeWithExit();
+       IMaze  maze = new SingleRoad();
        playerPosition = maze.getPlayer().getPosition();
        wayPointPosition = maze.getWayPoint().getPosition();
        walls = maze.getWalls();
