@@ -1,10 +1,8 @@
 import DataStructures.*;
-import GUI.IGUI;
-import GUI.Manager;
+import GUI.*;
 import Logic.GameManager;
 import Maze.*;
-import UserControl.PlayerControl;
-import UserControl.UserControl;
+import UserControl.*;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.input.KeyEvent;
@@ -25,7 +23,6 @@ public class Launcher {
     private Scene scene;
     private IMaze maze;
     private IDataStructure dataStructure;
-
 
 
     /**
@@ -60,6 +57,7 @@ public class Launcher {
      * Instantiate the different elements of the program and starts the thread that updates the program based on runSpeed.
      */
     Launcher() {
+        // Sets all the variables needed for below.
         configuration();
 
         // Interfaced modules
@@ -144,4 +142,5 @@ public class Launcher {
         //Default
         return new DepthFirst();
     }
+
 }
