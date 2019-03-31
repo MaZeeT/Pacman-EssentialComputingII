@@ -42,10 +42,10 @@ public abstract class DataStructure<T> {
      * @return Return the next element in the {@link java.util.Collection} and remove it from the {@link java.util.Collection}.
      */
     public T checkNext() {
-        if (!isEmpty()) {
-            return check();
-        } else {
+        if (isEmpty()) {
             return null;
+        } else {
+            return check();
         }
     }
 
@@ -56,10 +56,10 @@ public abstract class DataStructure<T> {
      * @return Return the next element in the {@link java.util.Collection} and remove it from the {@link java.util.Collection}.
      */
     public T getNext() {
-        if (!isEmpty()) {
-            return next();
-        } else {
+        if (isEmpty()) {
             return null;
+        } else {
+            return next();
         }
     }
 
