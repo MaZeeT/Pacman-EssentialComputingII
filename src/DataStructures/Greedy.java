@@ -85,22 +85,4 @@ public class Greedy implements IDataStructure {
         }
     }
 
-    //TODO look into if this cast() method can be deleted or if it is needed to make the class generic.
-    /*
-     * A method to cast a {@link Position} into a {@link PositionManhattan}.
-     *
-     * @param position The given {@link Position} that need to be casted.
-     * @return Returns the given {@link Position} as a {@link PositionManhattan}.
-     */
-  /*  private PositionManhattan cast(Position position) {
-        PositionManhattan positionManhattan = null;
-        try { //TODO replace with instance of, and check for position or positionManhattan and reject all others for generics.
-            positionManhattan = (PositionManhattan) position;
-
-        } catch (ClassCastException e) {
-            System.out.println("Could not cast to a Manhattan position");
-        }
-        return positionManhattan;
-    }*/
-
 }
