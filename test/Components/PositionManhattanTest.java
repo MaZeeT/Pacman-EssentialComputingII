@@ -98,7 +98,7 @@ public class PositionManhattanTest extends PositionTest
     }
 
     @Test
-    public void distance1() {
+    public void distance1ToPosition() {
         Position position = new Position(1, 2);
         PositionManhattan manhattan = new PositionManhattan(2, 2);
 
@@ -108,7 +108,7 @@ public class PositionManhattanTest extends PositionTest
     }
 
     @Test
-    public void distance2() {
+    public void distance2ToPosition() {
         Position position = new Position(1, 4);
         PositionManhattan manhattan = new PositionManhattan(1, 2);
 
@@ -118,7 +118,7 @@ public class PositionManhattanTest extends PositionTest
     }
 
     @Test
-    public void distance8() {
+    public void distance8ToPosition() {
         Position position = new Position(1, 1);
         PositionManhattan manhattan = new PositionManhattan(5, 5);
 
@@ -128,7 +128,7 @@ public class PositionManhattanTest extends PositionTest
     }
 
     @Test
-    public void distanceXY() {
+    public void distanceToXY() {
         int x = 3;
         int y = 5;
         PositionManhattan manhattan = new PositionManhattan(5, 5);
@@ -149,7 +149,7 @@ public class PositionManhattanTest extends PositionTest
     }
 
     @Test
-    public void positiveNegativeDistance() {
+    public void comparePositiveToNegativeDistance() {
         PositionManhattan pos1 = new PositionManhattan(1, 1);
         PositionManhattan pos2 = new PositionManhattan(5, 5);
 
@@ -159,7 +159,7 @@ public class PositionManhattanTest extends PositionTest
     }
 
     @Test
-    public void compareToDistanceHigher() {
+    public void compareToLowerDistance() {
         PositionManhattan pos1 = new PositionManhattan(7, 7);
         PositionManhattan pos2 = new PositionManhattan(5, 5);
         pos1.getDistanceTo(wayPoint.getPosition());
@@ -171,14 +171,14 @@ public class PositionManhattanTest extends PositionTest
     }
 
     @Test
-    public void compareToDistanceLower() {
+    public void compareToHigherDistance() {
         PositionManhattan pos1 = new PositionManhattan(2, 1);
         PositionManhattan pos2 = new PositionManhattan(2, 2);
         pos1.getDistanceTo(wayPoint.getPosition());
         pos2.getDistanceTo(wayPoint.getPosition());
 
-        int expected = -1;
-        int actual = pos2.compareTo(pos1);
+        int expected = 1;
+        int actual = pos1.compareTo(pos2);
         assertEquals(expected, actual);
     }
 
@@ -215,16 +215,16 @@ public class PositionManhattanTest extends PositionTest
         arr.add(new PositionManhattan(3,3));
         arr.add(new PositionManhattan(4,3));
         arr.add(new PositionManhattan(5,4));
-        PositionManhattan pos = new PositionManhattan(6, 6);
-        arr.add(pos);
+
+        PositionManhattan expected = new PositionManhattan(6, 6);
+        arr.add(expected);
 
         for (PositionManhattan arrPos : arr){
             arrPos.getDistanceTo(new Position(9,9));
         }
 
-        sort(arr, reverseOrder());
+        arr.sort(reverseOrder());
 
-        PositionManhattan expected = pos;
         PositionManhattan actual = arr.get(0);
         assertEquals(expected, actual);
     }
