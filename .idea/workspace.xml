@@ -4,9 +4,7 @@
     <option name="ANALYZE_TEST_SOURCES" value="false" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Renamed a few mazes to more meaningful names">
-      <change afterPath="$PROJECT_DIR$/src/Maze/PacMan.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/Maze/PacManTest.java" afterDir="false" />
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Added PacMan maze">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Launcher.java" afterDir="false" />
     </list>
@@ -131,11 +129,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Launcher.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="236">
-              <caret line="41" column="26" selection-start-line="41" selection-start-column="26" selection-end-line="41" selection-end-column="26" />
+            <state relative-caret-position="202">
+              <caret line="107" column="7" lean-forward="true" selection-start-line="107" selection-start-column="7" selection-end-line="107" selection-end-column="7" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -203,11 +201,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/Maze/PacManTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="355">
-              <caret line="40" column="9" lean-forward="true" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
+            <state relative-caret-position="304">
+              <caret line="32" column="9" lean-forward="true" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -309,9 +307,9 @@
         <option value="$PROJECT_DIR$/test/Maze/SingleRoadTest.java" />
         <option value="$PROJECT_DIR$/src/Maze/Pacman.java" />
         <option value="$PROJECT_DIR$/src/GUI/View.java" />
-        <option value="$PROJECT_DIR$/src/Launcher.java" />
         <option value="$PROJECT_DIR$/src/Maze/PacMan.java" />
         <option value="$PROJECT_DIR$/test/Maze/PacManTest.java" />
+        <option value="$PROJECT_DIR$/src/Launcher.java" />
       </list>
     </option>
   </component>
@@ -345,12 +343,6 @@
             <path>
               <item name="Pacman-EssentialComputingII" type="b2602c69:ProjectViewProjectNode" />
               <item name="Pacman-EssentialComputingII" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Maze" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Pacman-EssentialComputingII" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Pacman-EssentialComputingII" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -380,7 +372,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554245790153" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554245831739" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="dynamic.classpath" value="false" />
@@ -816,14 +808,7 @@
       <workItem from="1554002058655" duration="2677000" />
       <workItem from="1554011464875" duration="2607000" />
       <workItem from="1554042485944" duration="6823000" />
-      <workItem from="1554245144146" duration="487000" />
-    </task>
-    <task id="LOCAL-00072" summary="beginning of DepthFirst crawler">
-      <created>1552958481877</created>
-      <option name="number" value="00072" />
-      <option name="presentableId" value="LOCAL-00072" />
-      <option name="project" value="LOCAL" />
-      <updated>1552958481877</updated>
+      <workItem from="1554245144146" duration="742000" />
     </task>
     <task id="LOCAL-00073" summary="Finished Crawler + BreadthFirst and DepthFirst + 100% test on datastructures">
       <created>1552994496502</created>
@@ -1161,7 +1146,14 @@
       <option name="project" value="LOCAL" />
       <updated>1554046782084</updated>
     </task>
-    <option name="localTasksCounter" value="121" />
+    <task id="LOCAL-00121" summary="Added PacMan maze">
+      <created>1554245851666</created>
+      <option name="number" value="00121" />
+      <option name="presentableId" value="LOCAL-00121" />
+      <option name="project" value="LOCAL" />
+      <updated>1554245851666</updated>
+    </task>
+    <option name="localTasksCounter" value="122" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1197,7 +1189,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="334605000" />
+    <option name="totallyTimeSpent" value="334860000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1217,7 +1209,7 @@
       <window_info id="Favorites" order="2" weight="0.3295302" />
       <window_info id="Capture Tool" order="3" />
       <window_info id="Nl-Palette" order="4" />
-      <window_info content_ui="combo" id="Project" order="5" sideWeight="0.6703755" visible="true" weight="0.22867803" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" sideWeight="0.6703755" visible="true" weight="0.22867803" />
       <window_info id="Palette&#9;" order="6" />
       <window_info id="Structure" order="7" weight="0.24966443" />
       <window_info anchor="bottom" id="Application Servers" order="0" />
@@ -1229,7 +1221,7 @@
       <window_info anchor="bottom" id="Messages" order="6" weight="0.3220339" />
       <window_info anchor="bottom" id="Message" order="7" />
       <window_info anchor="bottom" id="Find" order="8" weight="0.32683983" />
-      <window_info active="true" anchor="bottom" id="Run" order="9" visible="true" weight="0.30627707" />
+      <window_info anchor="bottom" id="Run" order="9" visible="true" weight="0.30627707" />
       <window_info anchor="bottom" id="Debug" order="10" weight="0.3983051" />
       <window_info anchor="bottom" id="Cvs" order="11" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="12" weight="0.4" />
@@ -1251,7 +1243,7 @@
       <window_info anchor="right" id="Properties" order="9" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="10" weight="0.25" />
       <window_info anchor="right" id="Maven" order="11" />
-      <window_info anchor="right" id="Coverage" order="12" side_tool="true" visible="true" weight="0.16040269" />
+      <window_info anchor="right" id="Coverage" order="12" side_tool="true" visible="true" weight="0.15991472" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1266,7 +1258,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added javaDoc to MoveClockWise, and few small random edits" />
     <MESSAGE value="added TODO about a test class for the crawler." />
     <MESSAGE value="add javaDoc" />
     <MESSAGE value="Added javaDocs to all Entities" />
@@ -1291,7 +1282,8 @@
     <MESSAGE value="rearranged a few method calls in MazeObj" />
     <MESSAGE value="renamed MazeObj to TheTwoHalls" />
     <MESSAGE value="Renamed a few mazes to more meaningful names" />
-    <option name="LAST_COMMIT_MESSAGE" value="Renamed a few mazes to more meaningful names" />
+    <MESSAGE value="Added PacMan maze" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added PacMan maze" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -1691,16 +1683,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Launcher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="41" column="26" selection-start-line="41" selection-start-column="26" selection-end-line="41" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Maze/SingleRoad.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -1724,8 +1706,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/Maze/PacManTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="40" column="9" lean-forward="true" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
+        <state relative-caret-position="304">
+          <caret line="32" column="9" lean-forward="true" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Launcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="107" column="7" lean-forward="true" selection-start-line="107" selection-start-column="7" selection-end-line="107" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

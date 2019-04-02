@@ -113,6 +113,8 @@ public class Launcher {
      *              1 for SingleRoad.
      *              2 for ManyRoads.
      *              3 for ForkRoad.
+     *              4 for ForkRoad2.
+     *              5 for PacMan.
      * @return Returns the selected maze.
      */
     private IMaze setMaze(int index) {
