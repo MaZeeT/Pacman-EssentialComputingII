@@ -58,13 +58,14 @@ abstract class MazeArrayBased extends Maze {
      * @param arr The array that needs to have the {@link Player} instantiated.
      * @return Returns the {@link Player} if a 2 is in the array, else returns null.
      */
-    Player player(int[][] arr) {
+    List<Player> players(int[][] arr) {
+        List<Player> players = new ArrayList<>();
         for (int j = 0; j < width; j++) {
             for (int i = 0; i < height; i++) {
-                if (arr[i][j] == 2) return new Player(new Position(i, j));
+                if (arr[i][j] == 2) players.add(new Player(new Position(i, j)));
             }
         }
-        return null;
+        return players;
     }
 
     /**

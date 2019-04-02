@@ -18,8 +18,8 @@ import java.util.List;
  */
 public abstract class Maze implements IMaze {
 
-    List<GameObject> walls;
-    Player player;
+    List<GameObject> walls = new ArrayList<>(0);
+    List<Player> players = new ArrayList<>(0);
     WayPoint wayPoint;
 
     /**
@@ -32,7 +32,7 @@ public abstract class Maze implements IMaze {
         for (GameObject wall : walls) { //TODO rewrite class to include walls.contain(wall) method.
             if (!gameObjects.contains(wall)) gameObjects.add(wall);
         }
-        gameObjects.add(player);
+        gameObjects.addAll(players);
         gameObjects.add(wayPoint);
         return gameObjects;
     }
@@ -55,8 +55,8 @@ public abstract class Maze implements IMaze {
      *
      * @return {@inheritDoc}
      */
-    public Player getPlayer() {
-        return player;
+    public List<Player> getPlayers() {
+        return players;
     }
 
     /**

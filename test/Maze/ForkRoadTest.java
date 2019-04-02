@@ -18,7 +18,7 @@ public class ForkRoadTest {
     @Before
     public void setUp(){
         IMaze maze = new ForkRoad();
-        this.playerPosition = maze.getPlayer().getPosition();
+        this.playerPosition = maze.getPlayers().get(0).getPosition();   //TODO list support
         this.wayPointPosition = maze.getWayPoint().getPosition();
         this.walls = maze.getWalls();
     }

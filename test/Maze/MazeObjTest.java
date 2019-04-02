@@ -66,7 +66,7 @@ public class MazeObjTest {
         int expected =
                 x * 2 + y * 2 //walls
                         - 4 // corner overlays
-                        + 2 // player and wayPoint
+                        + 2 // players and wayPoint
                 ;
         int actual = m.getMaze().size();
         assertEquals(expected, actual);
@@ -91,7 +91,7 @@ public class MazeObjTest {
         Player testPlayer = new Player(new Position(2, 2));
 
         int expected = 0;
-        int actual = m.getPlayer().compareTo(testPlayer);
+        int actual = m.getPlayers().get(0).compareTo(testPlayer); //TODO list support
         assertEquals(expected, actual);
     }
 

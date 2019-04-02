@@ -21,7 +21,6 @@ class MazeObjTestable extends MazeObjBased {
      */
     MazeObjTestable(int width, int height) {
         this.maze = new GameObject[width][height];
-        this.walls = new ArrayList<>();
         addPlayer(2, 2);
         addWayPoint(2, 3);
         borders(width,height);

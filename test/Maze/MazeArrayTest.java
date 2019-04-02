@@ -35,7 +35,7 @@ public class MazeArrayTest {
     @Test
     public void ArrayGetPlayer() {
         Position testPosition = new Position(1, 1);
-        Position actualPosition = arrayGet.player(array).getPosition();
+        Position actualPosition = arrayGet.players(array).get(0).getPosition(); //TODO list support
 
         int expected = 0;
         int actual = actualPosition.compareTo(testPosition);
@@ -51,8 +51,13 @@ public class MazeArrayTest {
                 {1, 1, 1}
         };
 
-        Player actual = arrGet.player(arr);
-        assertNull(actual);
+
+          boolean actual = arrGet.players.isEmpty();
+          boolean expected = true;
+          assertEquals(expected,actual);
+
+        //Player actual = arrGet.players(arr).get(0);//TODO list support
+        //assertNull(actual);
     }
 
     @Test

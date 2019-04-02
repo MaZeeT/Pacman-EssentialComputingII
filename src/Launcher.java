@@ -34,20 +34,21 @@ public class Launcher {
      */
     private void configuration() {
         //TODO check the use of the width and height and edit the above javeDoc
-        width = 30; // width of maze
-        height = 20; // height of maze
+        width = 33; // width of maze
+        height = 36; // height of maze
         runSpeed = 500; // milliseconds between each update
 
         // Options for setting maze.
-        maze = setMaze(1);
+        maze = setMaze(5);
         // 0 for TwoHalls.
         // 1 for SingleRoad.
         // 2 for ManyRoads.
         // 3 for ForkRoad.
         // 4 for ForkRoad2 (good for greedy).
+        // 5 for PacMan
 
         // Options for setting dataStructure.
-        dataStructure = setDataStructure(2);
+        dataStructure = setDataStructure(0);
         // 0 for DepthFirst.
         // 1 for BreadthFirst.
         // 2 for Greedy.
@@ -120,6 +121,7 @@ public class Launcher {
         if (index == 2) return new ManyRoads();
         if (index == 3) return new ForkRoad();
         if (index == 4) return new ForkRoad2();
+        if (index == 5) return new PacMan();
 
         //Default
         return new ManyRoads();

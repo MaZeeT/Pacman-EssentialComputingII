@@ -29,15 +29,16 @@ abstract class MazeObjBased extends Maze {
 
     /**
      * This will add a new instantiation of a {@link Player} to the 2D array in this class,
-     * link it to the super classes "player" variable.
+     * and add it to the super classes "players" list.
      *
      * @param x The x position in the maze.
      * @param y The y position in the maze.
      */
     void addPlayer(int x, int y) {
         if (maze[x][y] == null) {
-            player = new Player(new Position(x, y));
-            maze[x][y] = player;
+            Player p = new Player(new Position(x, y));
+            maze[x][y] = p;
+            players.add(p);
         }
     }
 

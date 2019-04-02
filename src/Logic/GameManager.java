@@ -21,7 +21,7 @@ public class GameManager {
 
     private List<GameObject> walls;
     private List<GameObject> wayPoints = new ArrayList<>();
-    private List<GameObject> snake = new ArrayList<>();
+    private List<GameObject> players = new ArrayList<>();
 
     private char direction;
     private MoveClockWise movement;
@@ -38,8 +38,9 @@ public class GameManager {
     public GameManager(IMaze maze, IDataStructure dataStructure) {
         walls = maze.getWalls();
 
-        Player player = maze.getPlayer();
-        snake.add(player);
+        players.addAll(maze.getPlayers());//TODO make it use more than the first index in the list
+        //Player player = maze.getPlayers().get(0);
+        //players.add(player);
         wayPoints.add(maze.getWayPoint());
 
         movement = new MoveClockWise(maze);
@@ -82,7 +83,7 @@ public class GameManager {
         List<GameObject> gameObjects = new ArrayList<>();
         gameObjects.addAll(wayPoints);
         gameObjects.addAll(walls);
-        gameObjects.addAll(snake);
+        gameObjects.addAll(players);
 
         return gameObjects;
     }

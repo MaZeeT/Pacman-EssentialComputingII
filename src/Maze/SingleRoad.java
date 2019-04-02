@@ -26,7 +26,7 @@ public class SingleRoad extends MazeArrayBased {
                 {1, 1, 1, 1, 1, 1}
         };
         walls = walls(maze);
-        player = player(maze);
+        players = players(maze);
         wayPoint = wayPoint(maze);
     }
 

@@ -24,7 +24,7 @@ public class MoveClockWise {
      * @param maze The {@link IMaze} which need to have a user controlled {@link Player}.
      */
     public MoveClockWise(IMaze maze) {
-        this.player = maze.getPlayer();
+        this.player = maze.getPlayers().get(0); //TODO make this support list instead of Player
         this.walls = maze.getMazePositions();
     }
 

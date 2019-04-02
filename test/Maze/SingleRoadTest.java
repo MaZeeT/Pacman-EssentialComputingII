@@ -17,7 +17,7 @@ public class SingleRoadTest {
     @Before
     public void setUp(){
        IMaze  maze = new SingleRoad();
-       playerPosition = maze.getPlayer().getPosition();
+       playerPosition = maze.getPlayers().get(0).getPosition(); //TODO list support
        wayPointPosition = maze.getWayPoint().getPosition();
        walls = maze.getWalls();
     }

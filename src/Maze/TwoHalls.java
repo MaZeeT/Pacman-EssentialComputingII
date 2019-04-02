@@ -26,12 +26,12 @@ public class TwoHalls extends MazeObjBased {
     public TwoHalls(int width, int height) {
         this.sizeX = width;
         this.sizeY = height;
-        this.walls = new ArrayList<>();
         maze = new GameObject[sizeX][sizeY];
         borders(sizeX, sizeY);
         corners();
 
         addPlayer(5, 7);
+        addPlayer(6, 7);
         addWayPoint(7, 5);
         diagonalWall(3, 8);
     }

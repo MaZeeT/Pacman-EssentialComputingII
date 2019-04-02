@@ -17,7 +17,7 @@ public class MoveClockWiseTest {
     @Before
     public void setUp() {
         IMaze maze = new TwoHalls(10, 10);
-        player = maze.getPlayer();
+        player = maze.getPlayers().get(0); //TODO list support
         movement = new MoveClockWise(maze);
     }
 

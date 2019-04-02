@@ -36,7 +36,7 @@ public class Crawler {
      * @param dataStructure The dataStructure that will hold the {@link Position}s the {@link Crawler} will move to.
      */
     public Crawler(IMaze maze, IDataStructure dataStructure) {
-        this.player = maze.getPlayer();
+        this.player = maze.getPlayers().get(0); //TODO make this support list instead of player
         this.gameObjects = maze.getMaze();
         this.gameObjectPositions = maze.getMazePositions();
         this.dataStructure = dataStructure;

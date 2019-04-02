@@ -31,7 +31,7 @@ public interface IMaze {
      *
      * @return Return the {@link Player} of the maze.
      */
-    Player getPlayer();
+    List<Player> getPlayers();
 
     /**
      * Get the {@link WayPoint} in the maze.
