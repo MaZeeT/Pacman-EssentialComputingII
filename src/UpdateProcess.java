@@ -30,6 +30,7 @@ public class UpdateProcess extends Thread {
     /**
      * The logic the this thread runs
      */
+    @Override
     public void run() {
         boolean isRunning = true;
         while (isRunning) {

@@ -39,13 +39,14 @@ public class Launcher {
         runSpeed = 500; // milliseconds between each update
 
         // Options for setting maze.
-        maze = setMaze(5);
+        maze = setMaze(6);
         // 0 for TwoHalls.
         // 1 for SingleRoad.
         // 2 for ManyRoads.
         // 3 for ForkRoad.
         // 4 for ForkRoad2 (good for greedy).
-        // 5 for PacMan
+        // 5 for PacMan (for the exam)
+        // 6 for AITestMaze (extra maze to test pathfinder algorithms)
 
         // Options for setting dataStructure.
         dataStructure = setDataStructure(2);
@@ -85,7 +86,7 @@ public class Launcher {
      * @return Returns a new Scene based on the given pane.
      */
     private Scene setupScene(Pane pane, UserControl userControl, GameManager gameManager) {
-        Scene scene = new Scene(pane, 800, 600);
+        scene = new Scene(pane, 800, 600);
         scene.setOnKeyPressed(new EventHandler<KeyEvent>() {
             @Override
             public void handle(KeyEvent event) {
@@ -115,6 +116,7 @@ public class Launcher {
      *              3 for ForkRoad.
      *              4 for ForkRoad2.
      *              5 for PacMan.
+     *              6 for AITestMaze
      * @return Returns the selected maze.
      */
     private IMaze setMaze(int index) {
@@ -124,6 +126,7 @@ public class Launcher {
         if (index == 3) return new ForkRoad();
         if (index == 4) return new ForkRoad2();
         if (index == 5) return new PacMan();
+        if (index == 6) return new AITestMaze();
 
         //Default
         return new ManyRoads();
