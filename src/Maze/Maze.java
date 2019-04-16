@@ -21,6 +21,7 @@ public abstract class Maze implements IMaze {
     List<GameObject> walls;
     Player player;
     WayPoint wayPoint;
+    List<MovableEntity> ghosts;
 
     /**
      * {@inheritDoc}
@@ -75,6 +76,15 @@ public abstract class Maze implements IMaze {
      */
     public List<GameObject> getWalls() {
         return walls;
+    }
+
+    /**
+     * {@inheritDoc}
+     *
+     * @return {@inheritDoc}
+     */
+    public List<MovableEntity> getGhosts() {
+        return ghosts;
     }
 
 }

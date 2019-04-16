@@ -55,6 +55,20 @@ abstract class MazeObjBased extends Maze {
         }
     }
 
+    /**     //todo add ghosts to the test class
+     * This will add a new instantiation of a {@link Wall} to a list of walls and the 2D array in this class.
+     *
+     * @param x The x position in the maze.
+     * @param y The y position in the maze.
+     */
+    void addGhost(int x, int y) {
+        if (maze[x][y] == null) {
+            Ghost g = new Ghost(new Position(x, y));
+            maze[x][y] = g;
+            ghosts.add(g);
+        }
+    }
+
     /**
      * A default method to instantiate a border of {@link Wall}s around the maze.
      *

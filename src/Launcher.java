@@ -39,7 +39,7 @@ public class Launcher {
         runSpeed = 500; // milliseconds between each update
 
         // Options for setting maze.
-        maze = setMaze(6);
+        maze = setMaze(5);
         // 0 for TwoHalls.
         // 1 for SingleRoad.
         // 2 for ManyRoads.

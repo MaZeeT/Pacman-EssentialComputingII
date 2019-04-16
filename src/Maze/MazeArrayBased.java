@@ -84,4 +84,21 @@ abstract class MazeArrayBased extends Maze {
         return walls;
     }
 
+    /**     //todo add ghost to test class
+     * Scan the 2D array "arr" of the sub class for the ints 4.
+     * and instantiate a new {@link Ghost} at the i, j position in the Array at the given indexes.
+     *
+     * @param arr The array that needs to have the {@link Ghost}s instantiated.
+     * @return Returns all the {@link Ghost}s in the array as list of {@link MovableEntity}s.
+     */
+    List<MovableEntity> ghosts(int[][] arr) {
+        List<MovableEntity> ghosts = new ArrayList<>();
+        for (int j = 0; j < width; j++) {
+            for (int i = 0; i < height; i++) {
+                if (arr[i][j] == 4) ghosts.add(new Ghost(new Position(i, j)));
+            }
+        }
+        return ghosts;
+    }
+
 }
