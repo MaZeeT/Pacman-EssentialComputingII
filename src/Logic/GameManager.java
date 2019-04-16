@@ -27,6 +27,8 @@ public class GameManager {
     private char direction;
     private MoveClockWise movement;
     private Crawler crawler;
+    private Crawler ghostA;
+    private Crawler ghostB;
 
     private boolean crawl = true;
 
@@ -47,6 +49,8 @@ public class GameManager {
 
         movement = new MoveClockWise(maze);
         crawler = new Crawler(maze, dataStructure);
+        ghostA = new Crawler(maze, dataStructure);
+        ghostB = new Crawler(maze, dataStructure);
     }
 
     /**
@@ -54,8 +58,10 @@ public class GameManager {
      */
     public void update() {
         movement.move(direction);
-        direction = movement.getDirection();
+        direction = movement.getDirection(); //todo make a common interface for crawler and user controls of movableGameObjects
         if (crawl) crawler.update();
+        ghostA.update();
+        ghostB.update();
     }
 
     /**
