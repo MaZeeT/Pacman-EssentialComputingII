@@ -5,8 +5,8 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-public abstract class MovableGameObjectTest {
-     MovableGameObject defMovable;
+public abstract class MovableEntityTest {
+     MovableEntity defMovable;
      Position defPos;
      int defX;
      int defY;

@@ -3,6 +3,7 @@ package Logic.Crawler;
 import Components.Position;
 import DataStructures.IDataStructure;
 import Entities.GameObject;
+import Entities.MovableEntity;
 import Entities.Player;
 import Entities.Wall;
 import Maze.IMaze;
@@ -22,7 +23,7 @@ import java.util.List;
  */
 public class Crawler {
 
-    private Player player;
+    private MovableEntity movableEntity;
     private List<GameObject> gameObjects;
     private List<Position> gameObjectPositions;
     private IDataStructure dataStructure;
@@ -36,7 +37,7 @@ public class Crawler {
      * @param dataStructure The dataStructure that will hold the {@link Position}s the {@link Crawler} will move to.
      */
     public Crawler(IMaze maze, IDataStructure dataStructure) {
-        this.player = maze.getPlayer();
+        this.movableEntity = maze.getPlayer();
         this.gameObjects = maze.getMaze();
         this.gameObjectPositions = maze.getMazePositions();
         this.dataStructure = dataStructure;
@@ -49,10 +50,10 @@ public class Crawler {
      * If the dataStructure is not empty, the {@link Player}'s position will be checked to the next in the dataStructure.
      */
     public void update() {
-        gameObjects.add(visited(player.getPosition()));
-        checkNearby(player);
+        gameObjects.add(visited(movableEntity.getPosition()));
+        checkNearby(movableEntity);
         if (dataStructure.checkNext() != null) {
-            player.setPosition(dataStructure.getNext());
+            movableEntity.setPosition(dataStructure.getNext());
         }
     }
 
@@ -69,15 +70,15 @@ public class Crawler {
     }
 
     /**
-     * Check all the {@link Position} around the player, and call the "addToDataStructure" on each {@link Position}.
+     * Check all the {@link Position} around the movableEntity, and call the "addToDataStructure" on each {@link Position}.
      *
-     * @param player The crawling {@link Player}.
+     * @param entity The crawling {@link MovableEntity}.
      */
-    private void checkNearby(Player player) {
-        addToDataStructure(player.checkUp());
-        addToDataStructure(player.checkLeft());
-        addToDataStructure(player.checkDown());
-        addToDataStructure(player.checkRight());
+    private void checkNearby(MovableEntity entity) {
+        addToDataStructure(entity.checkUp());
+        addToDataStructure(entity.checkLeft());
+        addToDataStructure(entity.checkDown());
+        addToDataStructure(entity.checkRight());
     }
 
     /**

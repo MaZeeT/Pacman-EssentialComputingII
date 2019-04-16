@@ -2,9 +2,9 @@ package Entities;
 
 import Components.Position;
 
-public abstract class MovableGameObject extends GameObject{
+public abstract class MovableEntity extends GameObject{
     /**
-     * Change the {@link Position} of the {@link MovableGameObject} to one above.
+     * Change the {@link Position} of the {@link MovableEntity} to one above.
      * @return Returns the new {@link Position}.
      */
     public Position moveUp() {
@@ -13,7 +13,7 @@ public abstract class MovableGameObject extends GameObject{
     }
 
     /**
-     * Change the {@link Position} of the {@link MovableGameObject} to one below.
+     * Change the {@link Position} of the {@link MovableEntity} to one below.
      * @return Returns the new {@link Position}.
      */
     public Position moveDown() {
@@ -22,7 +22,7 @@ public abstract class MovableGameObject extends GameObject{
     }
 
     /**
-     * Change the {@link Position} of the {@link MovableGameObject} to the left.
+     * Change the {@link Position} of the {@link MovableEntity} to the left.
      * @return Returns the new {@link Position}.
      */
     public Position moveLeft() {
@@ -31,7 +31,7 @@ public abstract class MovableGameObject extends GameObject{
     }
 
     /**
-     * Change the {@link Position} of the {@link MovableGameObject} to the right.
+     * Change the {@link Position} of the {@link MovableEntity} to the right.
      * @return Returns the new {@link Position}.
      */
     public Position moveRight() {
@@ -40,7 +40,7 @@ public abstract class MovableGameObject extends GameObject{
     }
 
     /**
-     * Make a new {@link Position} above the {@link MovableGameObject}.
+     * Make a new {@link Position} above the {@link MovableEntity}.
      * @return Returns a new {@link Position}.
      */
     public Position checkUp() {
@@ -50,7 +50,7 @@ public abstract class MovableGameObject extends GameObject{
     }
 
     /**
-     * Make a new {@link Position} below the {@link MovableGameObject}.
+     * Make a new {@link Position} below the {@link MovableEntity}.
      * @return Returns a new {@link Position}.
      */
     public Position checkDown() {
@@ -60,7 +60,7 @@ public abstract class MovableGameObject extends GameObject{
     }
 
     /**
-     * Make a new {@link Position} to the left of the {@link MovableGameObject}.
+     * Make a new {@link Position} to the left of the {@link MovableEntity}.
      * @return Returns a new {@link Position}.
      */
     public Position checkLeft() {
@@ -70,7 +70,7 @@ public abstract class MovableGameObject extends GameObject{
     }
 
     /**
-     * Make a new {@link Position} to the right of the {@link MovableGameObject}.
+     * Make a new {@link Position} to the right of the {@link MovableEntity}.
      * @return Returns a new {@link Position}.
      */
     public Position checkRight() {

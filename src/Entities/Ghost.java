@@ -9,7 +9,7 @@ import javafx.scene.paint.Color;
  *
  * @author MaZeeT
  */
-public class Ghost extends MovableGameObject {
+public class Ghost extends MovableEntity {
 
     /**
      * This constructor take a {@link Position} to define the starting position of the{@link Ghost}, with a default color of RED.

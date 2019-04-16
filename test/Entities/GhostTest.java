@@ -5,11 +5,9 @@ import javafx.scene.paint.Color;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.awt.*;
-
 import static org.junit.Assert.assertEquals;
 
-public class GhostTest extends MovableGameObjectTest {
+public class GhostTest extends MovableEntityTest {
 
     @Before
     public void setUp() {
@@ -29,7 +27,7 @@ public class GhostTest extends MovableGameObjectTest {
     @Test
     public void setConstructorColor() {
         Color color = Color.BLUE;
-        MovableGameObject movable = new Ghost(new Position(1, 1), color);
+        MovableEntity movable = new Ghost(new Position(1, 1), color);
 
         Color expected = color;
         Color actual = movable.getColor();

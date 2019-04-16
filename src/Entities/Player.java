@@ -9,7 +9,7 @@ import javafx.scene.paint.Color;
  *
  * @author MaZeeT
  */
-public class Player extends MovableGameObject {
+public class Player extends MovableEntity {
 
     /**
      * This constructor take a {@link Position} to define where the {@link Player} will be positioned.

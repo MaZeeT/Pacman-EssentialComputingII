@@ -6,7 +6,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class PlayerTest extends MovableGameObjectTest{
+public class PlayerTest extends MovableEntityTest {
 
     @Before
     public void setUp() {
