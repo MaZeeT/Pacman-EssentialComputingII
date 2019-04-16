@@ -2,6 +2,7 @@ package Logic.Crawler;
 
 import Components.Position;
 import Entities.GameObject;
+import Entities.MovableEntity;
 import Entities.Player;
 import Maze.IMaze;
 
@@ -15,7 +16,7 @@ import java.util.List;
  */
 public class MoveClockWise {
     private char dir;
-    private Player player;
+    private MovableEntity player;
     private List<Position> walls;
 
     /**
@@ -54,7 +55,7 @@ public class MoveClockWise {
      *
      * @param player The {@link Player} that is moving.
      */
-    private void movement(Player player) {
+    private void movement(MovableEntity player) {
         switch (dir) {
             case 'w':
                 if (collideWith(walls, player.checkUp())) {

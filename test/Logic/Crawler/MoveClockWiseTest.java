@@ -1,7 +1,7 @@
 package Logic.Crawler;
 
 import Components.Position;
-import Entities.Player;
+import Entities.MovableEntity;
 import Maze.IMaze;
 import Maze.TwoHalls;
 import org.junit.Before;
@@ -12,7 +12,7 @@ import static org.junit.Assert.*;
 public class MoveClockWiseTest {
 
     private MoveClockWise movement;
-    private Player player;
+    private MovableEntity player;
 
     @Before
     public void setUp() {

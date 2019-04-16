@@ -2,7 +2,7 @@ package Logic;
 
 import DataStructures.IDataStructure;
 import Entities.GameObject;
-import Entities.Player;
+import Entities.MovableEntity;
 import Logic.Crawler.Crawler;
 import Logic.Crawler.MoveClockWise;
 import Maze.IMaze;
@@ -38,7 +38,7 @@ public class GameManager {
     public GameManager(IMaze maze, IDataStructure dataStructure) {
         walls = maze.getWalls();
 
-        Player player = maze.getPlayer();
+        MovableEntity player = maze.getPlayer();
         snake.add(player);
         wayPoints.add(maze.getWayPoint());
 

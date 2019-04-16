@@ -27,11 +27,11 @@ public interface IMaze {
     List<Position> getMazePositions();
 
     /**
-     * Get the {@link Player} in the maze.
+     * Get the {@link Player} in the maze as its superclass {@link MovableEntity}.
      *
-     * @return Return the {@link Player} of the maze.
+     * @return Return the {@link Player} of the maze as its superclass {@link MovableEntity}.
      */
-    Player getPlayer();
+    MovableEntity getPlayer();
 
     /**
      * Get the {@link WayPoint} in the maze.
@@ -47,4 +47,9 @@ public interface IMaze {
      */
     List<GameObject> getWalls();
 
+    /**
+     * Get all the {@link Ghost}s in the maze.
+     * @return Return a list of all the {@link Ghost}s in the maze.
+     */
+    List<MovableEntity> getGhosts();
 }
