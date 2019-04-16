@@ -51,5 +51,5 @@ public interface IMaze {
      * Get all the {@link Ghost}s in the maze.
      * @return Return a list of all the {@link Ghost}s in the maze.
      */
-    List<MovableEntity> getGhosts();
+    List<GameObject> getGhosts();
 }

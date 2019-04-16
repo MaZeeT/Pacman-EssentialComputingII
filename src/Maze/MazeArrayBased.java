@@ -91,8 +91,8 @@ abstract class MazeArrayBased extends Maze {
      * @param arr The array that needs to have the {@link Ghost}s instantiated.
      * @return Returns all the {@link Ghost}s in the array as list of {@link MovableEntity}s.
      */
-    List<MovableEntity> ghosts(int[][] arr) {
-        List<MovableEntity> ghosts = new ArrayList<>();
+    List<GameObject> ghosts(int[][] arr) {
+        List<GameObject> ghosts = new ArrayList<>();
         for (int j = 0; j < width; j++) {
             for (int i = 0; i < height; i++) {
                 if (arr[i][j] == 4) ghosts.add(new Ghost(new Position(i, j)));

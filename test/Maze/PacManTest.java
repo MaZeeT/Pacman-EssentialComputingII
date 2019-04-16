@@ -14,6 +14,7 @@ public class PacManTest {
     private Position playerPosition;
     private Position wayPointPosition;
     private List<GameObject> walls;
+    private List<GameObject> ghosts;
 
     @Before
     public void setUp(){
@@ -21,6 +22,7 @@ public class PacManTest {
         this.playerPosition = maze.getPlayer().getPosition();
         this.wayPointPosition = maze.getWayPoint().getPosition();
         this.walls = maze.getWalls();
+        this.ghosts = maze.getGhosts();
     }
 
     @Test
@@ -43,6 +45,14 @@ public class PacManTest {
         Position position = new Position(15,24);
         int expected = 0;
         int actual = playerPosition.compareTo(position);
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void checkGhosts(){
+        int expected = 3;
+        int actual = ghosts.size();
+        assertEquals(expected, actual);
         assertEquals(expected, actual);
     }
 

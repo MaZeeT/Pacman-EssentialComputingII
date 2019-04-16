@@ -1,10 +1,7 @@
 package Maze;
 
 import Components.Position;
-import Entities.GameObject;
-import Entities.Player;
-import Entities.Wall;
-import Entities.WayPoint;
+import Entities.*;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -15,17 +12,17 @@ import static org.junit.Assert.assertNull;
 
 public class MazeArrayTest {
     private int[][] array;
-    private MazeArrayBased arrayGet;
+    private MazeArrayBased maze;
 
     @Before
     public void setUp() {
-        arrayGet = new MazeArrayTestable(5, 6);
+        maze = new MazeArrayTestable(5, 6);
 
         array = new int[][]{
                 {1, 1, 1, 1, 1},
                 {1, 2, 1, 0, 3},
                 {1, 0, 1, 0, 1},
-                {1, 0, 1, 0, 1},
+                {1, 0, 1, 4, 1},
                 {1, 0, 0, 0, 1},
                 {1, 1, 1, 1, 1}
         };
@@ -35,7 +32,7 @@ public class MazeArrayTest {
     @Test
     public void ArrayGetPlayer() {
         Position testPosition = new Position(1, 1);
-        Position actualPosition = arrayGet.player(array).getPosition();
+        Position actualPosition = maze.player(array).getPosition();
 
         int expected = 0;
         int actual = actualPosition.compareTo(testPosition);
@@ -58,7 +55,7 @@ public class MazeArrayTest {
     @Test
     public void ArrayGetWayPoint() {
         Position testPosition = new Position(1, 4);
-        Position actualPosition = arrayGet.wayPoint(array).getPosition();
+        Position actualPosition = maze.wayPoint(array).getPosition();
 
         int expected = 0;
         int actual = actualPosition.compareTo(testPosition);
@@ -82,7 +79,7 @@ public class MazeArrayTest {
     @Test
     public void ArrayGetWalls() {
         boolean actual = false;
-        List<GameObject> walls = arrayGet.walls(array);
+        List<GameObject> walls = maze.walls(array);
         GameObject wall = new Wall(new Position(2, 2));
         for (GameObject go : walls) {
             if (wall.compareTo(go) == 0) actual = true;

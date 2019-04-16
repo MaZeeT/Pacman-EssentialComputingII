@@ -22,6 +22,7 @@ public class GameManager {
     private List<GameObject> walls;
     private List<GameObject> wayPoints = new ArrayList<>();
     private List<GameObject> snake = new ArrayList<>();
+    private List<GameObject> ghosts;
 
     private char direction;
     private MoveClockWise movement;
@@ -37,10 +38,12 @@ public class GameManager {
      */
     public GameManager(IMaze maze, IDataStructure dataStructure) {
         walls = maze.getWalls();
+        ghosts = maze.getGhosts();
 
         MovableEntity player = maze.getPlayer();
         snake.add(player);
         wayPoints.add(maze.getWayPoint());
+
 
         movement = new MoveClockWise(maze);
         crawler = new Crawler(maze, dataStructure);
@@ -83,6 +86,7 @@ public class GameManager {
         gameObjects.addAll(wayPoints);
         gameObjects.addAll(walls);
         gameObjects.addAll(snake);
+        if (ghosts != null) gameObjects.addAll(ghosts);
 
         return gameObjects;
     }
