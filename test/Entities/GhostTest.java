@@ -1,19 +1,39 @@
 package Entities;
 
 import Components.Position;
+import javafx.scene.paint.Color;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import java.awt.*;
 
-public class PlayerTest extends MovableGameObjectTest{
+import static org.junit.Assert.assertEquals;
+
+public class GhostTest extends MovableGameObjectTest {
 
     @Before
     public void setUp() {
         defX = 2;
         defY = 3;
         defPos = new Position(defX, defY);
-        defMovable = new Player(defPos);
+        defMovable = new Ghost(defPos);
+    }
+
+    @Test
+    public void getDefaultColor() {
+        Color expected = Color.RED;
+        Color actual = defMovable.getColor();
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void setConstructorColor() {
+        Color color = Color.BLUE;
+        MovableGameObject movable = new Ghost(new Position(1, 1), color);
+
+        Color expected = color;
+        Color actual = movable.getColor();
+        assertEquals(expected, actual);
     }
 
     @Test
