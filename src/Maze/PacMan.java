@@ -51,7 +51,7 @@ public class PacMan extends MazeArrayBased {
         walls = walls(maze);
         player = player(maze);
         wayPoint = wayPoint(maze);
-        ghosts = ghosts(maze);  //todo add ghost to test class
+        ghosts = ghosts(maze);
     }
 
 }

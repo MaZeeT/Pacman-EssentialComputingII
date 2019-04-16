@@ -55,7 +55,7 @@ abstract class MazeObjBased extends Maze {
         }
     }
 
-    /**     //todo add ghosts to the test class
+    /**
      * This will add a new instantiation of a {@link Wall} to a list of walls and the 2D array in this class.
      *
      * @param x The x position in the maze.

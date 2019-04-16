@@ -47,7 +47,7 @@ public interface IMaze {
      */
     List<GameObject> getWalls();
 
-    /**     //todo add getGhosts to test class
+    /**
      * Get all the {@link Ghost}s in the maze.
      * @return Return a list of all the {@link Ghost}s in the maze.
      */

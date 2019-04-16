@@ -84,7 +84,7 @@ abstract class MazeArrayBased extends Maze {
         return walls;
     }
 
-    /**     //todo add ghost to test class
+    /**
      * Scan the 2D array "arr" of the sub class for the ints 4.
      * and instantiate a new {@link Ghost} at the i, j position in the Array at the given indexes.
      *
