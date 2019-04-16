@@ -1,10 +1,13 @@
 package Maze;
 
 import Components.Position;
+import Entities.GameObject;
 import Entities.Player;
 import Entities.WayPoint;
 import org.junit.Before;
 import org.junit.Test;
+
+import java.util.List;
 
 import static org.junit.Assert.*;
 
@@ -104,6 +107,23 @@ public class MazeObjTest {
 
         int expected = 0;
         int actual = m.getWayPoint().compareTo(testWayPoint);
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void getAmountOfGhosts() {
+        int expected = 1;
+        int actual = maze.getGhosts().size();
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void compareGhostPosition() {
+        List<GameObject> ghosts = maze.getGhosts();
+        Position ghostPosition = ghosts.get(0).getPosition();
+
+        boolean actual = ghostPosition.equals(new Position(1,1));
+        boolean expected = true;
         assertEquals(expected, actual);
     }
 
