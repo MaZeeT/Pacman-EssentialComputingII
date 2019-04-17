@@ -5,6 +5,7 @@ import Entities.GameObject;
 import Entities.MovableEntity;
 import Entities.Player;
 import Maze.IMaze;
+import Movement.IMoveControlled;
 import Movement.IMove;
 
 import java.util.List;
@@ -15,7 +16,7 @@ import java.util.List;
  *
  * @author MaZeeT
  */
-public class MoveClockWise implements IMove {
+public class MoveClockWise implements IMove, IMoveControlled {
     private char dir;
     private MovableEntity player;
     private List<Position> walls;

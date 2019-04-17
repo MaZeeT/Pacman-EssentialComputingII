@@ -5,6 +5,7 @@ import Entities.MovableEntity;
 import Maze.IMaze;
 import Maze.TwoHalls;
 import Movement.IMove;
+import Movement.IMoveControlled;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -12,7 +13,7 @@ import static org.junit.Assert.*;
 
 public class MoveClockWiseTest {
 
-    private IMove movement;
+    private IMoveControlled movement;
     private MovableEntity player;
 
     @Before

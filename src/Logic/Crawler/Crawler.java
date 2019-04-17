@@ -93,13 +93,4 @@ public class Crawler implements IMove {
             dataStructure.add(position);
     }
 
-    @Override
-    public char getDirection() {
-        return 0;
-    }
-
-    @Override
-    public void setDirection(char direction) {
-
-    }
 }

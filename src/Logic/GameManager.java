@@ -6,6 +6,7 @@ import Entities.MovableEntity;
 import Logic.Crawler.Crawler;
 import Logic.Crawler.MoveClockWise;
 import Maze.IMaze;
+import Movement.IMoveControlled;
 
 import java.util.*;
 //todo check javadoc for changes since the implementation of IMove interface
@@ -25,7 +26,7 @@ public class GameManager {
     private List<GameObject> ghosts;
 
     private char direction; //todo direction can be removed if we can bridge the input with the moveClockWise class.
-    private MoveClockWise movement;
+    private IMoveControlled movement;
     private Crawler crawler;
     private Crawler ghostA;
     private Crawler ghostB;
