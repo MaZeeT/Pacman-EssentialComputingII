@@ -42,7 +42,6 @@ public class PlayerControl implements UserControl {
      * @return {@inheritDoc}
      */
     public char getDirection(KeyCode key) {
-        System.out.println("key pressed: " + key);
         return direction(key);
     }
 

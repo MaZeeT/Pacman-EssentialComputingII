@@ -4,12 +4,14 @@ import DataStructures.IDataStructure;
 import Entities.GameObject;
 import Entities.MovableEntity;
 import Movement.Crawler;
+import Movement.IMove;
 import Movement.MoveClockWise;
 import Maze.IMaze;
 import Movement.IMoveControlled;
 
 import java.util.*;
 //todo check javadoc for changes since the implementation of IMove interface
+
 /**
  * The purpose of this class is, to combine most of the components needed for the logic to work.
  * All the different types of {@link GameObject}s are access here.
@@ -27,11 +29,12 @@ public class GameManager {
 
     private char direction; //todo direction can be removed if we can bridge the input with the moveClockWise class.
     private IMoveControlled movement;
-    private Crawler crawler;
-    private Crawler ghostA;
-    private Crawler ghostB;
+    private IMove crawler;
+    private IMove ghostA;
+    private IMove ghostB;
 
-    private boolean crawl = false;
+    private boolean playerControlled = true;
+    private boolean ghostCanMove = false;
 
     /**
      * Constructor of this class. It takes a {@link IMaze} and a {@link IDataStructure} as input.
@@ -58,11 +61,16 @@ public class GameManager {
      * The move method, which is called each move tick.
      */
     public void update() {
-        movement.setDirection(direction);
-        movement.move();
-        direction = movement.getDirection(); //todo make a common interface for crawler and user controls of movableGameObjects
-        if (crawl){
+        //todo make a common interface for crawler and user controls of movableGameObjects
+        if (playerControlled) {
+            movement.setDirection(direction);
+            movement.move();
+            direction = movement.getDirection();
+        } else {
             crawler.move();
+        }
+
+        if (ghostCanMove) {
             ghostA.move();
             ghostB.move();
         }
