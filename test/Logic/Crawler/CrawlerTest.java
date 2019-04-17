@@ -5,6 +5,7 @@ import DataStructures.DepthFirst;
 import DataStructures.IDataStructure;
 import Maze.ForkRoad;
 import Maze.IMaze;
+import Movement.IMove;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -12,7 +13,7 @@ import static org.junit.Assert.*;
 
 public class CrawlerTest {
 
-    private Crawler crawler;
+    private IMove crawler;
     private IDataStructure dataStructure;
 
     @Before
@@ -24,9 +25,9 @@ public class CrawlerTest {
 
     @Test
     public void updateNotNull() {
-        crawler.update();
-        crawler.update();
-        crawler.update();
+        crawler.move();
+        crawler.move();
+        crawler.move();
 
         Position actual = dataStructure.checkNext();
         assertNotNull(actual);

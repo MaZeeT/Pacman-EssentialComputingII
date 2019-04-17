@@ -7,21 +7,22 @@ import Entities.MovableEntity;
 import Entities.Player;
 import Entities.Wall;
 import Maze.IMaze;
+import Movement.IMove;
 import javafx.scene.paint.Color;
 
 import java.util.List;
-
+//todo check javadoc for changes since the implementation of IMove interface
 /**
  * The purpose of this class is to be enable the {@link Player} to crawl around in a given {@link Maze.Maze}.
  * This is done by storing each possible steps in a data structure and make a decision about which step to take next.
  * This {@link Crawler} works with dataStructures that implements the {@link IDataStructure} interface.
  * The {@link DataStructures.DepthFirst} dataStructure will give a depth first approach.
  * The {@link DataStructures.BreadthFirst} dataStructure will give a Breadth first approach.
- * The {@link DataStructures.Greedy} dataStructure will take the best possible single step each update.
+ * The {@link DataStructures.Greedy} dataStructure will take the best possible single step each move.
  *
  * @author MaZeeT
  */
-public class Crawler {
+public class Crawler implements IMove {
 
     private MovableEntity movableEntity;
     private List<GameObject> gameObjects;
@@ -44,12 +45,13 @@ public class Crawler {
     }
 
     /**
-     * This function is called on each update "tick".
+     * This function is called on each move "tick".
      * First the {@link Position} of the {@link Player} is added as a visited wall,
      * and nearby positions of the {@link Player} is checked and added to the dataStructure.
      * If the dataStructure is not empty, the {@link Player}'s position will be checked to the next in the dataStructure.
      */
-    public void update() {
+    @Override
+    public void move() {
         gameObjects.add(visited(movableEntity.getPosition()));
         checkNearby(movableEntity);
         if (dataStructure.checkNext() != null) {
@@ -91,4 +93,13 @@ public class Crawler {
             dataStructure.add(position);
     }
 
+    @Override
+    public char getDirection() {
+        return 0;
+    }
+
+    @Override
+    public void setDirection(char direction) {
+
+    }
 }

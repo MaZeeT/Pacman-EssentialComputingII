@@ -29,14 +29,14 @@ public class Launcher {
      * When this method is called all of the variable is initialized.
      * The method is used to configure which maze and dataStructure the program shall run with,
      * and the width and height of the maze. The runSpeed is also given here,
-     * which is the time between each update, so a lower runSpeed will make the game faster,
+     * which is the time between each move, so a lower runSpeed will make the game faster,
      * and a higher runSpeed for a slower game.
      */
     private void configuration() {
         //TODO check the use of the width and height and edit the above javeDoc
         width = 48; // width of maze
         height = 33; // height of maze
-        runSpeed = 500; // milliseconds between each update
+        runSpeed = 500; // milliseconds between each move
 
         // Options for setting maze.
         maze = setMaze(5);

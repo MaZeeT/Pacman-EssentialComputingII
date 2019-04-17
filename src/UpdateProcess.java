@@ -2,9 +2,9 @@ import GUI.IGUI;
 import Logic.GameManager;
 
 /**
- * The purpose of this class is to make a thread to handle all the update calls the program need.
- * The update in {@link GameManager} needs to be called to change the positions of the elements in the game logic wise,
- * and the update in {@link IGUI} needs to be called to render the new positions to the scene.
+ * The purpose of this class is to make a thread to handle all the move calls the program need.
+ * The move in {@link GameManager} needs to be called to change the positions of the elements in the game logic wise,
+ * and the move in {@link IGUI} needs to be called to render the new positions to the scene.
  *
  * @author MaZeeT
  */
@@ -14,7 +14,7 @@ public class UpdateProcess extends Thread {
     private int speed;
 
     /**
-     * The constructor for this class. The class need to know about the {@link GameManager} and the {@link IGUI} to call the update functions in each.
+     * The constructor for this class. The class need to know about the {@link GameManager} and the {@link IGUI} to call the move functions in each.
      * Lastly the class need to know how long the delay between each updates has to be.
      *
      * @param gameManager The {@link GameManager}.

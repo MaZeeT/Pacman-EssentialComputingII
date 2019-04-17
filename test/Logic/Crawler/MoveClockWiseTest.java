@@ -4,6 +4,7 @@ import Components.Position;
 import Entities.MovableEntity;
 import Maze.IMaze;
 import Maze.TwoHalls;
+import Movement.IMove;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -11,7 +12,7 @@ import static org.junit.Assert.*;
 
 public class MoveClockWiseTest {
 
-    private MoveClockWise movement;
+    private IMove movement;
     private MovableEntity player;
 
     @Before
@@ -24,7 +25,8 @@ public class MoveClockWiseTest {
     @Test
     public void direction() {
         char expected = 'a';
-        movement.move(expected);
+        movement.setDirection(expected);
+        movement.move();
         char actual = movement.getDirection();
         assertEquals(expected, actual);
     }
@@ -33,7 +35,8 @@ public class MoveClockWiseTest {
     public void moveUpTurnRight() {
         player.setPosition(new Position(1, 3));
         char expected = 'd';
-        for (int i = 0; i <= 3; i++) movement.move('w');
+        movement.setDirection('w');
+        for (int i = 0; i <= 3; i++) movement.move();
         char actual = movement.getDirection();
         assertEquals(expected, actual);
     }
@@ -42,7 +45,8 @@ public class MoveClockWiseTest {
     public void moveRightTurnDown() {
         player.setPosition(new Position(6, 1));
         char expected = 's';
-        for (int i = 0; i <= 3; i++) movement.move('d');
+        movement.setDirection('d');
+        for (int i = 0; i <= 3; i++) movement.move();
         char actual = movement.getDirection();
         assertEquals(expected, actual);
     }
@@ -51,7 +55,8 @@ public class MoveClockWiseTest {
     public void moveDownTurnLeft() {
         player.setPosition(new Position(5, 7));
         char expected = 'a';
-        for (int i = 0; i <= 3; i++) movement.move('s');
+        movement.setDirection('s');
+        for (int i = 0; i <= 3; i++) movement.move();
         char actual = movement.getDirection();
         assertEquals(expected, actual);
     }
@@ -60,7 +65,8 @@ public class MoveClockWiseTest {
     public void moveLeftTurnUp() {
         player.setPosition(new Position(3, 8));
         char expected = 'w';
-        for (int i = 0; i <= 3; i++) movement.move('a');
+        movement.setDirection('a');
+        for (int i = 0; i <= 3; i++) movement.move();
         char actual = movement.getDirection();
         assertEquals(expected, actual);
     }

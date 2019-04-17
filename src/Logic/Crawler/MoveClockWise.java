@@ -5,16 +5,17 @@ import Entities.GameObject;
 import Entities.MovableEntity;
 import Entities.Player;
 import Maze.IMaze;
+import Movement.IMove;
 
 import java.util.List;
-
+//todo check javadoc for changes since the implementation of IMove interface
 /**
  * The purpose of this class is it enable user controlled inputs.
- * This class get direction inputs as chars, and update the {@link Player} accordingly.
+ * This class get direction inputs as chars, and move the {@link Player} accordingly.
  *
  * @author MaZeeT
  */
-public class MoveClockWise {
+public class MoveClockWise implements IMove {
     private char dir;
     private MovableEntity player;
     private List<Position> walls;
@@ -30,20 +31,25 @@ public class MoveClockWise {
     }
 
     /**
-     * Move the {@link Player} in a given direction.
-     *
-     * @param dir The direction the {@link Player} has to move.
+     * {@inheritDoc}
      */
-    public void move(char dir) {
-        this.dir = dir;
+    @Override
+    public void move() {
         movement(player);
     }
 
     /**
-     * Get the direction of the {@link Player}.
-     *
-     * @return Returns the direction as a char.
+     * {@inheritDoc}
      */
+    @Override
+    public void setDirection(char direction) {
+        this.dir = direction;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
     public char getDirection() {
         return dir;
     }
@@ -51,7 +57,7 @@ public class MoveClockWise {
     /**
      * This method controls the movement of the {@link Player}.
      * If the {@link Player} collides he will change direction clock wise.
-     * If not the {@link Position} will be update to a step in the given direction.
+     * If not the {@link Position} will be move to a step in the given direction.
      *
      * @param player The {@link Player} that is moving.
      */

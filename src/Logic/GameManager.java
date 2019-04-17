@@ -8,7 +8,7 @@ import Logic.Crawler.MoveClockWise;
 import Maze.IMaze;
 
 import java.util.*;
-
+//todo check javadoc for changes since the implementation of IMove interface
 /**
  * The purpose of this class is, to combine most of the components needed for the logic to work.
  * All the different types of {@link GameObject}s are access here.
@@ -54,14 +54,18 @@ public class GameManager {
     }
 
     /**
-     * The update method, which is called each update tick.
+     * The move method, which is called each move tick.
      */
     public void update() {
-        movement.move(direction);
+        movement.setDirection(direction);
+        movement.move();
         direction = movement.getDirection(); //todo make a common interface for crawler and user controls of movableGameObjects
-        if (crawl) crawler.update();
-        ghostA.update();
-        ghostB.update();
+        if (crawl){
+            crawler.move();
+            ghostA.move();
+            ghostB.move();
+        }
+
     }
 
     /**
