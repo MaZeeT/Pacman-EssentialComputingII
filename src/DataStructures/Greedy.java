@@ -9,8 +9,6 @@ import static java.util.Collections.reverseOrder;
 
 /**
  * The purpose of this class is to make "greedy" behavior when selecting which moves to take.
- * This "greedy" dataStructure implement the {@link IDataStructure} interface which make it compatible with
- * the {@link Logic.Crawler.Crawler}.
  * The "greedy" behavior is defined by, the next move should be the one with lowest manhattan distance.
  *
  * @author MaZeeT

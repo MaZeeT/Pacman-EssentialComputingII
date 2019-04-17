@@ -1,4 +1,4 @@
-package Logic.Crawler;
+package Movement;
 
 import Components.Position;
 import DataStructures.IDataStructure;
@@ -7,7 +7,6 @@ import Entities.MovableEntity;
 import Entities.Player;
 import Entities.Wall;
 import Maze.IMaze;
-import Movement.IMove;
 import javafx.scene.paint.Color;
 
 import java.util.List;

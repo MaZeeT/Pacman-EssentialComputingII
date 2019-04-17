@@ -4,8 +4,7 @@ import Components.Position;
 import javafx.scene.paint.Color;
 
 /**
- * The purpose of this class is to define a {@link GameObject},
- * that can be the "target/goal" for the {@link Logic.Crawler.Crawler}.
+ * The purpose of this class is to define a {@link GameObject}.
  *
  * @author MaZeeT
  */

@@ -1,12 +1,10 @@
-package Logic.Crawler;
+package Movement;
 
 import Components.Position;
 import Entities.GameObject;
 import Entities.MovableEntity;
 import Entities.Player;
 import Maze.IMaze;
-import Movement.IMoveControlled;
-import Movement.IMove;
 
 import java.util.List;
 //todo check javadoc for changes since the implementation of IMove interface

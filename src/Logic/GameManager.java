@@ -3,8 +3,8 @@ package Logic;
 import DataStructures.IDataStructure;
 import Entities.GameObject;
 import Entities.MovableEntity;
-import Logic.Crawler.Crawler;
-import Logic.Crawler.MoveClockWise;
+import Movement.Crawler;
+import Movement.MoveClockWise;
 import Maze.IMaze;
 import Movement.IMoveControlled;
 

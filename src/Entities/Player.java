@@ -4,8 +4,7 @@ import Components.Position;
 import javafx.scene.paint.Color;
 
 /**
- * The purpose of this class is to define a {@link GameObject} that a {@link Logic.Crawler.Crawler}
- * or a {@link UserControl.UserControl} can control.
+ * The purpose of this class is to define a {@link GameObject} that can a player can control.
  *
  * @author MaZeeT
  */
