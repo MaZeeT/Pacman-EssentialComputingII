@@ -34,6 +34,7 @@ public class Launcher {
      */
     private void configuration() {
         //TODO check the use of the width and height and edit the above javeDoc
+        //todo move this outside in a static config class, maybe ?!
         width = 48; // width of maze
         height = 33; // height of maze
         runSpeed = 500; // milliseconds between each move

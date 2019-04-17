@@ -28,8 +28,8 @@ public class GameManager {
     private List<GameObject> ghosts;
 
     private char direction; //todo direction can be removed if we can bridge the input with the moveClockWise class.
-    private IMoveControlled movement;
-    private IMove crawler;
+    private IMoveControlled playerMovement;
+    private IMove playerCrawler;
     private IMove ghostA;
     private IMove ghostB;
 
@@ -40,7 +40,7 @@ public class GameManager {
      * Constructor of this class. It takes a {@link IMaze} and a {@link IDataStructure} as input.
      *
      * @param maze          The {@link IMaze} is used to access all the different {@link GameObject}s in the {@link IMaze}.
-     * @param dataStructure The {@link IDataStructure} is used to store each possible movement, and returns the next move.
+     * @param dataStructure The {@link IDataStructure} is used to store each possible playerMovement, and returns the next move.
      */
     public GameManager(IMaze maze, IDataStructure dataStructure) {
         walls = maze.getWalls();
@@ -51,23 +51,24 @@ public class GameManager {
         wayPoints.add(maze.getWayPoint());
 
 
-        movement = new MoveClockWise(maze);
-        crawler = new Crawler(maze, dataStructure);
+        playerMovement = new MoveClockWise(maze);
+        playerCrawler = new Crawler(maze, dataStructure);
         ghostA = new Crawler(maze, dataStructure);
         ghostB = new Crawler(maze, dataStructure);
+        //todo move dataStructure to launcher and instantiate crawler their instead of inside the game manager
     }
 
     /**
      * The move method, which is called each move tick.
      */
     public void update() {
-        //todo make a common interface for crawler and user controls of movableGameObjects
+        //todo make a common interface for playerCrawler and user controls of movableGameObjects
         if (playerControlled) {
-            movement.setDirection(direction);
-            movement.move();
-            direction = movement.getDirection();
+            playerMovement.setDirection(direction);
+            playerMovement.move();
+            direction = playerMovement.getDirection();
         } else {
-            crawler.move();
+            playerCrawler.move();
         }
 
         if (ghostCanMove) {
