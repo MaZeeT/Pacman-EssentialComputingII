@@ -4,9 +4,12 @@
     <option name="ANALYZE_TEST_SOURCES" value="false" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="cleaned up test location">
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="added a few todo's and renames a fes variables in the gameManager">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Logic/GameManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logic/GameManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WorkInProgress/Nodes/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorkInProgress/Nodes/Node.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WorkInProgress/Nodes/Node2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorkInProgress/Nodes/Node2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WorkInProgress/Nodes/NodeX.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorkInProgress/Nodes/NodeX.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WorkInProgress/Tree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorkInProgress/Tree.java" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -134,70 +137,52 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Launcher.java">
+        <entry file="file://$PROJECT_DIR$/src/WorkInProgress/Tree.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret lean-forward="true" />
+            <state relative-caret-position="258">
+              <caret line="18" column="15" lean-forward="true" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="15" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="docComment;class#Launcher#0" />
-                <element signature="docComment;method#configuration#0;class#Launcher#0" />
-                <element signature="docComment;method#Launcher#0;class#Launcher#0" />
-                <element signature="docComment;method#setupScene#0;class#Launcher#0" />
-                <element signature="docComment;method#getScene#0;class#Launcher#0" />
-                <element signature="docComment;method#setMaze#0;class#Launcher#0" />
-                <element signature="docComment;method#setDataStructure#0;class#Launcher#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Movement/MoveClockWise.java">
+        <entry file="file://$PROJECT_DIR$/src/WorkInProgress/Nodes/SimpleNode.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="26" column="34" lean-forward="true" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
+            <state relative-caret-position="153">
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1021#1022#0" expanded="true" />
-                <element signature="e#1053#1054#0" expanded="true" />
+                <element signature="method#SimpleNode#0;class#SimpleNode#0" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Movement/IMove.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Logic/GameManager.java">
+        <entry file="file://$PROJECT_DIR$/src/WorkInProgress/Nodes/NodeX.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
-              <caret line="43" column="7" lean-forward="true" selection-start-line="43" selection-start-column="7" selection-end-line="43" selection-end-column="7" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2749#2750#0" expanded="true" />
-                <element signature="e#2791#2792#0" expanded="true" />
-                <element signature="e#2927#2928#0" expanded="true" />
-                <element signature="e#2964#2965#0" expanded="true" />
-                <element signature="e#3446#3447#0" expanded="true" />
-                <element signature="e#3489#3490#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="411">
+              <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/Logic/GameManagerTest.java">
+        <entry file="file://$PROJECT_DIR$/src/WorkInProgress/Nodes/Node.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
+            <state relative-caret-position="323">
+              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/WorkInProgress/Nodes/Node2.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="45" lean-forward="true" selection-start-line="6" selection-start-column="45" selection-end-line="6" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -206,46 +191,12 @@
         <entry file="file://$PROJECT_DIR$/src/Movement/Crawler.java">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret lean-forward="true" />
               <folding>
                 <element signature="docComment;class#Crawler#0" />
                 <element signature="docComment;method#Crawler#0;class#Crawler#0" />
                 <element signature="docComment;method#visited#0;class#Crawler#0" />
                 <element signature="docComment;method#checkNearby#0;class#Crawler#0" />
                 <element signature="docComment;method#addToDataStructure#0;class#Crawler#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/UserControl/UserControl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Movement/IMoveControlled.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/UserControl/PlayerControl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="43" column="43" selection-start-line="43" selection-start-column="43" selection-end-line="43" selection-end-column="43" />
-              <folding>
-                <element signature="docComment;class#PlayerControl#0" />
-                <element signature="docComment;method#direction#0;class#PlayerControl#0" />
-                <element signature="docComment;method#getDirection#0;class#PlayerControl#0" />
-                <element signature="e#1089#1090#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -291,9 +242,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/test/DataStructures/MyStackPositionsTest.java" />
-        <option value="$PROJECT_DIR$/src/DataStructures/DataStructureT.java" />
-        <option value="$PROJECT_DIR$/src/DataStructures/MyStackPositions.java" />
         <option value="$PROJECT_DIR$/test/DataStructures/DataStructuresTTest.java" />
         <option value="$PROJECT_DIR$/src/Components/DeadCode.java" />
         <option value="$PROJECT_DIR$/src/DataStructures/DepthFirstT.java" />
@@ -304,7 +252,6 @@
         <option value="$PROJECT_DIR$/src/DataStructures/MyStack.java" />
         <option value="$PROJECT_DIR$/src/DataStructures/DataStructure.java" />
         <option value="$PROJECT_DIR$/src/DataStructures/IDataStructure.java" />
-        <option value="$PROJECT_DIR$/src/WorkInProgress/Tree.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/Maze/MazeObj.java" />
         <option value="$PROJECT_DIR$/test/Maze/MazeWithExitTest.java" />
@@ -317,7 +264,6 @@
         <option value="$PROJECT_DIR$/test/Entities/PlayerTest.java" />
         <option value="$PROJECT_DIR$/test/Entities/MovableGameObjectTest.java" />
         <option value="$PROJECT_DIR$/test/Entities/GhostTest.java" />
-        <option value="$PROJECT_DIR$/src/Launcher.java" />
         <option value="$PROJECT_DIR$/test/Maze/MazeArrayTest.java" />
         <option value="$PROJECT_DIR$/src/Maze/Maze.java" />
         <option value="$PROJECT_DIR$/src/Maze/MazeObjTestable.java" />
@@ -342,6 +288,11 @@
         <option value="$PROJECT_DIR$/src/DataStructures/Greedy.java" />
         <option value="$PROJECT_DIR$/src/UserControl/PlayerControl.java" />
         <option value="$PROJECT_DIR$/src/Logic/GameManager.java" />
+        <option value="$PROJECT_DIR$/src/Launcher.java" />
+        <option value="$PROJECT_DIR$/src/WorkInProgress/Tree.java" />
+        <option value="$PROJECT_DIR$/src/WorkInProgress/Nodes/Node.java" />
+        <option value="$PROJECT_DIR$/src/WorkInProgress/Nodes/Node2.java" />
+        <option value="$PROJECT_DIR$/src/WorkInProgress/Nodes/NodeX.java" />
       </list>
     </option>
   </component>
@@ -375,13 +326,14 @@
               <item name="snakeFX" type="b2602c69:ProjectViewProjectNode" />
               <item name="snakeFX" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Logic" type="462c0819:PsiDirectoryNode" />
+              <item name="WorkInProgress" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="snakeFX" type="b2602c69:ProjectViewProjectNode" />
               <item name="snakeFX" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Movement" type="462c0819:PsiDirectoryNode" />
+              <item name="WorkInProgress" type="462c0819:PsiDirectoryNode" />
+              <item name="Nodes" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="snakeFX" type="b2602c69:ProjectViewProjectNode" />
@@ -410,7 +362,7 @@
     <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555542231264" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555542447666" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="dynamic.classpath" value="false" />
@@ -860,14 +812,7 @@
       <workItem from="1555409011142" duration="5163000" />
       <workItem from="1555431249037" duration="6089000" />
       <workItem from="1555531895022" duration="6433000" />
-      <workItem from="1555541134789" duration="992000" />
-    </task>
-    <task id="LOCAL-00086" summary="update to two of the data structures to take advantages of the equals() and compareTo() methods">
-      <created>1553631585746</created>
-      <option name="number" value="00086" />
-      <option name="presentableId" value="LOCAL-00086" />
-      <option name="project" value="LOCAL" />
-      <updated>1553631585746</updated>
+      <workItem from="1555541134789" duration="2368000" />
     </task>
     <task id="LOCAL-00087" summary="improvements to the javaDoc.&#10; Simplified the &quot;add&quot; method in Crawler since the check was already present in the dataStructure's add method.">
       <created>1553631758437</created>
@@ -1205,13 +1150,17 @@
       <option name="project" value="LOCAL" />
       <updated>1555541398219</updated>
     </task>
-    <option name="localTasksCounter" value="135" />
+    <task id="LOCAL-00135" summary="added a few todo's and renames a fes variables in the gameManager">
+      <created>1555542409451</created>
+      <option name="number" value="00135" />
+      <option name="presentableId" value="LOCAL-00135" />
+      <option name="project" value="LOCAL" />
+      <updated>1555542409451</updated>
+    </task>
+    <option name="localTasksCounter" value="136" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_in_snakeFX - 2019.04.17 at 23h 40m 59s.xml">
-      <configuration name="All in snakeFX" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="All_in_snakeFX - 2019.04.17 at 23h 48m 55s.xml">
       <configuration name="All in snakeFX" configurationId="JUnit" />
     </history-entry>
@@ -1239,9 +1188,12 @@
     <history-entry file="All_in_snakeFX - 2019.04.18 at 00h 49m 30s.xml">
       <configuration name="All in snakeFX" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="All_in_snakeFX - 2019.04.18 at 01h 03m 59s.xml">
+      <configuration name="All in snakeFX" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="362420000" />
+    <option name="totallyTimeSpent" value="363796000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1273,7 +1225,7 @@
       <window_info anchor="bottom" id="Messages" order="6" weight="0.32062146" />
       <window_info anchor="bottom" id="Message" order="7" />
       <window_info anchor="bottom" id="Find" order="8" weight="0.32627118" />
-      <window_info anchor="bottom" id="Run" order="9" weight="0.3036723" />
+      <window_info anchor="bottom" id="Run" order="9" visible="true" weight="0.3036723" />
       <window_info anchor="bottom" id="Debug" order="10" weight="0.3982684" />
       <window_info anchor="bottom" id="Cvs" order="11" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="12" weight="0.4" />
@@ -1291,13 +1243,13 @@
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="right" id="Database" order="4" />
       <window_info anchor="right" id="Designer" order="5" />
-      <window_info anchor="right" id="Ant Build" order="6" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="6" weight="0.24966443" />
       <window_info anchor="right" id="Capture Analysis" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info anchor="right" id="Properties" order="9" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="10" weight="0.25" />
       <window_info anchor="right" id="Maven" order="11" />
-      <window_info anchor="right" id="Coverage" order="12" side_tool="true" visible="true" weight="0.1590604" />
+      <window_info anchor="right" id="Coverage" order="12" side_tool="true" weight="0.1590604" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1312,7 +1264,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Clean up of dataStructure and made the stack + queue generic" />
     <MESSAGE value="ready for hand in as mandatory 6" />
     <MESSAGE value="added javaDoc to the abstract class, DataStructure" />
     <MESSAGE value="more javaDocs" />
@@ -1337,7 +1288,8 @@
     <MESSAGE value="refactor the crawler and MoveClockWise class into a new package" />
     <MESSAGE value="pulled getDirection back into this version from an old commit to remove it" />
     <MESSAGE value="cleaned up test location" />
-    <option name="LAST_COMMIT_MESSAGE" value="cleaned up test location" />
+    <MESSAGE value="added a few todo's and renames a fes variables in the gameManager" />
+    <option name="LAST_COMMIT_MESSAGE" value="added a few todo's and renames a fes variables in the gameManager" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -1370,13 +1322,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Components/Position.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -1595,34 +1540,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/WorkInProgress/Nodes/Node2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/WorkInProgress/Tree.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="2" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/WorkInProgress/Nodes/Node.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/WorkInProgress/Nodes/NodeX.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="50" selection-start-line="5" selection-start-column="50" selection-end-line="5" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/DataStructures/DataStructure.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -1731,17 +1648,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/Logic/GameManagerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Movement/MoveClockWise.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
-          <caret line="26" column="34" lean-forward="true" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
+          <caret line="26" column="34" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1021#1022#0" expanded="true" />
@@ -1750,24 +1660,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Movement/Crawler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" />
-          <folding>
-            <element signature="docComment;class#Crawler#0" />
-            <element signature="docComment;method#Crawler#0;class#Crawler#0" />
-            <element signature="docComment;method#visited#0;class#Crawler#0" />
-            <element signature="docComment;method#checkNearby#0;class#Crawler#0" />
-            <element signature="docComment;method#addToDataStructure#0;class#Crawler#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Launcher.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" />
+        <state relative-caret-position="405">
+          <caret line="104" column="7" selection-start-line="104" selection-start-column="7" selection-end-line="104" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;class#Launcher#0" />
@@ -1781,10 +1677,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Movement/Crawler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="docComment;class#Crawler#0" />
+            <element signature="docComment;method#Crawler#0;class#Crawler#0" />
+            <element signature="docComment;method#visited#0;class#Crawler#0" />
+            <element signature="docComment;method#checkNearby#0;class#Crawler#0" />
+            <element signature="docComment;method#addToDataStructure#0;class#Crawler#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Logic/GameManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="43" column="7" lean-forward="true" selection-start-line="43" selection-start-column="7" selection-end-line="43" selection-end-column="7" />
+        <state relative-caret-position="384">
+          <caret line="53" column="49" selection-start-line="53" selection-start-column="49" selection-end-line="53" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2749#2750#0" expanded="true" />
@@ -1794,6 +1703,54 @@
             <element signature="e#3446#3447#0" expanded="true" />
             <element signature="e#3489#3490#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/Logic/GameManagerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/WorkInProgress/Nodes/SimpleNode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <element signature="method#SimpleNode#0;class#SimpleNode#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/WorkInProgress/Tree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="18" column="15" lean-forward="true" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/WorkInProgress/Nodes/Node2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="45" lean-forward="true" selection-start-line="6" selection-start-column="45" selection-end-line="6" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/WorkInProgress/Nodes/Node.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/WorkInProgress/Nodes/NodeX.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="411">
+          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
         </state>
       </provider>
     </entry>
