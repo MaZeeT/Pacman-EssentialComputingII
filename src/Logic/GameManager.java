@@ -24,13 +24,13 @@ public class GameManager {
     private List<GameObject> snake = new ArrayList<>();
     private List<GameObject> ghosts;
 
-    private char direction;
+    private char direction; //todo direction can be removed if we can bridge the input with the moveClockWise class.
     private MoveClockWise movement;
     private Crawler crawler;
     private Crawler ghostA;
     private Crawler ghostB;
 
-    private boolean crawl = true;
+    private boolean crawl = false;
 
     /**
      * Constructor of this class. It takes a {@link IMaze} and a {@link IDataStructure} as input.
@@ -71,15 +71,6 @@ public class GameManager {
      */
     public void setDirection(char direction) {
         this.direction = direction;
-    }
-
-    /**
-     * Get the direction as char.
-     *
-     * @return Returns the direction as a char.
-     */
-    char getDirection() {
-        return this.direction;
     }
 
     /**
