@@ -38,6 +38,15 @@ public class GameManagerTest {
     }
 
     @Test
+    public void setGetDirection() {
+        char expected = 'a';
+        gameManager.setDirection(expected);
+        char actual = gameManager.getDirection();
+        assertEquals(expected, actual);
+    }
+
+
+    @Test
     public void getGameObjects() {
         List<GameObject> actual = gameManager.getGameObjects();
         assertNotNull(actual);

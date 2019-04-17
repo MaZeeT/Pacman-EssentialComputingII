@@ -87,6 +87,15 @@ public class GameManager {
     }
 
     /**
+     * Get the direction as char.
+     *
+     * @return Returns the direction as a char.
+     */
+    char getDirection() {
+        return this.direction;
+    }
+
+    /**
      * Combines the different {@link GameObject}s in a list and returns this list.
      *
      * @return Returns a list of all the {@link GameObject}s combined.
