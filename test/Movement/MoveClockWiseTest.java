@@ -1,11 +1,9 @@
-package Logic.Crawler;
+package Movement;
 
 import Components.Position;
 import Entities.MovableEntity;
 import Maze.IMaze;
 import Maze.TwoHalls;
-import Movement.IMoveControlled;
-import Movement.MoveClockWise;
 import org.junit.Before;
 import org.junit.Test;
 

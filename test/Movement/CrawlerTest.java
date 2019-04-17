@@ -1,12 +1,10 @@
-package Logic.Crawler;
+package Movement;
 
 import Components.Position;
 import DataStructures.DepthFirst;
 import DataStructures.IDataStructure;
 import Maze.ForkRoad;
 import Maze.IMaze;
-import Movement.Crawler;
-import Movement.IMove;
 import org.junit.Before;
 import org.junit.Test;
 
