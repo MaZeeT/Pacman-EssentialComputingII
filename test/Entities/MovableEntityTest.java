@@ -155,7 +155,6 @@ public abstract class MovableEntityTest {
     public void updateMover() {
         defMovable.setMover(defMover);
 
-
         boolean expected = true;
         boolean actual = defMovable.update();
         assertEquals(expected, actual);

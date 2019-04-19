@@ -4,6 +4,7 @@ import DataStructures.*;
 import Entities.*;
 import Movement.*;
 import Maze.IMaze;
+import UserControl.UserInput;
 
 import java.util.*;
 //todo check javadoc for changes since the implementation of IMover interface
@@ -12,7 +13,7 @@ import java.util.*;
  * The purpose of this class is, to combine most of the components needed for the logic to work.
  * All the different types of {@link GameObject}s are access here.
  * The {@link Crawler} is combined with the {@link IMaze} and {@link IDataStructure}.
- * It is also possible to disable the {@link Crawler} to control with {@link UserControl.UserControl} instead.
+ * It is also possible to disable the {@link Crawler} to control with {@link UserInput} instead.
  *
  * @author MaZeeT
  */
@@ -23,8 +24,7 @@ public class GameManager {
     private List<GameObject> snake = new ArrayList<>();
     private List<GameObject> ghosts;
 
-    private char direction; //todo direction can be removed if we can bridge the input with the moveClockWise class.
-    private IMoverControlled playerMovement;
+    public IMoverControlled playerMovement;
     private IMover playerCrawler;
 
     private boolean playerControlled = true;
@@ -47,6 +47,8 @@ public class GameManager {
 //todo fix movableEntity
         playerMovement = new MoveClockWise(maze);
         playerCrawler = new Crawler(maze, maze.getPlayer(), dataStructure);
+        player.setMover(playerMovement);
+
         if (ghosts != null) {
             ((Ghost)ghosts.get(0)).setMover(
                     new Crawler(maze, (MovableEntity) ghosts.get(0), new Greedy(player.getPosition())));
@@ -63,37 +65,11 @@ public class GameManager {
      * The update method, which is called each update tick.
      */
     public void update() {
-        //todo make a common interface for playerCrawler and user controls of movableGameObjects
-        if (playerControlled) {
-            playerMovement.setDirection(direction);
-            playerMovement.move();
-            direction = playerMovement.getDirection();
-        } else {
-            playerCrawler.move();
+        for (GameObject gameObject : combineGameObjects()){
+            if (gameObject instanceof MovableEntity){
+                ((MovableEntity) gameObject).update();
+            }
         }
-        if(ghostCanMove && ghosts != null){
-            for (GameObject ghost:ghosts )
-            ((MovableEntity) ghost).update();
-        }
-
-    }
-
-    /**
-     * Set the direction.
-     *
-     * @param direction The direction as a char.
-     */
-    public void setDirection(char direction) {
-        this.direction = direction;
-    }
-
-    /**
-     * Get the direction as char.
-     *
-     * @return Returns the direction as a char.
-     */
-    char getDirection() {
-        return this.direction;
     }
 
     /**

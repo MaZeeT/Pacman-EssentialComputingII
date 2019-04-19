@@ -1,16 +1,26 @@
 import DataStructures.*;
+import Entities.GameObject;
+import Entities.Ghost;
+import Entities.MovableEntity;
+import Entities.Player;
 import GUI.*;
 import Logic.GameManager;
 import Maze.*;
+import Movement.Crawler;
+import Movement.IMover;
+import Movement.IMoverControlled;
+import Movement.MoveClockWise;
 import UserControl.*;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.Pane;
 
+import java.util.List;
+
 /**
  * The purpose of this class is to combine the different elements the program consist of.
- * The combined elements are the {@link GameManager}, the {@link UserControl} interface and the {@link IGUI} interface.
+ * The combined elements are the {@link GameManager}, the {@link UserInput} interface and the {@link IGUI} interface.
  * Lastly this class provide the Stage with the scene from the program.
  *
  * @author MaZeeT
@@ -40,7 +50,7 @@ public class Launcher {
         runSpeed = 500; // milliseconds between each update
 
         // Options for setting maze.
-        maze = setMaze(5);
+        maze = setMaze(6);
         // 0 for TwoHalls.
         // 1 for SingleRoad.
         // 2 for ManyRoads.
@@ -65,13 +75,16 @@ public class Launcher {
 
         // Interfaced modules
         IGUI gui = new Manager(width, height);
-        UserControl userControl = new PlayerControl();
+        UserInput userInput = new PlayerControl();
 
         // Game logic
         GameManager gameManager = new GameManager(maze, dataStructure);
 
+        InputManager inputManager = new InputManager(gameManager.playerMovement, userInput);
+
         // Setup scene and stage
-        this.scene = setupScene(gui.getView().pane, userControl, gameManager);
+        this.scene = setupScene(gui.getView().pane, userInput, gameManager, inputManager);
+
 
         // Update thread
         UpdateProcess updateProcess = new UpdateProcess(gameManager, gui, runSpeed);
@@ -79,20 +92,20 @@ public class Launcher {
     }
 
     /**
-     * Setup a scene with a pane from the {@link IGUI} and bridges the {@link UserControl} with the direction in the {@link GameManager}.
+     * Setup a scene with a pane from the {@link IGUI} and bridges the {@link UserInput} with the direction in the {@link GameManager}.
      *
      * @param pane        The given pane that will render the objects of the {@link GameManager}.
-     * @param userControl The {@link UserControl} for the program.
+     * @param userInput   The {@link UserInput} for the program.
      * @param gameManager The {@link GameManager} for the program.
      * @return Returns a new Scene based on the given pane.
      */
-    private Scene setupScene(Pane pane, UserControl userControl, GameManager gameManager) {
+    private Scene setupScene(Pane pane, UserInput userInput, GameManager gameManager, InputManager inputManager) {
         scene = new Scene(pane, 800, 600);
         scene.setOnKeyPressed(new EventHandler<KeyEvent>() {
             @Override
             public void handle(KeyEvent event) {
-                userControl.getDirection(event.getCode());
-                gameManager.setDirection(userControl.getDirection(event.getCode()));
+                inputManager.update(event.getCode());
+                //  gameManager.setDirection(userInput.getDirection(event.getCode()));
             }
         });
         return scene;
@@ -149,6 +162,29 @@ public class Launcher {
 
         //Default
         return new DepthFirst();
+    }
+
+    private void setupMoversWithEntities() {
+        List<GameObject> ghosts = maze.getGhosts();
+        MovableEntity player = maze.getPlayer();
+
+        IMoverControlled playerMovement = new MoveClockWise(maze);
+        IMover playerCrawler = new Crawler(maze, maze.getPlayer(), dataStructure);
+
+        player.setMover(playerMovement);
+
+
+        if (ghosts != null) {
+            ((Ghost) ghosts.get(0)).setMover(
+                    new Crawler(maze, (MovableEntity) ghosts.get(0), new Greedy(player.getPosition())));
+            ((Ghost) ghosts.get(1)).setMover(
+                    new Crawler(maze, (MovableEntity) ghosts.get(1), new BreadthFirst()));
+            ((Ghost) ghosts.get(2)).setMover(
+                    new Crawler(maze, (MovableEntity) ghosts.get(2), new DepthFirst()));
+            //todo call update on all movableEntities, than we are have at least the player to update.
+            //todo update dataStructure to launcher and instantiate crawler their instead of inside the game manager
+
+        }
     }
 
 }

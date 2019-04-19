@@ -1,6 +1,7 @@
 package UserControl;
 
 import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 
 /**
  * The purpose of this class is to give the user a way to control the program.
@@ -8,7 +9,7 @@ import javafx.scene.input.KeyCode;
  *
  * @author MaZeeT
  */
-public class PlayerControl implements UserControl {
+public class PlayerControl implements UserInput {
 
     /**
      * Convert the KeyCode to a char.
@@ -17,6 +18,9 @@ public class PlayerControl implements UserControl {
      * @return Return char depending on input from user.
      */
     private char direction(KeyCode key) {
+
+        KeyEvent keyEvent;
+
         char direction = ' ';
         switch (key) {
             case S:
@@ -30,6 +34,9 @@ public class PlayerControl implements UserControl {
                 break;
             case W:
                 direction = 'w';
+                break;
+            case SHIFT:
+                direction = ' ';
                 break;
         }
         return direction;
