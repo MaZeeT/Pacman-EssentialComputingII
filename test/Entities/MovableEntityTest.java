@@ -1,6 +1,10 @@
 package Entities;
 
 import Components.Position;
+import DataStructures.DepthFirst;
+import Maze.PacMan;
+import Movement.Crawler;
+import Movement.IMover;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -8,6 +12,7 @@ import static org.junit.Assert.assertEquals;
 public abstract class MovableEntityTest {
      MovableEntity defMovable;
      Position defPos;
+     IMover defMover;
      int defX;
      int defY;
 
@@ -117,6 +122,42 @@ public abstract class MovableEntityTest {
     public void checkRight2() {
         int expected = +1;
         int actual = defPos.compareTo(defMovable.checkRight());
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void getNullMover() {
+
+        IMover expected = null;
+        IMover actual = defMovable.getMover();
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void setGetMover() {
+        IMover mover = new Crawler(new PacMan(), defMovable, new DepthFirst());
+        defMovable.setMover(mover);
+
+        IMover expected = mover;
+        IMover actual = defMovable.getMover();
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void updateNullMover() {
+
+        boolean expected = false;
+        boolean actual = defMovable.update();
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void updateMover() {
+        defMovable.setMover(defMover);
+
+
+        boolean expected = true;
+        boolean actual = defMovable.update();
         assertEquals(expected, actual);
     }
 

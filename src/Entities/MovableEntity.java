@@ -1,10 +1,22 @@
 package Entities;
 
 import Components.Position;
+import Movement.IMover;
 
-public abstract class MovableEntity extends GameObject{
+//todo javaDoc
+public abstract class MovableEntity extends GameObject {
+
+    IMover mover;
+
+    /**
+     * Move the {@link MovableEntity} around by calling update().
+     * @return Return true if an IMover is present and the update() was successful, else return false.
+     */
+    public abstract boolean update();
+
     /**
      * Change the {@link Position} of the {@link MovableEntity} to one above.
+     *
      * @return Returns the new {@link Position}.
      */
     public Position moveUp() {
@@ -14,6 +26,7 @@ public abstract class MovableEntity extends GameObject{
 
     /**
      * Change the {@link Position} of the {@link MovableEntity} to one below.
+     *
      * @return Returns the new {@link Position}.
      */
     public Position moveDown() {
@@ -23,6 +36,7 @@ public abstract class MovableEntity extends GameObject{
 
     /**
      * Change the {@link Position} of the {@link MovableEntity} to the left.
+     *
      * @return Returns the new {@link Position}.
      */
     public Position moveLeft() {
@@ -32,6 +46,7 @@ public abstract class MovableEntity extends GameObject{
 
     /**
      * Change the {@link Position} of the {@link MovableEntity} to the right.
+     *
      * @return Returns the new {@link Position}.
      */
     public Position moveRight() {
@@ -41,6 +56,7 @@ public abstract class MovableEntity extends GameObject{
 
     /**
      * Make a new {@link Position} above the {@link MovableEntity}.
+     *
      * @return Returns a new {@link Position}.
      */
     public Position checkUp() {
@@ -51,6 +67,7 @@ public abstract class MovableEntity extends GameObject{
 
     /**
      * Make a new {@link Position} below the {@link MovableEntity}.
+     *
      * @return Returns a new {@link Position}.
      */
     public Position checkDown() {
@@ -61,6 +78,7 @@ public abstract class MovableEntity extends GameObject{
 
     /**
      * Make a new {@link Position} to the left of the {@link MovableEntity}.
+     *
      * @return Returns a new {@link Position}.
      */
     public Position checkLeft() {
@@ -71,12 +89,31 @@ public abstract class MovableEntity extends GameObject{
 
     /**
      * Make a new {@link Position} to the right of the {@link MovableEntity}.
+     *
      * @return Returns a new {@link Position}.
      */
     public Position checkRight() {
         int x = position.getX() + 1;
         int y = position.getY();
         return new Position(x, y);
+    }
+
+    /**
+     * Set the {@link IMover} which update the {@link MovableEntity} around.
+     *
+     * @param mover The mover the {@link MovableEntity} is moved by.
+     */
+    public void setMover(IMover mover) {
+        this.mover = mover;
+    }
+
+    /**
+     * Get the {@link IMover} which update the {@link MovableEntity} around.
+     *
+     * @return Returns the mover, the {@link MovableEntity} is moved by.
+     */
+    public IMover getMover() {
+        return this.mover;
     }
 
 }

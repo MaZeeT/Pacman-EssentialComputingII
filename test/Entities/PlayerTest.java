@@ -1,6 +1,9 @@
 package Entities;
 
 import Components.Position;
+import DataStructures.BreadthFirst;
+import Maze.PacMan;
+import Movement.Crawler;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -14,6 +17,7 @@ public class PlayerTest extends MovableEntityTest {
         defY = 3;
         defPos = new Position(defX, defY);
         defMovable = new Player(defPos);
+        defMover = new Crawler(new PacMan(), defMovable, new BreadthFirst());
     }
 
     @Test

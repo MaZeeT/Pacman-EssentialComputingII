@@ -1,6 +1,7 @@
 package Entities;
 
 import Components.Position;
+import Movement.IMover;
 import javafx.scene.paint.Color;
 
 /**
@@ -29,6 +30,20 @@ public class Ghost extends MovableEntity {
     public Ghost(Position position, Color color) {
         this.position = position;
         this.color = color;
+    }
+
+    /**
+     * {@inheritDoc}
+     * The {@link Ghost} will be moved if an {@link IMover} is present.
+     */
+    @Override
+    public boolean update() {
+        if (mover != null) {
+            mover.move();
+            return true;
+        } else {
+            return false;
+        }
     }
 
 }

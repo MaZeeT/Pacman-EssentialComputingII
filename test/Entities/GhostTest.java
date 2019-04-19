@@ -1,6 +1,9 @@
 package Entities;
 
 import Components.Position;
+import DataStructures.BreadthFirst;
+import Maze.PacMan;
+import Movement.Crawler;
 import javafx.scene.paint.Color;
 import org.junit.Before;
 import org.junit.Test;
@@ -15,6 +18,7 @@ public class GhostTest extends MovableEntityTest {
         defY = 3;
         defPos = new Position(defX, defY);
         defMovable = new Ghost(defPos);
+        defMover = new Crawler(new PacMan(), defMovable, new BreadthFirst());
     }
 
     @Test
