@@ -32,7 +32,7 @@ public class Launcher {
 
     private Scene scene;
     private IMaze maze;
-    private IDataStructure dataStructure;
+    private IMover playerMovement;
 
 
     /**
@@ -59,11 +59,12 @@ public class Launcher {
         // 5 for PacMan (for the exam)
         // 6 for AITestMaze (extra maze to test pathfinder algorithms)
 
-        // Options for setting dataStructure.
-        dataStructure = setDataStructure(2);
-        // 0 for DepthFirst.
-        // 1 for BreadthFirst.
-        // 2 for Greedy.
+        // Player movement options
+        playerMovement = setPlayerMovement(2);
+        // 0 for User controlled.
+        // 1 for DepthFirst.
+        // 2 for BreadthFirst.
+        // 3 for Greedy.
     }
 
     /**
@@ -80,11 +81,11 @@ public class Launcher {
         // Game logic
         GameManager gameManager = new GameManager(maze);
 
-        // Set movement to MovableGameObjects
+        // Setup movement to MovableGameObjects
         IMoverControlled mover = new MoveClockWise(maze);
-        InputManager inputManager = new InputManager(mover, userInput);
-        maze.getPlayer().setMover(mover);
-        setMoversToGhosts();
+        InputManager inputManager = new InputManager(playerMovement, userInput);
+        maze.getPlayer().setMover(playerMovement);
+        setupMoversToGhosts();
 
         // Setup scene and stage
         this.scene = setupScene(gui.getView().pane, userInput, gameManager, inputManager);
@@ -95,7 +96,7 @@ public class Launcher {
         updateProcess.start();
     }
 
-    /**
+    /** //todo update javaDoc
      * Setup a scene with a pane from the {@link IGUI} and bridges the {@link UserInput} with the direction in the {@link GameManager}.
      *
      * @param pane        The given pane that will render the objects of the {@link GameManager}.
@@ -153,35 +154,29 @@ public class Launcher {
      * This method make it possible to select the wanted dataStructure by using an int as parameter.
      *
      * @param index The index of a given dataStructure.
-     *              0 for DepthFirst.
-     *              1 for BreadthFirst.
-     *              2 for Greedy.
+     *              0 for User control.
+     *              1 for DepthFirst.
+     *              2 for BreadthFirst.
+     *              3 for Greedy.
      * @return Returns the selected dataStructure.
      */
-    private IDataStructure setDataStructure(int index) {
-        if (index == 0) return new DepthFirst();
-        if (index == 1) return new BreadthFirst();
-        if (index == 2) return new Greedy(this.maze.getWayPoint().getPosition());
+    private IMover setPlayerMovement(int index) {
+        if (index == 0){
 
-        //Default
-        return new DepthFirst();
+            return new MoveClockWise(maze);
+        }
+
+        IDataStructure dataStructure = new DepthFirst(); //Default data
+        if (index == 1) dataStructure = new DepthFirst();
+        if (index == 2) dataStructure = new BreadthFirst();
+        if (index == 3) dataStructure = new Greedy(this.maze.getWayPoint().getPosition());
+
+        return new Crawler(maze, maze.getPlayer(), dataStructure);
     }
 
-    private void setMoverToPlayer() {
 
-      //  if (maze.getPlayer().getMover() == null)
-      //  maze.getPlayer().setMover(mover);
-
-
-   //     IMover playerCrawler = new Crawler(maze, maze.getPlayer(), dataStructure);
-
-     //   player.setMover(playerMovement);
-
-
-
-    }
-
-    private void setMoversToGhosts(){
+    //todo write javaDoc
+    private void setupMoversToGhosts() {
         List<GameObject> ghosts = maze.getGhosts();
         MovableEntity player = maze.getPlayer();
         if (ghosts != null) {

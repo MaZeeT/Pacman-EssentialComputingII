@@ -2,7 +2,7 @@ package Logic;
 
 import DataStructures.*;
 import Entities.*;
-import Movement.*;
+import Movement.*;//todo remove when rewritten the class javaDoc
 import Maze.IMaze;
 import UserControl.UserInput;
 

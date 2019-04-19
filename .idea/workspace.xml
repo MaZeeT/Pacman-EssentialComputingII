@@ -4,10 +4,11 @@
     <option name="ANALYZE_TEST_SOURCES" value="false" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="mayor changes to decouple Input and movement control from the gameManager, and move it into a Input packages and initialize the Movers from launcher instead of the gameManager">
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="moved the Mover + MovableGameObject combination to launcher from gameManager">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Launcher.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Logic/GameManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logic/GameManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UserControl/InputManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UserControl/InputManager.java" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -89,7 +90,7 @@
     </SUITE>
   </component>
   <component name="CoverageViewManager">
-    <option name="myElementSize" value="40" />
+    <option name="myElementSize" value="41" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -140,24 +141,20 @@
             <file pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/src/Launcher.java">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="646">
-                    <caret line="74" lean-forward="true" selection-start-line="74" selection-end-line="74" />
+                  <state relative-caret-position="425">
+                    <caret line="84" column="57" lean-forward="true" selection-start-line="84" selection-start-column="57" selection-end-line="84" selection-end-column="57" />
                     <folding>
                       <element signature="imports" expanded="true" />
                       <element signature="docComment;class#Launcher#0" />
                       <element signature="docComment;method#configuration#0;class#Launcher#0" />
-                      <element signature="method#configuration#0;class#Launcher#0" />
                       <element signature="docComment;method#Launcher#0;class#Launcher#0" />
                       <element signature="docComment;method#setupScene#0;class#Launcher#0" />
                       <element signature="method#setupScene#0;class#Launcher#0" />
-                      <element signature="e#3834#3835#0" expanded="true" />
-                      <element signature="e#3902#3903#0" expanded="true" />
+                      <element signature="e#3988#3989#0" expanded="true" />
+                      <element signature="e#4056#4057#0" expanded="true" />
                       <element signature="docComment;method#getScene#0;class#Launcher#0" />
                       <element signature="docComment;method#setMaze#0;class#Launcher#0" />
                       <element signature="method#setMaze#0;class#Launcher#0" />
-                      <element signature="docComment;method#setDataStructure#0;class#Launcher#0" />
-                      <element signature="method#setDataStructure#0;class#Launcher#0" />
-                      <element signature="method#asignMoversToGhosts#0;class#Launcher#0" />
                     </folding>
                   </state>
                 </provider>
@@ -173,14 +170,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Logic/GameManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="646">
-              <caret line="38" column="29" lean-forward="true" selection-start-line="38" selection-start-column="29" selection-end-line="38" selection-end-column="29" />
+            <state relative-caret-position="204">
+              <caret line="12" column="71" lean-forward="true" selection-start-line="12" selection-start-column="71" selection-end-line="12" selection-end-column="71" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2446#2447#0" expanded="true" />
+                <element signature="e#2417#2418#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -189,8 +186,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/Logic/GameManagerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="37" column="5" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
+            <state relative-caret-position="323">
+              <caret line="19" column="36" lean-forward="true" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -220,13 +220,27 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/UserControl/InputManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="26" selection-start-line="26" selection-end-line="26" />
+            <state relative-caret-position="187">
+              <caret line="16" column="24" lean-forward="true" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Movement/Crawler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="459">
+              <caret line="36" column="15" lean-forward="true" selection-start-line="36" selection-start-column="15" selection-end-line="36" selection-end-column="15" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="docComment;class#Crawler#0" />
+                <element signature="docComment;method#visited#0;class#Crawler#0" />
               </folding>
             </state>
           </provider>
@@ -318,10 +332,10 @@
         <option value="$PROJECT_DIR$/test/Entities/MovableEntityTest.java" />
         <option value="$PROJECT_DIR$/src/UserControl/UserInput.java" />
         <option value="$PROJECT_DIR$/src/UserControl/PlayerControl.java" />
-        <option value="$PROJECT_DIR$/src/UserControl/InputManager.java" />
-        <option value="$PROJECT_DIR$/test/Logic/GameManagerTest.java" />
         <option value="$PROJECT_DIR$/src/Entities/Player.java" />
+        <option value="$PROJECT_DIR$/test/Logic/GameManagerTest.java" />
         <option value="$PROJECT_DIR$/src/Logic/GameManager.java" />
+        <option value="$PROJECT_DIR$/src/UserControl/InputManager.java" />
         <option value="$PROJECT_DIR$/src/Launcher.java" />
       </list>
     </option>
@@ -403,7 +417,7 @@
     <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555702672913" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555705644964" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="dynamic.classpath" value="false" />
@@ -459,7 +473,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.All in snakeFX">
+  <component name="RunManager" selected="Application.Main">
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="" />
       <option name="DEPLOY" value="true" />
@@ -858,14 +872,7 @@
       <workItem from="1555541134789" duration="2368000" />
       <workItem from="1555572809387" duration="9000" />
       <workItem from="1555610273451" duration="2838000" />
-      <workItem from="1555667262694" duration="25261000" />
-    </task>
-    <task id="LOCAL-00097" summary="add javaDoc">
-      <created>1553681126100</created>
-      <option name="number" value="00097" />
-      <option name="presentableId" value="LOCAL-00097" />
-      <option name="project" value="LOCAL" />
-      <updated>1553681126101</updated>
+      <workItem from="1555667262694" duration="28159000" />
     </task>
     <task id="LOCAL-00098" summary="Added javaDocs to all Entities">
       <created>1553684782981</created>
@@ -1203,22 +1210,17 @@
       <option name="project" value="LOCAL" />
       <updated>1555700066334</updated>
     </task>
-    <option name="localTasksCounter" value="146" />
+    <task id="LOCAL-00146" summary="moved the Mover + MovableGameObject combination to launcher from gameManager">
+      <created>1555703482974</created>
+      <option name="number" value="00146" />
+      <option name="presentableId" value="LOCAL-00146" />
+      <option name="project" value="LOCAL" />
+      <updated>1555703482974</updated>
+    </task>
+    <option name="localTasksCounter" value="147" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_in_snakeFX - 2019.04.19 at 19h 21m 37s.xml">
-      <configuration name="All in snakeFX" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_snakeFX - 2019.04.19 at 19h 21m 44s.xml">
-      <configuration name="All in snakeFX" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_snakeFX - 2019.04.19 at 19h 29m 32s.xml">
-      <configuration name="All in snakeFX" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_snakeFX - 2019.04.19 at 20h 33m 42s.xml">
-      <configuration name="All in snakeFX" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="All_in_snakeFX - 2019.04.19 at 20h 36m 27s.xml">
       <configuration name="All in snakeFX" configurationId="JUnit" />
     </history-entry>
@@ -1237,9 +1239,21 @@
     <history-entry file="All_in_snakeFX - 2019.04.19 at 21h 29m 10s.xml">
       <configuration name="All in snakeFX" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="All_in_snakeFX - 2019.04.19 at 21h 37m 07s.xml">
+      <configuration name="All in snakeFX" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_snakeFX - 2019.04.19 at 21h 37m 17s.xml">
+      <configuration name="All in snakeFX" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_snakeFX - 2019.04.19 at 21h 37m 26s.xml">
+      <configuration name="All in snakeFX" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_snakeFX - 2019.04.19 at 21h 38m 10s.xml">
+      <configuration name="All in snakeFX" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="391904000" />
+    <option name="totallyTimeSpent" value="394802000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1259,7 +1273,7 @@
       <window_info id="Favorites" order="2" weight="0.3295302" />
       <window_info id="Capture Tool" order="3" />
       <window_info id="Nl-Palette" order="4" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" sideWeight="0.6703755" visible="true" weight="0.26439232" />
+      <window_info content_ui="combo" id="Project" order="5" sideWeight="0.6703755" visible="true" weight="0.26439232" />
       <window_info id="Palette&#9;" order="6" />
       <window_info id="Structure" order="7" weight="0.24966443" />
       <window_info anchor="bottom" id="Application Servers" order="0" />
@@ -1271,11 +1285,11 @@
       <window_info anchor="bottom" id="Messages" order="6" weight="0.32034633" />
       <window_info anchor="bottom" id="Message" order="7" />
       <window_info anchor="bottom" id="Find" order="8" weight="0.32575756" />
-      <window_info anchor="bottom" id="Run" order="9" visible="true" weight="0.3030303" />
+      <window_info active="true" anchor="bottom" id="Run" order="9" visible="true" weight="0.3030303" />
       <window_info anchor="bottom" id="Debug" order="10" weight="0.3982684" />
       <window_info anchor="bottom" id="Cvs" order="11" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="12" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="13" weight="0.32627118" />
+      <window_info anchor="bottom" id="TODO" order="13" weight="0.32575756" />
       <window_info anchor="bottom" id="Terminal" order="14" weight="0.32900432" />
       <window_info anchor="bottom" id="Statistic" order="15" />
       <window_info anchor="bottom" id="Database Changes" order="16" show_stripe_button="false" />
@@ -1310,7 +1324,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="split player into an abstract class and two entities player and ghost." />
     <MESSAGE value="updated the crawler to work with movableEntities instead of only player objects." />
     <MESSAGE value="changed some classes to work with MovableEntities instead of player and updated the Imaze interface to movableEntities instead of player" />
     <MESSAGE value="added ghosts to the Maze package, so the Maze + ArrayBased + ObjBased classes can handle ghosts. Added 3 ghosts to the PacMan maze" />
@@ -1335,7 +1348,8 @@
     <MESSAGE value="renamed UserInput" />
     <MESSAGE value=" Added the InputManager Class" />
     <MESSAGE value="mayor changes to decouple Input and movement control from the gameManager, and move it into a Input packages and initialize the Movers from launcher instead of the gameManager" />
-    <option name="LAST_COMMIT_MESSAGE" value="mayor changes to decouple Input and movement control from the gameManager, and move it into a Input packages and initialize the Movers from launcher instead of the gameManager" />
+    <MESSAGE value="moved the Mover + MovableGameObject combination to launcher from gameManager" />
+    <option name="LAST_COMMIT_MESSAGE" value="moved the Mover + MovableGameObject combination to launcher from gameManager" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -1651,20 +1665,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Movement/Crawler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="33" column="96" selection-start-line="33" selection-start-column="96" selection-end-line="33" selection-end-column="96" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;class#Crawler#0" />
-            <element signature="docComment;method#visited#0;class#Crawler#0" />
-            <element signature="docComment;method#checkNearby#0;class#Crawler#0" />
-            <element signature="docComment;method#addToDataStructure#0;class#Crawler#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/IGUI.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -1757,13 +1757,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/Logic/GameManagerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="37" column="5" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/UserControl/UserInput.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -1785,47 +1778,65 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/UserControl/InputManager.java">
+    <entry file="file://$PROJECT_DIR$/test/Logic/GameManagerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        <state relative-caret-position="323">
+          <caret line="19" column="36" lean-forward="true" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Launcher.java">
+    <entry file="file://$PROJECT_DIR$/src/Movement/Crawler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="74" lean-forward="true" selection-start-line="74" selection-end-line="74" />
+        <state relative-caret-position="459">
+          <caret line="36" column="15" lean-forward="true" selection-start-line="36" selection-start-column="15" selection-end-line="36" selection-end-column="15" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="docComment;class#Launcher#0" />
-            <element signature="docComment;method#configuration#0;class#Launcher#0" />
-            <element signature="method#configuration#0;class#Launcher#0" />
-            <element signature="docComment;method#Launcher#0;class#Launcher#0" />
-            <element signature="docComment;method#setupScene#0;class#Launcher#0" />
-            <element signature="method#setupScene#0;class#Launcher#0" />
-            <element signature="e#3834#3835#0" expanded="true" />
-            <element signature="e#3902#3903#0" expanded="true" />
-            <element signature="docComment;method#getScene#0;class#Launcher#0" />
-            <element signature="docComment;method#setMaze#0;class#Launcher#0" />
-            <element signature="method#setMaze#0;class#Launcher#0" />
-            <element signature="docComment;method#setDataStructure#0;class#Launcher#0" />
-            <element signature="method#setDataStructure#0;class#Launcher#0" />
-            <element signature="method#asignMoversToGhosts#0;class#Launcher#0" />
+            <element signature="docComment;class#Crawler#0" />
+            <element signature="docComment;method#visited#0;class#Crawler#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Logic/GameManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="38" column="29" lean-forward="true" selection-start-line="38" selection-start-column="29" selection-end-line="38" selection-end-column="29" />
+        <state relative-caret-position="204">
+          <caret line="12" column="71" lean-forward="true" selection-start-line="12" selection-start-column="71" selection-end-line="12" selection-end-column="71" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2446#2447#0" expanded="true" />
+            <element signature="e#2417#2418#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Launcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="84" column="57" lean-forward="true" selection-start-line="84" selection-start-column="57" selection-end-line="84" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#Launcher#0" />
+            <element signature="docComment;method#configuration#0;class#Launcher#0" />
+            <element signature="docComment;method#Launcher#0;class#Launcher#0" />
+            <element signature="docComment;method#setupScene#0;class#Launcher#0" />
+            <element signature="method#setupScene#0;class#Launcher#0" />
+            <element signature="e#3988#3989#0" expanded="true" />
+            <element signature="e#4056#4057#0" expanded="true" />
+            <element signature="docComment;method#getScene#0;class#Launcher#0" />
+            <element signature="docComment;method#setMaze#0;class#Launcher#0" />
+            <element signature="method#setMaze#0;class#Launcher#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UserControl/InputManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="16" column="24" lean-forward="true" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
