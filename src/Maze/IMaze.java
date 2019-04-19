@@ -49,7 +49,16 @@ public interface IMaze {
 
     /**
      * Get all the {@link Ghost}s in the maze.
+     *
      * @return Return a list of all the {@link Ghost}s in the maze.
      */
     List<GameObject> getGhosts();
+
+    /**
+     * Get all {@link MovableEntity} in the maze.
+     * Both {@link Player} and {@link Ghost}s are included in the list.
+     *
+     * @return Returns a list of all {@link MovableEntity} in the maze.
+     */
+    List<MovableEntity> getMovables();
 }
