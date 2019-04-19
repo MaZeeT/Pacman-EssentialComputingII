@@ -6,12 +6,12 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class UserInputTest {
-    private UserInput uc;
+public class PlayerControlTest {
+    private UserInput userInput;
 
     @Before
     public void setUp() {
-        uc = new PlayerControl();
+        userInput = new PlayerControl();
     }
 
     @Test
@@ -19,7 +19,7 @@ public class UserInputTest {
         char actual = 'w';
         KeyCode key = KeyCode.W;
 
-        char expected = uc.getDirection(key);
+        char expected = userInput.getDirection(key);
         assertEquals(expected, actual);
     }
 
@@ -28,7 +28,7 @@ public class UserInputTest {
         char actual = 's';
         KeyCode key = KeyCode.S;
 
-        char expected = uc.getDirection(key);
+        char expected = userInput.getDirection(key);
         assertEquals(expected, actual);
     }
 
@@ -37,7 +37,7 @@ public class UserInputTest {
         char actual = 'a';
         KeyCode key = KeyCode.A;
 
-        char expected = uc.getDirection(key);
+        char expected = userInput.getDirection(key);
         assertEquals(expected, actual);
     }
 
@@ -46,7 +46,16 @@ public class UserInputTest {
         char actual = 'd';
         KeyCode key = KeyCode.D;
 
-        char expected = uc.getDirection(key);
+        char expected = userInput.getDirection(key);
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void directionSHIFT() {
+        char actual = ' ';
+        KeyCode key = KeyCode.SHIFT;
+
+        char expected = userInput.getDirection(key);
         assertEquals(expected, actual);
     }
 

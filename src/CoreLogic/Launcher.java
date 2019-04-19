@@ -1,15 +1,11 @@
+package CoreLogic;
+
 import DataStructures.*;
 import Entities.GameObject;
-import Entities.Ghost;
 import Entities.MovableEntity;
-import Entities.Player;
 import GUI.*;
-import Logic.GameManager;
 import Maze.*;
-import Movement.Crawler;
-import Movement.IMover;
-import Movement.IMoverControlled;
-import Movement.MoveClockWise;
+import Movement.*;
 import UserControl.*;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
@@ -60,7 +56,7 @@ public class Launcher {
         // 6 for AITestMaze (extra maze to test pathfinder algorithms)
 
         // Player movement options
-        playerMovement = setPlayerMovement(2);
+        playerMovement = setPlayerMovement(0);
         // 0 for User controlled.
         // 1 for DepthFirst.
         // 2 for BreadthFirst.
@@ -82,7 +78,6 @@ public class Launcher {
         GameManager gameManager = new GameManager(maze);
 
         // Setup movement to MovableGameObjects
-        IMoverControlled mover = new MoveClockWise(maze);
         InputManager inputManager = new InputManager(playerMovement, userInput);
         maze.getPlayer().setMover(playerMovement);
         setupMoversToGhosts();
@@ -96,7 +91,8 @@ public class Launcher {
         updateProcess.start();
     }
 
-    /** //todo update javaDoc
+    /**
+     * //todo update javaDoc
      * Setup a scene with a pane from the {@link IGUI} and bridges the {@link UserInput} with the direction in the {@link GameManager}.
      *
      * @param pane        The given pane that will render the objects of the {@link GameManager}.
@@ -161,7 +157,7 @@ public class Launcher {
      * @return Returns the selected dataStructure.
      */
     private IMover setPlayerMovement(int index) {
-        if (index == 0){
+        if (index == 0) {
 
             return new MoveClockWise(maze);
         }
@@ -180,11 +176,11 @@ public class Launcher {
         List<GameObject> ghosts = maze.getGhosts();
         MovableEntity player = maze.getPlayer();
         if (ghosts != null) {
-            ((Ghost) ghosts.get(0)).setMover(
+            ((MovableEntity) ghosts.get(0)).setMover(
                     new Crawler(maze, (MovableEntity) ghosts.get(0), new Greedy(player.getPosition())));
-            ((Ghost) ghosts.get(1)).setMover(
+            ((MovableEntity) ghosts.get(1)).setMover(
                     new Crawler(maze, (MovableEntity) ghosts.get(1), new BreadthFirst()));
-            ((Ghost) ghosts.get(2)).setMover(
+            ((MovableEntity) ghosts.get(2)).setMover(
                     new Crawler(maze, (MovableEntity) ghosts.get(2), new DepthFirst()));
             //todo call update on all movableEntities, than we are have at least the player to update.
             //todo update dataStructure to launcher and instantiate crawler their instead of inside the game manager

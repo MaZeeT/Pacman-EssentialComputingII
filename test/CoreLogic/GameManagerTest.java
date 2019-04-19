@@ -1,4 +1,4 @@
-package Logic;
+package CoreLogic;
 
 import Entities.GameObject;
 import Maze.ForkRoad;

@@ -4,11 +4,15 @@
     <option name="ANALYZE_TEST_SOURCES" value="false" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="moved the Mover + MovableGameObject combination to launcher from gameManager">
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="refined InputManager and Launcher">
+      <change afterPath="$PROJECT_DIR$/test/UserControl/InputManagerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Launcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Logic/GameManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Logic/GameManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UserControl/InputManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UserControl/InputManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CoreLogic/Launcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Logic/GameManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CoreLogic/GameManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CoreLogic/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UpdateProcess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CoreLogic/UpdateProcess.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Logic/GameManagerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/CoreLogic/GameManagerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/UserControl/UserInputTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/UserControl/PlayerControlTest.java" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -22,7 +26,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/Pacman_EssentialComputingII$All_in_snakeFX.ic" NAME="All in snakeFX Coverage Results" MODIFIED="1555702673758" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Pacman_EssentialComputingII$All_in_snakeFX.ic" NAME="All in snakeFX Coverage Results" MODIFIED="1555706584998" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/snakeFX$DepthFirstTest.ic" NAME="DepthFirstTest Coverage Results" MODIFIED="1552562828790" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>SnakeDataStructures.*</FILTER>
     </SUITE>
@@ -133,98 +137,61 @@
     <ui_properties converted="true" />
     <breakpoint_rules converted="true" />
   </component>
-  <component name="DockManager">
-    <window id="1">
-      <content type="file-editors">
-        <state>
-          <leaf>
-            <file pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/src/Launcher.java">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="425">
-                    <caret line="84" column="57" lean-forward="true" selection-start-line="84" selection-start-column="57" selection-end-line="84" selection-end-column="57" />
-                    <folding>
-                      <element signature="imports" expanded="true" />
-                      <element signature="docComment;class#Launcher#0" />
-                      <element signature="docComment;method#configuration#0;class#Launcher#0" />
-                      <element signature="docComment;method#Launcher#0;class#Launcher#0" />
-                      <element signature="docComment;method#setupScene#0;class#Launcher#0" />
-                      <element signature="method#setupScene#0;class#Launcher#0" />
-                      <element signature="e#3988#3989#0" expanded="true" />
-                      <element signature="e#4056#4057#0" expanded="true" />
-                      <element signature="docComment;method#getScene#0;class#Launcher#0" />
-                      <element signature="docComment;method#setMaze#0;class#Launcher#0" />
-                      <element signature="method#setMaze#0;class#Launcher#0" />
-                    </folding>
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
-  </component>
   <component name="FavoritesManager">
     <favorites_list name="JavaFxApplication" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Logic/GameManager.java">
+        <entry file="file://$PROJECT_DIR$/src/CoreLogic/GameManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="71" lean-forward="true" selection-start-line="12" selection-start-column="71" selection-end-line="12" selection-end-column="71" />
+            <state relative-caret-position="18">
+              <caret line="10" column="34" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2417#2418#0" expanded="true" />
+                <element signature="e#2421#2422#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/Logic/GameManagerTest.java">
+        <entry file="file://$PROJECT_DIR$/src/CoreLogic/Launcher.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="36" lean-forward="true" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
+            <state relative-caret-position="187">
+              <caret line="12" column="32" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
               <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/UserControl/UserInput.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="39" lean-forward="true" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/UserControl/PlayerControl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
-              <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="docComment;class#PlayerControl#0" />
-                <element signature="docComment;method#getDirection#0;class#PlayerControl#0" />
-                <element signature="e#1052#1053#0" expanded="true" />
-                <element signature="e#1089#1090#0" expanded="true" />
+                <element signature="docComment;class#Launcher#0" />
+                <element signature="docComment;method#configuration#0;class#Launcher#0" />
+                <element signature="docComment;method#Launcher#0;class#Launcher#0" />
+                <element signature="docComment;method#setupScene#0;class#Launcher#0" />
+                <element signature="method#setupScene#0;class#Launcher#0" />
+                <element signature="docComment;method#getScene#0;class#Launcher#0" />
+                <element signature="docComment;method#setMaze#0;class#Launcher#0" />
+                <element signature="method#setMaze#0;class#Launcher#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/UserControl/InputManager.java">
+        <entry file="file://$PROJECT_DIR$/test/UserControl/PlayerControlTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="16" column="24" lean-forward="true" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
+            <state relative-caret-position="85">
+              <caret line="9" column="32" lean-forward="true" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
+              <folding>
+                <element signature="e#233#234#0" expanded="true" />
+                <element signature="e#273#274#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/UserControl/InputManagerTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -233,14 +200,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Movement/Crawler.java">
+        <entry file="file://$PROJECT_DIR$/src/CoreLogic/UpdateProcess.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="36" column="15" lean-forward="true" selection-start-line="36" selection-start-column="15" selection-end-line="36" selection-end-column="15" />
+            <state relative-caret-position="477">
+              <caret line="46" selection-start-line="46" selection-end-line="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/CoreLogic/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="188">
+              <caret line="13" column="76" selection-start-line="13" selection-start-column="76" selection-end-line="13" selection-end-column="76" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="docComment;class#Crawler#0" />
-                <element signature="docComment;method#visited#0;class#Crawler#0" />
+                <element signature="e#726#727#0" expanded="true" />
+                <element signature="e#754#755#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -252,9 +227,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="JUnit4 Test Class" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
@@ -286,15 +261,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/DataStructures/MyStack.java" />
-        <option value="$PROJECT_DIR$/src/DataStructures/DataStructure.java" />
-        <option value="$PROJECT_DIR$/src/DataStructures/IDataStructure.java" />
-        <option value="$PROJECT_DIR$/src/Main.java" />
-        <option value="$PROJECT_DIR$/src/Maze/MazeObj.java" />
-        <option value="$PROJECT_DIR$/test/Maze/MazeWithExitTest.java" />
         <option value="$PROJECT_DIR$/test/Maze/SingleRoadTest.java" />
         <option value="$PROJECT_DIR$/src/Entities/IEntities.java" />
-        <option value="$PROJECT_DIR$/src/UpdateProcess.java" />
         <option value="$PROJECT_DIR$/src/Maze/AITestMaze.java" />
         <option value="$PROJECT_DIR$/test/Maze/AITestMazeTest.java" />
         <option value="$PROJECT_DIR$/src/Entities/MovableGameObject.java" />
@@ -336,7 +304,14 @@
         <option value="$PROJECT_DIR$/test/Logic/GameManagerTest.java" />
         <option value="$PROJECT_DIR$/src/Logic/GameManager.java" />
         <option value="$PROJECT_DIR$/src/UserControl/InputManager.java" />
+        <option value="$PROJECT_DIR$/src/UpdateProcess.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/Launcher.java" />
+        <option value="$PROJECT_DIR$/src/Logic/Main.java" />
+        <option value="$PROJECT_DIR$/src/CoreLogic/Main.java" />
+        <option value="$PROJECT_DIR$/test/UserControl/UserInputTest.java" />
+        <option value="$PROJECT_DIR$/test/UserControl/PlayerControlTest.java" />
+        <option value="$PROJECT_DIR$/test/UserControl/InputManagerTest.java" />
       </list>
     </option>
   </component>
@@ -367,18 +342,6 @@
               <item name="Pacman-EssentialComputingII" type="b2602c69:ProjectViewProjectNode" />
               <item name="Pacman-EssentialComputingII" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Pacman-EssentialComputingII" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Pacman-EssentialComputingII" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Logic" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Pacman-EssentialComputingII" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Pacman-EssentialComputingII" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Movement" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Pacman-EssentialComputingII" type="b2602c69:ProjectViewProjectNode" />
@@ -417,7 +380,7 @@
     <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555705644964" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555706665551" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="dynamic.classpath" value="false" />
@@ -441,12 +404,15 @@
       <recent name="SnakeComponents" />
       <recent name="SnakeMaze" />
     </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="sample" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="Logic" />
       <recent name="" />
       <recent name="Movement" />
       <recent name="SnakeLogic.Crawler" />
       <recent name="SnakeMaze" />
-      <recent name="SnakeUserControl" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="Entities" />
@@ -456,9 +422,6 @@
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
-    </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="sample" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -473,7 +436,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.All in snakeFX">
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="" />
       <option name="DEPLOY" value="true" />
@@ -536,7 +499,7 @@
       </method>
     </configuration>
     <configuration name="Main" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="Main" />
+      <option name="MAIN_CLASS_NAME" value="CoreLogic.Main" />
       <module name="snakeFX" />
       <extension name="coverage">
         <pattern>
@@ -632,26 +595,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GhostTest.getMover" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="snakeFX" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Entities.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Entities" />
-      <option name="MAIN_CLASS_NAME" value="Entities.GhostTest" />
-      <option name="METHOD_NAME" value="getMover" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="GhostTest.getNullMover" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="snakeFX" />
       <extension name="coverage">
@@ -672,17 +615,36 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PacManTest.getMovableEntities" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="InputManagerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="snakeFX" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Maze.*" />
+          <option name="PATTERN" value="UserControl.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="Maze" />
-      <option name="MAIN_CLASS_NAME" value="Maze.PacManTest" />
-      <option name="METHOD_NAME" value="getMovableEntities" />
+      <option name="PACKAGE_NAME" value="UserControl" />
+      <option name="MAIN_CLASS_NAME" value="UserControl.InputManagerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PlayerControlTest.directionSHIFT" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="snakeFX" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="UserControl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="UserControl" />
+      <option name="MAIN_CLASS_NAME" value="UserControl.PlayerControlTest" />
+      <option name="METHOD_NAME" value="directionSHIFT" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="TEST_SEARCH_SCOPE">
@@ -788,19 +750,19 @@
     <list>
       <item itemvalue="Application.Main" />
       <item itemvalue="JUnit.All in snakeFX" />
-      <item itemvalue="JUnit.PacManTest.getMovableEntities" />
-      <item itemvalue="JUnit.GhostTest.getMover" />
       <item itemvalue="JUnit.GhostTest.getNullMover" />
       <item itemvalue="JUnit.GhostTest and 1 more" />
       <item itemvalue="JUnit.PlayerTest" />
+      <item itemvalue="JUnit.PlayerControlTest.directionSHIFT" />
+      <item itemvalue="JUnit.InputManagerTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.InputManagerTest" />
+        <item itemvalue="JUnit.PlayerControlTest.directionSHIFT" />
         <item itemvalue="JUnit.GhostTest and 1 more" />
         <item itemvalue="JUnit.PlayerTest" />
         <item itemvalue="JUnit.GhostTest and 1 more" />
-        <item itemvalue="JUnit.GhostTest.getNullMover" />
-        <item itemvalue="JUnit.GhostTest.getMover" />
       </list>
     </recent_temporary>
   </component>
@@ -872,14 +834,7 @@
       <workItem from="1555541134789" duration="2368000" />
       <workItem from="1555572809387" duration="9000" />
       <workItem from="1555610273451" duration="2838000" />
-      <workItem from="1555667262694" duration="28159000" />
-    </task>
-    <task id="LOCAL-00098" summary="Added javaDocs to all Entities">
-      <created>1553684782981</created>
-      <option name="number" value="00098" />
-      <option name="presentableId" value="LOCAL-00098" />
-      <option name="project" value="LOCAL" />
-      <updated>1553684782981</updated>
+      <workItem from="1555667262694" duration="29242000" />
     </task>
     <task id="LOCAL-00099" summary="added javaDoc">
       <created>1553686977225</created>
@@ -1217,43 +1172,50 @@
       <option name="project" value="LOCAL" />
       <updated>1555703482974</updated>
     </task>
-    <option name="localTasksCounter" value="147" />
+    <task id="LOCAL-00147" summary="refined InputManager and Launcher">
+      <created>1555705774931</created>
+      <option name="number" value="00147" />
+      <option name="presentableId" value="LOCAL-00147" />
+      <option name="project" value="LOCAL" />
+      <updated>1555705774931</updated>
+    </task>
+    <option name="localTasksCounter" value="148" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_in_snakeFX - 2019.04.19 at 20h 36m 27s.xml">
+    <history-entry file="All_in_snakeFX - 2019.04.19 at 22h 30m 18s.xml">
       <configuration name="All in snakeFX" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_snakeFX - 2019.04.19 at 20h 37m 25s.xml">
+    <history-entry file="All_in_snakeFX - 2019.04.19 at 22h 32m 46s.xml">
       <configuration name="All in snakeFX" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_snakeFX - 2019.04.19 at 20h 41m 53s.xml">
+    <history-entry file="All_in_snakeFX - 2019.04.19 at 22h 38m 09s.xml">
       <configuration name="All in snakeFX" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_snakeFX - 2019.04.19 at 21h 05m 41s.xml">
+    <history-entry file="All_in_snakeFX - 2019.04.19 at 22h 38m 33s.xml">
       <configuration name="All in snakeFX" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_snakeFX - 2019.04.19 at 21h 28m 33s.xml">
+    <history-entry file="PlayerControlTest_directionSHIFT - 2019.04.19 at 22h 40m 32s.xml">
+      <configuration name="PlayerControlTest.directionSHIFT" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PlayerControlTest_directionSHIFT - 2019.04.19 at 22h 40m 39s.xml">
+      <configuration name="PlayerControlTest.directionSHIFT" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_snakeFX - 2019.04.19 at 22h 41m 02s.xml">
       <configuration name="All in snakeFX" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_snakeFX - 2019.04.19 at 21h 29m 10s.xml">
+    <history-entry file="All_in_snakeFX - 2019.04.19 at 22h 41m 36s.xml">
       <configuration name="All in snakeFX" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_snakeFX - 2019.04.19 at 21h 37m 07s.xml">
-      <configuration name="All in snakeFX" configurationId="JUnit" />
+    <history-entry file="InputManagerTest - 2019.04.19 at 22h 42m 52s.xml">
+      <configuration name="InputManagerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_snakeFX - 2019.04.19 at 21h 37m 17s.xml">
-      <configuration name="All in snakeFX" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_snakeFX - 2019.04.19 at 21h 37m 26s.xml">
-      <configuration name="All in snakeFX" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_snakeFX - 2019.04.19 at 21h 38m 10s.xml">
+    <history-entry file="All_in_snakeFX - 2019.04.19 at 22h 43m 22s.xml">
       <configuration name="All in snakeFX" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="394802000" />
+    <option name="totallyTimeSpent" value="395885000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1324,7 +1286,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="updated the crawler to work with movableEntities instead of only player objects." />
     <MESSAGE value="changed some classes to work with MovableEntities instead of player and updated the Imaze interface to movableEntities instead of player" />
     <MESSAGE value="added ghosts to the Maze package, so the Maze + ArrayBased + ObjBased classes can handle ghosts. Added 3 ghosts to the PacMan maze" />
     <MESSAGE value="added a few test to increase test coverage to 100% after ghosts were added." />
@@ -1349,7 +1310,8 @@
     <MESSAGE value=" Added the InputManager Class" />
     <MESSAGE value="mayor changes to decouple Input and movement control from the gameManager, and move it into a Input packages and initialize the Movers from launcher instead of the gameManager" />
     <MESSAGE value="moved the Mover + MovableGameObject combination to launcher from gameManager" />
-    <option name="LAST_COMMIT_MESSAGE" value="moved the Mover + MovableGameObject combination to launcher from gameManager" />
+    <MESSAGE value="refined InputManager and Launcher" />
+    <option name="LAST_COMMIT_MESSAGE" value="refined InputManager and Launcher" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -1382,38 +1344,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/test/Entities/WayPointTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entities/GameObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
-          <folding>
-            <element signature="e#1643#1644#0" expanded="true" />
-            <element signature="e#1705#1706#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/DataStructures/DataStructuresTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="13" column="42" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/Entities/GameObjectTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.base/java/util/ArrayList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="206">
@@ -1757,17 +1687,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/UserControl/UserInput.java">
+    <entry file="file://$PROJECT_DIR$/test/CoreLogic/GameManagerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="39" lean-forward="true" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
+        <state relative-caret-position="323">
+          <caret line="19" column="36" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Movement/Crawler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="36" column="15" selection-start-line="36" selection-start-column="15" selection-end-line="36" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#Crawler#0" />
+            <element signature="docComment;method#visited#0;class#Crawler#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CoreLogic/UpdateProcess.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="477">
+          <caret line="46" selection-start-line="46" selection-end-line="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CoreLogic/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="13" column="76" selection-start-line="13" selection-start-column="76" selection-end-line="13" selection-end-column="76" />
+          <folding>
+            <element signature="e#726#727#0" expanded="true" />
+            <element signature="e#754#755#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/UserControl/PlayerControl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
+        <state relative-caret-position="290">
+          <caret line="38" column="28" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;class#PlayerControl#0" />
@@ -1778,52 +1741,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/Logic/GameManagerTest.java">
+    <entry file="file://$PROJECT_DIR$/src/UserControl/InputManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="36" lean-forward="true" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
+        <state relative-caret-position="136">
+          <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Movement/Crawler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="36" column="15" lean-forward="true" selection-start-line="36" selection-start-column="15" selection-end-line="36" selection-end-column="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;class#Crawler#0" />
-            <element signature="docComment;method#visited#0;class#Crawler#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Logic/GameManager.java">
+    <entry file="file://$PROJECT_DIR$/src/UserControl/UserInput.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
-          <caret line="12" column="71" lean-forward="true" selection-start-line="12" selection-start-column="71" selection-end-line="12" selection-end-column="71" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2417#2418#0" expanded="true" />
-          </folding>
+          <caret line="12" column="85" selection-start-line="12" selection-start-column="85" selection-end-line="12" selection-end-column="85" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Launcher.java">
+    <entry file="file://$PROJECT_DIR$/src/CoreLogic/Launcher.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="84" column="57" lean-forward="true" selection-start-line="84" selection-start-column="57" selection-end-line="84" selection-end-column="57" />
+        <state relative-caret-position="187">
+          <caret line="12" column="32" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="docComment;class#Launcher#0" />
             <element signature="docComment;method#configuration#0;class#Launcher#0" />
             <element signature="docComment;method#Launcher#0;class#Launcher#0" />
             <element signature="docComment;method#setupScene#0;class#Launcher#0" />
             <element signature="method#setupScene#0;class#Launcher#0" />
-            <element signature="e#3988#3989#0" expanded="true" />
-            <element signature="e#4056#4057#0" expanded="true" />
             <element signature="docComment;method#getScene#0;class#Launcher#0" />
             <element signature="docComment;method#setMaze#0;class#Launcher#0" />
             <element signature="method#setMaze#0;class#Launcher#0" />
@@ -1831,12 +1775,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/UserControl/InputManager.java">
+    <entry file="file://$PROJECT_DIR$/src/CoreLogic/GameManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="16" column="24" lean-forward="true" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
+        <state relative-caret-position="18">
+          <caret line="10" column="34" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2421#2422#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/UserControl/InputManagerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/UserControl/PlayerControlTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="9" column="32" lean-forward="true" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
+          <folding>
+            <element signature="e#233#234#0" expanded="true" />
+            <element signature="e#273#274#0" expanded="true" />
           </folding>
         </state>
       </provider>

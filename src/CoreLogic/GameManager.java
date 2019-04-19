@@ -1,4 +1,4 @@
-package Logic;
+package CoreLogic;
 
 import DataStructures.*;
 import Entities.*;
