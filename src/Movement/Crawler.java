@@ -2,15 +2,12 @@ package Movement;
 
 import Components.Position;
 import DataStructures.IDataStructure;
-import Entities.GameObject;
-import Entities.MovableEntity;
-import Entities.Player;
-import Entities.Wall;
+import Entities.*;
 import Maze.IMaze;
 import javafx.scene.paint.Color;
 
 import java.util.List;
-//todo check javadoc for changes since the implementation of IMove interface
+//todo check javadoc for changes since the implementation of IMover interface
 /**
  * The purpose of this class is to be enable the {@link Player} to crawl around in a given {@link Maze.Maze}.
  * This is done by storing each possible steps in a data structure and make a decision about which step to take next.
@@ -21,7 +18,7 @@ import java.util.List;
  *
  * @author MaZeeT
  */
-public class Crawler implements IMove {
+public class Crawler implements IMover {
 
     private MovableEntity movableEntity;
     private List<GameObject> gameObjects;
@@ -34,10 +31,11 @@ public class Crawler implements IMove {
      * and links some of the objects inside the {@link Maze.Maze} to some of the private variables of this class.
      *
      * @param maze          The {@link Maze.Maze} where the {@link Crawler} will move in.
+     * @param EntityToMove  The {@link MovableEntity} that the {@link Crawler} will move around.
      * @param dataStructure The dataStructure that will hold the {@link Position}s the {@link Crawler} will move to.
      */
-    public Crawler(IMaze maze, IDataStructure dataStructure) {
-        this.movableEntity = maze.getPlayer();
+    public Crawler(IMaze maze, MovableEntity EntityToMove, IDataStructure dataStructure) {
+        this.movableEntity = EntityToMove;
         this.gameObjects = maze.getMaze();
         this.gameObjectPositions = maze.getMazePositions();
         this.dataStructure = dataStructure;

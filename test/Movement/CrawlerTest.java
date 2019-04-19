@@ -12,14 +12,14 @@ import static org.junit.Assert.*;
 
 public class CrawlerTest {
 
-    private IMove crawler;
+    private IMover crawler;
     private IDataStructure dataStructure;
 
     @Before
     public void setUp() {
         IMaze maze = new ForkRoad();
         this.dataStructure = new DepthFirst();
-        this.crawler = new Crawler(maze, dataStructure);
+        this.crawler = new Crawler(maze, maze.getPlayer(), dataStructure);
     }
 
     @Test

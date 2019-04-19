@@ -6,7 +6,7 @@ package Movement;
  *
  * @author MaZeeT
  */
-public interface IMove {
+public interface IMover {
 
     /**
      * This will perform a single movement for each call

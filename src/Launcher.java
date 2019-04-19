@@ -37,7 +37,7 @@ public class Launcher {
         //todo move this outside in a static config class, maybe ?!
         width = 48; // width of maze
         height = 33; // height of maze
-        runSpeed = 500; // milliseconds between each move
+        runSpeed = 500; // milliseconds between each update
 
         // Options for setting maze.
         maze = setMaze(5);

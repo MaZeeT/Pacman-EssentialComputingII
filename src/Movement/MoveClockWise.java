@@ -7,14 +7,14 @@ import Entities.Player;
 import Maze.IMaze;
 
 import java.util.List;
-//todo check javadoc for changes since the implementation of IMove interface
+//todo check javadoc for changes since the implementation of IMover interface
 /**
  * The purpose of this class is it enable user controlled inputs.
  * This class get direction inputs as chars, and move the {@link Player} accordingly.
  *
  * @author MaZeeT
  */
-public class MoveClockWise implements IMove, IMoveControlled {
+public class MoveClockWise implements IMover, IMoverControlled {
     private char dir;
     private MovableEntity player;
     private List<Position> walls;

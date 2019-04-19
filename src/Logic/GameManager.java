@@ -4,13 +4,13 @@ import DataStructures.IDataStructure;
 import Entities.GameObject;
 import Entities.MovableEntity;
 import Movement.Crawler;
-import Movement.IMove;
+import Movement.IMover;
+import Movement.IMoverControlled;
 import Movement.MoveClockWise;
 import Maze.IMaze;
-import Movement.IMoveControlled;
 
 import java.util.*;
-//todo check javadoc for changes since the implementation of IMove interface
+//todo check javadoc for changes since the implementation of IMover interface
 
 /**
  * The purpose of this class is, to combine most of the components needed for the logic to work.

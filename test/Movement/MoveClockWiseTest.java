@@ -11,7 +11,7 @@ import static org.junit.Assert.*;
 
 public class MoveClockWiseTest {
 
-    private IMoveControlled movement;
+    private IMoverControlled movement;
     private MovableEntity player;
 
     @Before
