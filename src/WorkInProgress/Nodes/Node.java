@@ -1,16 +1,21 @@
 package WorkInProgress.Nodes;
 
-public abstract class Node<T> {
+import java.util.List;
+
+public class Node<T> {
 
     private T contain;
     private Node<T> parent;
-    Node<T>[] branches;
+    private List<Node<T>> children;
 
-    Node(T contain, Node<T> parent) {
+    public Node(T contain, Node<T> parent) {
         this.contain = contain;
         this.parent = parent;
     }
 
+    public void addChild(Node<T> child){
+        this.children.add(child);
+    }
 
     public T getContain() {
         return contain;
@@ -20,8 +25,16 @@ public abstract class Node<T> {
         return parent;
     }
 
-    public abstract boolean addNode(int i, T contain);
+    public void setParent(Node<T> parent) {
+        this.parent = parent;
+    }
 
-    public abstract Node<T> getNode(int i);
+    public List<Node<T>> getChildren() {
+        return children;
+    }
+
+    public void setChildren(List<Node<T>> children) {
+        this.children = children;
+    }
 
 }

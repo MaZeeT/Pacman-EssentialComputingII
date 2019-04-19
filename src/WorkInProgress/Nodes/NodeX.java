@@ -9,7 +9,6 @@ public class NodeX<T> extends Node<T> {
         //new Node[NodeAmount];
     }
 
-    @Override
     public Node<T> getNode(int i) {
         if (insideLimit(i)) {
             return branches[i];
@@ -18,7 +17,6 @@ public class NodeX<T> extends Node<T> {
         }
     }
 
-    @Override
     public boolean addNode(int i, T contain) {
         if (insideLimit(i)) {
             branches[i] = new NodeX<>(contain, this, this.branches.length);
