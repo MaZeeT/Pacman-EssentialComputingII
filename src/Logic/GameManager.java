@@ -1,12 +1,8 @@
 package Logic;
 
-import DataStructures.IDataStructure;
-import Entities.GameObject;
-import Entities.MovableEntity;
-import Movement.Crawler;
-import Movement.IMover;
-import Movement.IMoverControlled;
-import Movement.MoveClockWise;
+import DataStructures.*;
+import Entities.*;
+import Movement.*;
 import Maze.IMaze;
 
 import java.util.*;
@@ -28,13 +24,11 @@ public class GameManager {
     private List<GameObject> ghosts;
 
     private char direction; //todo direction can be removed if we can bridge the input with the moveClockWise class.
-    private IMoveControlled playerMovement;
-    private IMove playerCrawler;
-    private IMove ghostA;
-    private IMove ghostB;
+    private IMoverControlled playerMovement;
+    private IMover playerCrawler;
 
     private boolean playerControlled = true;
-    private boolean ghostCanMove = false;
+    private boolean ghostCanMove = true;
 
     /**
      * Constructor of this class. It takes a {@link IMaze} and a {@link IDataStructure} as input.
@@ -50,16 +44,23 @@ public class GameManager {
         snake.add(player);
         wayPoints.add(maze.getWayPoint());
 
-
+//todo fix movableEntity
         playerMovement = new MoveClockWise(maze);
-        playerCrawler = new Crawler(maze, dataStructure);
-        ghostA = new Crawler(maze, dataStructure);
-        ghostB = new Crawler(maze, dataStructure);
-        //todo move dataStructure to launcher and instantiate crawler their instead of inside the game manager
+        playerCrawler = new Crawler(maze, maze.getPlayer(), dataStructure);
+        if (ghosts != null) {
+            ((Ghost)ghosts.get(0)).setMover(
+                    new Crawler(maze, (MovableEntity) ghosts.get(0), new Greedy(player.getPosition())));
+            ((Ghost)ghosts.get(1)).setMover(
+                    new Crawler(maze, (MovableEntity) ghosts.get(1), new BreadthFirst()));
+            ((Ghost)ghosts.get(2)).setMover(
+                    new Crawler(maze, (MovableEntity) ghosts.get(2), new DepthFirst()));
+            //todo call update on all movableEntities, than we are have at least the player to update.
+            //todo update dataStructure to launcher and instantiate crawler their instead of inside the game manager
+        }
     }
 
     /**
-     * The move method, which is called each move tick.
+     * The update method, which is called each update tick.
      */
     public void update() {
         //todo make a common interface for playerCrawler and user controls of movableGameObjects
@@ -70,10 +71,9 @@ public class GameManager {
         } else {
             playerCrawler.move();
         }
-
-        if (ghostCanMove) {
-            ghostA.move();
-            ghostB.move();
+        if(ghostCanMove && ghosts != null){
+            for (GameObject ghost:ghosts )
+            ((MovableEntity) ghost).update();
         }
 
     }
