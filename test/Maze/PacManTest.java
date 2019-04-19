@@ -2,6 +2,7 @@ package Maze;
 
 import Components.Position;
 import Entities.GameObject;
+import Entities.MovableEntity;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -11,6 +12,7 @@ import static org.junit.Assert.assertEquals;
 
 public class PacManTest {
 
+    private IMaze maze;
     private Position playerPosition;
     private Position wayPointPosition;
     private List<GameObject> walls;
@@ -18,7 +20,7 @@ public class PacManTest {
 
     @Before
     public void setUp(){
-        IMaze maze = new PacMan();
+        maze = new PacMan();
         this.playerPosition = maze.getPlayer().getPosition();
         this.wayPointPosition = maze.getWayPoint().getPosition();
         this.walls = maze.getWalls();
@@ -53,6 +55,12 @@ public class PacManTest {
         int expected = 3;
         int actual = ghosts.size();
         assertEquals(expected, actual);
+    }
+
+    @Test
+    public void getMovableEntities(){
+        int expected = 4;
+        int actual = maze.getMovables().size();
         assertEquals(expected, actual);
     }
 
