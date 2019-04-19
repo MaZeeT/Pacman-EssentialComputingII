@@ -6,8 +6,8 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class UserControlTest {
-    private UserControl uc;
+public class UserInputTest {
+    private UserInput uc;
 
     @Before
     public void setUp() {

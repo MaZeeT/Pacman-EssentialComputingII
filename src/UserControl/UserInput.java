@@ -7,7 +7,7 @@ import javafx.scene.input.KeyCode;
  *
  * @author MaZeeT
  */
-public interface UserControl {
+public interface UserInput {
 
     /**
      * Get the input of the user in form of a char with a value of w (up), s (down), a (left) and d (right).
