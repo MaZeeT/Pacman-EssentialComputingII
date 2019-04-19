@@ -50,7 +50,7 @@ public class Launcher {
         runSpeed = 500; // milliseconds between each update
 
         // Options for setting maze.
-        maze = setMaze(6);
+        maze = setMaze(5);
         // 0 for TwoHalls.
         // 1 for SingleRoad.
         // 2 for ManyRoads.
@@ -78,9 +78,13 @@ public class Launcher {
         UserInput userInput = new PlayerControl();
 
         // Game logic
-        GameManager gameManager = new GameManager(maze, dataStructure);
+        GameManager gameManager = new GameManager(maze);
 
-        InputManager inputManager = new InputManager(gameManager.playerMovement, userInput);
+        // Set movement to MovableGameObjects
+        IMoverControlled mover = new MoveClockWise(maze);
+        InputManager inputManager = new InputManager(mover, userInput);
+        maze.getPlayer().setMover(mover);
+        setMoversToGhosts();
 
         // Setup scene and stage
         this.scene = setupScene(gui.getView().pane, userInput, gameManager, inputManager);
@@ -105,7 +109,6 @@ public class Launcher {
             @Override
             public void handle(KeyEvent event) {
                 inputManager.update(event.getCode());
-                //  gameManager.setDirection(userInput.getDirection(event.getCode()));
             }
         });
         return scene;
@@ -164,16 +167,23 @@ public class Launcher {
         return new DepthFirst();
     }
 
-    private void setupMoversWithEntities() {
+    private void setMoverToPlayer() {
+
+      //  if (maze.getPlayer().getMover() == null)
+      //  maze.getPlayer().setMover(mover);
+
+
+   //     IMover playerCrawler = new Crawler(maze, maze.getPlayer(), dataStructure);
+
+     //   player.setMover(playerMovement);
+
+
+
+    }
+
+    private void setMoversToGhosts(){
         List<GameObject> ghosts = maze.getGhosts();
         MovableEntity player = maze.getPlayer();
-
-        IMoverControlled playerMovement = new MoveClockWise(maze);
-        IMover playerCrawler = new Crawler(maze, maze.getPlayer(), dataStructure);
-
-        player.setMover(playerMovement);
-
-
         if (ghosts != null) {
             ((Ghost) ghosts.get(0)).setMover(
                     new Crawler(maze, (MovableEntity) ghosts.get(0), new Greedy(player.getPosition())));
@@ -183,7 +193,6 @@ public class Launcher {
                     new Crawler(maze, (MovableEntity) ghosts.get(2), new DepthFirst()));
             //todo call update on all movableEntities, than we are have at least the player to update.
             //todo update dataStructure to launcher and instantiate crawler their instead of inside the game manager
-
         }
     }
 

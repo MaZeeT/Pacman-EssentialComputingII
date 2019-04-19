@@ -7,8 +7,8 @@ import Maze.IMaze;
 import UserControl.UserInput;
 
 import java.util.*;
-//todo check javadoc for changes since the implementation of IMover interface
 
+//todo check javadoc for changes since the implementation of IMover interface
 /**
  * The purpose of this class is, to combine most of the components needed for the logic to work.
  * All the different types of {@link GameObject}s are access here.
@@ -21,52 +21,30 @@ public class GameManager {
 
     private List<GameObject> walls;
     private List<GameObject> wayPoints = new ArrayList<>();
-    private List<GameObject> snake = new ArrayList<>();
+    private List<GameObject> player = new ArrayList<>();
     private List<GameObject> ghosts;
 
-    public IMoverControlled playerMovement;
-    private IMover playerCrawler;
-
-    private boolean playerControlled = true;
-    private boolean ghostCanMove = true;
-
     /**
-     * Constructor of this class. It takes a {@link IMaze} and a {@link IDataStructure} as input.
+     * Constructor of this class. It takes a {@link IMaze} as input.
      *
-     * @param maze          The {@link IMaze} is used to access all the different {@link GameObject}s in the {@link IMaze}.
-     * @param dataStructure The {@link IDataStructure} is used to store each possible playerMovement, and returns the next move.
+     * @param maze The {@link IMaze} is used to access all the different {@link GameObject}s in the {@link IMaze}.
      */
-    public GameManager(IMaze maze, IDataStructure dataStructure) {
+    public GameManager(IMaze maze) {
         walls = maze.getWalls();
         ghosts = maze.getGhosts();
 
         MovableEntity player = maze.getPlayer();
-        snake.add(player);
+        this.player.add(player);
         wayPoints.add(maze.getWayPoint());
-
-//todo fix movableEntity
-        playerMovement = new MoveClockWise(maze);
-        playerCrawler = new Crawler(maze, maze.getPlayer(), dataStructure);
-        player.setMover(playerMovement);
-
-        if (ghosts != null) {
-            ((Ghost)ghosts.get(0)).setMover(
-                    new Crawler(maze, (MovableEntity) ghosts.get(0), new Greedy(player.getPosition())));
-            ((Ghost)ghosts.get(1)).setMover(
-                    new Crawler(maze, (MovableEntity) ghosts.get(1), new BreadthFirst()));
-            ((Ghost)ghosts.get(2)).setMover(
-                    new Crawler(maze, (MovableEntity) ghosts.get(2), new DepthFirst()));
-            //todo call update on all movableEntities, than we are have at least the player to update.
-            //todo update dataStructure to launcher and instantiate crawler their instead of inside the game manager
-        }
     }
 
     /**
      * The update method, which is called each update tick.
+     * Checks all {@link GameObject}s for the subtypes of {@link MovableEntity} and call update each.
      */
     public void update() {
-        for (GameObject gameObject : combineGameObjects()){
-            if (gameObject instanceof MovableEntity){
+        for (GameObject gameObject : combineGameObjects()) {
+            if (gameObject instanceof MovableEntity) {
                 ((MovableEntity) gameObject).update();
             }
         }
@@ -81,7 +59,7 @@ public class GameManager {
         List<GameObject> gameObjects = new ArrayList<>();
         gameObjects.addAll(wayPoints);
         gameObjects.addAll(walls);
-        gameObjects.addAll(snake);
+        gameObjects.addAll(player);
         if (ghosts != null) gameObjects.addAll(ghosts);
 
         return gameObjects;

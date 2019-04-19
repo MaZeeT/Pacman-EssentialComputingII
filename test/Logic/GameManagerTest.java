@@ -1,7 +1,5 @@
 package Logic;
 
-import DataStructures.DepthFirst;
-import DataStructures.IDataStructure;
 import Entities.GameObject;
 import Maze.ForkRoad;
 import Maze.IMaze;
@@ -20,8 +18,7 @@ public class GameManagerTest {
     @Before
     public void setUp() {
         IMaze maze = new ForkRoad();
-        IDataStructure dataStructure = new DepthFirst();
-        gameManager = new GameManager(maze, dataStructure);
+        gameManager = new GameManager(maze);
     }
 
     @Test
@@ -42,4 +39,5 @@ public class GameManagerTest {
         List<GameObject> actual = gameManager.getGameObjects();
         assertNotNull(actual);
     }
+
 }
