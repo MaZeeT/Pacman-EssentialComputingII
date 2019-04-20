@@ -19,7 +19,7 @@ public class GreedyTest extends DataStructuresTest{
     }
 
     @Test
-    public void checkNext() {
+    public void checkNextX1() {
         Position pos1 = new Position(1, 1);
         Position pos2 = new Position(2, 2);
         Position pos3 = new Position(3, 3);
@@ -33,7 +33,7 @@ public class GreedyTest extends DataStructuresTest{
     }
 
     @Test
-    public void checkNext2() {
+    public void checkNextX3() {
         Position pos1 = new Position(1, 1);
         Position pos2 = new Position(2, 2);
         Position pos3 = new Position(3, 3);
@@ -48,7 +48,7 @@ public class GreedyTest extends DataStructuresTest{
     }
 
     @Test
-    public void getNext() {
+    public void getNextX1() {
         Position pos1 = new Position(1, 1);
         Position pos2 = new Position(2, 2);
         Position pos3 = new Position(3, 3);
@@ -62,7 +62,7 @@ public class GreedyTest extends DataStructuresTest{
     }
 
     @Test
-    public void getNext2() {
+    public void getNextX3() {
         Position pos1 = new Position(1, 1);
         Position pos2 = new Position(2, 2);
         Position pos3 = new Position(3, 3);
