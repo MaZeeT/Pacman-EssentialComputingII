@@ -4,8 +4,6 @@ import Movement.IMover;
 import Movement.IMoverControlled;
 import javafx.scene.input.KeyCode;
 
-//todo make tests
-
 /**
  * The purpose of this class is to connect {@link UserInput} with {@link IMover}s
  * that implements the {@link IMoverControlled} interface.
@@ -19,11 +17,12 @@ public class InputManager {
     private UserInput userInput;
     private char direction;
 
-    //todo javaDoc
-
     /**
-     * @param mover
-     * @param userInput
+     * Constructor of the InputManager.
+     * Takes a {@link IMover} and a {@link UserInput} object, to get input from one and set it in the other object.
+     *
+     * @param mover     The object that need to have the direction set.
+     * @param userInput The object the directions is got from.
      */
     public InputManager(IMover mover, UserInput userInput) {
         this.mover = mover;
@@ -31,10 +30,13 @@ public class InputManager {
     }
 
     //todo look into removing keyCodes
-    //todo javaDoc
 
     /**
-     * @param keyCode
+     * Update the direction of a {@link IMover} implementing the {@link IMoverControlled} interface,
+     * else nothing is done.
+     *
+     * @param keyCode The keyCode that define the raw input which is converted to fit
+     *                the program in the classes implementing the {@link UserInput} interface.
      */
     public void update(KeyCode keyCode) {
         if (mover instanceof IMoverControlled) {
