@@ -1,7 +1,7 @@
 package Maze;
 
 /**
- * The purpose of this class is to add a PacMan maze //todo extend text
+ * The purpose of this class is to add a PacMan maze, with a few {@link Entities.Ghost}s and a {@link Entities.Player}
  *
  * @author MaZeeT
  */

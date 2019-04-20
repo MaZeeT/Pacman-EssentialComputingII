@@ -18,7 +18,7 @@ public class MoveClockWiseTest {
     public void setUp() {
         IMaze maze = new TwoHalls(10, 10);
         player = maze.getPlayer();
-        movement = new MoveClockWise(maze);
+        movement = new MoveClockWise(maze, maze.getPlayer());
     }
 
     @Test

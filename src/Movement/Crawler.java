@@ -7,10 +7,10 @@ import Maze.IMaze;
 import javafx.scene.paint.Color;
 
 import java.util.List;
-//todo check javadoc for changes since the implementation of IMover interface
+
 /**
- * The purpose of this class is to be enable the {@link Player} to crawl around in a given {@link Maze.Maze}.
- * This is done by storing each possible steps in a data structure and make a decision about which step to take next.
+ * The purpose of this class is to be enable a {@link MovableEntity} to crawl around in a given {@link IMaze}.
+ * This is done by storing each possible steps in a {@link IDataStructure} which makes the decision about where to step next.
  * This {@link Crawler} works with dataStructures that implements the {@link IDataStructure} interface.
  * The {@link DataStructures.DepthFirst} dataStructure will give a depth first approach.
  * The {@link DataStructures.BreadthFirst} dataStructure will give a Breadth first approach.
@@ -27,12 +27,12 @@ public class Crawler implements IMover {
 
     /**
      * The constructor of the {@link Crawler} class.
-     * This take a {@link Maze.Maze} and a dataStructure as an input,
-     * and links some of the objects inside the {@link Maze.Maze} to some of the private variables of this class.
+     * This take a {@link IMaze}, a {@link MovableEntity} and a {@link IDataStructure} as an input,
+     * and connect some of the private variables to different Lists from the {@link IMaze}.
      *
-     * @param maze          The {@link Maze.Maze} where the {@link Crawler} will move in.
+     * @param maze          The {@link IMaze} where the {@link Crawler} will move in.
      * @param EntityToMove  The {@link MovableEntity} that the {@link Crawler} will move around.
-     * @param dataStructure The dataStructure that will hold the {@link Position}s the {@link Crawler} will move to.
+     * @param dataStructure The {@link IDataStructure} that will hold the {@link Position}s the {@link Crawler} will move around to.
      */
     public Crawler(IMaze maze, MovableEntity EntityToMove, IDataStructure dataStructure) {
         this.movableEntity = EntityToMove;
@@ -41,11 +41,12 @@ public class Crawler implements IMover {
         this.dataStructure = dataStructure;
     }
 
+    //todo check text around visited walls.
     /**
-     * This function is called on each move "tick".
-     * First the {@link Position} of the {@link Player} is added as a visited wall,
-     * and nearby positions of the {@link Player} is checked and added to the dataStructure.
-     * If the dataStructure is not empty, the {@link Player}'s position will be checked to the next in the dataStructure.
+     * This method is called on each move "tick".
+     * First the {@link Position} of the {@link MovableEntity} is added as a visited wall,
+     * and nearby positions of the {@link MovableEntity} is checked and added to the dataStructure.
+     * If the dataStructure is not empty, the {@link MovableEntity}'s position will be checked to the next in the dataStructure.
      */
     @Override
     public void move() {
@@ -56,6 +57,7 @@ public class Crawler implements IMover {
         }
     }
 
+    //todo this have never worked, make it working or remove.
     /**
      * Instantiate a new {@link Wall} object, set the color to YELLOW and return the new {@link Wall} object.
      *

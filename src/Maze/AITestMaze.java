@@ -1,6 +1,8 @@
 package Maze;
 
-//TODO javadoc
+/**
+ * The purpose of this class is to define a maze to highlight some of the flaws with the different path finding algorithms
+ */
 public class AITestMaze extends MazeArrayBased {
 
     /**

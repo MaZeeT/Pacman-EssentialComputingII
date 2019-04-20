@@ -158,8 +158,7 @@ public class Launcher {
      */
     private IMover setPlayerMovement(int index) {
         if (index == 0) {
-
-            return new MoveClockWise(maze);
+            return new MoveClockWise(maze, maze.getPlayer());
         }
 
         IDataStructure dataStructure = new DepthFirst(); //Default data
@@ -170,8 +169,10 @@ public class Launcher {
         return new Crawler(maze, maze.getPlayer(), dataStructure);
     }
 
-
-    //todo write javaDoc
+    /**
+     * This method connects the {@link Entities.Ghost}s in the maze to {@link IMover}s
+     * where a {@link IDataStructure} need to be specified to dictate behaviour.
+     */
     private void setupMoversToGhosts() {
         List<GameObject> ghosts = maze.getGhosts();
         MovableEntity player = maze.getPlayer();

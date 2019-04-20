@@ -3,29 +3,29 @@ package Movement;
 import Components.Position;
 import Entities.GameObject;
 import Entities.MovableEntity;
-import Entities.Player;
 import Maze.IMaze;
 
 import java.util.List;
-//todo check javadoc for changes since the implementation of IMover interface
+
 /**
- * The purpose of this class is it enable user controlled inputs.
- * This class get direction inputs as chars, and move the {@link Player} accordingly.
+ * The purpose of this class is to define a implementation of the {@link IMoverControlled} interface which enable user controlled inputs.
+ * By implementing the {@link IMoverControlled} interface a {@link IMover} can be controlled if a input is given.
+ * This class get direction inputs as chars, and move the {@link MovableEntity} accordingly.
  *
  * @author MaZeeT
  */
 public class MoveClockWise implements IMover, IMoverControlled {
     private char dir;
-    private MovableEntity player;
+    private MovableEntity movableEntity;
     private List<Position> walls;
 
     /**
-     * Constructor for this class. It needs a maze to know where the {@link GameObject}s and the {@link Player} are.
+     * Constructor for this class. It needs a maze to know where the {@link GameObject}s and the {@link MovableEntity} are.
      *
-     * @param maze The {@link IMaze} which need to have a user controlled {@link Player}.
+     * @param maze The {@link IMaze} which need to have a user controlled {@link MovableEntity}.
      */
-    public MoveClockWise(IMaze maze) {
-        this.player = maze.getPlayer();
+    public MoveClockWise(IMaze maze, MovableEntity movableEntity) {
+        this.movableEntity = movableEntity;
         this.walls = maze.getMazePositions();
     }
 
@@ -34,7 +34,7 @@ public class MoveClockWise implements IMover, IMoverControlled {
      */
     @Override
     public void move() {
-        movement(player);
+        movement(movableEntity);
     }
 
     /**
@@ -54,47 +54,47 @@ public class MoveClockWise implements IMover, IMoverControlled {
     }
 
     /**
-     * This method controls the movement of the {@link Player}.
-     * If the {@link Player} collides he will change direction clock wise.
+     * This method controls the movement of the {@link MovableEntity}.
+     * If the {@link MovableEntity} collides it will change direction clock wise.
      * If not the {@link Position} will be move to a step in the given direction.
      *
-     * @param player The {@link Player} that is moving.
+     * @param movableEntity The {@link MovableEntity} that is moving.
      */
-    private void movement(MovableEntity player) {
+    private void movement(MovableEntity movableEntity) {
         switch (dir) {
             case 'w':
-                if (collideWith(walls, player.checkUp())) {
+                if (collideWith(walls, movableEntity.checkUp())) {
                     dir = 'd';
-                    movement(player);
+                    movement(movableEntity);
                 } else {
-                    player.moveUp();
+                    movableEntity.moveUp();
                 }
                 break;
 
             case 's':
-                if (collideWith(walls, player.checkDown())) {
+                if (collideWith(walls, movableEntity.checkDown())) {
                     dir = 'a';
-                    movement(player);
+                    movement(movableEntity);
                 } else {
-                    player.moveDown();
+                    movableEntity.moveDown();
                 }
                 break;
 
             case 'a':
-                if (collideWith(walls, player.checkLeft())) {
+                if (collideWith(walls, movableEntity.checkLeft())) {
                     dir = 'w';
-                    movement(player);
+                    movement(movableEntity);
                 } else {
-                    player.moveLeft();
+                    movableEntity.moveLeft();
                 }
                 break;
 
             case 'd':
-                if (collideWith(walls, player.checkRight())) {
+                if (collideWith(walls, movableEntity.checkRight())) {
                     dir = 's';
-                    movement(player);
+                    movement(movableEntity);
                 } else {
-                    player.moveRight();
+                    movableEntity.moveRight();
                 }
                 break;
         }
@@ -110,4 +110,5 @@ public class MoveClockWise implements IMover, IMoverControlled {
     private boolean collideWith(List<Position> walls, Position position) {
         return walls.contains(position);
     }
+
 }

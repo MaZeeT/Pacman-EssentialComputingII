@@ -1,7 +1,8 @@
 package Movement;
 
 /**
- * //todo javaDoc
+ * The purpose of this interface is to define two methods to which enable control of a
+ * {@link Entities.MovableEntity} which have a {@link IMover} that implement this interface.
  *
  * @author MaZeeT
  */

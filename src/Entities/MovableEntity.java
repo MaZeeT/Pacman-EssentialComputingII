@@ -3,7 +3,15 @@ package Entities;
 import Components.Position;
 import Movement.IMover;
 
-//todo javaDoc
+/**
+ * The purpose of this class is to enable {@link GameObject}s to enable move around.
+ * This is done by having a set of methods that check if the next intended move is possible,
+ * and a set of methods that actually perform the movement.
+ * To be able to move, a {@link IMover} need to handle where to move next.
+ * So the class also contains a few methods to interact with the {@link IMover}.
+ *
+ * @author MaZeeT
+ */
 public abstract class MovableEntity extends GameObject {
 
     IMover mover;
