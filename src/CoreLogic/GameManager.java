@@ -1,19 +1,13 @@
 package CoreLogic;
 
-import DataStructures.*;
 import Entities.*;
-import Movement.*;//todo remove when rewritten the class javaDoc
 import Maze.IMaze;
-import UserControl.UserInput;
 
 import java.util.*;
 
-//todo check javadoc for changes since the implementation of IMover interface
 /**
- * The purpose of this class is, to combine most of the components needed for the logic to work.
- * All the different types of {@link GameObject}s are access here.
- * The {@link Crawler} is combined with the {@link IMaze} and {@link IDataStructure}.
- * It is also possible to disable the {@link Crawler} to control with {@link UserInput} instead.
+ * The purpose of this class is, to combine most of the program specific logic.
+ * All the different types of {@link GameObject}s are updated and past around from this class.
  *
  * @author MaZeeT
  */
