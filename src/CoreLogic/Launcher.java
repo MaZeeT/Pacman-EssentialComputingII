@@ -91,8 +91,8 @@ public class Launcher {
         updateProcess.start();
     }
 
+    //todo update javaDoc
     /**
-     * //todo update javaDoc
      * Setup a scene with a pane from the {@link IGUI} and bridges the {@link UserInput} with the direction in the {@link GameManager}.
      *
      * @param pane        The given pane that will render the objects of the {@link GameManager}.
@@ -183,8 +183,6 @@ public class Launcher {
                     new Crawler(maze, (MovableEntity) ghosts.get(1), new BreadthFirst()));
             ((MovableEntity) ghosts.get(2)).setMover(
                     new Crawler(maze, (MovableEntity) ghosts.get(2), new DepthFirst()));
-            //todo call update on all movableEntities, than we are have at least the player to update.
-            //todo update dataStructure to launcher and instantiate crawler their instead of inside the game manager
         }
     }
 
