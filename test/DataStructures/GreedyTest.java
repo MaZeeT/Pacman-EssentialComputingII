@@ -10,8 +10,6 @@ public class GreedyTest extends DataStructuresTest{
 
     private Position target;
 
-    //TODO look into tests with the target in between the different points.
-
     @Before
     public void setUp(){
         target = new Position(9,9); // move this position to 2,2 to break the tests.
@@ -70,6 +68,22 @@ public class GreedyTest extends DataStructuresTest{
         dataStructure.add(pos2);
         dataStructure.add(pos3);
         dataStructure.getNext();
+        dataStructure.getNext();
+
+        Position actual = dataStructure.getNext();
+        Position expected = pos1;
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void getNextX2ScrambledPositions() {
+        dataStructure = new Greedy(new Position(4,3));
+        Position pos1 = new Position(1, 1);
+        Position pos2 = new Position(2, 8);
+        Position pos3 = new Position(7, 3);
+        dataStructure.add(pos1);
+        dataStructure.add(pos2);
+        dataStructure.add(pos3);
         dataStructure.getNext();
 
         Position actual = dataStructure.getNext();
