@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 //todo javaDoc
-public class Tree<T extends Comparable> {
+public class Tree<T> {
 
     private Node<T> root;
     private int size;
@@ -64,7 +64,7 @@ public class Tree<T extends Comparable> {
     public List<T> getAllParents(T item) {
         List<T> list = new ArrayList<>();
         Node<T> child = find(item, root);
-        if (child != null){
+        if (child != null) {
             boolean getNextParent = true;
             while (getNextParent) {
                 list.add(child.contain);
@@ -80,19 +80,19 @@ public class Tree<T extends Comparable> {
 
 }
 
-class Node<T extends Comparable> {
+class Node<T> {
 
-     T contain;
-     Node<T> parent;
-     List<Node<T>> children;
+    T contain;
+    Node<T> parent;
+    List<Node<T>> children;
 
-     Node(T contain, Node<T> parent) {
+    Node(T contain, Node<T> parent) {
         this.contain = contain;
         this.parent = parent;
         children = new ArrayList<>();
     }
 
-     void addChild(Node<T> child){
+    void addChild(Node<T> child) {
         this.children.add(child);
         child.parent = this;
     }
