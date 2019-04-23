@@ -1,6 +1,8 @@
-package WorkInProgress.Nodes;
+package WorkInProgress.Deletables;
 
-public class NodeX<T> extends Node<T> {
+import WorkInProgress.Nodes.Node;
+
+public class NodeX<T extends Comparable> extends Node<T> {
     private Node<T>[] branches;
 
     private NodeX(T contain, NodeX<T> parent, int NodeAmount) {

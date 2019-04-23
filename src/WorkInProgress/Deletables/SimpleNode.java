@@ -1,4 +1,4 @@
-package WorkInProgress.Nodes;
+package WorkInProgress.Deletables;
 
 public class SimpleNode<T> {
 
