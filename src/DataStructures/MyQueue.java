@@ -10,7 +10,7 @@ import java.util.Queue;
  * @param <T> The type which the {@link Queue} should contain.
  * @author MaZeeT
  */
-class MyQueue<T> extends DataStructure<T> {
+public class MyQueue<T> extends DataStructure<T> {
     private Queue<T> queue = new LinkedList<>();
 
     /**
@@ -41,7 +41,7 @@ class MyQueue<T> extends DataStructure<T> {
      * {@inheritDoc}
      */
     @Override
-    boolean isEmpty() {
+   public boolean isEmpty() {
         return queue.isEmpty();
     }
 

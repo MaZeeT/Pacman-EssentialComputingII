@@ -89,6 +89,6 @@ public abstract class DataStructure<T> {
      *
      * @return Return true if the {@link java.util.Collection} is empty, and false if not.
      */
-    abstract boolean isEmpty();
+    public abstract boolean isEmpty();
 
 }

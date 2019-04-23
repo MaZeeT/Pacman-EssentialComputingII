@@ -9,7 +9,7 @@ import java.util.Stack;
  * @param <T> The type which the {@link Stack} should contain.
  * @author MaZeeT
  */
-class MyStack<T> extends DataStructure<T> {
+public class MyStack<T> extends DataStructure<T> {
     private Stack<T> stack = new Stack<>();
 
     /**
@@ -40,7 +40,7 @@ class MyStack<T> extends DataStructure<T> {
      * {@inheritDoc}
      */
     @Override
-    boolean isEmpty() {
+   public boolean isEmpty() {
         return stack.empty();
     }
 
