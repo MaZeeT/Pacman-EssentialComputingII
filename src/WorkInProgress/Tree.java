@@ -34,46 +34,37 @@ public class Tree<T extends Comparable> {
         return null; //failed to find item in tree
     }
 
-    private Node<T> findNode(Node<T> node) {    //todo quick copy-paste, needs review
-        if (root.contain == node.contain) {
-            return root;
-        } else {
-            if (root.children != null) {
-                for (Node<T> child : root.children) {
-                    Node<T> rtn = find(node.contain, child);
-                    if (rtn != null) {
-                        return rtn;
-                    }
-                }
-            }
-        }
-        return null; //failed to find item in tree
-    }
-
-    public void add(Node<T> parent, Node<T> child) {
-        find(parent.contain, root); //todo feel like this need to be T item and not Node parent
-        // find.parent
-        parent.addChild(child);
-    }
-
     public boolean add(T item) {
+        return add(null, item);
+    }
+
+    public boolean add(T parentItem, T childItem) {
         if (root == null) {
-            root = new Node<>(item, null);
+            root = new Node<>(childItem, null);
             size++;
             return true;
-        } else {
-            return add(item, root);
-            //add childNode.to.arrayOfNodes
-            //node.addNode(item,null)
         }
+        // adds the childItem if it isn't already in the tree.
+        if (!contain(childItem)) {
+            Node<T> parent = find(parentItem, root);
+            if (parent != null) {
+                Node<T> child = new Node<>(childItem, parent);
+                parent.addChild(child);
+                size++;
+                return true;
+            }
+        }
+        return false;
     }
 
     private boolean add(T item, Node<T> node) {
+        // if (node.children != null) {
         for (Node<T> child : node.children) {   //nullPointer in test
             if (child.contain == item) {
                 System.out.println("?"); //todo fix
             }
         }
+        // }
         if (item.equals(node.contain)) {    //todo need a closer look
             node.addChild(new Node<>(item, node));
             return true;

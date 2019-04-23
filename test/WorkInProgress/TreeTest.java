@@ -74,7 +74,7 @@ public class TreeTest {
 
     @Test
     public void findNotInTree() {
-        tree.add(3);
+        tree.add(null,3);
 
         boolean actual = tree.contain(5);
         boolean expected = false;
@@ -107,5 +107,51 @@ public class TreeTest {
         boolean expected = true;
         assertEquals(expected, actual);
     }
+
+    @Test
+    public void containInTreeOfSize1True() {
+        int i = 32;
+        tree.add(i);
+
+        boolean actual = tree.contain(i);
+        boolean expected = true;
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void containInTreeOfSize1False() {
+        int i = 32;
+        tree.add(i+1);
+
+        boolean actual = tree.contain(i);
+        boolean expected = false;
+        assertEquals(expected, actual);
+    }
+
+
+    @Test
+    public void containInTreeOfSize10True() {
+        int i = 32;
+        for (int j = -5; j < 10; j++){
+            tree.add(i+j);
+        }
+
+        boolean actual = tree.contain(i);
+        boolean expected = true;
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void containInTreeOfSize15False() {
+        int i = 32;
+        for (int j = -5; j < 10; j++){
+            tree.add(i+j);
+        }
+//todo should fail at this moment
+        boolean actual = tree.contain(i);
+        boolean expected = false;
+        assertEquals(expected, actual);
+    }
+
 
 }

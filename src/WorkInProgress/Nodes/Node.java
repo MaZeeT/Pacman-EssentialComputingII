@@ -1,5 +1,6 @@
 package WorkInProgress.Nodes;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Node<T extends Comparable> {
@@ -11,6 +12,7 @@ public class Node<T extends Comparable> {
     public Node(T contain, Node<T> parent) {
         this.contain = contain;
         this.parent = parent;
+        children = new ArrayList<>();
     }
 
     public void addChild(Node<T> child){
