@@ -4,13 +4,9 @@
     <option name="ANALYZE_TEST_SOURCES" value="false" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="added javaDoc primarily to the Tree class">
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="first non-functional draft of the Shortest Path Tree Mover">
+      <change afterPath="$PROJECT_DIR$/test/DataStructures/MyQueueStackTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataStructures/DataStructure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataStructures/DataStructure.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataStructures/MyQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataStructures/MyQueue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataStructures/MyStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataStructures/MyStack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WorkInProgress/ShortestTree.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WorkInProgress/TreeClimber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorkInProgress/ShortestPathTree.java" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -84,6 +80,9 @@
       <FILTER>SnakeMaze.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/snakeFX$All_in_snakeFX.ic" NAME="All in snakeFX Coverage Results" MODIFIED="1555541249442" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Pacman_EssentialComputingII$MyQueueStackTest.ic" NAME="MyQueueStackTest Coverage Results" MODIFIED="1556055867776" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>DataStructures.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/Pacman_EssentialComputingII$GhostTest_and_1_more.ic" NAME="GhostTest and 1 more Coverage Results" MODIFIED="1555410046249" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>Entities.*</FILTER>
     </SUITE>
@@ -149,11 +148,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/WorkInProgress/ShortestPathTree.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="493">
-              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+              <caret line="29" selection-start-line="29" selection-end-line="29" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1418#1419#0" expanded="true" />
@@ -167,7 +166,7 @@
         <entry file="file://$PROJECT_DIR$/src/Entities/IEntities.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="272">
-              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
             </state>
           </provider>
         </entry>
@@ -175,65 +174,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/DataStructures/DataStructure.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="341">
-              <caret line="85" lean-forward="true" selection-start-line="85" selection-end-line="85" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Entities/MovableEntity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-731">
-              <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/WorkInProgress/Tree.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="135" column="15" lean-forward="true" selection-start-line="135" selection-end-line="135" selection-end-column="15" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Entities/Player.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="239">
-              <caret line="23" column="7" lean-forward="true" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Entities/Ghost.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="31" lean-forward="true" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Entities/GameObject.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-237">
-              <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+            <state relative-caret-position="85">
+              <caret line="6" column="55" lean-forward="true" selection-start-line="6" selection-start-column="55" selection-end-line="6" selection-end-column="55" />
             </state>
           </provider>
         </entry>
@@ -241,8 +183,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/DataStructures/MyQueue.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
-              <caret line="43" column="3" selection-start-line="43" selection-start-column="3" selection-end-line="43" selection-end-column="3" />
+            <state relative-caret-position="409">
+              <caret line="32" column="20" lean-forward="true" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
               <folding>
                 <element signature="e#836#837#0" expanded="true" />
                 <element signature="e#874#875#0" expanded="true" />
@@ -252,10 +194,59 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/DataStructures/BreadthFirstTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="459">
+              <caret line="33" column="43" lean-forward="true" selection-start-line="33" selection-start-column="43" selection-end-line="33" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/DataStructures/DepthFirstTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-373">
+              <caret line="24" selection-start-line="24" selection-end-line="26" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/DataStructures/DataStructuresTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="41" column="5" lean-forward="true" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/DataStructures/MyQueueStackTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="19" column="29" lean-forward="true" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/DataStructures/GreedyTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="15" column="20" lean-forward="true" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/DataStructures/MyStack.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="52">
-              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+            <state relative-caret-position="427">
+              <caret line="42" column="9" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="9" />
+              <folding>
+                <element signature="e#800#801#0" expanded="true" />
+                <element signature="e#836#837#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -300,9 +291,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/test/Logic/Crawler/MoveClockWiseTest.java" />
-        <option value="$PROJECT_DIR$/src/Entities/WayPoint.java" />
-        <option value="$PROJECT_DIR$/src/DataStructures/Greedy.java" />
         <option value="$PROJECT_DIR$/src/WorkInProgress/Nodes/Node2.java" />
         <option value="$PROJECT_DIR$/test/Movement/CrawlerTest.java" />
         <option value="$PROJECT_DIR$/src/Maze/IMaze.java" />
@@ -347,10 +335,13 @@
         <option value="$PROJECT_DIR$/src/Movement/MoveClockWise.java" />
         <option value="$PROJECT_DIR$/src/CoreLogic/Launcher.java" />
         <option value="$PROJECT_DIR$/src/WorkInProgress/TreeClimber.java" />
-        <option value="$PROJECT_DIR$/src/DataStructures/MyStack.java" />
-        <option value="$PROJECT_DIR$/src/DataStructures/MyQueue.java" />
         <option value="$PROJECT_DIR$/src/DataStructures/DataStructure.java" />
         <option value="$PROJECT_DIR$/src/WorkInProgress/ShortestPathTree.java" />
+        <option value="$PROJECT_DIR$/src/DataStructures/MyStack.java" />
+        <option value="$PROJECT_DIR$/src/DataStructures/MyQueue.java" />
+        <option value="$PROJECT_DIR$/test/DataStructures/DataStructuresTest.java" />
+        <option value="$PROJECT_DIR$/test/DataStructures/BreadthFirstTest.java" />
+        <option value="$PROJECT_DIR$/test/DataStructures/MyQueueStackTest.java" />
       </list>
     </option>
   </component>
@@ -381,12 +372,6 @@
               <item name="Pacman-EssentialComputingII" type="b2602c69:ProjectViewProjectNode" />
               <item name="Pacman-EssentialComputingII" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Pacman-EssentialComputingII" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Pacman-EssentialComputingII" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Components" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Pacman-EssentialComputingII" type="b2602c69:ProjectViewProjectNode" />
@@ -435,6 +420,12 @@
               <item name="Pacman-EssentialComputingII" type="b2602c69:ProjectViewProjectNode" />
               <item name="Pacman-EssentialComputingII" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="DataStructures" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Pacman-EssentialComputingII" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Pacman-EssentialComputingII" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="UserControl" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -467,7 +458,7 @@
     <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556055141096" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556055930453" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="dynamic.classpath" value="false" />
@@ -503,10 +494,10 @@
       <recent name="" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="DataStructures" />
       <recent name="WorkInProgress" />
       <recent name="Entities" />
       <recent name="Maze" />
-      <recent name="DataStructures" />
       <recent name="SnakeDataStructures" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
@@ -525,7 +516,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.All in snakeFX">
+  <component name="RunManager" selected="JUnit.MyQueueStackTest">
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="" />
       <option name="DEPLOY" value="true" />
@@ -661,17 +652,60 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TreeTestIntegers.getAllParents" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BreadthFirstTest and 2 more" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="snakeFX" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="WorkInProgress.*" />
+          <option name="PATTERN" value="DataStructures.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="WorkInProgress" />
-      <option name="MAIN_CLASS_NAME" value="WorkInProgress.TreeTestIntegers" />
-      <option name="METHOD_NAME" value="getAllParents" />
+      <option name="PACKAGE_NAME" value="DataStructures" />
+      <option name="MAIN_CLASS_NAME" value="DataStructures.DataStructuresTest" />
+      <option name="TEST_OBJECT" value="pattern" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <patterns>
+        <pattern testClass="DataStructures.BreadthFirstTest" />
+        <pattern testClass="DataStructures.DepthFirstTest" />
+        <pattern testClass="DataStructures.GreedyTest" />
+      </patterns>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MyQueueStackTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="snakeFX" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="DataStructures.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="DataStructures" />
+      <option name="MAIN_CLASS_NAME" value="DataStructures.MyQueueStackTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MyQueueStackTest.isEmptyFalse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="snakeFX" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="DataStructures.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="DataStructures" />
+      <option name="MAIN_CLASS_NAME" value="DataStructures.MyQueueStackTest" />
+      <option name="METHOD_NAME" value="isEmptyFalse" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="TEST_SEARCH_SCOPE">
@@ -681,17 +715,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TreeTestIntegers.getAllParentsChildNotInTree" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MyQueueStackTest.isEmptyTrue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="snakeFX" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="WorkInProgress.*" />
+          <option name="PATTERN" value="DataStructures.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="WorkInProgress" />
-      <option name="MAIN_CLASS_NAME" value="WorkInProgress.TreeTestIntegers" />
-      <option name="METHOD_NAME" value="getAllParentsChildNotInTree" />
+      <option name="PACKAGE_NAME" value="DataStructures" />
+      <option name="MAIN_CLASS_NAME" value="DataStructures.MyQueueStackTest" />
+      <option name="METHOD_NAME" value="isEmptyTrue" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="TEST_SEARCH_SCOPE">
@@ -701,57 +735,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TreeTestStrings.containInTreeOfSize10True" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MyQueueStackTest.isEmptyTrueAfterNotEmpty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="snakeFX" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="WorkInProgress.*" />
+          <option name="PATTERN" value="DataStructures.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="WorkInProgress" />
-      <option name="MAIN_CLASS_NAME" value="WorkInProgress.TreeTestStrings" />
-      <option name="METHOD_NAME" value="containInTreeOfSize10True" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TreeTestStrings.getAllParents" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="snakeFX" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="WorkInProgress.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="WorkInProgress" />
-      <option name="MAIN_CLASS_NAME" value="WorkInProgress.TreeTestStrings" />
-      <option name="METHOD_NAME" value="getAllParents" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TreeTestStrings.getAllParentsChildNotInTree" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="snakeFX" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="WorkInProgress.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="WorkInProgress" />
-      <option name="MAIN_CLASS_NAME" value="WorkInProgress.TreeTestStrings" />
-      <option name="METHOD_NAME" value="getAllParentsChildNotInTree" />
+      <option name="PACKAGE_NAME" value="DataStructures" />
+      <option name="MAIN_CLASS_NAME" value="DataStructures.MyQueueStackTest" />
+      <option name="METHOD_NAME" value="isEmptyTrueAfterNotEmpty" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="TEST_SEARCH_SCOPE">
@@ -838,19 +832,19 @@
     <list>
       <item itemvalue="Application.Main" />
       <item itemvalue="JUnit.All in snakeFX" />
-      <item itemvalue="JUnit.TreeTestStrings.containInTreeOfSize10True" />
-      <item itemvalue="JUnit.TreeTestIntegers.getAllParents" />
-      <item itemvalue="JUnit.TreeTestStrings.getAllParents" />
-      <item itemvalue="JUnit.TreeTestStrings.getAllParentsChildNotInTree" />
-      <item itemvalue="JUnit.TreeTestIntegers.getAllParentsChildNotInTree" />
+      <item itemvalue="JUnit.BreadthFirstTest and 2 more" />
+      <item itemvalue="JUnit.MyQueueStackTest" />
+      <item itemvalue="JUnit.MyQueueStackTest.isEmptyTrue" />
+      <item itemvalue="JUnit.MyQueueStackTest.isEmptyFalse" />
+      <item itemvalue="JUnit.MyQueueStackTest.isEmptyTrueAfterNotEmpty" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TreeTestIntegers.getAllParentsChildNotInTree" />
-        <item itemvalue="JUnit.TreeTestStrings.getAllParentsChildNotInTree" />
-        <item itemvalue="JUnit.TreeTestStrings.getAllParents" />
-        <item itemvalue="JUnit.TreeTestIntegers.getAllParents" />
-        <item itemvalue="JUnit.TreeTestStrings.containInTreeOfSize10True" />
+        <item itemvalue="JUnit.MyQueueStackTest" />
+        <item itemvalue="JUnit.MyQueueStackTest.isEmptyTrue" />
+        <item itemvalue="JUnit.MyQueueStackTest.isEmptyTrueAfterNotEmpty" />
+        <item itemvalue="JUnit.MyQueueStackTest.isEmptyFalse" />
+        <item itemvalue="JUnit.BreadthFirstTest and 2 more" />
       </list>
     </recent_temporary>
   </component>
@@ -929,21 +923,7 @@
       <workItem from="1555874394881" duration="4147000" />
       <workItem from="1555925979706" duration="244000" />
       <workItem from="1555951553020" duration="6338000" />
-      <workItem from="1556011216384" duration="33031000" />
-    </task>
-    <task id="LOCAL-00117" summary="removed cast method in greedy dataStructure">
-      <created>1554013973983</created>
-      <option name="number" value="00117" />
-      <option name="presentableId" value="LOCAL-00117" />
-      <option name="project" value="LOCAL" />
-      <updated>1554013973983</updated>
-    </task>
-    <task id="LOCAL-00118" summary="moved launching variables from main to the launcher class">
-      <created>1554045276294</created>
-      <option name="number" value="00118" />
-      <option name="presentableId" value="LOCAL-00118" />
-      <option name="project" value="LOCAL" />
-      <updated>1554045276294</updated>
+      <workItem from="1556011216384" duration="33706000" />
     </task>
     <task id="LOCAL-00119" summary="rearranged a few method calls in MazeObj">
       <created>1554046292499</created>
@@ -1274,19 +1254,24 @@
       <option name="project" value="LOCAL" />
       <updated>1556052775020</updated>
     </task>
-    <option name="localTasksCounter" value="166" />
+    <task id="LOCAL-00166" summary="Update to DataStructure and child classes to make them public and isEmpty() public">
+      <created>1556055177815</created>
+      <option name="number" value="00166" />
+      <option name="presentableId" value="LOCAL-00166" />
+      <option name="project" value="LOCAL" />
+      <updated>1556055177815</updated>
+    </task>
+    <task id="LOCAL-00167" summary="first non-functional draft of the Shortest Path Tree Mover">
+      <created>1556055216818</created>
+      <option name="number" value="00167" />
+      <option name="presentableId" value="LOCAL-00167" />
+      <option name="project" value="LOCAL" />
+      <updated>1556055216818</updated>
+    </task>
+    <option name="localTasksCounter" value="168" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TreeTestIntegers_getAllParentsChildNotInTree - 2019.04.23 at 21h 26m 43s.xml">
-      <configuration name="TreeTestIntegers.getAllParentsChildNotInTree" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_snakeFX - 2019.04.23 at 21h 27m 05s.xml">
-      <configuration name="All in snakeFX" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_snakeFX - 2019.04.23 at 21h 28m 10s.xml">
-      <configuration name="All in snakeFX" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="All_in_snakeFX - 2019.04.23 at 21h 33m 27s.xml">
       <configuration name="All in snakeFX" configurationId="JUnit" />
     </history-entry>
@@ -1308,9 +1293,18 @@
     <history-entry file="All_in_snakeFX - 2019.04.23 at 22h 50m 50s.xml">
       <configuration name="All in snakeFX" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="All_in_snakeFX - 2019.04.23 at 23h 31m 28s.xml">
+      <configuration name="All in snakeFX" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_snakeFX - 2019.04.23 at 23h 31m 50s.xml">
+      <configuration name="All in snakeFX" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BreadthFirstTest_and_2_more - 2019.04.23 at 23h 39m 02s.xml">
+      <configuration name="BreadthFirstTest and 2 more" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="452976000" />
+    <option name="totallyTimeSpent" value="453651000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1381,8 +1375,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Included IMover in the MovableEntities" />
-    <MESSAGE value="correcting comments" />
     <MESSAGE value="changed the GameManager class to enable each MovableEntities to have an independent Mover" />
     <MESSAGE value="renamed UserInput" />
     <MESSAGE value=" Added the InputManager Class" />
@@ -1406,7 +1398,9 @@
     <MESSAGE value="tree v1.0 with inner Node class" />
     <MESSAGE value="removed Comparable requirement since it wasn't used" />
     <MESSAGE value="added javaDoc primarily to the Tree class" />
-    <option name="LAST_COMMIT_MESSAGE" value="added javaDoc primarily to the Tree class" />
+    <MESSAGE value="Update to DataStructure and child classes to make them public and isEmpty() public" />
+    <MESSAGE value="first non-functional draft of the Shortest Path Tree Mover" />
+    <option name="LAST_COMMIT_MESSAGE" value="first non-functional draft of the Shortest Path Tree Mover" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -1439,23 +1433,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/test/Entities/GhostTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="35" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/View.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="22" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/Entities/MovableEntityTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2092">
@@ -1574,13 +1551,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/DataStructures/GreedyTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/CoreLogic/GameManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
@@ -1655,20 +1625,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/DataStructures/DataStructuresTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/DataStructures/DepthFirstTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="24" selection-start-line="24" selection-end-line="26" selection-end-column="39" />
         </state>
       </provider>
     </entry>
@@ -1796,17 +1752,7 @@
     <entry file="file://$PROJECT_DIR$/src/Entities/Ghost.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
-          <caret line="20" column="31" lean-forward="true" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entities/MovableEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-731">
-          <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+          <caret line="20" column="31" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1816,7 +1762,7 @@
     <entry file="file://$PROJECT_DIR$/src/WorkInProgress/Tree.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
-          <caret line="135" column="15" lean-forward="true" selection-start-line="135" selection-end-line="135" selection-end-column="15" />
+          <caret line="135" column="15" selection-start-line="135" selection-end-line="135" selection-end-column="15" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1826,7 +1772,7 @@
     <entry file="file://$PROJECT_DIR$/src/Entities/Player.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="239">
-          <caret line="23" column="7" lean-forward="true" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
+          <caret line="23" column="7" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1847,17 +1793,50 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entities/IEntities.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/WorkInProgress/ShortestPathTree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1418#1419#0" expanded="true" />
+            <element signature="e#1446#1447#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entities/MovableEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-731">
+          <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/DataStructures/MyStack.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        <state relative-caret-position="427">
+          <caret line="42" column="9" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="9" />
+          <folding>
+            <element signature="e#800#801#0" expanded="true" />
+            <element signature="e#836#837#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DataStructures/MyQueue.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="43" column="3" selection-start-line="43" selection-start-column="3" selection-end-line="43" selection-end-column="3" />
+        <state relative-caret-position="409">
+          <caret line="32" column="20" lean-forward="true" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
           <folding>
             <element signature="e#836#837#0" expanded="true" />
             <element signature="e#874#875#0" expanded="true" />
@@ -1867,27 +1846,43 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DataStructures/DataStructure.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="85" lean-forward="true" selection-start-line="85" selection-end-line="85" />
+        <state relative-caret-position="85">
+          <caret line="6" column="55" lean-forward="true" selection-start-line="6" selection-start-column="55" selection-end-line="6" selection-end-column="55" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entities/IEntities.java">
+    <entry file="file://$PROJECT_DIR$/test/DataStructures/DepthFirstTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        <state relative-caret-position="-373">
+          <caret line="24" selection-start-line="24" selection-end-line="26" selection-end-column="39" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/WorkInProgress/ShortestPathTree.java">
+    <entry file="file://$PROJECT_DIR$/test/DataStructures/GreedyTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1418#1419#0" expanded="true" />
-            <element signature="e#1446#1447#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="187">
+          <caret line="15" column="20" lean-forward="true" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/DataStructures/BreadthFirstTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="33" column="43" lean-forward="true" selection-start-line="33" selection-start-column="43" selection-end-line="33" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/DataStructures/DataStructuresTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="41" column="5" lean-forward="true" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/DataStructures/MyQueueStackTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="19" column="29" lean-forward="true" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
         </state>
       </provider>
     </entry>
