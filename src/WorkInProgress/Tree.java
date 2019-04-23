@@ -7,13 +7,19 @@ import WorkInProgress.Nodes.Node;
 public class Tree<T extends Comparable> {
 
     private Node<T> root;
+    private int size;
 
     public boolean contain(T item) {
-        return find(item, root) != null;
+        if (root != null) {
+            return find(item, root) != null;
+        } else {
+            return false;
+        }
+
     }
 
     private Node<T> find(T item, Node<T> parent) {
-        if (parent.contain == item) {
+        if (parent.contain == item) {   //nullPointer in test
             return parent;
         } else {
             if (parent.children != null) {
@@ -49,18 +55,21 @@ public class Tree<T extends Comparable> {
         // find.parent
         parent.addChild(child);
     }
-/*
+
     public boolean add(T item) {
         if (root == null) {
             root = new Node<>(item, null);
+            size++;
             return true;
         } else {
             return add(item, root);
+            //add childNode.to.arrayOfNodes
+            //node.addNode(item,null)
         }
-    }*/
+    }
 
     private boolean add(T item, Node<T> node) {
-        for (Node<T> child : node.children) {
+        for (Node<T> child : node.children) {   //nullPointer in test
             if (child.contain == item) {
                 System.out.println("?"); //todo fix
             }
@@ -82,15 +91,8 @@ public class Tree<T extends Comparable> {
         return false;
     }
 
-    public void add(T item) {
-        if (root == null) {
-            root = new Node<T>(item, null);
-        } else {
-            //add childNode.to.arrayOfNodes
-            //node.addNode(item,null)
-        }
-
-        //new SimpleNode<T>(item,null);
+    public int getSize() {
+        return size;
     }
 
 }
