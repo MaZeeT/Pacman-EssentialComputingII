@@ -3,9 +3,13 @@ package WorkInProgress;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 import static org.junit.Assert.*;
 
-public class TreeTest {
+public class TreeTestIntegers {
     Tree<Integer> tree;
 
     @Before
@@ -42,10 +46,10 @@ public class TreeTest {
     @Test
     public void add5TimesNonIsEqual() {
         tree.add(5);
-        tree.add(13);
-        tree.add(3);
-        tree.add(1);
-        tree.add(8);
+        tree.add(5,13);
+        tree.add(5,3);
+        tree.add(13,1);
+        tree.add(3,8);
 
         int actual = tree.getSize();
         int expected = 5;
@@ -55,10 +59,10 @@ public class TreeTest {
     @Test
     public void add5Times2AreEquals() {
         tree.add(5);
-        tree.add(13);
-        tree.add(3);
-        tree.add(1);
-        tree.add(3);
+        tree.add(5, 3);
+        tree.add(3, 13);
+        tree.add(3, 1);
+        tree.add(5, 3);
 
         int actual = tree.getSize();
         int expected = 4;
@@ -74,7 +78,7 @@ public class TreeTest {
 
     @Test
     public void findNotInTree() {
-        tree.add(null,3);
+        tree.add(null, 3);
 
         boolean actual = tree.contain(5);
         boolean expected = false;
@@ -84,10 +88,10 @@ public class TreeTest {
     @Test
     public void findNotInLargerTree() {
         tree.add(3);
-        tree.add(13);
-        tree.add(1);
-        tree.add(9);
-        tree.add(7);
+        tree.add(3, 13);
+        tree.add(13, 1);
+        tree.add(3, 9);
+        tree.add(3, 7);
 
         boolean actual = tree.contain(5);
         boolean expected = false;
@@ -97,11 +101,11 @@ public class TreeTest {
     @Test
     public void findInLargerTree() {
         tree.add(3);
-        tree.add(13);
-        tree.add(1);
-        tree.add(9);
-        tree.add(7);
-        tree.add(5);
+        tree.add(3,13);
+        tree.add(13,1);
+        tree.add(1,9);
+        tree.add(3,7);
+        tree.add(1,5);
 
         boolean actual = tree.contain(5);
         boolean expected = true;
@@ -121,19 +125,18 @@ public class TreeTest {
     @Test
     public void containInTreeOfSize1False() {
         int i = 32;
-        tree.add(i+1);
+        tree.add(i + 1);
 
         boolean actual = tree.contain(i);
         boolean expected = false;
         assertEquals(expected, actual);
     }
 
-
     @Test
     public void containInTreeOfSize10True() {
         int i = 32;
-        for (int j = -5; j < 10; j++){
-            tree.add(i+j);
+        for (int j = i+10; j > i; j--) {
+            tree.add(j, j-1);
         }
 
         boolean actual = tree.contain(i);
@@ -143,15 +146,48 @@ public class TreeTest {
 
     @Test
     public void containInTreeOfSize15False() {
-        int i = 32;
-        for (int j = -5; j < 10; j++){
-            tree.add(i+j);
+        for (int i = 0; i < 10; i++) {
+            tree.add(i, i+1);
         }
-//todo should fail at this moment
-        boolean actual = tree.contain(i);
+
+        boolean actual = tree.contain(15);
         boolean expected = false;
         assertEquals(expected, actual);
     }
 
+    @Test
+    public void getAllParentsChildInTree() {
+        tree.add(3);
+        tree.add(3,13);
+        tree.add(13,1);
+        tree.add(1,9);
+        tree.add(3,7);
+        tree.add(1,5);
+
+        List<Integer> list = new ArrayList<>();
+        // list is returned backwards (from child to grandparents)
+        list.add(5);
+        list.add(1);
+        list.add(13);
+        list.add(3);
+
+        List<Integer> actual = tree.getAllParents(5);
+        List<Integer> expected = list;
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void getAllParentsChildNotInTree() {
+        tree.add(3);
+        tree.add(3,13);
+        tree.add(13,1);
+        tree.add(1,9);
+        tree.add(3,7);
+        tree.add(1,5);
+
+        List<Integer> actual = tree.getAllParents(2);
+        List<Integer> expected = new ArrayList<>();
+        assertEquals(expected, actual);
+    }
 
 }
