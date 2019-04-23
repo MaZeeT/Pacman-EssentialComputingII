@@ -98,6 +98,7 @@ public class Launcher {
      * @param pane        The given pane that will render the objects of the {@link GameManager}.
      * @param userInput   The {@link UserInput} for the program.
      * @param gameManager The {@link GameManager} for the program.
+     *
      * @return Returns a new Scene based on the given pane.
      */
     private Scene setupScene(Pane pane, UserInput userInput, GameManager gameManager, InputManager inputManager) {
