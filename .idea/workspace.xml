@@ -4,9 +4,13 @@
     <option name="ANALYZE_TEST_SOURCES" value="false" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="removed Comparable requirement since it wasn't used">
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="added javaDoc primarily to the Tree class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WorkInProgress/Tree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorkInProgress/Tree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataStructures/DataStructure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataStructures/DataStructure.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataStructures/MyQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataStructures/MyQueue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataStructures/MyStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataStructures/MyStack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WorkInProgress/ShortestTree.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WorkInProgress/TreeClimber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WorkInProgress/ShortestPathTree.java" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -20,7 +24,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/Pacman_EssentialComputingII$All_in_snakeFX.ic" NAME="All in snakeFX Coverage Results" MODIFIED="1556052632201" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Pacman_EssentialComputingII$All_in_snakeFX.ic" NAME="All in snakeFX Coverage Results" MODIFIED="1556055092234" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/snakeFX$MazeTest_listSizeGameObjectComparedPositions.ic" NAME="MazeTest.listSizeGameObjectComparedPositions Coverage Results" MODIFIED="1552948383785" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>SnakeMaze.*</FILTER>
     </SUITE>
@@ -145,60 +149,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/WorkInProgress/TreeClimber.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/WorkInProgress/ShortestTree.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/WorkInProgress/Tree.java">
+        <entry file="file://$PROJECT_DIR$/src/WorkInProgress/ShortestPathTree.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="124" column="5" lean-forward="true" selection-start-line="124" selection-start-column="5" selection-end-line="124" selection-end-column="5" />
+            <state relative-caret-position="493">
+              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1834#1835#0" expanded="true" />
-                <element signature="e#1872#1873#0" expanded="true" />
-                <element signature="e#3049#3050#0" expanded="true" />
-                <element signature="e#3076#3077#0" expanded="true" />
+                <element signature="e#1418#1419#0" expanded="true" />
+                <element signature="e#1446#1447#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/WorkInProgress/TreeTestIntegers.java">
+        <entry file="file://$PROJECT_DIR$/src/Entities/IEntities.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="28" column="12" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DataStructures/IDataStructure.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="26" column="7" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
+            <state relative-caret-position="272">
+              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
             </state>
           </provider>
         </entry>
@@ -206,8 +175,87 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/DataStructures/DataStructure.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+            <state relative-caret-position="341">
+              <caret line="85" lean-forward="true" selection-start-line="85" selection-end-line="85" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Entities/MovableEntity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-731">
+              <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/WorkInProgress/Tree.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="273">
+              <caret line="135" column="15" lean-forward="true" selection-start-line="135" selection-end-line="135" selection-end-column="15" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Entities/Player.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="239">
+              <caret line="23" column="7" lean-forward="true" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Entities/Ghost.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="20" column="31" lean-forward="true" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Entities/GameObject.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-237">
+              <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/DataStructures/MyQueue.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="460">
+              <caret line="43" column="3" selection-start-line="43" selection-start-column="3" selection-end-line="43" selection-end-column="3" />
+              <folding>
+                <element signature="e#836#837#0" expanded="true" />
+                <element signature="e#874#875#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/DataStructures/MyStack.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="52">
+              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
             </state>
           </provider>
         </entry>
@@ -252,10 +300,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Movement/IControlable.java" />
-        <option value="$PROJECT_DIR$/src/Movement/IControllable.java" />
-        <option value="$PROJECT_DIR$/src/Movement/IMoveControlled.java" />
-        <option value="$PROJECT_DIR$/src/Logic/Crawler/Crawler.java" />
         <option value="$PROJECT_DIR$/test/Logic/Crawler/MoveClockWiseTest.java" />
         <option value="$PROJECT_DIR$/src/Entities/WayPoint.java" />
         <option value="$PROJECT_DIR$/src/DataStructures/Greedy.java" />
@@ -282,7 +326,6 @@
         <option value="$PROJECT_DIR$/src/Entities/MovableEntity.java" />
         <option value="$PROJECT_DIR$/src/Maze/PacMan.java" />
         <option value="$PROJECT_DIR$/src/Maze/AITestMaze.java" />
-        <option value="$PROJECT_DIR$/src/Movement/MoveClockWise.java" />
         <option value="$PROJECT_DIR$/test/Movement/MoveClockWiseTest.java" />
         <option value="$PROJECT_DIR$/src/Movement/IMoverControlled.java" />
         <option value="$PROJECT_DIR$/src/Movement/Crawler.java" />
@@ -291,11 +334,9 @@
         <option value="$PROJECT_DIR$/src/UserControl/InputManager.java" />
         <option value="$PROJECT_DIR$/src/Maze/Maze.java" />
         <option value="$PROJECT_DIR$/test/DataStructures/GreedyTest.java" />
-        <option value="$PROJECT_DIR$/src/CoreLogic/Launcher.java" />
         <option value="$PROJECT_DIR$/src/WorkInProgress/ShortestTree.java" />
         <option value="$PROJECT_DIR$/src/WorkInProgress/Nodes/NodeX.java" />
         <option value="$PROJECT_DIR$/src/WorkInProgress/Nodes/ComparableNode.java" />
-        <option value="$PROJECT_DIR$/src/WorkInProgress/TreeClimber.java" />
         <option value="$PROJECT_DIR$/src/WorkInProgress/Deletables/NodeX.java" />
         <option value="$PROJECT_DIR$/test/WorkInProgress/TreeTest.java" />
         <option value="$PROJECT_DIR$/test/WorkInProgress/TreeTestIntergers.java" />
@@ -303,6 +344,13 @@
         <option value="$PROJECT_DIR$/test/WorkInProgress/TreeTestIntegers.java" />
         <option value="$PROJECT_DIR$/src/WorkInProgress/Nodes/Node.java" />
         <option value="$PROJECT_DIR$/src/WorkInProgress/Tree.java" />
+        <option value="$PROJECT_DIR$/src/Movement/MoveClockWise.java" />
+        <option value="$PROJECT_DIR$/src/CoreLogic/Launcher.java" />
+        <option value="$PROJECT_DIR$/src/WorkInProgress/TreeClimber.java" />
+        <option value="$PROJECT_DIR$/src/DataStructures/MyStack.java" />
+        <option value="$PROJECT_DIR$/src/DataStructures/MyQueue.java" />
+        <option value="$PROJECT_DIR$/src/DataStructures/DataStructure.java" />
+        <option value="$PROJECT_DIR$/src/WorkInProgress/ShortestPathTree.java" />
       </list>
     </option>
   </component>
@@ -338,13 +386,45 @@
               <item name="Pacman-EssentialComputingII" type="b2602c69:ProjectViewProjectNode" />
               <item name="Pacman-EssentialComputingII" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Pacman-EssentialComputingII" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Pacman-EssentialComputingII" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="DataStructures" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Pacman-EssentialComputingII" type="b2602c69:ProjectViewProjectNode" />
               <item name="Pacman-EssentialComputingII" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Entities" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Pacman-EssentialComputingII" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Pacman-EssentialComputingII" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Movement" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Pacman-EssentialComputingII" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Pacman-EssentialComputingII" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="WorkInProgress" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Pacman-EssentialComputingII" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Pacman-EssentialComputingII" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="WorkInProgress" type="462c0819:PsiDirectoryNode" />
+              <item name="ShortestPathTree.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
+            </path>
+            <path>
+              <item name="Pacman-EssentialComputingII" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Pacman-EssentialComputingII" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="WorkInProgress" type="462c0819:PsiDirectoryNode" />
+              <item name="Tree.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
             </path>
             <path>
               <item name="Pacman-EssentialComputingII" type="b2602c69:ProjectViewProjectNode" />
@@ -387,7 +467,7 @@
     <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556052661503" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556055141096" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="dynamic.classpath" value="false" />
@@ -849,14 +929,7 @@
       <workItem from="1555874394881" duration="4147000" />
       <workItem from="1555925979706" duration="244000" />
       <workItem from="1555951553020" duration="6338000" />
-      <workItem from="1556011216384" duration="30620000" />
-    </task>
-    <task id="LOCAL-00116" summary="More javaDoc + TODOs">
-      <created>1554013873101</created>
-      <option name="number" value="00116" />
-      <option name="presentableId" value="LOCAL-00116" />
-      <option name="project" value="LOCAL" />
-      <updated>1554013873101</updated>
+      <workItem from="1556011216384" duration="33031000" />
     </task>
     <task id="LOCAL-00117" summary="removed cast method in greedy dataStructure">
       <created>1554013973983</created>
@@ -1194,13 +1267,17 @@
       <option name="project" value="LOCAL" />
       <updated>1556048374669</updated>
     </task>
-    <option name="localTasksCounter" value="165" />
+    <task id="LOCAL-00165" summary="added javaDoc primarily to the Tree class">
+      <created>1556052775020</created>
+      <option name="number" value="00165" />
+      <option name="presentableId" value="LOCAL-00165" />
+      <option name="project" value="LOCAL" />
+      <updated>1556052775020</updated>
+    </task>
+    <option name="localTasksCounter" value="166" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TreeTestIntegers_getAllParentsChildNotInTree - 2019.04.23 at 21h 26m 35s.xml">
-      <configuration name="TreeTestIntegers.getAllParentsChildNotInTree" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="TreeTestIntegers_getAllParentsChildNotInTree - 2019.04.23 at 21h 26m 43s.xml">
       <configuration name="TreeTestIntegers.getAllParentsChildNotInTree" configurationId="JUnit" />
     </history-entry>
@@ -1228,9 +1305,12 @@
     <history-entry file="All_in_snakeFX - 2019.04.23 at 21h 40m 04s.xml">
       <configuration name="All in snakeFX" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="All_in_snakeFX - 2019.04.23 at 22h 50m 50s.xml">
+      <configuration name="All in snakeFX" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="450565000" />
+    <option name="totallyTimeSpent" value="452976000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1250,7 +1330,7 @@
       <window_info id="Favorites" order="2" weight="0.3295302" />
       <window_info id="Capture Tool" order="3" />
       <window_info id="Nl-Palette" order="4" />
-      <window_info content_ui="combo" id="Project" order="5" sideWeight="0.6703755" visible="true" weight="0.2185501" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" sideWeight="0.6703755" visible="true" weight="0.2185501" />
       <window_info id="Palette&#9;" order="6" />
       <window_info id="Structure" order="7" weight="0.24966443" />
       <window_info anchor="bottom" id="Application Servers" order="0" />
@@ -1262,7 +1342,7 @@
       <window_info anchor="bottom" id="Messages" order="6" weight="0.32034633" />
       <window_info anchor="bottom" id="Message" order="7" />
       <window_info anchor="bottom" id="Find" order="8" weight="0.32575756" />
-      <window_info active="true" anchor="bottom" id="Run" order="9" visible="true" weight="0.3030303" />
+      <window_info anchor="bottom" id="Run" order="9" visible="true" weight="0.3030303" />
       <window_info anchor="bottom" id="Debug" order="10" weight="0.3982684" />
       <window_info anchor="bottom" id="Cvs" order="11" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="12" weight="0.4" />
@@ -1301,7 +1381,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="renamed IMove to IMover" />
     <MESSAGE value="Included IMover in the MovableEntities" />
     <MESSAGE value="correcting comments" />
     <MESSAGE value="changed the GameManager class to enable each MovableEntities to have an independent Mover" />
@@ -1326,7 +1405,8 @@
     <MESSAGE value="deleted old non-functioning classes" />
     <MESSAGE value="tree v1.0 with inner Node class" />
     <MESSAGE value="removed Comparable requirement since it wasn't used" />
-    <option name="LAST_COMMIT_MESSAGE" value="removed Comparable requirement since it wasn't used" />
+    <MESSAGE value="added javaDoc primarily to the Tree class" />
+    <option name="LAST_COMMIT_MESSAGE" value="added javaDoc primarily to the Tree class" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -1359,13 +1439,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/test/Maze/AITestMazeTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-50">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/Entities/GhostTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -1407,30 +1480,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entities/Ghost.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="7" lean-forward="true" selection-start-line="28" selection-start-column="7" selection-end-line="28" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Movement/IMover.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="7" lean-forward="true" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entities/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1451,27 +1504,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entities/GameObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entities/MovableEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="23" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2817#2818#0" expanded="true" />
-            <element signature="e#2851#2852#0" expanded="true" />
-            <element signature="e#3056#3057#0" expanded="true" />
-            <element signature="e#3089#3090#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Maze/AITestMaze.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -1483,16 +1515,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="969">
           <caret line="57" selection-start-line="57" selection-end-line="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Movement/MoveClockWise.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="28" column="42" selection-start-line="28" selection-start-column="42" selection-end-line="28" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1559,34 +1581,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DataStructures/BreadthFirst.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DataStructures/DepthFirst.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DataStructures/MyStack.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DataStructures/MyQueue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="16" column="7" lean-forward="true" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/CoreLogic/GameManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
@@ -1645,42 +1639,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CoreLogic/Launcher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="850">
-          <caret line="62" column="24" lean-forward="true" selection-start-line="62" selection-start-column="24" selection-end-line="62" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;class#Launcher#0" />
-            <element signature="docComment;method#configuration#0;class#Launcher#0" />
-            <element signature="docComment;method#Launcher#0;class#Launcher#0" />
-            <element signature="docComment;method#getScene#0;class#Launcher#0" />
-            <element signature="docComment;method#setMaze#0;class#Launcher#0" />
-            <element signature="method#setMaze#0;class#Launcher#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DataStructures/Greedy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="37" column="43" selection-start-line="37" selection-start-column="43" selection-end-line="37" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Movement/Crawler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="20" column="20" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/WorkInProgress/Deletables/SimpleNode.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -1697,13 +1655,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/Position.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-34">
-          <caret line="81" column="23" selection-start-line="81" selection-start-column="23" selection-end-line="81" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -1735,13 +1686,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DataStructures/DataStructure.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/WorkInProgress/Nodes/ComparableNode.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -1766,16 +1710,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/WorkInProgress/TreeClimber.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/WorkInProgress/TreeTestIntegers.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -1783,10 +1717,96 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Movement/MoveClockWise.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CoreLogic/Launcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="453">
+          <caret line="113" lean-forward="true" selection-start-line="113" selection-end-line="113" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#Launcher#0" />
+            <element signature="docComment;method#configuration#0;class#Launcher#0" />
+            <element signature="docComment;method#Launcher#0;class#Launcher#0" />
+            <element signature="docComment;method#getScene#0;class#Launcher#0" />
+            <element signature="docComment;method#setMaze#0;class#Launcher#0" />
+            <element signature="method#setMaze#0;class#Launcher#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/WorkInProgress/ShortestTree.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+        <state relative-caret-position="136">
+          <caret line="8" selection-start-line="8" selection-end-line="9" selection-end-column="70" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Movement/Crawler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#Crawler#0" />
+            <element signature="docComment;method#Crawler#0;class#Crawler#0" />
+            <element signature="docComment;method#move#0;class#Crawler#0" />
+            <element signature="docComment;method#visited#0;class#Crawler#0" />
+            <element signature="docComment;method#checkNearby#0;class#Crawler#0" />
+            <element signature="docComment;method#addToDataStructure#0;class#Crawler#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataStructures/Greedy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="37" column="43" selection-start-line="37" selection-start-column="43" selection-end-line="37" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataStructures/DepthFirst.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Position.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1241">
+          <caret line="81" column="23" selection-start-line="81" selection-start-column="23" selection-end-line="81" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entities/Ghost.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="31" lean-forward="true" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entities/MovableEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-731">
+          <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1795,14 +1815,78 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/WorkInProgress/Tree.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="124" column="5" lean-forward="true" selection-start-line="124" selection-start-column="5" selection-end-line="124" selection-end-column="5" />
+        <state relative-caret-position="273">
+          <caret line="135" column="15" lean-forward="true" selection-start-line="135" selection-end-line="135" selection-end-column="15" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1834#1835#0" expanded="true" />
-            <element signature="e#1872#1873#0" expanded="true" />
-            <element signature="e#3049#3050#0" expanded="true" />
-            <element signature="e#3076#3077#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entities/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="23" column="7" lean-forward="true" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entities/GameObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-237">
+          <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataStructures/BreadthFirst.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataStructures/MyStack.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="52">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataStructures/MyQueue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="43" column="3" selection-start-line="43" selection-start-column="3" selection-end-line="43" selection-end-column="3" />
+          <folding>
+            <element signature="e#836#837#0" expanded="true" />
+            <element signature="e#874#875#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataStructures/DataStructure.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="341">
+          <caret line="85" lean-forward="true" selection-start-line="85" selection-end-line="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entities/IEntities.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/WorkInProgress/ShortestPathTree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1418#1419#0" expanded="true" />
+            <element signature="e#1446#1447#0" expanded="true" />
           </folding>
         </state>
       </provider>
