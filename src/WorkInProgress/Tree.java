@@ -1,9 +1,9 @@
 package WorkInProgress;
 
-import WorkInProgress.Nodes.Node;
+import java.util.ArrayList;
+import java.util.List;
 
-//TODO implement a tree
-//TODO Make a shortest route algorithm based on a tree.
+//todo javaDoc
 public class Tree<T extends Comparable> {
 
     private Node<T> root;
@@ -19,7 +19,7 @@ public class Tree<T extends Comparable> {
     }
 
     private Node<T> find(T item, Node<T> parent) {
-        if (parent.contain == item) {   //nullPointer in test
+        if (parent.contain == item) {
             return parent;
         } else {
             if (parent.children != null) {
@@ -31,7 +31,7 @@ public class Tree<T extends Comparable> {
                 }
             }
         }
-        return null; //failed to find item in tree
+        return null;
     }
 
     public boolean add(T item) {
@@ -57,33 +57,44 @@ public class Tree<T extends Comparable> {
         return false;
     }
 
-    private boolean add(T item, Node<T> node) {
-        // if (node.children != null) {
-        for (Node<T> child : node.children) {   //nullPointer in test
-            if (child.contain == item) {
-                System.out.println("?"); //todo fix
-            }
-        }
-        // }
-        if (item.equals(node.contain)) {    //todo need a closer look
-            node.addChild(new Node<>(item, node));
-            return true;
-        } else {
-
-        }
-
-        if (root == null) {
-            root = new Node<>(item, null);
-        } else {
-            Node<T> node2 = new Node<>(item, root);
-            root.addChild(node);
-            root.children.add(node);
-        }
-        return false;
-    }
-
     public int getSize() {
         return size;
+    }
+
+    public List<T> getAllParents(T item) {
+        List<T> list = new ArrayList<>();
+        Node<T> child = find(item, root);
+        if (child != null){
+            boolean getNextParent = true;
+            while (getNextParent) {
+                list.add(child.contain);
+                if (child.parent != null) {
+                    child = child.parent;
+                } else {
+                    getNextParent = false;
+                }
+            }
+        }
+        return list;
+    }
+
+}
+
+class Node<T extends Comparable> {
+
+     T contain;
+     Node<T> parent;
+     List<Node<T>> children;
+
+     Node(T contain, Node<T> parent) {
+        this.contain = contain;
+        this.parent = parent;
+        children = new ArrayList<>();
+    }
+
+     void addChild(Node<T> child){
+        this.children.add(child);
+        child.parent = this;
     }
 
 }
