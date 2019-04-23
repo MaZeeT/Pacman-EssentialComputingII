@@ -4,9 +4,9 @@ import java.util.List;
 
 public class Node<T> {
 
-    private T contain;
-    private Node<T> parent;
-    private List<Node<T>> children;
+    public T contain;
+    public Node<T> parent;
+    public List<Node<T>> children;
 
     public Node(T contain, Node<T> parent) {
         this.contain = contain;
@@ -15,6 +15,7 @@ public class Node<T> {
 
     public void addChild(Node<T> child){
         this.children.add(child);
+        child.parent = this;
     }
 
     public T getContain() {
