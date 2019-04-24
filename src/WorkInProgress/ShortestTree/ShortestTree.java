@@ -66,12 +66,15 @@ public class ShortestTree implements IMover {
     @Override
     public void move() {
         List<Position> list = tree.getAllParents(target.getPosition());
-        movableEntity.setPosition(list.get(list.size() - 1));
+        System.out.println(list );
+      //todo bug somewhere in the lines below
+        /*
+        movableEntity.setPosition(list.get(1));
         if (updatePath) {
             buildTree();
         } else {
             list.remove(list.size() - 1);
-        }
+        }*/
     }
 
 }
