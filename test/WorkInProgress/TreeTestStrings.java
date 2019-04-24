@@ -1,5 +1,6 @@
 package WorkInProgress;
 
+import WorkInProgress.ShortestTree.Tree;
 import org.junit.Before;
 import org.junit.Test;
 

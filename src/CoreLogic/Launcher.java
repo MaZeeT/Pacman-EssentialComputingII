@@ -7,6 +7,7 @@ import GUI.*;
 import Maze.*;
 import Movement.*;
 import UserControl.*;
+import WorkInProgress.ShortestTree.ShortestTree;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.input.KeyEvent;
@@ -46,7 +47,7 @@ public class Launcher {
         runSpeed = 500; // milliseconds between each update
 
         // Options for setting maze.
-        maze = setMaze(5);
+        maze = setMaze(6);
         // 0 for TwoHalls.
         // 1 for SingleRoad.
         // 2 for ManyRoads.
@@ -56,11 +57,12 @@ public class Launcher {
         // 6 for AITestMaze (extra maze to test pathfinder algorithms)
 
         // Player movement options
-        playerMovement = setPlayerMovement(0);
+        playerMovement = setPlayerMovement(4);
         // 0 for User controlled.
         // 1 for DepthFirst.
         // 2 for BreadthFirst.
         // 3 for Greedy.
+        // 4 for ShortestTree.
     }
 
     /**
@@ -155,11 +157,15 @@ public class Launcher {
      *              1 for DepthFirst.
      *              2 for BreadthFirst.
      *              3 for Greedy.
+     *              4 for ShortestTree
      * @return Returns the selected dataStructure.
      */
     private IMover setPlayerMovement(int index) {
         if (index == 0) {
             return new MoveClockWise(maze, maze.getPlayer());
+        }
+        if (index == 4){
+            return new ShortestTree(maze, maze.getPlayer(), maze.getWayPoint(), false);
         }
 
         IDataStructure dataStructure = new DepthFirst(); //Default data
@@ -184,6 +190,8 @@ public class Launcher {
                     new Crawler(maze, (MovableEntity) ghosts.get(1), new BreadthFirst()));
             ((MovableEntity) ghosts.get(2)).setMover(
                     new Crawler(maze, (MovableEntity) ghosts.get(2), new DepthFirst()));
+       //     ((MovableEntity) ghosts.get(0)).setMover(
+        //            new ShortestTree(maze, (MovableEntity) ghosts.get(0), maze.getPlayer(), false));
         }
     }
 
