@@ -39,6 +39,11 @@ public class ShortestTree implements IMover {
         tree = new Tree<>();
         visited = new ArrayList<>();
         explorer = new Explorer();
+        explorer.setPosition(movableEntity.getPosition());
+        tree.add(movableEntity.getPosition());
+        queue.add(movableEntity.getPosition());
+        visited.add(movableEntity.getPosition());
+
         nearby(movableEntity.getPosition());
 
         while (!queue.isEmpty() &&
@@ -66,9 +71,10 @@ public class ShortestTree implements IMover {
     @Override
     public void move() {
         List<Position> list = tree.getAllParents(target.getPosition());
-        System.out.println(list );
+        System.out.println(list);
+        System.out.println(tree.getAllParents(target.getPosition()));
       //todo bug somewhere in the lines below
-        /*
+/*
         movableEntity.setPosition(list.get(1));
         if (updatePath) {
             buildTree();
