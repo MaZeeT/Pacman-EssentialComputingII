@@ -26,7 +26,6 @@ public class ShortestTreeTest {
         this.shortTreeFalse = new ShortestTree(maze, player, wayPoint, false);
         this.shortTreeTrue = new ShortestTree(maze, player, wayPoint, true);
     }
-//todo write tests
 
     @Test
     public void LengthToTargetAITestMazeTrackingTargetOff() {

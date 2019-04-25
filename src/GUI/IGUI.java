@@ -5,8 +5,6 @@ import javafx.scene.layout.Pane;
 
 import java.util.List;
 
-//TODO write javaDoc
-
 /**
  * The purpose of this interface is to specify what the core program needs to provide to get a graphical representation,
  * and what input the GUI will be provided with from the core program.
