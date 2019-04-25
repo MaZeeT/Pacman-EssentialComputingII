@@ -3,6 +3,7 @@ package Entities;
 import Components.Position;
 import javafx.scene.paint.Color;
 
+//todo unused interface
 public interface IEntities extends Comparable<IEntities> {
     Color getColor();
 

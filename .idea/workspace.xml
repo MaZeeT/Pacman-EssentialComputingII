@@ -4,10 +4,9 @@
     <option name="ANALYZE_TEST_SOURCES" value="false" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="slimmed down Launcher.setupScene()">
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="fixed warnings in CoreLogic">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CoreLogic/GameManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CoreLogic/GameManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CoreLogic/Launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CoreLogic/Launcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entities/IEntities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/IEntities.java" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -156,53 +155,22 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Movement/ShortestTree/ShortestTree.java">
+        <entry file="file://$PROJECT_DIR$/src/UserControl/InputManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="213">
-              <caret line="43" column="34" selection-start-line="43" selection-start-column="34" selection-end-line="43" selection-end-column="34" />
+            <state relative-caret-position="357">
+              <caret line="21" column="88" selection-start-line="21" selection-start-column="88" selection-end-line="21" selection-end-column="88" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2701#2702#0" expanded="true" />
-                <element signature="e#2729#2730#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/Movement/ShortestTree/ShortestTreeTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="33" column="34" lean-forward="true" selection-start-line="33" selection-start-column="34" selection-end-line="33" selection-end-column="34" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/CoreLogic/Launcher.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-              <folding>
-                <element signature="docComment;class#Launcher#0" />
-                <element signature="docComment;method#configuration#0;class#Launcher#0" />
-                <element signature="docComment;method#Launcher#0;class#Launcher#0" />
-                <element signature="docComment;method#getScene#0;class#Launcher#0" />
-                <element signature="docComment;method#setMaze#0;class#Launcher#0" />
-                <element signature="method#setMaze#0;class#Launcher#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/CoreLogic/GameManager.java">
+        <entry file="file://$PROJECT_DIR$/src/Entities/IEntities.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="307">
-              <caret line="58" column="27" lean-forward="true" selection-start-line="58" selection-start-column="27" selection-end-line="58" selection-end-column="27" />
+            <state relative-caret-position="255">
+              <caret line="15" column="35" lean-forward="true" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -211,44 +179,35 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Movement/DataStructureCrawlers/Crawler.java">
+        <entry file="file://$PROJECT_DIR$/src/Entities/MovableEntity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="215">
-              <caret line="60" column="6" selection-start-line="60" selection-start-column="6" selection-end-line="60" selection-end-column="6" />
+            <state relative-caret-position="153">
+              <caret line="9" column="63" lean-forward="true" selection-start-line="9" selection-start-column="63" selection-end-line="9" selection-end-column="63" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="docComment;class#Crawler#0" />
-                <element signature="docComment;method#Crawler#0;class#Crawler#0" />
-                <element signature="docComment;method#move#0;class#Crawler#0" />
-                <element signature="docComment;method#visited#0;class#Crawler#0" />
-                <element signature="method#visited#0;class#Crawler#0" />
-                <element signature="docComment;method#checkNearby#0;class#Crawler#0" />
-                <element signature="docComment;method#addToDataStructure#0;class#Crawler#0" />
+                <element signature="e#3212#3213#0" expanded="true" />
+                <element signature="e#3246#3247#0" expanded="true" />
+                <element signature="e#3451#3452#0" expanded="true" />
+                <element signature="e#3484#3485#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/GUI/IGUI.java">
+        <entry file="file://$PROJECT_DIR$/src/UserControl/PlayerControl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="3" lean-forward="true" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="205">
+              <caret line="21" column="88" selection-start-line="21" selection-start-column="88" selection-end-line="21" selection-end-column="88" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/UserControl/InputManager.java">
+        <entry file="file://$PROJECT_DIR$/src/UserControl/UserInput.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="31" column="6" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="153">
+              <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -293,8 +252,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/test/UserControl/UserInputTest.java" />
-        <option value="$PROJECT_DIR$/test/UserControl/PlayerControlTest.java" />
         <option value="$PROJECT_DIR$/src/Entities/MovableEntity.java" />
         <option value="$PROJECT_DIR$/src/Maze/PacMan.java" />
         <option value="$PROJECT_DIR$/src/Maze/AITestMaze.java" />
@@ -302,7 +259,6 @@
         <option value="$PROJECT_DIR$/src/Movement/IMoverControlled.java" />
         <option value="$PROJECT_DIR$/src/Movement/Crawler.java" />
         <option value="$PROJECT_DIR$/test/UserControl/InputManagerTest.java" />
-        <option value="$PROJECT_DIR$/src/UserControl/InputManager.java" />
         <option value="$PROJECT_DIR$/src/Maze/Maze.java" />
         <option value="$PROJECT_DIR$/test/DataStructures/GreedyTest.java" />
         <option value="$PROJECT_DIR$/src/WorkInProgress/ShortestTree.java" />
@@ -328,7 +284,6 @@
         <option value="$PROJECT_DIR$/src/WorkInProgress/ShortestTree/ShortestTree.java" />
         <option value="$PROJECT_DIR$/test/WorkInProgress/ShortestTree/ShortestTreeTest.java" />
         <option value="$PROJECT_DIR$/src/DataStructures/ShortestTree/Tree.java" />
-        <option value="$PROJECT_DIR$/src/Movement/ShortestTree/Tree.java" />
         <option value="$PROJECT_DIR$/test/DataStructures/MyStackTest.java" />
         <option value="$PROJECT_DIR$/test/DataStructures/MyQueueTest.java" />
         <option value="$PROJECT_DIR$/test/DataStructures/DataStructuresTest.java" />
@@ -337,13 +292,17 @@
         <option value="$PROJECT_DIR$/src/GUI/View.java" />
         <option value="$PROJECT_DIR$/src/GUI/SimpleView.java" />
         <option value="$PROJECT_DIR$/src/GUI/SimpleGUI.java" />
-        <option value="$PROJECT_DIR$/src/GUI/SimpleGUI/SimpleGUI.java" />
         <option value="$PROJECT_DIR$/src/Movement/DataStructureCrawlers/Crawler.java" />
         <option value="$PROJECT_DIR$/src/Movement/UserControlled/IMoverControlled.java" />
         <option value="$PROJECT_DIR$/src/GUI/IGUI.java" />
         <option value="$PROJECT_DIR$/test/Movement/ShortestTree/ShortestTreeTest.java" />
         <option value="$PROJECT_DIR$/src/CoreLogic/Launcher.java" />
         <option value="$PROJECT_DIR$/src/CoreLogic/GameManager.java" />
+        <option value="$PROJECT_DIR$/src/GUI/SimpleGUI/SimpleGUI.java" />
+        <option value="$PROJECT_DIR$/src/Movement/ShortestTree/Tree.java" />
+        <option value="$PROJECT_DIR$/src/UserControl/PlayerControl.java" />
+        <option value="$PROJECT_DIR$/src/UserControl/InputManager.java" />
+        <option value="$PROJECT_DIR$/src/Entities/IEntities.java" />
       </list>
     </option>
   </component>
@@ -379,7 +338,13 @@
               <item name="Pacman-EssentialComputingII" type="b2602c69:ProjectViewProjectNode" />
               <item name="Pacman-EssentialComputingII" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="CoreLogic" type="462c0819:PsiDirectoryNode" />
+              <item name="Entities" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Pacman-EssentialComputingII" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Pacman-EssentialComputingII" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="UserControl" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Pacman-EssentialComputingII" type="b2602c69:ProjectViewProjectNode" />
@@ -410,7 +375,7 @@
     <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556194724781" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556195592958" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="dynamic.classpath" value="false" />
@@ -873,35 +838,7 @@
       <workItem from="1555951553020" duration="6338000" />
       <workItem from="1556011216384" duration="43972000" />
       <workItem from="1556099168504" duration="3533000" />
-      <workItem from="1556181371422" duration="11542000" />
-    </task>
-    <task id="LOCAL-00133" summary="pulled getDirection back into this version from an old commit to remove it">
-      <created>1555541243573</created>
-      <option name="number" value="00133" />
-      <option name="presentableId" value="LOCAL-00133" />
-      <option name="project" value="LOCAL" />
-      <updated>1555541243573</updated>
-    </task>
-    <task id="LOCAL-00134" summary="cleaned up test location">
-      <created>1555541398219</created>
-      <option name="number" value="00134" />
-      <option name="presentableId" value="LOCAL-00134" />
-      <option name="project" value="LOCAL" />
-      <updated>1555541398219</updated>
-    </task>
-    <task id="LOCAL-00135" summary="added a few todo's and renames a fes variables in the gameManager">
-      <created>1555542409451</created>
-      <option name="number" value="00135" />
-      <option name="presentableId" value="LOCAL-00135" />
-      <option name="project" value="LOCAL" />
-      <updated>1555542409451</updated>
-    </task>
-    <task id="LOCAL-00136" summary="a bit more work on the Tree">
-      <created>1555688650537</created>
-      <option name="number" value="00136" />
-      <option name="presentableId" value="LOCAL-00136" />
-      <option name="project" value="LOCAL" />
-      <updated>1555688650538</updated>
+      <workItem from="1556181371422" duration="12412000" />
     </task>
     <task id="LOCAL-00137" summary="added a list of movableEntities to the IMaze interface and the abstract maze class">
       <created>1555688769950</created>
@@ -1218,7 +1155,35 @@
       <option name="project" value="LOCAL" />
       <updated>1556194346495</updated>
     </task>
-    <option name="localTasksCounter" value="182" />
+    <task id="LOCAL-00182" summary="fixed warnings in CoreLogic">
+      <created>1556194763821</created>
+      <option name="number" value="00182" />
+      <option name="presentableId" value="LOCAL-00182" />
+      <option name="project" value="LOCAL" />
+      <updated>1556194763821</updated>
+    </task>
+    <task id="LOCAL-00183" summary="fixed warnings in the GUI package">
+      <created>1556195026501</created>
+      <option name="number" value="00183" />
+      <option name="presentableId" value="LOCAL-00183" />
+      <option name="project" value="LOCAL" />
+      <updated>1556195026501</updated>
+    </task>
+    <task id="LOCAL-00184" summary="fixed warnings in ShortestTree">
+      <created>1556195164234</created>
+      <option name="number" value="00184" />
+      <option name="presentableId" value="LOCAL-00184" />
+      <option name="project" value="LOCAL" />
+      <updated>1556195164234</updated>
+    </task>
+    <task id="LOCAL-00185" summary="added todo's to warnings in UserControl">
+      <created>1556195316650</created>
+      <option name="number" value="00185" />
+      <option name="presentableId" value="LOCAL-00185" />
+      <option name="project" value="LOCAL" />
+      <updated>1556195316650</updated>
+    </task>
+    <option name="localTasksCounter" value="186" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1254,7 +1219,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="481307000" />
+    <option name="totallyTimeSpent" value="482177000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1285,8 +1250,8 @@
       <window_info anchor="bottom" id="Version Control" order="5" weight="0.32683983" />
       <window_info anchor="bottom" id="Messages" order="6" weight="0.32034633" />
       <window_info anchor="bottom" id="Message" order="7" />
-      <window_info anchor="bottom" id="Find" order="8" weight="0.32575756" />
-      <window_info anchor="bottom" id="Run" order="9" visible="true" weight="0.3030303" />
+      <window_info anchor="bottom" id="Find" order="8" visible="true" weight="0.32575756" />
+      <window_info anchor="bottom" id="Run" order="9" weight="0.3030303" />
       <window_info anchor="bottom" id="Debug" order="10" weight="0.3982684" />
       <window_info anchor="bottom" id="Cvs" order="11" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="12" weight="0.4" />
@@ -1369,10 +1334,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="a few attempts on implementing a tree... Will need heavy refactoring" />
-    <MESSAGE value="More work on a tree dataStructure" />
-    <MESSAGE value="More work on the tree + added a few test for the tree" />
-    <MESSAGE value="More work on the tree + tests" />
     <MESSAGE value="added tests for the Tree with a string and an integer version" />
     <MESSAGE value="deleted old non-functioning classes" />
     <MESSAGE value="tree v1.0 with inner Node class" />
@@ -1394,7 +1355,11 @@
     <MESSAGE value="reorganized a few classes into packages." />
     <MESSAGE value="completed/removed some todo's" />
     <MESSAGE value="slimmed down Launcher.setupScene()" />
-    <option name="LAST_COMMIT_MESSAGE" value="slimmed down Launcher.setupScene()" />
+    <MESSAGE value="fixed warnings in CoreLogic" />
+    <MESSAGE value="fixed warnings in the GUI package" />
+    <MESSAGE value="fixed warnings in ShortestTree" />
+    <MESSAGE value="added todo's to warnings in UserControl" />
+    <option name="LAST_COMMIT_MESSAGE" value="added todo's to warnings in UserControl" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -1427,105 +1392,10 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Maze/AITestMaze.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="24" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Maze/PacMan.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="969">
-          <caret line="57" selection-start-line="57" selection-end-line="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/UserControl/PlayerControl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="39" column="22" lean-forward="true" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;class#PlayerControl#0" />
-            <element signature="docComment;method#getDirection#0;class#PlayerControl#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/UserControl/PlayerControlTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="49" column="39" lean-forward="true" selection-start-line="49" selection-start-column="39" selection-end-line="49" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/UserControl/InputManagerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="34" column="37" selection-start-line="34" selection-start-column="37" selection-end-line="34" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/WorkInProgress/Deletables/SimpleNode.java" />
     <entry file="file://$PROJECT_DIR$/src/WorkInProgress/Deletables/NodeX.java" />
     <entry file="file://$PROJECT_DIR$/src/WorkInProgress/Nodes/ComparableNode.java" />
     <entry file="file://$PROJECT_DIR$/src/WorkInProgress/Nodes/Node.java" />
     <entry file="file://$PROJECT_DIR$/src/WorkInProgress/ShortestTree.java" />
-    <entry file="file://$PROJECT_DIR$/src/DataStructures/Greedy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="37" column="43" selection-start-line="37" selection-start-column="43" selection-end-line="37" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entities/Ghost.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="31" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entities/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="23" column="7" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entities/GameObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-237">
-          <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DataStructures/BreadthFirst.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entities/IEntities.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/DataStructures/GreedyTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -1544,20 +1414,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entities/MovableEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-102">
-          <caret line="22" column="31" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3212#3213#0" expanded="true" />
-            <element signature="e#3246#3247#0" expanded="true" />
-            <element signature="e#3451#3452#0" expanded="true" />
-            <element signature="e#3484#3485#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1591,20 +1447,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CoreLogic/UpdateProcess.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="562">
-          <caret line="39" column="44" selection-start-line="39" selection-start-column="44" selection-end-line="39" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CoreLogic/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/Movement/ShortestTree/TreeTestStrings.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-67">
@@ -1612,44 +1454,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DataStructures/DataStructure.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="89" column="90" lean-forward="true" selection-start-line="89" selection-start-column="90" selection-end-line="89" selection-end-column="90" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/Position.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="613">
-          <caret line="81" column="23" selection-start-line="81" selection-start-column="23" selection-end-line="81" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/Movement/ShortestTree/TreeTestIntegers.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="307">
           <caret line="115" selection-start-line="115" selection-end-line="123" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Movement/ShortestTree/Tree.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="43" column="26" lean-forward="true" selection-start-line="43" selection-start-column="26" selection-end-line="43" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DataStructures/DepthFirst.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1692,19 +1500,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DataStructures/MyStack.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
-          <folding>
-            <element signature="e#495#496#0" expanded="true" />
-            <element signature="e#527#528#0" expanded="true" />
-            <element signature="e#932#933#0" expanded="true" />
-            <element signature="e#971#972#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/Manager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -1715,54 +1510,6 @@
             <element signature="e#763#764#0" expanded="true" />
             <element signature="e#795#796#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Movement/UserControlled/MoveClockWise.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/SimpleGUI/SimpleGUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="51" column="7" selection-start-line="51" selection-start-column="7" selection-end-line="51" selection-end-column="7" />
-          <folding>
-            <element signature="docComment;class#View#0" />
-            <element signature="docComment;method#View#0;class#View#0" />
-            <element signature="method#View#0;class#View#0" />
-            <element signature="docComment;method#setGameObjects#0;class#View#0" />
-            <element signature="docComment;method#calculateFields#0;class#View#0" />
-            <element signature="method#calculateFields#0;class#SimpleGUI#0" />
-            <element signature="e#2693#2694#0" expanded="true" />
-            <element signature="e#2720#2721#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Movement/UserControlled/IMoverControlled.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DataStructures/MyQueue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="25" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DataStructures/IDataStructure.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" selection-start-line="4" selection-end-line="8" selection-end-column="3" />
         </state>
       </provider>
     </entry>
@@ -1783,22 +1530,55 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/IGUI.java">
+    <entry file="file://$PROJECT_DIR$/src/CoreLogic/UpdateProcess.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="3" lean-forward="true" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+        <state relative-caret-position="663">
+          <caret line="39" column="44" selection-start-line="39" selection-start-column="44" selection-end-line="39" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CoreLogic/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CoreLogic/GameManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="58" column="27" lean-forward="true" selection-start-line="58" selection-start-column="27" selection-end-line="58" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/UserControl/InputManager.java">
+    <entry file="file://$PROJECT_DIR$/src/Components/Position.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="31" column="6" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
+        <state relative-caret-position="585">
+          <caret line="81" column="23" selection-start-line="81" selection-start-column="23" selection-end-line="81" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/PositionManhattan.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="511">
+          <caret line="50" column="24" lean-forward="true" selection-start-line="50" selection-start-column="24" selection-end-line="50" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CoreLogic/Launcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1122">
+          <caret line="95" lean-forward="true" selection-start-line="95" selection-end-line="95" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#Launcher#0" />
+            <element signature="docComment;method#configuration#0;class#Launcher#0" />
+            <element signature="docComment;method#Launcher#0;class#Launcher#0" />
+            <element signature="docComment;method#getScene#0;class#Launcher#0" />
+            <element signature="docComment;method#setMaze#0;class#Launcher#0" />
+            <element signature="method#setMaze#0;class#Launcher#0" />
           </folding>
         </state>
       </provider>
@@ -1813,14 +1593,143 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Movement/ShortestTree/ShortestTree.java">
+    <entry file="file://$PROJECT_DIR$/src/DataStructures/BreadthFirst.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="43" column="34" selection-start-line="43" selection-start-column="34" selection-end-line="43" selection-end-column="34" />
+        <state relative-caret-position="170">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataStructures/DataStructure.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="89" column="90" lean-forward="true" selection-start-line="89" selection-start-column="90" selection-end-line="89" selection-end-column="90" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2701#2702#0" expanded="true" />
-            <element signature="e#2729#2730#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataStructures/DepthFirst.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataStructures/Greedy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="37" column="43" selection-start-line="37" selection-start-column="43" selection-end-line="37" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataStructures/IDataStructure.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" selection-start-line="4" selection-end-line="8" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataStructures/MyQueue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="25" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataStructures/MyStack.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+          <folding>
+            <element signature="e#495#496#0" expanded="true" />
+            <element signature="e#527#528#0" expanded="true" />
+            <element signature="e#932#933#0" expanded="true" />
+            <element signature="e#971#972#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entities/WayPoint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entities/Wall.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entities/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="23" column="7" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entities/Ghost.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="30" column="33" lean-forward="true" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entities/GameObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/SimpleGUI/SimpleGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="34" column="36" lean-forward="true" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="36" />
+          <folding>
+            <element signature="method#calculateFields#0;class#SimpleGUI#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/IGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="3" lean-forward="true" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Movement/IMover.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Movement/ShortestTree/Tree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="23" column="89" lean-forward="true" selection-start-line="23" selection-start-column="89" selection-end-line="23" selection-end-column="89" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3290#3291#0" expanded="true" />
+            <element signature="e#3317#3318#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1842,25 +1751,77 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CoreLogic/Launcher.java">
+    <entry file="file://$PROJECT_DIR$/src/Movement/UserControlled/IMoverControlled.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        <state relative-caret-position="187">
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Movement/UserControlled/MoveClockWise.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
           <folding>
-            <element signature="docComment;class#Launcher#0" />
-            <element signature="docComment;method#configuration#0;class#Launcher#0" />
-            <element signature="docComment;method#Launcher#0;class#Launcher#0" />
-            <element signature="docComment;method#getScene#0;class#Launcher#0" />
-            <element signature="docComment;method#setMaze#0;class#Launcher#0" />
-            <element signature="method#setMaze#0;class#Launcher#0" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CoreLogic/GameManager.java">
+    <entry file="file://$PROJECT_DIR$/src/Movement/ShortestTree/ShortestTree.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="58" column="27" lean-forward="true" selection-start-line="58" selection-start-column="27" selection-end-line="58" selection-end-column="27" />
+        <state relative-caret-position="391">
+          <caret line="26" column="42" lean-forward="true" selection-start-line="26" selection-start-column="42" selection-end-line="26" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2701#2702#0" expanded="true" />
+            <element signature="e#2729#2730#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UserControl/UserInput.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UserControl/InputManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="88" selection-start-line="21" selection-start-column="88" selection-end-line="21" selection-end-column="88" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UserControl/PlayerControl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="21" column="88" selection-start-line="21" selection-start-column="88" selection-end-line="21" selection-end-column="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entities/MovableEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="63" lean-forward="true" selection-start-line="9" selection-start-column="63" selection-end-line="9" selection-end-column="63" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3212#3213#0" expanded="true" />
+            <element signature="e#3246#3247#0" expanded="true" />
+            <element signature="e#3451#3452#0" expanded="true" />
+            <element signature="e#3484#3485#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entities/IEntities.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="35" lean-forward="true" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
