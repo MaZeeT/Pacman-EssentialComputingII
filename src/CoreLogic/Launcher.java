@@ -4,6 +4,7 @@ import DataStructures.*;
 import Entities.GameObject;
 import Entities.MovableEntity;
 import GUI.*;
+import GUI.SimpleGUI.SimpleGUI;
 import Maze.*;
 import Movement.*;
 import UserControl.*;
@@ -73,7 +74,7 @@ public class Launcher {
         configuration();
 
         // Interfaced modules
-        IGUI gui = new Manager(width, height);
+        IGUI gui = new SimpleGUI(width, height);
         UserInput userInput = new PlayerControl();
 
         // Game logic
@@ -85,7 +86,7 @@ public class Launcher {
         setupMoversToGhosts();
 
         // Setup scene and stage
-        this.scene = setupScene(gui.getView().pane, userInput, gameManager, inputManager);
+        this.scene = setupScene(gui.getPane(), userInput, gameManager, inputManager);
 
 
         // Update thread

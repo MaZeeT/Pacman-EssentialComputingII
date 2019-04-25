@@ -1,28 +1,23 @@
-package GUI;
+package GUI.SimpleGUI;
 
 import Entities.GameObject;
+import GUI.IGUI;
 import javafx.scene.canvas.*;
-import javafx.scene.control.*;
 import javafx.scene.layout.*;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * The purpose of this class is to handle the output of the GUI. It will render to the scene which is passed to the primanyStage.
+ * The purpose of this class is to provide a graphical representation of the running program.
+ * When the class can fulfill the {@link IGUI} interface it will be able to be used with the program.
+ *
  * @author MaZeeT.
  */
-public class View {
-
-    Button btnStart = new Button("Start");
-    Button btnPause = new Button("Pause");
-    Label label = new Label("Begin");
-    private HBox hBox = new HBox();
+public class SimpleGUI implements IGUI {
     private Canvas canvas = new Canvas(600.0, 400.0);
-    public BorderPane pane = new BorderPane();
-
+    private BorderPane pane = new BorderPane();
     private List<GameObject> gameObjects = new ArrayList<>();
-
     private double fieldHeight;
     private double fieldWidth;
     private int width;
@@ -30,21 +25,21 @@ public class View {
 
     /**
      * Constructor to set the size of the scene and make a initial render.
-     * @param width The width of the scene.
+     *
+     * @param width  The width of the scene.
      * @param height The height of the scene.
      */
-    View(int width, int height) {
+    public SimpleGUI(int width, int height) {
         this.width = width;
         this.height = height;
-        hBox.getChildren().addAll(btnStart, btnPause, label);
-        pane.setTop(hBox);
-        pane.setCenter(canvas);
+        this.pane.setCenter(canvas);
         calculateFields();
         drawCanvas();
     }
 
     /**
-     * Set the list to the gameObject list coming from outside the GUI.
+     * Set the list to the given {@link GameObject}s from outside the {@link IGUI}.
+     *
      * @param gameObjects The list of renderables gameObjects.
      */
     void setGameObjects(List<GameObject> gameObjects) {
@@ -52,9 +47,8 @@ public class View {
     }
 
 
-
     /**
-     * Calculate height and width of each field.
+     * A helper method to calculate height and width of each field in the graphicsContext2D.
      */
     private void calculateFields() {
         this.fieldHeight = canvas.getHeight() / this.height;
@@ -62,7 +56,7 @@ public class View {
     }
 
     /**
-     * Draw the canvas.
+     * A Method to draw the canvas with the given {@link GameObject}s.
      */
     void drawCanvas() {
         GraphicsContext g = canvas.getGraphicsContext2D();
@@ -75,4 +69,22 @@ public class View {
             g.fillRoundRect(x * fieldWidth, y * fieldHeight, fieldWidth, fieldHeight, 5, 5);
         }
     }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public void update(List<GameObject> gameObjects) {
+        setGameObjects(gameObjects);
+        drawCanvas();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public Pane getPane() {
+        return this.pane;
+    }
+
 }
