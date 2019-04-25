@@ -1,4 +1,6 @@
-package Movement;
+package Movement.UserControlled;
+
+import Movement.IMover;
 
 /**
  * The purpose of this interface is to define two methods to which enable control of a

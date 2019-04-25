@@ -1,9 +1,10 @@
-package Movement;
+package Movement.UserControlled;
 
 import Components.Position;
 import Entities.GameObject;
 import Entities.MovableEntity;
 import Maze.IMaze;
+import Movement.IMover;
 
 import java.util.List;
 

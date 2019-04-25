@@ -3,7 +3,7 @@ package Entities;
 import Components.Position;
 import DataStructures.DepthFirst;
 import Maze.PacMan;
-import Movement.Crawler;
+import Movement.DataStructureCrawlers.Crawler;
 import Movement.IMover;
 import org.junit.Test;
 

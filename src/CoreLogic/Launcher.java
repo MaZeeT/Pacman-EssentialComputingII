@@ -7,6 +7,8 @@ import GUI.*;
 import GUI.SimpleGUI.SimpleGUI;
 import Maze.*;
 import Movement.*;
+import Movement.DataStructureCrawlers.Crawler;
+import Movement.UserControlled.MoveClockWise;
 import UserControl.*;
 import Movement.ShortestTree.ShortestTree;
 import javafx.event.EventHandler;

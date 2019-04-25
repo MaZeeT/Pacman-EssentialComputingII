@@ -1,7 +1,7 @@
 package UserControl;
 
 import Movement.IMover;
-import Movement.IMoverControlled;
+import Movement.UserControlled.IMoverControlled;
 import javafx.scene.input.KeyCode;
 
 /**

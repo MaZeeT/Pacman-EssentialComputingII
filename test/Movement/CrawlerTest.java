@@ -5,6 +5,7 @@ import DataStructures.DepthFirst;
 import DataStructures.IDataStructure;
 import Maze.ForkRoad;
 import Maze.IMaze;
+import Movement.DataStructureCrawlers.Crawler;
 import org.junit.Before;
 import org.junit.Test;
 

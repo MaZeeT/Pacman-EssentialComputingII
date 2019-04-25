@@ -4,6 +4,8 @@ import Components.Position;
 import Entities.MovableEntity;
 import Maze.IMaze;
 import Maze.TwoHalls;
+import Movement.UserControlled.IMoverControlled;
+import Movement.UserControlled.MoveClockWise;
 import org.junit.Before;
 import org.junit.Test;
 

@@ -1,9 +1,10 @@
-package Movement;
+package Movement.DataStructureCrawlers;
 
 import Components.Position;
 import DataStructures.IDataStructure;
 import Entities.*;
 import Maze.IMaze;
+import Movement.IMover;
 import javafx.scene.paint.Color;
 
 import java.util.List;
