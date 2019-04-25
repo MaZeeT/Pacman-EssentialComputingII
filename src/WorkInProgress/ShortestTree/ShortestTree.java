@@ -61,8 +61,8 @@ public class ShortestTree implements IMover {
     }
 
     private void addNearby(Position pos, Position checkPos) {
-        if (!walls.contains(checkPos) && !visited.contains(checkPos)) {
-            visited.add(checkPos);
+        if (!walls.contains(checkPos)) {    // && !visited.contains(checkPos)
+            visited.add(checkPos);  //todo remove visited
             queue.add(checkPos);
             tree.add(pos, checkPos);
         }
@@ -70,16 +70,14 @@ public class ShortestTree implements IMover {
 
     @Override
     public void move() {
-        List<Position> list = tree.getAllParents(target.getPosition());
-        System.out.println(list);
+        MyStack<Position> stack = tree.getAllParents(target.getPosition());
+        System.out.println(stack);
       //todo bug somewhere in the lines below
-/*
-        movableEntity.setPosition(list.get(1));
+
+        movableEntity.setPosition(stack.getNext());
         if (updatePath) {
             buildTree();
-        } else {
-            list.remove(list.size() - 1);
-        }*/
+        }
     }
 
 }

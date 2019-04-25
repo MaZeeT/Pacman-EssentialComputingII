@@ -1,5 +1,7 @@
 package WorkInProgress.ShortestTree;
 
+import DataStructures.MyStack;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -107,13 +109,13 @@ public class Tree<T> {
      * @param item The generic item that specify where in the tree to start returning {@link Node}s from.
      * @return Return a list of generic items with the specified item as the first item and the root item as the last.
      */
-    public List<T> getAllParents(T item) {
-        List<T> list = new ArrayList<>();
+    public MyStack<T> getAllParents(T item) {
+        MyStack<T> stack = new MyStack<>();
         Node<T> child = find(item, root);
         if (child != null) {
             boolean getNextParent = true;
             while (getNextParent) {
-                list.add(child.contain);
+                stack.add(child.contain);
                 if (child.parent != null) {
                     child = child.parent;
                 } else {
@@ -121,7 +123,7 @@ public class Tree<T> {
                 }
             }
         }
-        return list;
+        return stack;
     }
 
 }

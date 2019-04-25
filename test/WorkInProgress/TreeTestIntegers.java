@@ -1,5 +1,6 @@
 package WorkInProgress;
 
+import DataStructures.MyStack;
 import WorkInProgress.ShortestTree.Tree;
 import org.junit.Before;
 import org.junit.Test;
@@ -165,13 +166,19 @@ public class TreeTestIntegers {
         tree.add(1,5);
 
         List<Integer> list = new ArrayList<>();
-        // list is returned backwards (from child to grandparents)
-        list.add(5);
-        list.add(1);
-        list.add(13);
         list.add(3);
+        list.add(13);
+        list.add(1);
+        list.add(5);
 
-        List<Integer> actual = tree.getAllParents(5);
+        //Converts MyStack to a List
+        List<Integer> stackList = new ArrayList<>();
+        MyStack<Integer> stack = tree.getAllParents(5);
+        while (!stack.isEmpty()){
+            stackList.add(stack.getNext());
+        }
+
+        List<Integer> actual = stackList;
         List<Integer> expected = list;
         assertEquals(expected, actual);
     }
@@ -185,7 +192,14 @@ public class TreeTestIntegers {
         tree.add(3,7);
         tree.add(1,5);
 
-        List<Integer> actual = tree.getAllParents(2);
+        //Converts MyStack to a List
+        List<Integer> stackList = new ArrayList<>();
+        MyStack<Integer> stack = tree.getAllParents(2);
+        while (!stack.isEmpty()){
+            stackList.add(stack.getNext());
+        }
+
+        List<Integer> actual = stackList;
         List<Integer> expected = new ArrayList<>();
         assertEquals(expected, actual);
     }
