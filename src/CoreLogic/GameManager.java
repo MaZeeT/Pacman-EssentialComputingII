@@ -23,7 +23,7 @@ public class GameManager {
      *
      * @param maze The {@link IMaze} is used to access all the different {@link GameObject}s in the {@link IMaze}.
      */
-    public GameManager(IMaze maze) {
+    GameManager(IMaze maze) {
         walls = maze.getWalls();
         ghosts = maze.getGhosts();
 
@@ -64,7 +64,7 @@ public class GameManager {
      *
      * @return Returns a list of {@link GameObject}s.
      */
-    public List<GameObject> getGameObjects() {
+    List<GameObject> getGameObjects() {
         return combineGameObjects();
     }
 

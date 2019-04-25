@@ -1,12 +1,11 @@
 package CoreLogic;
 
 import DataStructures.*;
-import Entities.GameObject;
-import Entities.MovableEntity;
-import GUI.*;
+import Entities.*;
+import GUI.IGUI;
 import GUI.SimpleGUI.SimpleGUI;
 import Maze.*;
-import Movement.*;
+import Movement.IMover;
 import Movement.DataStructureCrawlers.Crawler;
 import Movement.UserControlled.MoveClockWise;
 import UserControl.*;
@@ -190,7 +189,7 @@ public class Launcher {
             ((MovableEntity) ghosts.get(2)).setMover(
                     new Crawler(maze, (MovableEntity) ghosts.get(2), new DepthFirst()));
             ((MovableEntity) ghosts.get(0)).setMover(
-                    new ShortestTree(maze, (MovableEntity) ghosts.get(0), maze.getPlayer(), true));
+                    new ShortestTree(maze, (MovableEntity) ghosts.get(0), player, true));
         }
     }
 
