@@ -88,25 +88,21 @@ public class Launcher {
         setupMoversToGhosts();
 
         // Setup scene and stage
-        this.scene = setupScene(gui.getPane(), userInput, gameManager, inputManager);
-
+        this.scene = setupScene(gui.getPane(), inputManager);
 
         // Update thread
         UpdateProcess updateProcess = new UpdateProcess(gameManager, gui, runSpeed);
         updateProcess.start();
     }
 
-    //todo update javaDoc
+    //todo update javaDoc and take a look on the new EventHandler.
     /**
      * Setup a scene with a pane from the {@link IGUI} and bridges the {@link UserInput} with the direction in the {@link GameManager}.
      *
-     * @param pane        The given pane that will render the objects of the {@link GameManager}.
-     * @param userInput   The {@link UserInput} for the program.
-     * @param gameManager The {@link GameManager} for the program.
-     *
+     * @param pane The given pane that will render the objects of the {@link GameManager}.
      * @return Returns a new Scene based on the given pane.
      */
-    private Scene setupScene(Pane pane, UserInput userInput, GameManager gameManager, InputManager inputManager) {
+    private Scene setupScene(Pane pane, InputManager inputManager) {
         scene = new Scene(pane, 800, 600);
         scene.setOnKeyPressed(new EventHandler<KeyEvent>() {
             @Override
@@ -167,7 +163,7 @@ public class Launcher {
         if (index == 0) {
             return new MoveClockWise(maze, maze.getPlayer());
         }
-        if (index == 4){
+        if (index == 4) {
             return new ShortestTree(maze, maze.getPlayer(), maze.getWayPoint(), false);
         }
 
@@ -187,8 +183,8 @@ public class Launcher {
         List<GameObject> ghosts = maze.getGhosts();
         MovableEntity player = maze.getPlayer();
         if (ghosts != null) {
-        //    ((MovableEntity) ghosts.get(0)).setMover(
-        //            new Crawler(maze, (MovableEntity) ghosts.get(0), new Greedy(player.getPosition())));
+            //    ((MovableEntity) ghosts.get(0)).setMover(
+            //            new Crawler(maze, (MovableEntity) ghosts.get(0), new Greedy(player.getPosition())));
             ((MovableEntity) ghosts.get(1)).setMover(
                     new Crawler(maze, (MovableEntity) ghosts.get(1), new BreadthFirst()));
             ((MovableEntity) ghosts.get(2)).setMover(
