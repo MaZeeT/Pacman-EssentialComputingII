@@ -12,7 +12,7 @@ import java.util.List;
  * @param <T> The generic type the {@link Tree} should store.
  * @author MaZeeT
  */
-public class Tree<T> {
+class Tree<T> {
 
     private Node<T> root;
     private int size;
@@ -23,7 +23,7 @@ public class Tree<T> {
      * @param item The item that is checked if present in the {@link Tree}.
      * @return Returns true if the item is present in the {@link Tree}, and false if not.
      */
-    public boolean contain(T item) {
+    boolean contain(T item) {
         if (root != null) {
             return find(item, root) != null;
         } else {
@@ -109,7 +109,7 @@ public class Tree<T> {
      * @param item The generic item that specify where in the tree to start returning {@link Node}s from.
      * @return Return a list of generic items with the specified item as the first item and the root item as the last.
      */
-    public MyStack<T> getAllParents(T item) {
+    MyStack<T> getAllParents(T item) {
         MyStack<T> stack = new MyStack<>();
         Node<T> child = find(item, root);
         if (child != null) {
