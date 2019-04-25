@@ -38,16 +38,6 @@ public class SimpleGUI implements IGUI {
     }
 
     /**
-     * Set the list to the given {@link GameObject}s from outside the {@link IGUI}.
-     *
-     * @param gameObjects The list of renderables gameObjects.
-     */
-    void setGameObjects(List<GameObject> gameObjects) {
-        this.gameObjects = gameObjects;
-    }
-
-
-    /**
      * A helper method to calculate height and width of each field in the graphicsContext2D.
      */
     private void calculateFields() {
@@ -58,7 +48,7 @@ public class SimpleGUI implements IGUI {
     /**
      * A Method to draw the canvas with the given {@link GameObject}s.
      */
-    void drawCanvas() {
+    private void drawCanvas() {
         GraphicsContext g = canvas.getGraphicsContext2D();
         g.clearRect(0, 0, width * fieldWidth, height * fieldHeight);
 
@@ -75,7 +65,7 @@ public class SimpleGUI implements IGUI {
      */
     @Override
     public void update(List<GameObject> gameObjects) {
-        setGameObjects(gameObjects);
+        this.gameObjects = gameObjects;
         drawCanvas();
     }
 
