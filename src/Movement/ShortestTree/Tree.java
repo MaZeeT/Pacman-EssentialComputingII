@@ -1,4 +1,4 @@
-package WorkInProgress.ShortestTree;
+package Movement.ShortestTree;
 
 import DataStructures.MyStack;
 

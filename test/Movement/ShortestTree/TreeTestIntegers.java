@@ -1,7 +1,7 @@
-package WorkInProgress;
+package Movement.ShortestTree;
 
 import DataStructures.MyStack;
-import WorkInProgress.ShortestTree.Tree;
+import Movement.ShortestTree.Tree;
 import org.junit.Before;
 import org.junit.Test;
 

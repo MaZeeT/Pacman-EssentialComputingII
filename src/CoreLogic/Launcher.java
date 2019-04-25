@@ -7,7 +7,7 @@ import GUI.*;
 import Maze.*;
 import Movement.*;
 import UserControl.*;
-import WorkInProgress.ShortestTree.ShortestTree;
+import Movement.ShortestTree.ShortestTree;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.input.KeyEvent;
@@ -47,7 +47,7 @@ public class Launcher {
         runSpeed = 500; // milliseconds between each update
 
         // Options for setting maze.
-        maze = setMaze(6);
+        maze = setMaze(5);
         // 0 for TwoHalls.
         // 1 for SingleRoad.
         // 2 for ManyRoads.
@@ -57,7 +57,7 @@ public class Launcher {
         // 6 for AITestMaze (extra maze to test pathfinder algorithms)
 
         // Player movement options
-        playerMovement = setPlayerMovement(4);
+        playerMovement = setPlayerMovement(0);
         // 0 for User controlled.
         // 1 for DepthFirst.
         // 2 for BreadthFirst.
@@ -184,14 +184,14 @@ public class Launcher {
         List<GameObject> ghosts = maze.getGhosts();
         MovableEntity player = maze.getPlayer();
         if (ghosts != null) {
-            ((MovableEntity) ghosts.get(0)).setMover(
-                    new Crawler(maze, (MovableEntity) ghosts.get(0), new Greedy(player.getPosition())));
+        //    ((MovableEntity) ghosts.get(0)).setMover(
+        //            new Crawler(maze, (MovableEntity) ghosts.get(0), new Greedy(player.getPosition())));
             ((MovableEntity) ghosts.get(1)).setMover(
                     new Crawler(maze, (MovableEntity) ghosts.get(1), new BreadthFirst()));
             ((MovableEntity) ghosts.get(2)).setMover(
                     new Crawler(maze, (MovableEntity) ghosts.get(2), new DepthFirst()));
-       //     ((MovableEntity) ghosts.get(0)).setMover(
-        //            new ShortestTree(maze, (MovableEntity) ghosts.get(0), maze.getPlayer(), false));
+            ((MovableEntity) ghosts.get(0)).setMover(
+                    new ShortestTree(maze, (MovableEntity) ghosts.get(0), maze.getPlayer(), true));
         }
     }
 

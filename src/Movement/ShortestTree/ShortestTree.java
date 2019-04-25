@@ -1,4 +1,4 @@
-package WorkInProgress.ShortestTree;
+package Movement.ShortestTree;
 
 import Components.Position;
 import DataStructures.*;
@@ -14,14 +14,11 @@ public class ShortestTree implements IMover {
     private Tree<Position> tree;
     private MovableEntity movableEntity;
     private GameObject target;
-    private List<Position> visited;
     private List<Position> walls;
     private DataStructure<Position> queue;
     private MyStack<Position> stack;
     private boolean updatePath;
 
-    // wrapper for a tree, to take a target, generate a path to the target,
-// and on each update calls move 1 position closer, maybe use a queue.
     public ShortestTree(IMaze maze, MovableEntity movableEntity, GameObject target, boolean updatePath) {
         tree = new Tree<>();
         queue = new MyQueue<>();
@@ -32,31 +29,30 @@ public class ShortestTree implements IMover {
         this.movableEntity = movableEntity;
         this.target = target;
         this.updatePath = updatePath;
-        if (!updatePath){
-            buildTree(); //build the tree once if the path isn't updated for each step.
-            stack = tree.getAllParents(target.getPosition());
-        }
+        // if (!updatePath) {
+        buildTree(movableEntity.getPosition(), target.getPosition()); //build the tree once if the path isn't updated for each step.
+        stack = tree.getAllParents(target.getPosition());
+        //  }
 
     }
 
-    private void buildTree() {
+    private void buildTree(Position startPosition, Position targetPosition) {
         tree = new Tree<>();
-        visited = new ArrayList<>();
-        tree.add(movableEntity.getPosition());
-        queue.add(movableEntity.getPosition());
-        visited.add(movableEntity.getPosition());
-
-        nearby(movableEntity.getPosition());
-        while (!queue.isEmpty() &&
-                queue.checkNext() != target.getPosition()) {
+        tree.add(startPosition);
+        queue.add(startPosition);
+        nearby(startPosition);
+        while (!queue.isEmpty() //todo clean up
+                && queue.checkNext() != targetPosition
+        ) {
             nearby(queue.getNext());
         }
-
     }
 
     private void nearby(Position position) {
+        //explorer is a hack to access the nearby functions of the MovableGameObject class.
         MovableEntity explorer = new Explorer();
         explorer.setPosition(position);
+
         addNearby(position, explorer.checkUp());
         addNearby(position, explorer.checkRight());
         addNearby(position, explorer.checkDown());
@@ -64,8 +60,7 @@ public class ShortestTree implements IMover {
     }
 
     private void addNearby(Position pos, Position checkPos) {
-        if (!walls.contains(checkPos)) {    // && !visited.contains(checkPos)
-            visited.add(checkPos);  //todo remove visited
+        if (!walls.contains(checkPos)) {
             queue.add(checkPos);
             tree.add(pos, checkPos);
         }
@@ -73,12 +68,15 @@ public class ShortestTree implements IMover {
 
     @Override
     public void move() {
-        System.out.println(stack);
-        //todo bug somewhere in the lines below
-        movableEntity.setPosition(stack.getNext());
-        if (updatePath) {
-            buildTree();
+        if (!stack.isEmpty()) {
+            movableEntity.setPosition(stack.getNext());
         }
+        if (updatePath) {
+             buildTree(movableEntity.getPosition(), target.getPosition());
+            // movableEntity.setPosition(stack.getNext());
+            //  stack = tree.getAllParents(target.getPosition());
+        }
+        System.out.println(stack);
     }
 
 }
