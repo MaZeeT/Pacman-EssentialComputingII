@@ -17,7 +17,6 @@ public class ShortestTree implements IMover {
     private List<Position> visited;
     private List<Position> walls;
     private DataStructure<Position> queue;
-    private MovableEntity explorer;
     private boolean updatePath;
 
     // wrapper for a tree, to take a target, generate a path to the target,
@@ -32,27 +31,28 @@ public class ShortestTree implements IMover {
         this.movableEntity = movableEntity;
         this.target = target;
         this.updatePath = updatePath;
-        if (!updatePath) buildTree(); //build the tree once if the path isn't updated for each step.
+        //if (!updatePath)
+            buildTree(); //build the tree once if the path isn't updated for each step.
     }
 
     private void buildTree() {
         tree = new Tree<>();
         visited = new ArrayList<>();
-        explorer = new Explorer();
-        explorer.setPosition(movableEntity.getPosition());
+//        explorer.setPosition(movableEntity.getPosition());
         tree.add(movableEntity.getPosition());
         queue.add(movableEntity.getPosition());
         visited.add(movableEntity.getPosition());
 
         nearby(movableEntity.getPosition());
-
         while (!queue.isEmpty() &&
                 queue.checkNext() != target.getPosition()) {
             nearby(queue.getNext());
         }
+
     }
 
     private void nearby(Position position) {
+        MovableEntity  explorer = new Explorer();
         explorer.setPosition(position);
         addNearby(position, explorer.checkUp());
         addNearby(position, explorer.checkRight());
@@ -72,7 +72,6 @@ public class ShortestTree implements IMover {
     public void move() {
         List<Position> list = tree.getAllParents(target.getPosition());
         System.out.println(list);
-        System.out.println(tree.getAllParents(target.getPosition()));
       //todo bug somewhere in the lines below
 /*
         movableEntity.setPosition(list.get(1));

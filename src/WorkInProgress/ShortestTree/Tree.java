@@ -38,7 +38,7 @@ public class Tree<T> {
      * @return Returns the {@link Node} containing the given item if present, if not returns null.
      */
     private Node<T> find(T item, Node<T> parent) {
-        if (parent.contain == item) {
+        if (parent.contain.equals(item)) {
             return parent;
         } else {
             if (parent.children != null) {
