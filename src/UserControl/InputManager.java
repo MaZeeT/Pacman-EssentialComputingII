@@ -15,7 +15,7 @@ import javafx.scene.input.KeyCode;
 public class InputManager {
     private IMover mover;
     private UserInput userInput;
-    private char direction;
+    private char direction; //todo move to method specific if nothing more is done to this class.
 
     /**
      * Constructor of the InputManager.

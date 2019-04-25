@@ -19,7 +19,7 @@ public class PlayerControl implements UserInput {
      */
     private char direction(KeyCode key) {
 
-        KeyEvent keyEvent;
+        KeyEvent keyEvent;  //todo remove this variable if keyEvent is not moved in here
 
         char direction = ' ';
         switch (key) {
