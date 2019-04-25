@@ -45,4 +45,11 @@ public class MyQueue<T> extends DataStructure<T> {
         return queue.isEmpty();
     }
 
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public String toString() {
+        return queue.toString();
+    }
 }

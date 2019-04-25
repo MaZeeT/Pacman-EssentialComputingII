@@ -91,4 +91,10 @@ public abstract class DataStructure<T> {
      */
     public abstract boolean isEmpty();
 
+    /**
+     * Used to print the contents of the {@link DataStructure}.
+     *
+     * @return Returns the contents as a string.
+     */
+    public abstract String toString();
 }
