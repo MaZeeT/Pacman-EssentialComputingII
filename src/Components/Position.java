@@ -94,10 +94,10 @@ public class Position implements Comparable<Position> {
      */
     @Override
     public boolean equals(Object obj) {
-        try {
+        if (obj instanceof Position) {
             Position other = (Position) obj;
             return (x == other.x && y == other.y);
-        } catch (ClassCastException e) {
+        } else {
             return false;
         }
     }

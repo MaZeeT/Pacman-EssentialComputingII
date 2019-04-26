@@ -30,11 +30,11 @@ public class Crawler implements IMover {
      * and connect some of the private variables to different Lists from the {@link IMaze}.
      *
      * @param maze          The {@link IMaze} where the {@link Crawler} will move in.
-     * @param EntityToMove  The {@link MovableEntity} that the {@link Crawler} will move around.
+     * @param movableEntity  The {@link MovableEntity} that the {@link Crawler} will move around.
      * @param dataStructure The {@link IDataStructure} that will hold the {@link Position}s the {@link Crawler} will move around to.
      */
-    public Crawler(IMaze maze, MovableEntity EntityToMove, IDataStructure dataStructure) {
-        this.movableEntity = EntityToMove;
+    public Crawler(IMaze maze, MovableEntity movableEntity, IDataStructure dataStructure) {
+        this.movableEntity = movableEntity;
         this.gameObjectPositions = maze.getMazePositions();
         this.dataStructure = dataStructure;
     }

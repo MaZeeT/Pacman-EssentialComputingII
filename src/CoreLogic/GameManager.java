@@ -27,8 +27,11 @@ public class GameManager {
         walls = maze.getWalls();
         ghosts = maze.getGhosts();
 
-        MovableEntity player = maze.getPlayer();
-        this.player.add(player);
+        //todo remove comment
+       // MovableEntity player = maze.getPlayer();
+     //   this.player.add(player);
+
+        this.player.add(maze.getPlayer());
         wayPoints.add(maze.getWayPoint());
     }
 

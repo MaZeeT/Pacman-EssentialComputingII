@@ -98,6 +98,8 @@ public class MoveClockWise implements IMover, IMoverControlled {
                     movableEntity.moveRight();
                 }
                 break;
+             default:
+
         }
     }
 
