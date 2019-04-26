@@ -15,7 +15,6 @@ import javafx.scene.input.KeyCode;
 public class InputManager {
     private IMover mover;
     private UserInput userInput;
-    private char direction; //todo move to method specific if nothing more is done to this class.
 
     /**
      * Constructor of the InputManager.
@@ -29,8 +28,6 @@ public class InputManager {
         this.userInput = userInput;
     }
 
-    //todo look into removing keyCodes
-
     /**
      * Update the direction of a {@link IMover} implementing the {@link IMoverControlled} interface,
      * else nothing is done.
@@ -40,8 +37,7 @@ public class InputManager {
      */
     public void update(KeyCode keyCode) {
         if (mover instanceof IMoverControlled) {
-            direction = ((IMoverControlled) mover).getDirection();
-            direction = userInput.getDirection(keyCode);
+            char direction = userInput.getDirection(keyCode);
             ((IMoverControlled) mover).setDirection(direction);
         }
     }
