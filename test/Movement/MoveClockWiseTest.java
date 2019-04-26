@@ -2,10 +2,8 @@ package Movement;
 
 import Components.Position;
 import Entities.MovableEntity;
-import Maze.IMaze;
-import Maze.TwoHalls;
-import Movement.UserControlled.IMoverControlled;
-import Movement.UserControlled.MoveClockWise;
+import Maze.*;
+import Movement.UserControlled.*;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -71,4 +69,5 @@ public class MoveClockWiseTest {
         char actual = movement.getDirection();
         assertEquals(expected, actual);
     }
+
 }

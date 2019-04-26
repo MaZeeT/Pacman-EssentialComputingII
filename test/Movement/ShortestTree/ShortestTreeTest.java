@@ -1,7 +1,6 @@
 package Movement.ShortestTree;
 
-import Entities.GameObject;
-import Entities.MovableEntity;
+import Entities.*;
 import Maze.*;
 import Movement.IMover;
 import org.junit.Before;

@@ -6,7 +6,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class BreadthFirstTest extends DataStructuresTest{
+public class BreadthFirstTest extends DataStructuresTest {
 
     @Before
     public void setUp() {

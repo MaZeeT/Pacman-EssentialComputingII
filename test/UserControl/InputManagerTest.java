@@ -1,12 +1,10 @@
 package UserControl;
 
 import DataStructures.DepthFirst;
-import Maze.IMaze;
-import Maze.PacMan;
+import Maze.*;
 import Movement.DataStructureCrawlers.Crawler;
 import Movement.IMover;
-import Movement.UserControlled.IMoverControlled;
-import Movement.UserControlled.MoveClockWise;
+import Movement.UserControlled.*;
 import javafx.scene.input.KeyCode;
 import org.junit.Before;
 import org.junit.Test;
@@ -14,6 +12,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class InputManagerTest {
+
     private KeyCode keyCode;
     private IMover mover;
     private IMoverControlled moverControlled;
@@ -44,7 +43,7 @@ public class InputManagerTest {
         inputManager = new InputManager(mover, userInput);
         inputManager.update(keyCode);
 
-        // "\0" is the "null" char
+        // "\0" is the char for "null"
         char actual = '\0';
         char expected = moverControlled.getDirection();
         assertEquals(expected, actual);

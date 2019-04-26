@@ -64,4 +64,5 @@ public class WallTest {
         int actual = defWall.compareTo(wall);
         assertEquals(expected, actual);
     }
+
 }

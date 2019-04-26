@@ -135,7 +135,7 @@ public class PositionTest {
     }
 
     @Test
-    public void equalHashcode() {
+    public void notEqualHashcode() {
         Position pos1 = new Position(defX, defY);
         Position pos2 = new Position(defX + 1, defY + 1);
 
@@ -145,7 +145,7 @@ public class PositionTest {
     }
 
     @Test
-    public void notEqualHashcode() {
+    public void equalHashcode() {
         Position pos1 = new Position(defX, defY);
         Position pos2 = new Position(defX, defY);
 

@@ -28,7 +28,6 @@ public class GameObjectTest {
         wall = new Wall(wallPos);
     }
 
-
     @Test
     public void getWayPointPosition() {
         Position wayPointExpected = wayPointPos;
@@ -75,48 +74,51 @@ public class GameObjectTest {
         assertEquals(wallExpected, wallActual);
     }
 
-
     @Test
-    public void getColor() {
+    public void getColorWayPoint() {
 
-        //test wayPoint
         Color wayPointExpected = Color.GREEN;
         Color wayPointActual = wayPoint.getColor();
         assertEquals(wayPointExpected, wayPointActual);
+    }
 
-        //test player
+    @Test
+    public void getColorPlayer() {
         Color playerExpected = Color.BLACK;
         Color playerActual = player.getColor();
         assertEquals(playerExpected, playerActual);
+    }
 
-        //test wall
+    @Test
+    public void getColorWall() {
         Color wallExpected = Color.GREY;
         Color wallActual = wall.getColor();
         assertEquals(wallExpected, wallActual);
     }
 
-
     @Test
-    public void setColor() {
-
-        //test wayPoint
+    public void setColorWayPoint() {
         Color wayPointExpected = Color.BLUE;
         wayPoint.setColor(wayPointExpected);
         Color wayPointActual = wayPoint.getColor();
         assertEquals(wayPointExpected, wayPointActual);
+    }
 
-        //test player
+    @Test
+    public void setColorPlayer() {
         Color playerExpected = Color.GREEN;
         player.setColor(playerExpected);
         Color playerActual = player.getColor();
         assertEquals(playerExpected, playerActual);
 
-        //test walls
+    }
+
+    @Test
+    public void setColorWalls() {
         Color wallExpected = Color.RED;
         wall.setColor(wallExpected);
         Color wallActual = wall.getColor();
         assertEquals(wallExpected, wallActual);
     }
-
 
 }

@@ -6,6 +6,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class MyStackTest {
+
     private MyStack<Integer> stack;
 
     @Before
@@ -22,7 +23,7 @@ public class MyStackTest {
 
     @Test
     public void toString1Item() {
-       stack.add(6);
+        stack.add(6);
 
         String actual = stack.toString();
         String expected = "[6]";

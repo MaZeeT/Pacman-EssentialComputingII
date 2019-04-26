@@ -1,7 +1,6 @@
 package Movement.ShortestTree;
 
 import DataStructures.MyStack;
-import Movement.ShortestTree.Tree;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -11,6 +10,7 @@ import java.util.List;
 import static org.junit.Assert.*;
 
 public class TreeTestIntegers {
+
     Tree<Integer> tree;
 
     @Before
@@ -47,10 +47,10 @@ public class TreeTestIntegers {
     @Test
     public void add5TimesNonIsEqual() {
         tree.add(5);
-        tree.add(5,13);
-        tree.add(5,3);
-        tree.add(13,1);
-        tree.add(3,8);
+        tree.add(5, 13);
+        tree.add(5, 3);
+        tree.add(13, 1);
+        tree.add(3, 8);
 
         int actual = tree.getSize();
         int expected = 5;
@@ -102,11 +102,11 @@ public class TreeTestIntegers {
     @Test
     public void findInLargerTree() {
         tree.add(3);
-        tree.add(3,13);
-        tree.add(13,1);
-        tree.add(1,9);
-        tree.add(3,7);
-        tree.add(1,5);
+        tree.add(3, 13);
+        tree.add(13, 1);
+        tree.add(1, 9);
+        tree.add(3, 7);
+        tree.add(1, 5);
 
         boolean actual = tree.contain(5);
         boolean expected = true;
@@ -136,8 +136,8 @@ public class TreeTestIntegers {
     @Test
     public void containInTreeOfSize10True() {
         int i = 32;
-        for (int j = i+10; j > i; j--) {
-            tree.add(j, j-1);
+        for (int j = i + 10; j > i; j--) {
+            tree.add(j, j - 1);
         }
 
         boolean actual = tree.contain(i);
@@ -148,7 +148,7 @@ public class TreeTestIntegers {
     @Test
     public void containInTreeOfSize15False() {
         for (int i = 0; i < 10; i++) {
-            tree.add(i, i+1);
+            tree.add(i, i + 1);
         }
 
         boolean actual = tree.contain(15);
@@ -159,11 +159,11 @@ public class TreeTestIntegers {
     @Test
     public void getAllParentsChildInTree() {
         tree.add(3);
-        tree.add(3,13);
-        tree.add(13,1);
-        tree.add(1,9);
-        tree.add(3,7);
-        tree.add(1,5);
+        tree.add(3, 13);
+        tree.add(13, 1);
+        tree.add(1, 9);
+        tree.add(3, 7);
+        tree.add(1, 5);
 
         List<Integer> list = new ArrayList<>();
         list.add(3);
@@ -174,7 +174,7 @@ public class TreeTestIntegers {
         //Converts MyStack to a List
         List<Integer> stackList = new ArrayList<>();
         MyStack<Integer> stack = tree.getAllParents(5);
-        while (!stack.isEmpty()){
+        while (!stack.isEmpty()) {
             stackList.add(stack.getNext());
         }
 
@@ -186,16 +186,16 @@ public class TreeTestIntegers {
     @Test
     public void getAllParentsChildNotInTree() {
         tree.add(3);
-        tree.add(3,13);
-        tree.add(13,1);
-        tree.add(1,9);
-        tree.add(3,7);
-        tree.add(1,5);
+        tree.add(3, 13);
+        tree.add(13, 1);
+        tree.add(1, 9);
+        tree.add(3, 7);
+        tree.add(1, 5);
 
         //Converts MyStack to a List
         List<Integer> stackList = new ArrayList<>();
         MyStack<Integer> stack = tree.getAllParents(2);
-        while (!stack.isEmpty()){
+        while (!stack.isEmpty()) {
             stackList.add(stack.getNext());
         }
 

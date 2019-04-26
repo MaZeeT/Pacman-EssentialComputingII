@@ -6,13 +6,13 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class GreedyTest extends DataStructuresTest{
+public class GreedyTest extends DataStructuresTest {
 
     private Position target;
 
     @Before
-    public void setUp(){
-        target = new Position(9,9); // move this position to 2,2 to break the tests.
+    public void setUp() {
+        target = new Position(9, 9); // move this position to 2,2 to break the tests.
         dataStructure = new Greedy(target);
     }
 
@@ -77,7 +77,7 @@ public class GreedyTest extends DataStructuresTest{
 
     @Test
     public void getNextX2ScrambledPositions() {
-        dataStructure = new Greedy(new Position(4,3));
+        dataStructure = new Greedy(new Position(4, 3));
         Position pos1 = new Position(1, 1);
         Position pos2 = new Position(2, 8);
         Position pos3 = new Position(7, 3);

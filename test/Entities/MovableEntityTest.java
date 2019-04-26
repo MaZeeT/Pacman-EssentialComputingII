@@ -10,11 +10,12 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 public abstract class MovableEntityTest {
-     MovableEntity defMovable;
-     Position defPos;
-     IMover defMover;
-     int defX;
-     int defY;
+
+    MovableEntity defMovable;
+    Position defPos;
+    IMover defMover;
+    int defX;
+    int defY;
 
     @Test
     public void moveUp() {

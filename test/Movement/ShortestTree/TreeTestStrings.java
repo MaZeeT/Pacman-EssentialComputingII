@@ -1,7 +1,6 @@
 package Movement.ShortestTree;
 
 import DataStructures.MyStack;
-import Movement.ShortestTree.Tree;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -11,6 +10,7 @@ import java.util.List;
 import static org.junit.Assert.assertEquals;
 
 public class TreeTestStrings {
+
     Tree<String> tree;
 
     @Before
@@ -193,7 +193,7 @@ public class TreeTestStrings {
         //Converts MyStack to a List
         List<String> stackList = new ArrayList<>();
         MyStack<String> stack = tree.getAllParents("mads");
-        while (!stack.isEmpty()){
+        while (!stack.isEmpty()) {
             stackList.add(stack.getNext());
         }
 
@@ -219,7 +219,7 @@ public class TreeTestStrings {
         //Converts MyStack to a List
         List<String> stackList = new ArrayList<>();
         MyStack<String> stack = tree.getAllParents("ebbe");
-        while (!stack.isEmpty()){
+        while (!stack.isEmpty()) {
             stackList.add(stack.getNext());
         }
 

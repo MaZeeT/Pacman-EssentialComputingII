@@ -12,6 +12,7 @@ import java.util.List;
 import static org.junit.Assert.*;
 
 public class MazeObjTest {
+
     private IMaze maze;
     private int defX;
     private int defY;
@@ -122,7 +123,7 @@ public class MazeObjTest {
         List<GameObject> ghosts = maze.getGhosts();
         Position ghostPosition = ghosts.get(0).getPosition();
 
-        boolean actual = ghostPosition.equals(new Position(1,1));
+        boolean actual = ghostPosition.equals(new Position(1, 1));
         boolean expected = true;
         assertEquals(expected, actual);
     }
