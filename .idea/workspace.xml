@@ -4,10 +4,10 @@
     <option name="ANALYZE_TEST_SOURCES" value="false" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="shortestTree can now trace the target when it moves.">
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Clean up of UserControl code">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UserControl/InputManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UserControl/InputManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UserControl/PlayerControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UserControl/PlayerControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CoreLogic/Launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CoreLogic/Launcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Maze/PacMan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Maze/PacMan.java" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -21,7 +21,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/Pacman_EssentialComputingII$All_in_snakeFX.ic" NAME="All in snakeFX Coverage Results" MODIFIED="1556272321706" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Pacman_EssentialComputingII$All_in_snakeFX.ic" NAME="All in snakeFX Coverage Results" MODIFIED="1556273090491" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/snakeFX$MazeTest_listSizeGameObjectComparedPositions.ic" NAME="MazeTest.listSizeGameObjectComparedPositions Coverage Results" MODIFIED="1552948383785" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>SnakeMaze.*</FILTER>
     </SUITE>
@@ -155,14 +155,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/UserControl/InputManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="111">
-              <caret line="14" column="27" lean-forward="true" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
+            <state relative-caret-position="714">
+              <caret line="42" column="5" lean-forward="true" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Maze/PacMan.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="562">
+              <caret line="34" column="66" selection-start-line="34" selection-start-column="66" selection-end-line="34" selection-end-column="66" />
             </state>
           </provider>
         </entry>
@@ -186,6 +195,10 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="306">
               <caret line="19" column="41" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
+              <folding>
+                <element signature="e#1257#1258#0" expanded="true" />
+                <element signature="e#1294#1295#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -202,11 +215,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/CoreLogic/Launcher.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="409">
-              <caret line="191" column="86" selection-start-line="191" selection-start-column="86" selection-end-line="191" selection-end-column="86" />
+            <state relative-caret-position="2346">
+              <caret line="199" column="83" lean-forward="true" selection-start-line="199" selection-start-column="83" selection-end-line="199" selection-end-column="83" />
               <folding>
                 <element signature="docComment;class#Launcher#0" />
                 <element signature="docComment;method#configuration#0;class#Launcher#0" />
@@ -259,7 +272,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Maze/PacMan.java" />
         <option value="$PROJECT_DIR$/src/Maze/AITestMaze.java" />
         <option value="$PROJECT_DIR$/test/Movement/MoveClockWiseTest.java" />
         <option value="$PROJECT_DIR$/src/Movement/IMoverControlled.java" />
@@ -306,10 +318,11 @@
         <option value="$PROJECT_DIR$/src/GUI/SimpleGUI/SimpleGUI.java" />
         <option value="$PROJECT_DIR$/src/Movement/ShortestTree/Tree.java" />
         <option value="$PROJECT_DIR$/src/Entities/IEntities.java" />
-        <option value="$PROJECT_DIR$/src/CoreLogic/Launcher.java" />
         <option value="$PROJECT_DIR$/src/Movement/ShortestTree/ShortestTree.java" />
         <option value="$PROJECT_DIR$/src/UserControl/PlayerControl.java" />
         <option value="$PROJECT_DIR$/src/UserControl/InputManager.java" />
+        <option value="$PROJECT_DIR$/src/Maze/PacMan.java" />
+        <option value="$PROJECT_DIR$/src/CoreLogic/Launcher.java" />
       </list>
     </option>
   </component>
@@ -342,6 +355,12 @@
             <path>
               <item name="Pacman-EssentialComputingII" type="b2602c69:ProjectViewProjectNode" />
               <item name="Pacman-EssentialComputingII" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Maze" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Pacman-EssentialComputingII" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Pacman-EssentialComputingII" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -370,7 +389,7 @@
     <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556272478711" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556273088801" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="dynamic.classpath" value="false" />
@@ -428,7 +447,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.All in snakeFX">
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="" />
       <option name="DEPLOY" value="true" />
@@ -835,14 +854,7 @@
       <workItem from="1556099168504" duration="3533000" />
       <workItem from="1556181371422" duration="13286000" />
       <workItem from="1556229074877" duration="1549000" />
-      <workItem from="1556266293887" duration="3468000" />
-    </task>
-    <task id="LOCAL-00139" summary="renamed IMove to IMover">
-      <created>1555689353725</created>
-      <option name="number" value="00139" />
-      <option name="presentableId" value="LOCAL-00139" />
-      <option name="project" value="LOCAL" />
-      <updated>1555689353725</updated>
+      <workItem from="1556266293887" duration="4177000" />
     </task>
     <task id="LOCAL-00140" summary="Included IMover in the MovableEntities">
       <created>1555689479258</created>
@@ -1180,7 +1192,14 @@
       <option name="project" value="LOCAL" />
       <updated>1556271845353</updated>
     </task>
-    <option name="localTasksCounter" value="188" />
+    <task id="LOCAL-00188" summary="Clean up of UserControl code">
+      <created>1556272505928</created>
+      <option name="number" value="00188" />
+      <option name="presentableId" value="LOCAL-00188" />
+      <option name="project" value="LOCAL" />
+      <updated>1556272505928</updated>
+    </task>
+    <option name="localTasksCounter" value="189" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1216,7 +1235,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="488068000" />
+    <option name="totallyTimeSpent" value="488777000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1229,6 +1248,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Image Layers" order="0" />
       <window_info id="UI Designer" order="1" />
@@ -1271,7 +1291,7 @@
       <window_info anchor="right" id="Properties" order="9" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="10" weight="0.25" />
       <window_info anchor="right" id="Maven" order="11" />
-      <window_info anchor="right" id="Coverage" order="12" side_tool="true" visible="true" weight="0.15884861" />
+      <window_info anchor="right" id="Coverage" order="12" side_tool="true" weight="0.15884861" />
     </layout>
     <layout-to-restore>
       <window_info id="Image Layers" order="0" />
@@ -1330,7 +1350,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="tree v1.0 with inner Node class" />
     <MESSAGE value="removed Comparable requirement since it wasn't used" />
     <MESSAGE value="added javaDoc primarily to the Tree class" />
     <MESSAGE value="Update to DataStructure and child classes to make them public and isEmpty() public" />
@@ -1355,7 +1374,8 @@
     <MESSAGE value="added todo's to warnings in UserControl" />
     <MESSAGE value="added todo to IEntities interface which is not in use for the moment" />
     <MESSAGE value="shortestTree can now trace the target when it moves." />
-    <option name="LAST_COMMIT_MESSAGE" value="shortestTree can now trace the target when it moves." />
+    <MESSAGE value="Clean up of UserControl code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Clean up of UserControl code" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -1388,7 +1408,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/WorkInProgress/Nodes/ComparableNode.java" />
     <entry file="file://$PROJECT_DIR$/src/WorkInProgress/Nodes/Node.java" />
     <entry file="file://$PROJECT_DIR$/src/WorkInProgress/ShortestTree.java" />
     <entry file="file://$PROJECT_DIR$/test/DataStructures/GreedyTest.java">
@@ -1749,21 +1768,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CoreLogic/Launcher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="191" column="86" selection-start-line="191" selection-start-column="86" selection-end-line="191" selection-end-column="86" />
-          <folding>
-            <element signature="docComment;class#Launcher#0" />
-            <element signature="docComment;method#configuration#0;class#Launcher#0" />
-            <element signature="docComment;method#Launcher#0;class#Launcher#0" />
-            <element signature="docComment;method#getScene#0;class#Launcher#0" />
-            <element signature="docComment;method#setMaze#0;class#Launcher#0" />
-            <element signature="method#setMaze#0;class#Launcher#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/Movement/ShortestTree/ShortestTreeTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="232">
@@ -1790,15 +1794,41 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="19" column="41" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
+          <folding>
+            <element signature="e#1257#1258#0" expanded="true" />
+            <element signature="e#1294#1295#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/UserControl/InputManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="14" column="27" lean-forward="true" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
+        <state relative-caret-position="714">
+          <caret line="42" column="5" lean-forward="true" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Maze/PacMan.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="562">
+          <caret line="34" column="66" selection-start-line="34" selection-start-column="66" selection-end-line="34" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CoreLogic/Launcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2346">
+          <caret line="199" column="83" lean-forward="true" selection-start-line="199" selection-start-column="83" selection-end-line="199" selection-end-column="83" />
+          <folding>
+            <element signature="docComment;class#Launcher#0" />
+            <element signature="docComment;method#configuration#0;class#Launcher#0" />
+            <element signature="docComment;method#Launcher#0;class#Launcher#0" />
+            <element signature="docComment;method#getScene#0;class#Launcher#0" />
+            <element signature="docComment;method#setMaze#0;class#Launcher#0" />
+            <element signature="method#setMaze#0;class#Launcher#0" />
           </folding>
         </state>
       </provider>

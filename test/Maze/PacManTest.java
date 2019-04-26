@@ -52,14 +52,14 @@ public class PacManTest {
 
     @Test
     public void checkGhosts(){
-        int expected = 3;
+        int expected = 4;
         int actual = ghosts.size();
         assertEquals(expected, actual);
     }
 
     @Test
     public void getMovableEntities(){
-        int expected = 4;
+        int expected = 5;
         int actual = maze.getMovables().size();
         assertEquals(expected, actual);
     }

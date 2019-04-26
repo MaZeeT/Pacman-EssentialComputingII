@@ -14,6 +14,7 @@ import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.Pane;
+import javafx.scene.paint.Color;
 
 import java.util.List;
 
@@ -95,6 +96,7 @@ public class Launcher {
     }
 
     //todo update javaDoc and take a look on the new EventHandler.
+
     /**
      * Setup a scene with a pane from the {@link IGUI} and bridges the {@link UserInput} with the direction in the {@link GameManager}.
      *
@@ -182,14 +184,24 @@ public class Launcher {
         List<GameObject> ghosts = maze.getGhosts();
         MovableEntity player = maze.getPlayer();
         if (ghosts != null) {
-            //    ((MovableEntity) ghosts.get(0)).setMover(
-            //            new Crawler(maze, (MovableEntity) ghosts.get(0), new Greedy(player.getPosition())));
-            ((MovableEntity) ghosts.get(1)).setMover(
-                    new Crawler(maze, (MovableEntity) ghosts.get(1), new BreadthFirst()));
-            ((MovableEntity) ghosts.get(2)).setMover(
-                    new Crawler(maze, (MovableEntity) ghosts.get(2), new DepthFirst()));
-            ((MovableEntity) ghosts.get(0)).setMover(
-                    new ShortestTree(maze, (MovableEntity) ghosts.get(0), player, true));
+            int greedy = 0;
+            int breadFirst = 1;
+            int depthFirst = 2;
+            int shortestTree = 3;
+
+            ghosts.get(greedy).setColor(Color.GREEN);
+            ghosts.get(breadFirst).setColor(Color.BLUE);
+            ghosts.get(depthFirst).setColor(Color.RED);
+            ghosts.get(shortestTree).setColor(Color.GOLD);
+
+            ((MovableEntity) ghosts.get(greedy)).setMover(
+                    new Crawler(maze, (MovableEntity) ghosts.get(greedy), new Greedy(player.getPosition())));
+            ((MovableEntity) ghosts.get(breadFirst)).setMover(
+                    new Crawler(maze, (MovableEntity) ghosts.get(breadFirst), new BreadthFirst()));
+            ((MovableEntity) ghosts.get(depthFirst)).setMover(
+                    new Crawler(maze, (MovableEntity) ghosts.get(depthFirst), new DepthFirst()));
+            ((MovableEntity) ghosts.get(shortestTree)).setMover(
+                    new ShortestTree(maze, (MovableEntity) ghosts.get(shortestTree), player, true));
         }
     }
 
