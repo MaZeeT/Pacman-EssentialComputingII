@@ -95,13 +95,11 @@ public class Launcher {
         updateProcess.start();
     }
 
-    //todo update javaDoc and take a look on the new EventHandler.
-
     /**
-     * Setup a scene with a pane from the {@link IGUI} and bridges the {@link UserInput} with the direction in the {@link GameManager}.
+     * Setup a scene with the pane from the {@link IGUI} and bridges together the {@link InputManager} with the keyEvents from the scene.
      *
-     * @param pane The given pane that will render the objects of the {@link GameManager}.
-     * @return Returns a new Scene based on the given pane.
+     * @param pane The given pane that shall be shown on the scene.
+     * @return Returns a new Scene based on the given pane and the given {@link InputManager}.
      */
     private Scene setupScene(Pane pane, InputManager inputManager) {
         scene = new Scene(pane, 800, 600);

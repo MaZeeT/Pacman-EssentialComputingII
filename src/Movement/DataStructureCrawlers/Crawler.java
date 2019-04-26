@@ -5,7 +5,6 @@ import DataStructures.IDataStructure;
 import Entities.*;
 import Maze.IMaze;
 import Movement.IMover;
-import javafx.scene.paint.Color;
 
 import java.util.List;
 
@@ -22,7 +21,6 @@ import java.util.List;
 public class Crawler implements IMover {
 
     private MovableEntity movableEntity;
-    private List<GameObject> gameObjects;
     private List<Position> gameObjectPositions;
     private IDataStructure dataStructure;
 
@@ -37,38 +35,21 @@ public class Crawler implements IMover {
      */
     public Crawler(IMaze maze, MovableEntity EntityToMove, IDataStructure dataStructure) {
         this.movableEntity = EntityToMove;
-        this.gameObjects = maze.getMaze();
         this.gameObjectPositions = maze.getMazePositions();
         this.dataStructure = dataStructure;
     }
 
-    //todo check text around visited walls.
     /**
-     * This method is called on each move "tick".
-     * First the {@link Position} of the {@link MovableEntity} is added as a visited wall,
-     * and nearby positions of the {@link MovableEntity} is checked and added to the dataStructure.
-     * If the dataStructure is not empty, the {@link MovableEntity}'s position will be checked to the next in the dataStructure.
+     * This method is called on each move "tick" and handle the movement of the {@link MovableEntity}.
+     * The movement is handle to add the nearby {@link Position}s to a dataStructure implementing
+     * the {@link IDataStructure} interface and setting the {@link Position} to the next {@link Position} in the dataStructure.
      */
     @Override
     public void move() {
-        gameObjects.add(visited(movableEntity.getPosition()));
         checkNearby(movableEntity);
         if (dataStructure.checkNext() != null) {
             movableEntity.setPosition(dataStructure.getNext());
         }
-    }
-
-    //todo this have never worked, make it working or remove.
-    /**
-     * Instantiate a new {@link Wall} object, set the color to YELLOW and return the new {@link Wall} object.
-     *
-     * @param position The {@link Position} of the new instantiated {@link Wall}.
-     * @return Return a new YELLOW {@link Wall} object
-     */
-    private Wall visited(Position position) {
-        Wall wall = new Wall(position);
-        wall.setColor(Color.YELLOW);
-        return wall;
     }
 
     /**
