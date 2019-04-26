@@ -123,8 +123,9 @@ public class ShortestTree implements IMover {
 }
 
 /**
- * The purpose of this inner class is to give access to the checkUp etc methods.
- * //todo consider deleting this and move checkUp etc. to a static utility class.
+ * The purpose of this inner class is to give access to the checkUp etc. methods.
+ *
+ * @author MaZeeT
  */
 class Explorer extends MovableEntity {
 
