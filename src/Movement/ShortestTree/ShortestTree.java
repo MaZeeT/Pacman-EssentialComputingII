@@ -121,6 +121,7 @@ public class ShortestTree implements IMover {
 
 }
 
+
 /**
  * The purpose of this inner class is to give access to the checkUp etc. methods.
  *

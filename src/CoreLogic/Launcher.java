@@ -96,6 +96,7 @@ public class Launcher {
      * Setup a scene with the pane from the {@link IGUI} and bridges together the {@link InputManager} with the keyEvents from the scene.
      *
      * @param pane The given pane that shall be shown on the scene.
+     * @param inputManager The {@link InputManager} that handles the input from the KeyEvent.
      * @return Returns a new Scene based on the given pane and the given {@link InputManager}.
      */
     private Scene setupScene(Pane pane, InputManager inputManager) {
