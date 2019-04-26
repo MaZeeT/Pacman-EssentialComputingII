@@ -19,8 +19,8 @@ public class UpdateProcess extends Thread {
      * Lastly the class need to know how long the delay between each updates has to be.
      *
      * @param gameManager The {@link GameManager}.
-     * @param gui The {@link IGUI}.
-     * @param speed The delay between each updates in milliseconds.
+     * @param gui         The {@link IGUI}.
+     * @param speed       The delay between each updates in milliseconds.
      */
     UpdateProcess(GameManager gameManager, IGUI gui, int speed) {
         this.gameManager = gameManager;

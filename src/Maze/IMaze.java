@@ -61,4 +61,5 @@ public interface IMaze {
      * @return Returns a list of all {@link MovableEntity} in the maze.
      */
     List<MovableEntity> getMovables();
+
 }

@@ -16,4 +16,5 @@ public interface UserInput {
      * @return Returns the direction as a char.
      */
     char getDirection(KeyCode keyCode);
+
 }

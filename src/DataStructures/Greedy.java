@@ -19,7 +19,7 @@ public class Greedy implements IDataStructure {
     private List<Position> visitedList = new ArrayList<>();
     private Position target;
 
-    public Greedy(Position targetPosition){
+    public Greedy(Position targetPosition) {
         this.target = targetPosition;
     }
 

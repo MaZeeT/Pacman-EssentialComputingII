@@ -41,7 +41,7 @@ public class MyQueue<T> extends DataStructure<T> {
      * {@inheritDoc}
      */
     @Override
-   public boolean isEmpty() {
+    public boolean isEmpty() {
         return queue.isEmpty();
     }
 

@@ -18,6 +18,7 @@ public abstract class MovableEntity extends GameObject {
 
     /**
      * Move the {@link MovableEntity} around by calling update().
+     *
      * @return Return true if an IMover is present and the update() was successful, else return false.
      */
     public abstract boolean update();

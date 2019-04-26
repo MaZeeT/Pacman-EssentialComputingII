@@ -1,8 +1,7 @@
 package Movement.UserControlled;
 
 import Components.Position;
-import Entities.GameObject;
-import Entities.MovableEntity;
+import Entities.*;
 import Maze.IMaze;
 import Movement.IMover;
 
@@ -23,7 +22,7 @@ public class MoveClockWise implements IMover, IMoverControlled {
     /**
      * Constructor for this class. It needs a maze to know where the {@link GameObject}s and the {@link MovableEntity} are.
      *
-     * @param maze The {@link IMaze} which need to have a user controlled {@link MovableEntity}.
+     * @param maze          The {@link IMaze} which need to have a user controlled {@link MovableEntity}.
      * @param movableEntity The {@link MovableEntity} that should be controlled by the {@link IMover}.
      */
     public MoveClockWise(IMaze maze, MovableEntity movableEntity) {

@@ -1,7 +1,6 @@
 package UserControl;
 
 import javafx.scene.input.KeyCode;
-import javafx.scene.input.KeyEvent;
 
 /**
  * The purpose of this class is to give the user a way to control the program.

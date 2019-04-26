@@ -95,9 +95,9 @@ public abstract class Maze implements IMaze {
     public List<MovableEntity> getMovables() {
         List<MovableEntity> list = new ArrayList<>();
         list.add(player);
-        if (ghosts != null){
-            for (GameObject ghost:ghosts){
-                list.add((MovableEntity)ghost);
+        if (ghosts != null) {
+            for (GameObject ghost : ghosts) {
+                list.add((MovableEntity) ghost);
             }
         }
         return list;

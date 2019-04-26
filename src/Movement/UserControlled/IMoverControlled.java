@@ -24,4 +24,5 @@ public interface IMoverControlled extends IMover {
      * @return Returns the direction the next update will be taken towards.
      */
     char getDirection();
+
 }

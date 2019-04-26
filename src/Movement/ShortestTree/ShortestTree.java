@@ -2,8 +2,7 @@ package Movement.ShortestTree;
 
 import Components.Position;
 import DataStructures.*;
-import Entities.GameObject;
-import Entities.MovableEntity;
+import Entities.*;
 import Maze.IMaze;
 import Movement.IMover;
 

@@ -40,7 +40,7 @@ public class MyStack<T> extends DataStructure<T> {
      * {@inheritDoc}
      */
     @Override
-   public boolean isEmpty() {
+    public boolean isEmpty() {
         return stack.empty();
     }
 

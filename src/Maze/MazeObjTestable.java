@@ -25,8 +25,8 @@ class MazeObjTestable extends MazeObjBased {
         this.ghosts = new ArrayList<>();
         addPlayer(2, 2);
         addWayPoint(2, 3);
-        addGhost(1,1);
-        borders(width,height);
+        addGhost(1, 1);
+        borders(width, height);
     }
 
 }
