@@ -9,7 +9,7 @@ package Movement;
 public interface IMover {
 
     /**
-     * This will perform a single movement for each call
+     * This will perform a single movement for each call.
      */
     void move();
 

@@ -4,10 +4,11 @@
     <option name="ANALYZE_TEST_SOURCES" value="false" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="removed unused interface">
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="completed some todo's">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CoreLogic/Launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CoreLogic/Launcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Movement/DataStructureCrawlers/Crawler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movement/DataStructureCrawlers/Crawler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Movement/IMover.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movement/IMover.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Movement/ShortestTree/ShortestTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movement/ShortestTree/ShortestTree.java" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -155,15 +156,36 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Movement/ShortestTree/ShortestTree.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="587">
-              <caret line="82" selection-start-line="82" selection-end-line="82" />
+            <state relative-caret-position="238">
+              <caret line="14" column="29" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2701#2702#0" expanded="true" />
                 <element signature="e#2729#2730#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Movement/IMover.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="57" selection-start-line="11" selection-start-column="57" selection-end-line="11" selection-end-column="57" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Entities/Player.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="24" column="7" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="20" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -185,14 +207,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/CoreLogic/Launcher.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="419">
-              <caret line="101" column="6" lean-forward="true" selection-start-line="101" selection-start-column="6" selection-end-line="101" selection-end-column="6" />
+            <state relative-caret-position="-417">
+              <caret line="38" column="67" selection-start-line="38" selection-start-column="67" selection-end-line="38" selection-end-column="67" />
               <folding>
                 <element signature="docComment;class#Launcher#0" />
-                <element signature="docComment;method#configuration#0;class#Launcher#0" />
                 <element signature="docComment;method#Launcher#0;class#Launcher#0" />
                 <element signature="docComment;method#getScene#0;class#Launcher#0" />
                 <element signature="docComment;method#setMaze#0;class#Launcher#0" />
@@ -242,7 +263,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/test/Movement/MoveClockWiseTest.java" />
         <option value="$PROJECT_DIR$/src/Movement/IMoverControlled.java" />
         <option value="$PROJECT_DIR$/src/Movement/Crawler.java" />
         <option value="$PROJECT_DIR$/test/UserControl/InputManagerTest.java" />
@@ -286,13 +306,14 @@
         <option value="$PROJECT_DIR$/src/GUI/SimpleGUI/SimpleGUI.java" />
         <option value="$PROJECT_DIR$/src/Movement/ShortestTree/Tree.java" />
         <option value="$PROJECT_DIR$/src/Entities/IEntities.java" />
-        <option value="$PROJECT_DIR$/src/Movement/ShortestTree/ShortestTree.java" />
         <option value="$PROJECT_DIR$/src/UserControl/PlayerControl.java" />
         <option value="$PROJECT_DIR$/src/UserControl/InputManager.java" />
         <option value="$PROJECT_DIR$/src/Maze/PacMan.java" />
         <option value="$PROJECT_DIR$/test/Maze/PacManTest.java" />
         <option value="$PROJECT_DIR$/src/Movement/DataStructureCrawlers/Crawler.java" />
         <option value="$PROJECT_DIR$/src/CoreLogic/Launcher.java" />
+        <option value="$PROJECT_DIR$/src/Movement/IMover.java" />
+        <option value="$PROJECT_DIR$/src/Movement/ShortestTree/ShortestTree.java" />
       </list>
     </option>
   </component>
@@ -326,7 +347,13 @@
               <item name="Pacman-EssentialComputingII" type="b2602c69:ProjectViewProjectNode" />
               <item name="Pacman-EssentialComputingII" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Maze" type="462c0819:PsiDirectoryNode" />
+              <item name="Entities" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Pacman-EssentialComputingII" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Pacman-EssentialComputingII" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Movement" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Pacman-EssentialComputingII" type="b2602c69:ProjectViewProjectNode" />
@@ -359,7 +386,7 @@
     <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556273987695" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556277990548" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="dynamic.classpath" value="false" />
@@ -824,14 +851,7 @@
       <workItem from="1556099168504" duration="3533000" />
       <workItem from="1556181371422" duration="13286000" />
       <workItem from="1556229074877" duration="1549000" />
-      <workItem from="1556266293887" duration="5078000" />
-    </task>
-    <task id="LOCAL-00142" summary="changed the GameManager class to enable each MovableEntities to have an independent Mover">
-      <created>1555689860198</created>
-      <option name="number" value="00142" />
-      <option name="presentableId" value="LOCAL-00142" />
-      <option name="project" value="LOCAL" />
-      <updated>1555689860198</updated>
+      <workItem from="1556266293887" duration="7570000" />
     </task>
     <task id="LOCAL-00143" summary="renamed UserInput">
       <created>1555699796365</created>
@@ -1169,7 +1189,14 @@
       <option name="project" value="LOCAL" />
       <updated>1556273322714</updated>
     </task>
-    <option name="localTasksCounter" value="191" />
+    <task id="LOCAL-00191" summary="completed some todo's">
+      <created>1556274056300</created>
+      <option name="number" value="00191" />
+      <option name="presentableId" value="LOCAL-00191" />
+      <option name="project" value="LOCAL" />
+      <updated>1556274056300</updated>
+    </task>
+    <option name="localTasksCounter" value="192" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1205,7 +1232,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="489678000" />
+    <option name="totallyTimeSpent" value="492170000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1237,11 +1264,11 @@
       <window_info anchor="bottom" id="Messages" order="6" weight="0.32034633" />
       <window_info anchor="bottom" id="Message" order="7" />
       <window_info anchor="bottom" id="Find" order="8" weight="0.32575756" />
-      <window_info anchor="bottom" id="Run" order="9" weight="0.3030303" />
+      <window_info active="true" anchor="bottom" id="Run" order="9" visible="true" weight="0.3030303" />
       <window_info anchor="bottom" id="Debug" order="10" weight="0.3982684" />
       <window_info anchor="bottom" id="Cvs" order="11" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="12" weight="0.4" />
-      <window_info active="true" anchor="bottom" id="TODO" order="13" visible="true" weight="0.25541127" />
+      <window_info anchor="bottom" id="TODO" order="13" weight="0.25541127" />
       <window_info anchor="bottom" id="Terminal" order="14" weight="0.32900432" />
       <window_info anchor="bottom" id="Statistic" order="15" />
       <window_info anchor="bottom" id="Database Changes" order="16" show_stripe_button="false" />
@@ -1320,7 +1347,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Update to DataStructure and child classes to make them public and isEmpty() public" />
     <MESSAGE value="first non-functional draft of the Shortest Path Tree Mover" />
     <MESSAGE value="added tests for isEmpty() from the DataStructure subclasses" />
     <MESSAGE value="updates to the ShortestTree Crawler" />
@@ -1345,7 +1371,8 @@
     <MESSAGE value="Clean up of UserControl code" />
     <MESSAGE value="included a ghost for each algorithm" />
     <MESSAGE value="removed unused interface" />
-    <option name="LAST_COMMIT_MESSAGE" value="removed unused interface" />
+    <MESSAGE value="completed some todo's" />
+    <option name="LAST_COMMIT_MESSAGE" value="completed some todo's" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -1599,16 +1626,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entities/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="23" column="7" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Entities/Ghost.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
@@ -1643,13 +1660,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Movement/IMover.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -1765,18 +1775,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Movement/ShortestTree/ShortestTree.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="587">
-          <caret line="82" selection-start-line="82" selection-end-line="82" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2701#2702#0" expanded="true" />
-            <element signature="e#2729#2730#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Movement/DataStructureCrawlers/Crawler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -1793,15 +1791,43 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CoreLogic/Launcher.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="419">
-          <caret line="101" column="6" lean-forward="true" selection-start-line="101" selection-start-column="6" selection-end-line="101" selection-end-column="6" />
+        <state relative-caret-position="-417">
+          <caret line="38" column="67" selection-start-line="38" selection-start-column="67" selection-end-line="38" selection-end-column="67" />
           <folding>
             <element signature="docComment;class#Launcher#0" />
-            <element signature="docComment;method#configuration#0;class#Launcher#0" />
             <element signature="docComment;method#Launcher#0;class#Launcher#0" />
             <element signature="docComment;method#getScene#0;class#Launcher#0" />
             <element signature="docComment;method#setMaze#0;class#Launcher#0" />
             <element signature="method#setMaze#0;class#Launcher#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entities/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="24" column="7" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Movement/IMover.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="57" selection-start-line="11" selection-start-column="57" selection-end-line="11" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Movement/ShortestTree/ShortestTree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="29" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2701#2702#0" expanded="true" />
+            <element signature="e#2729#2730#0" expanded="true" />
           </folding>
         </state>
       </provider>

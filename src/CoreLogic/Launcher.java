@@ -36,7 +36,7 @@ public class Launcher {
 
 
     /**
-     * When this method is called all of the variable is initialized.
+     * When this method is called initialize most of the variables.
      * The method is used to configure which maze and dataStructure the program shall run with,
      * and the width and height of the maze. The runSpeed is also given here,
      * which is the time between each move, so a lower runSpeed will make the game faster,
