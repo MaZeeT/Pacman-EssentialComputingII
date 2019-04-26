@@ -229,4 +229,84 @@ public class PositionManhattanTest extends PositionTest {
         assertEquals(expected, actual);
     }
 
+    @Test
+    public void isEqual() {
+        int x = 9;
+        int y = 9;
+        PositionManhattan pos1 = new PositionManhattan(defX, defY);
+        PositionManhattan pos2 = new PositionManhattan(defX, defY);
+        pos1.getDistanceTo(x, y);
+        pos2.getDistanceTo(x, y);
+
+        boolean expected = true;
+        boolean actual = pos1.equals(pos2);
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void isNotEqual() {
+        int x = 9;
+        int y = 9;
+        PositionManhattan pos1 = new PositionManhattan(defX, defY);
+        PositionManhattan pos2 = new PositionManhattan(defX + 1, defY + 1);
+        pos1.getDistanceTo(x, y);
+        pos2.getDistanceTo(x, y);
+
+        boolean expected = false;
+        boolean actual = pos1.equals(pos2);
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void isEqualWrongTypeString() {
+        PositionManhattan pos1 = new PositionManhattan(defX, defY);
+        pos1.getDistanceTo(1, 1);
+        String string = "test";
+
+        boolean expected = false;
+        boolean actual = pos1.equals(string);
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void isEqualWrongTypePosition() {
+        PositionManhattan pos1 = new PositionManhattan(defX, defY);
+        Position pos2 = new Position(defX, defY);
+        pos1.getDistanceTo(1, 1);
+
+        boolean expected = false;
+        boolean actual = pos1.equals(pos2);
+        assertEquals(expected, actual);
+    }
+
+
+    @Test
+    public void notEqualHashcode() {
+        int x = 7;
+        int y = 3;
+        PositionManhattan pos1 = new PositionManhattan(defX, defY);
+        PositionManhattan pos2 = new PositionManhattan(defX + 1, defY + 1);
+        pos1.getDistanceTo(x, y);
+        pos2.getDistanceTo(x, y);
+
+        boolean expected = false;
+        boolean actual = pos1.hashCode() == pos2.hashCode();
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void equalHashcode() {
+        int x = 5;
+        int y = 11;
+        PositionManhattan pos1 = new PositionManhattan(defX, defY);
+        PositionManhattan pos2 = new PositionManhattan(defX, defY);
+        pos1.getDistanceTo(x, y);
+        pos2.getDistanceTo(x, y);
+
+        boolean expected = true;
+        boolean actual = pos1.hashCode() == pos2.hashCode();
+        assertEquals(expected, actual);
+    }
+
+
 }

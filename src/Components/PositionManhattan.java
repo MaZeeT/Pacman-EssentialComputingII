@@ -1,5 +1,7 @@
 package Components;
 
+import java.util.Arrays;
+
 /**
  * The purpose of this class is to extend the {@link Position} class to be able to handle distance between two {@link Position}s by calculating a Manhattan distance.
  *
@@ -96,6 +98,33 @@ public class PositionManhattan extends Position {
             if (distance > other.getDistance()) return -1;
         }
         return super.compareTo(otherPos);
+    }
+
+    /**
+     * Override the equals function, where it will check if x, y and distance is equal to the compared x, y and distance of the object.
+     *
+     * @param obj The object the {@link PositionManhattan} is trying to compare to.
+     * @return Returns a boolean to show if the obj is equal to the position or not.
+     */
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof PositionManhattan) {
+            PositionManhattan other = (PositionManhattan) obj;
+            return (x == other.x && y == other.y && distance == other.distance);
+        } else {
+            return false;
+        }
+    }
+
+    /**
+     * Calculate the hashcode of the {@link PositionManhattan} based on the given x, y and distance variables.
+     *
+     * @return Return a hashcode based on the x, y and distance variables.
+     */
+    @Override
+    public int hashCode() {
+        final int[] numbers = {x, y, distance};
+        return Arrays.hashCode(numbers);
     }
 
 }

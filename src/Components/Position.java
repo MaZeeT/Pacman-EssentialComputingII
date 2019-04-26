@@ -89,7 +89,7 @@ public class Position implements Comparable<Position> {
     /**
      * Override the equals function, where it will check if x and y is equal to the compared x and y of the object.
      *
-     * @param obj The object the Position is trying to compare to.
+     * @param obj The object the {@link Position} is trying to compare to.
      * @return Returns a boolean to show if the obj is equal to the position or not.
      */
     @Override
@@ -103,9 +103,9 @@ public class Position implements Comparable<Position> {
     }
 
     /**
-     * Calculate the hashcode of the position based on the given x and y position.
+     * Calculate the hashcode of the {@link Position} based on the given x and y variables.
      *
-     * @return Return a hashcode based on the x and y position.
+     * @return Return a hashcode based on the x and y variables.
      */
     @Override
     public int hashCode() {
