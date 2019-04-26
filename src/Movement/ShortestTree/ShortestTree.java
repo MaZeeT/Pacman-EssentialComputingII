@@ -10,40 +10,39 @@ import Movement.IMover;
 import java.util.ArrayList;
 import java.util.List;
 
+//todo write javaDoc
 public class ShortestTree implements IMover {
     private Tree<Position> tree;
     private MovableEntity movableEntity;
-    private GameObject target;
+    private Position targetPos;
     private List<Position> walls;
     private DataStructure<Position> queue;
     private MyStack<Position> stack;
     private boolean updatePath;
 
     public ShortestTree(IMaze maze, MovableEntity movableEntity, GameObject target, boolean updatePath) {
+        this.movableEntity = movableEntity;
+        this.targetPos = target.getPosition();
+        this.updatePath = updatePath;
+
         tree = new Tree<>();
         queue = new MyQueue<>();
         walls = new ArrayList<>();
         for (GameObject wall : maze.getWalls()) {
             walls.add(wall.getPosition());
         }
-        this.movableEntity = movableEntity;
-        this.target = target;
-        this.updatePath = updatePath;
-        // if (!updatePath) {
-        buildTree(movableEntity.getPosition(), target.getPosition()); //build the tree once if the path isn't updated for each step.
-        stack = tree.getAllParents(target.getPosition());
-        //  }
 
+        buildTree(movableEntity.getPosition());
+        stack = tree.getAllParents(target.getPosition());
     }
 
-    private void buildTree(Position startPosition, Position targetPosition) {
+    private void buildTree(Position startPosition) {
         tree = new Tree<>();
+        queue = new MyQueue<>();
         tree.add(startPosition);
         queue.add(startPosition);
         nearby(startPosition);
-        while (!queue.isEmpty() //todo clean up
-                && queue.checkNext() != targetPosition
-        ) {
+        while (!queue.isEmpty()) {
             nearby(queue.getNext());
         }
     }
@@ -72,16 +71,19 @@ public class ShortestTree implements IMover {
             movableEntity.setPosition(stack.getNext());
         }
         if (updatePath) {
-             buildTree(movableEntity.getPosition(), target.getPosition());
-            // movableEntity.setPosition(stack.getNext());
-            //  stack = tree.getAllParents(target.getPosition());
+            buildTree(movableEntity.getPosition());
+            stack = tree.getAllParents(targetPos);
+
+            // skip a position in the stack if it is the same as the movableEntity's Position, to not get stuck.
+            if (stack.checkNext().equals(movableEntity.getPosition())) {
+                stack.getNext();
+            }
         }
-        System.out.println(stack);
     }
 
 }
 
-
+//todo write javaDoc
 class Explorer extends MovableEntity {
 
     @Override
