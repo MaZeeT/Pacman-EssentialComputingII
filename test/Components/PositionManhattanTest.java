@@ -279,7 +279,6 @@ public class PositionManhattanTest extends PositionTest {
         assertEquals(expected, actual);
     }
 
-
     @Test
     public void notEqualHashcode() {
         int x = 7;
@@ -307,6 +306,5 @@ public class PositionManhattanTest extends PositionTest {
         boolean actual = pos1.hashCode() == pos2.hashCode();
         assertEquals(expected, actual);
     }
-
 
 }

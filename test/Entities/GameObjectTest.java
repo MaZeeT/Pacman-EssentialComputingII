@@ -49,7 +49,6 @@ public class GameObjectTest {
         assertEquals(wallExpected, wallActual);
     }
 
-
     @Test
     public void setWayPointPosition() {
         Position wayPointExpected = new Position(1, 3);
@@ -119,6 +118,77 @@ public class GameObjectTest {
         wall.setColor(wallExpected);
         Color wallActual = wall.getColor();
         assertEquals(wallExpected, wallActual);
+    }
+
+    @Test
+    public void isEqual() {
+        int x = 9;
+        int y = 6;
+        GameObject go1 = new Wall(x, y);
+        GameObject go2 = new Wall(x, y);
+
+        boolean expected = true;
+        boolean actual = go1.equals(go2);
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void isNotEqual() {
+        int x = 9;
+        int y = 9;
+        GameObject go1 = new Wall(x, y);
+        GameObject go2 = new Wall(x + 1, y + 1);
+
+        boolean expected = false;
+        boolean actual = go1.equals(go2);
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void isEqualWrongTypeString() {
+        int x = 3;
+        int y = 1;
+        GameObject go1 = new Wall(x, y);
+        String string = "test";
+
+        boolean expected = false;
+        boolean actual = go1.equals(string);
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void isEqualWrongGameObjectSubType() {
+        int x = 4;
+        int y = 7;
+        GameObject go1 = new Wall(x, y);
+        GameObject go2 = new WayPoint(new Position(x, y));
+
+        boolean expected = false;
+        boolean actual = go1.equals(go2);
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void notEqualHashcode() {
+
+        GameObject go1 = new Wall(3, 7);
+        GameObject go2 = new Wall(4, 6);
+
+        boolean expected = false;
+        boolean actual = go1.hashCode() == go2.hashCode();
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void equalHashcode() {
+        int x = 5;
+        int y = 11;
+        GameObject go1 = new Wall(x, y);
+        GameObject go2 = new Wall(x, y);
+
+        boolean expected = true;
+        boolean actual = go1.hashCode() == go2.hashCode();
+        assertEquals(expected, actual);
     }
 
 }

@@ -4,12 +4,14 @@
     <option name="ANALYZE_TEST_SOURCES" value="false" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="fixes a few sonarLint warnings">
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="fixes a few sonarLint warnings, and updates test and javaDoc to match the fixes">
+      <change afterPath="$PROJECT_DIR$/test/Entities/MovableEntityEqualsTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Position.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/PositionManhattan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/PositionManhattan.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Movement/UserControlled/MoveClockWise.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movement/UserControlled/MoveClockWise.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CoreLogic/GameManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CoreLogic/GameManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entities/GameObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/GameObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entities/MovableEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/MovableEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/Components/PositionManhattanTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/Components/PositionManhattanTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Entities/GameObjectTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/Entities/GameObjectTest.java" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -23,7 +25,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/Pacman_EssentialComputingII$All_in_snakeFX.ic" NAME="All in snakeFX Coverage Results" MODIFIED="1556283118585" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Pacman_EssentialComputingII$All_in_snakeFX.ic" NAME="All in snakeFX Coverage Results" MODIFIED="1556324993964" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/snakeFX$MazeTest_listSizeGameObjectComparedPositions.ic" NAME="MazeTest.listSizeGameObjectComparedPositions Coverage Results" MODIFIED="1552948383785" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>SnakeMaze.*</FILTER>
     </SUITE>
@@ -164,25 +166,69 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Components/PositionManhattan.java">
+        <entry file="file://$PROJECT_DIR$/src/Entities/GameObject.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="392">
-              <caret line="121" column="74" selection-start-line="121" selection-start-column="74" selection-end-line="121" selection-end-column="74" />
+            <state relative-caret-position="884">
+              <caret line="60" column="44" selection-start-line="60" selection-start-column="44" selection-end-line="60" selection-end-column="44" />
               <folding>
-                <element signature="e#1685#1686#0" expanded="true" />
-                <element signature="e#1716#1717#0" expanded="true" />
-                <element signature="e#2002#2003#0" expanded="true" />
-                <element signature="e#2069#2070#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#1705#1706#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Components/Position.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/Entities/GameObjectTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
-              <caret line="114" lean-forward="true" selection-start-line="114" selection-end-line="114" />
+            <state relative-caret-position="3281">
+              <caret line="193" column="1" selection-start-line="193" selection-start-column="1" selection-end-line="193" selection-end-column="1" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/CoreLogic/GameManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="612">
+              <caret line="36" column="26" selection-start-line="36" selection-start-column="26" selection-end-line="36" selection-end-column="26" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Entities/MovableEntity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="166">
+              <caret line="145" column="27" selection-start-line="145" selection-start-column="27" selection-end-line="145" selection-end-column="27" />
+              <folding>
+                <element signature="e#3458#3459#0" expanded="true" />
+                <element signature="e#3491#3492#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/Entities/MovableEntityEqualsTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/Components/PositionManhattanTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="217">
+              <caret line="163" column="51" lean-forward="true" selection-start-line="163" selection-start-column="51" selection-end-line="163" selection-end-column="51" />
             </state>
           </provider>
         </entry>
@@ -227,8 +273,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Movement/ShortestTree/Tree.java" />
-        <option value="$PROJECT_DIR$/src/Entities/IEntities.java" />
         <option value="$PROJECT_DIR$/src/UserControl/InputManager.java" />
         <option value="$PROJECT_DIR$/src/Maze/PacMan.java" />
         <option value="$PROJECT_DIR$/src/Movement/IMover.java" />
@@ -237,7 +281,6 @@
         <option value="$PROJECT_DIR$/src/DataStructures/Greedy.java" />
         <option value="$PROJECT_DIR$/src/DataStructures/MyQueue.java" />
         <option value="$PROJECT_DIR$/src/DataStructures/MyStack.java" />
-        <option value="$PROJECT_DIR$/src/Entities/MovableEntity.java" />
         <option value="$PROJECT_DIR$/src/Movement/UserControlled/IMoverControlled.java" />
         <option value="$PROJECT_DIR$/src/UserControl/PlayerControl.java" />
         <option value="$PROJECT_DIR$/src/UserControl/UserInput.java" />
@@ -246,7 +289,6 @@
         <option value="$PROJECT_DIR$/src/Maze/MazeObjTestable.java" />
         <option value="$PROJECT_DIR$/test/Components/PositionTest.java" />
         <option value="$PROJECT_DIR$/test/CoreLogic/GameManagerTest.java" />
-        <option value="$PROJECT_DIR$/test/Entities/GameObjectTest.java" />
         <option value="$PROJECT_DIR$/test/Entities/WallTest.java" />
         <option value="$PROJECT_DIR$/test/Maze/PacManTest.java" />
         <option value="$PROJECT_DIR$/test/Maze/MazeObjTest.java" />
@@ -273,11 +315,15 @@
         <option value="$PROJECT_DIR$/src/CoreLogic/Launcher.java" />
         <option value="$PROJECT_DIR$/src/Movement/ShortestTree/ShortestTree.java" />
         <option value="$PROJECT_DIR$/src/Movement/DataStructureCrawlers/Crawler.java" />
-        <option value="$PROJECT_DIR$/src/CoreLogic/GameManager.java" />
         <option value="$PROJECT_DIR$/src/Movement/UserControlled/MoveClockWise.java" />
-        <option value="$PROJECT_DIR$/test/Components/PositionManhattanTest.java" />
         <option value="$PROJECT_DIR$/src/Components/Position.java" />
         <option value="$PROJECT_DIR$/src/Components/PositionManhattan.java" />
+        <option value="$PROJECT_DIR$/src/CoreLogic/GameManager.java" />
+        <option value="$PROJECT_DIR$/test/Components/PositionManhattanTest.java" />
+        <option value="$PROJECT_DIR$/test/Entities/GameObjectTest.java" />
+        <option value="$PROJECT_DIR$/src/Entities/GameObject.java" />
+        <option value="$PROJECT_DIR$/src/Entities/MovableEntity.java" />
+        <option value="$PROJECT_DIR$/test/Entities/MovableEntityEqualsTest.java" />
       </list>
     </option>
   </component>
@@ -311,12 +357,6 @@
               <item name="Pacman-EssentialComputingII" type="b2602c69:ProjectViewProjectNode" />
               <item name="Pacman-EssentialComputingII" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Pacman-EssentialComputingII" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Pacman-EssentialComputingII" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Movement" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -329,49 +369,13 @@
             <path>
               <item name="Pacman-EssentialComputingII" type="b2602c69:ProjectViewProjectNode" />
               <item name="Pacman-EssentialComputingII" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Movement" type="462c0819:PsiDirectoryNode" />
-              <item name="ShortestTree" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Pacman-EssentialComputingII" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Pacman-EssentialComputingII" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Movement" type="462c0819:PsiDirectoryNode" />
-              <item name="ShortestTree" type="462c0819:PsiDirectoryNode" />
-              <item name="ShortestTree.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
-            </path>
-            <path>
-              <item name="Pacman-EssentialComputingII" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Pacman-EssentialComputingII" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Movement" type="462c0819:PsiDirectoryNode" />
-              <item name="ShortestTree" type="462c0819:PsiDirectoryNode" />
-              <item name="Tree.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
-            </path>
-            <path>
-              <item name="Pacman-EssentialComputingII" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Pacman-EssentialComputingII" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Movement" type="462c0819:PsiDirectoryNode" />
-              <item name="UserControlled" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Pacman-EssentialComputingII" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Pacman-EssentialComputingII" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="UserControl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Pacman-EssentialComputingII" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Pacman-EssentialComputingII" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Pacman-EssentialComputingII" type="b2602c69:ProjectViewProjectNode" />
               <item name="Pacman-EssentialComputingII" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="Components" type="462c0819:PsiDirectoryNode" />
+              <item name="Entities" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Pacman-EssentialComputingII" type="b2602c69:ProjectViewProjectNode" />
@@ -399,7 +403,7 @@
     <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556283165108" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556325210960" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="dynamic.classpath" value="false" />
@@ -424,9 +428,6 @@
       <recent name="UserControl" />
       <recent name="Logic.Crawler" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="sample" />
-    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="Movement" />
       <recent name="Movement.ShortestTree" />
@@ -434,15 +435,18 @@
       <recent name="Logic" />
       <recent name="" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="Entities" />
       <recent name="DataStructures" />
       <recent name="WorkInProgress" />
-      <recent name="Entities" />
       <recent name="Maze" />
       <recent name="SnakeDataStructures" />
     </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="sample" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -457,7 +461,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.All in snakeFX">
+  <component name="RunManager" selected="Application.Main">
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="" />
       <option name="DEPLOY" value="true" />
@@ -593,17 +597,36 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PositionManhattanTest.equalHashcode" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MovableEntityEqualsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="snakeFX" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Components.*" />
+          <option name="PATTERN" value="Entities.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="Components" />
-      <option name="MAIN_CLASS_NAME" value="Components.PositionManhattanTest" />
-      <option name="METHOD_NAME" value="equalHashcode" />
+      <option name="PACKAGE_NAME" value="Entities" />
+      <option name="MAIN_CLASS_NAME" value="Entities.MovableEntityEqualsTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MovableEntityEqualsTest.isNotEqualColor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="snakeFX" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Entities.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Entities" />
+      <option name="MAIN_CLASS_NAME" value="Entities.MovableEntityEqualsTest" />
+      <option name="METHOD_NAME" value="isNotEqualColor" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="TEST_SEARCH_SCOPE">
@@ -613,17 +636,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PositionManhattanTest.isEqualWrongType" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MovableEntityEqualsTest.isNotEqualMover" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="snakeFX" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Components.*" />
+          <option name="PATTERN" value="Entities.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="Components" />
-      <option name="MAIN_CLASS_NAME" value="Components.PositionManhattanTest" />
-      <option name="METHOD_NAME" value="isEqualWrongType" />
+      <option name="PACKAGE_NAME" value="Entities" />
+      <option name="MAIN_CLASS_NAME" value="Entities.MovableEntityEqualsTest" />
+      <option name="METHOD_NAME" value="isNotEqualMover" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="TEST_SEARCH_SCOPE">
@@ -633,17 +656,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PositionManhattanTest.isEqualWrongTypePosition" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MovableEntityEqualsTest.isNotEqualPosition" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="snakeFX" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Components.*" />
+          <option name="PATTERN" value="Entities.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="Components" />
-      <option name="MAIN_CLASS_NAME" value="Components.PositionManhattanTest" />
-      <option name="METHOD_NAME" value="isEqualWrongTypePosition" />
+      <option name="PACKAGE_NAME" value="Entities" />
+      <option name="MAIN_CLASS_NAME" value="Entities.MovableEntityEqualsTest" />
+      <option name="METHOD_NAME" value="isNotEqualPosition" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="TEST_SEARCH_SCOPE">
@@ -653,37 +676,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PositionManhattanTest.isNotEqual" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MovableEntityEqualsTest.isNotEqualTwoMovers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="snakeFX" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Components.*" />
+          <option name="PATTERN" value="Entities.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="Components" />
-      <option name="MAIN_CLASS_NAME" value="Components.PositionManhattanTest" />
-      <option name="METHOD_NAME" value="isNotEqual" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PositionManhattanTest.notEqualHashcode" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="snakeFX" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Components.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Components" />
-      <option name="MAIN_CLASS_NAME" value="Components.PositionManhattanTest" />
-      <option name="METHOD_NAME" value="notEqualHashcode" />
+      <option name="PACKAGE_NAME" value="Entities" />
+      <option name="MAIN_CLASS_NAME" value="Entities.MovableEntityEqualsTest" />
+      <option name="METHOD_NAME" value="isNotEqualTwoMovers" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="TEST_SEARCH_SCOPE">
@@ -770,19 +773,19 @@
     <list>
       <item itemvalue="Application.Main" />
       <item itemvalue="JUnit.All in snakeFX" />
-      <item itemvalue="JUnit.PositionManhattanTest.isNotEqual" />
-      <item itemvalue="JUnit.PositionManhattanTest.isEqualWrongType" />
-      <item itemvalue="JUnit.PositionManhattanTest.isEqualWrongTypePosition" />
-      <item itemvalue="JUnit.PositionManhattanTest.notEqualHashcode" />
-      <item itemvalue="JUnit.PositionManhattanTest.equalHashcode" />
+      <item itemvalue="JUnit.MovableEntityEqualsTest.isNotEqualColor" />
+      <item itemvalue="JUnit.MovableEntityEqualsTest.isNotEqualPosition" />
+      <item itemvalue="JUnit.MovableEntityEqualsTest" />
+      <item itemvalue="JUnit.MovableEntityEqualsTest.isNotEqualMover" />
+      <item itemvalue="JUnit.MovableEntityEqualsTest.isNotEqualTwoMovers" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.PositionManhattanTest.equalHashcode" />
-        <item itemvalue="JUnit.PositionManhattanTest.notEqualHashcode" />
-        <item itemvalue="JUnit.PositionManhattanTest.isEqualWrongTypePosition" />
-        <item itemvalue="JUnit.PositionManhattanTest.isEqualWrongType" />
-        <item itemvalue="JUnit.PositionManhattanTest.isNotEqual" />
+        <item itemvalue="JUnit.MovableEntityEqualsTest.isNotEqualTwoMovers" />
+        <item itemvalue="JUnit.MovableEntityEqualsTest.isNotEqualMover" />
+        <item itemvalue="JUnit.MovableEntityEqualsTest" />
+        <item itemvalue="JUnit.MovableEntityEqualsTest.isNotEqualPosition" />
+        <item itemvalue="JUnit.MovableEntityEqualsTest.isNotEqualColor" />
       </list>
     </recent_temporary>
   </component>
@@ -865,14 +868,9 @@
       <workItem from="1556099168504" duration="3533000" />
       <workItem from="1556181371422" duration="13286000" />
       <workItem from="1556229074877" duration="1549000" />
-      <workItem from="1556266293887" duration="12814000" />
-    </task>
-    <task id="LOCAL-00149" summary="Added movableEntity to the MoveClockWise constructor.&#10;completed some todo's and written some javaDocs">
-      <created>1555774441172</created>
-      <option name="number" value="00149" />
-      <option name="presentableId" value="LOCAL-00149" />
-      <option name="project" value="LOCAL" />
-      <updated>1555774441172</updated>
+      <workItem from="1556266293887" duration="12909000" />
+      <workItem from="1556315722295" duration="691000" />
+      <workItem from="1556316778779" duration="7626000" />
     </task>
     <task id="LOCAL-00150" summary="added a few tests for the InputManager Class">
       <created>1555791607258</created>
@@ -1210,43 +1208,50 @@
       <option name="project" value="LOCAL" />
       <updated>1556281871389</updated>
     </task>
-    <option name="localTasksCounter" value="198" />
+    <task id="LOCAL-00198" summary="fixes a few sonarLint warnings, and updates test and javaDoc to match the fixes">
+      <created>1556283188084</created>
+      <option name="number" value="00198" />
+      <option name="presentableId" value="LOCAL-00198" />
+      <option name="project" value="LOCAL" />
+      <updated>1556283188084</updated>
+    </task>
+    <option name="localTasksCounter" value="199" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="PositionManhattanTest_isEqualWrongType - 2019.04.26 at 14h 46m 50s.xml">
-      <configuration name="PositionManhattanTest.isEqualWrongType" configurationId="JUnit" />
+    <history-entry file="MovableEntityEqualsTest - 2019.04.27 at 02h 21m 04s.xml">
+      <configuration name="MovableEntityEqualsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PositionManhattanTest_isEqualWrongType - 2019.04.26 at 14h 46m 55s.xml">
-      <configuration name="PositionManhattanTest.isEqualWrongType" configurationId="JUnit" />
+    <history-entry file="MovableEntityEqualsTest - 2019.04.27 at 02h 22m 05s.xml">
+      <configuration name="MovableEntityEqualsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PositionManhattanTest_isEqualWrongTypePosition - 2019.04.26 at 14h 47m 36s.xml">
-      <configuration name="PositionManhattanTest.isEqualWrongTypePosition" configurationId="JUnit" />
+    <history-entry file="All_in_snakeFX - 2019.04.27 at 02h 22m 49s.xml">
+      <configuration name="All in snakeFX" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PositionManhattanTest_isEqualWrongTypePosition - 2019.04.26 at 14h 47m 40s.xml">
-      <configuration name="PositionManhattanTest.isEqualWrongTypePosition" configurationId="JUnit" />
+    <history-entry file="All_in_snakeFX - 2019.04.27 at 02h 26m 39s.xml">
+      <configuration name="All in snakeFX" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PositionManhattanTest_isEqualWrongTypePosition - 2019.04.26 at 14h 47m 45s.xml">
-      <configuration name="PositionManhattanTest.isEqualWrongTypePosition" configurationId="JUnit" />
+    <history-entry file="All_in_snakeFX - 2019.04.27 at 02h 26m 48s.xml">
+      <configuration name="All in snakeFX" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PositionManhattanTest_notEqualHashcode - 2019.04.26 at 14h 48m 27s.xml">
-      <configuration name="PositionManhattanTest.notEqualHashcode" configurationId="JUnit" />
+    <history-entry file="MovableEntityEqualsTest_isNotEqualMover - 2019.04.27 at 02h 26m 56s.xml">
+      <configuration name="MovableEntityEqualsTest.isNotEqualMover" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PositionManhattanTest_notEqualHashcode - 2019.04.26 at 14h 48m 32s.xml">
-      <configuration name="PositionManhattanTest.notEqualHashcode" configurationId="JUnit" />
+    <history-entry file="All_in_snakeFX - 2019.04.27 at 02h 27m 23s.xml">
+      <configuration name="All in snakeFX" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PositionManhattanTest_equalHashcode - 2019.04.26 at 14h 48m 59s.xml">
-      <configuration name="PositionManhattanTest.equalHashcode" configurationId="JUnit" />
+    <history-entry file="MovableEntityEqualsTest_isNotEqualTwoMovers - 2019.04.27 at 02h 29m 43s.xml">
+      <configuration name="MovableEntityEqualsTest.isNotEqualTwoMovers" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PositionManhattanTest_equalHashcode - 2019.04.26 at 14h 49m 04s.xml">
-      <configuration name="PositionManhattanTest.equalHashcode" configurationId="JUnit" />
+    <history-entry file="MovableEntityEqualsTest_isNotEqualTwoMovers - 2019.04.27 at 02h 29m 50s.xml">
+      <configuration name="MovableEntityEqualsTest.isNotEqualTwoMovers" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_snakeFX - 2019.04.26 at 14h 49m 27s.xml">
+    <history-entry file="All_in_snakeFX - 2019.04.27 at 02h 30m 14s.xml">
       <configuration name="All in snakeFX" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="497414000" />
+    <option name="totallyTimeSpent" value="505826000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1266,7 +1271,7 @@
       <window_info id="Favorites" order="2" weight="0.3295302" />
       <window_info id="Capture Tool" order="3" />
       <window_info id="Nl-Palette" order="4" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" sideWeight="0.6703755" visible="true" weight="0.22921109" />
+      <window_info content_ui="combo" id="Project" order="5" sideWeight="0.6703755" visible="true" weight="0.23454158" />
       <window_info id="Palette&#9;" order="6" />
       <window_info id="Structure" order="7" weight="0.24966443" />
       <window_info anchor="bottom" id="Application Servers" order="0" />
@@ -1274,11 +1279,11 @@
       <window_info anchor="bottom" id="Profiler" order="2" />
       <window_info anchor="bottom" id="Event Log" order="3" />
       <window_info anchor="bottom" id="Problems" order="4" />
-      <window_info anchor="bottom" id="Version Control" order="5" weight="0.32683983" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="5" visible="true" weight="0.32683983" />
       <window_info anchor="bottom" id="Messages" order="6" weight="0.32034633" />
       <window_info anchor="bottom" id="Message" order="7" />
       <window_info anchor="bottom" id="Find" order="8" weight="0.32575756" />
-      <window_info anchor="bottom" id="Run" order="9" visible="true" weight="0.3030303" />
+      <window_info anchor="bottom" id="Run" order="9" weight="0.3030303" />
       <window_info anchor="bottom" id="Debug" order="10" weight="0.3982684" />
       <window_info anchor="bottom" id="Cvs" order="11" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="12" weight="0.4" />
@@ -1289,7 +1294,7 @@
       <window_info anchor="bottom" id="Docker" order="17" show_stripe_button="false" />
       <window_info anchor="bottom" id="Inspection Results" order="18" weight="0.32909605" />
       <window_info anchor="bottom" id="Duplicates" order="19" weight="0.32909605" />
-      <window_info anchor="bottom" id="SonarLint" order="20" weight="0.32909605" />
+      <window_info anchor="bottom" id="SonarLint" order="20" weight="0.32900432" />
       <window_info anchor="right" id="Palette" order="0" />
       <window_info anchor="right" id="JetGradle" order="1" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="2" type="SLIDING" weight="0.4" />
@@ -1361,7 +1366,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="changed to MyStack from List" />
     <MESSAGE value="added &quot;toString&quot; in the DataStructure class and sub classes" />
     <MESSAGE value="shall changes to DataStructure + sub classes" />
     <MESSAGE value="first working ShortestTree on AI maze" />
@@ -1386,7 +1390,8 @@
     <MESSAGE value="a bit of cleanup of the formation style in the tests." />
     <MESSAGE value="added missing javaDoc" />
     <MESSAGE value="fixes a few sonarLint warnings" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixes a few sonarLint warnings" />
+    <MESSAGE value="fixes a few sonarLint warnings, and updates test and javaDoc to match the fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixes a few sonarLint warnings, and updates test and javaDoc to match the fixes" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -1419,72 +1424,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Maze/IMaze.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="426">
-          <caret line="60" column="71" selection-start-line="60" selection-start-column="71" selection-end-line="60" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Maze/ManyRoads.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Maze/Maze.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="443">
-          <caret line="100" column="13" selection-start-line="100" selection-start-column="13" selection-end-line="100" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Maze/MazeArrayBased.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1036">
-          <caret line="14" column="15" selection-start-line="14" selection-start-column="15" selection-end-line="14" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Maze/MazeArrayTestable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
-          <folding>
-            <element signature="e#483#484#0" expanded="true" />
-            <element signature="e#519#520#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Maze/MazeObjBased.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="426">
-          <caret line="86" column="9" selection-start-line="86" selection-start-column="9" selection-end-line="86" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Maze/MazeObjTestable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Maze/PacMan.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="44" column="13" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Maze/TwoHalls.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
@@ -1555,27 +1494,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="409">
           <caret line="44" column="23" selection-start-line="44" selection-start-column="23" selection-end-line="44" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/Entities/GhostTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="30" column="9" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/Entities/GameObjectTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/Entities/MovableEntityTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="82">
-          <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -1650,13 +1568,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/CoreLogic/GameManagerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -1782,16 +1693,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CoreLogic/GameManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="29" column="29" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Movement/UserControlled/MoveClockWise.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1632">
@@ -1802,13 +1703,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/Components/PositionManhattanTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="824">
-          <caret line="305" column="31" selection-start-line="305" selection-start-column="31" selection-end-line="305" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/Components/PositionTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="307">
@@ -1816,23 +1710,129 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entities/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entities/Ghost.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="79">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entities/WayPoint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entities/Wall.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/CoreLogic/GameManagerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="38" column="63" lean-forward="true" selection-start-line="38" selection-start-column="63" selection-end-line="38" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/Entities/GhostTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-186">
+          <caret line="30" column="9" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/Entities/MovableEntityTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1973">
+          <caret line="152" column="5" lean-forward="true" selection-start-line="152" selection-start-column="5" selection-end-line="152" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Movement/IMover.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Components/PositionManhattan.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="121" column="74" selection-start-line="121" selection-start-column="74" selection-end-line="121" selection-end-column="74" />
-          <folding>
-            <element signature="e#1685#1686#0" expanded="true" />
-            <element signature="e#1716#1717#0" expanded="true" />
-            <element signature="e#2002#2003#0" expanded="true" />
-            <element signature="e#2069#2070#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="164">
+          <caret line="94" column="1" lean-forward="true" selection-start-line="94" selection-start-column="1" selection-end-line="99" selection-end-column="41" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Components/Position.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="114" lean-forward="true" selection-start-line="114" selection-end-line="114" />
+        <state relative-caret-position="1082">
+          <caret line="77" column="9" lean-forward="true" selection-start-line="77" selection-start-column="9" selection-end-line="77" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/Entities/GameObjectTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3281">
+          <caret line="193" column="1" selection-start-line="193" selection-start-column="1" selection-end-line="193" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entities/GameObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="884">
+          <caret line="60" column="44" selection-start-line="60" selection-start-column="44" selection-end-line="60" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1705#1706#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CoreLogic/GameManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="36" column="26" selection-start-line="36" selection-start-column="26" selection-end-line="36" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entities/MovableEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="145" column="27" selection-start-line="145" selection-start-column="27" selection-end-line="145" selection-end-column="27" />
+          <folding>
+            <element signature="e#3458#3459#0" expanded="true" />
+            <element signature="e#3491#3492#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/Entities/MovableEntityEqualsTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/Components/PositionManhattanTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="163" column="51" lean-forward="true" selection-start-line="163" selection-start-column="51" selection-end-line="163" selection-end-column="51" />
         </state>
       </provider>
     </entry>

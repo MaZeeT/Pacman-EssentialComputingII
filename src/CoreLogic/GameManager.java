@@ -24,15 +24,10 @@ public class GameManager {
      * @param maze The {@link IMaze} is used to access all the different {@link GameObject}s in the {@link IMaze}.
      */
     GameManager(IMaze maze) {
-        walls = maze.getWalls();
-        ghosts = maze.getGhosts();
-
-        //todo remove comment
-       // MovableEntity player = maze.getPlayer();
-     //   this.player.add(player);
-
+        this.walls = maze.getWalls();
+        this.ghosts = maze.getGhosts();
         this.player.add(maze.getPlayer());
-        wayPoints.add(maze.getWayPoint());
+        this.wayPoints.add(maze.getWayPoint());
     }
 
     /**
