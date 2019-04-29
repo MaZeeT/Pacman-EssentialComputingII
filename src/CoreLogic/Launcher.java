@@ -62,7 +62,7 @@ public class Launcher {
         // 1 for DepthFirst.
         // 2 for BreadthFirst.
         // 3 for Greedy.
-        // 4 for ShortestTree (to wayPoint).
+        // 4 for ShortestTree (target: wayPoint).
     }
 
     /**
