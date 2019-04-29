@@ -4,10 +4,8 @@
     <option name="ANALYZE_TEST_SOURCES" value="false" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="added if statement to reduce the size of the tree generated from shortestTree">
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="last edits before handing in. (mostly changes comments)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CoreLogic/Launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CoreLogic/Launcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Movement/ShortestTree/ShortestTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movement/ShortestTree/ShortestTree.java" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -21,7 +19,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/Pacman_EssentialComputingII$All_in_snakeFX.ic" NAME="All in snakeFX Coverage Results" MODIFIED="1556324993964" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Pacman_EssentialComputingII$All_in_snakeFX.ic" NAME="All in snakeFX Coverage Results" MODIFIED="1556529810757" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/snakeFX$MazeTest_listSizeGameObjectComparedPositions.ic" NAME="MazeTest.listSizeGameObjectComparedPositions Coverage Results" MODIFIED="1552948383785" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>SnakeMaze.*</FILTER>
     </SUITE>
@@ -174,11 +172,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Movement/ShortestTree/ShortestTree.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="392">
-              <caret line="72" column="13" selection-start-line="72" selection-start-column="13" selection-end-line="72" selection-end-column="13" />
+            <state relative-caret-position="1037">
+              <caret line="61" column="32" lean-forward="true" selection-start-line="61" selection-start-column="32" selection-end-line="61" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -204,7 +202,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/CoreLogic/Launcher.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="188">
@@ -326,8 +324,8 @@
         <option value="$PROJECT_DIR$/src/Movement/GreedyTree/ShortestTree/Tree.java" />
         <option value="$PROJECT_DIR$/src/Movement/GreedyTree/Tree.java" />
         <option value="$PROJECT_DIR$/src/Movement/ShortestTree/GreedyTree.java" />
-        <option value="$PROJECT_DIR$/src/Movement/ShortestTree/ShortestTree.java" />
         <option value="$PROJECT_DIR$/src/CoreLogic/Launcher.java" />
+        <option value="$PROJECT_DIR$/src/Movement/ShortestTree/ShortestTree.java" />
       </list>
     </option>
   </component>
@@ -362,46 +360,7 @@
             <path>
               <item name="Pacman-EssentialComputingII" type="b2602c69:ProjectViewProjectNode" />
               <item name="Pacman-EssentialComputingII" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="CoreLogic" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Pacman-EssentialComputingII" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Pacman-EssentialComputingII" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="DataStructures" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Pacman-EssentialComputingII" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Pacman-EssentialComputingII" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Movement" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Pacman-EssentialComputingII" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Pacman-EssentialComputingII" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Movement" type="462c0819:PsiDirectoryNode" />
-              <item name="ShortestTree" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Pacman-EssentialComputingII" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Pacman-EssentialComputingII" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Movement" type="462c0819:PsiDirectoryNode" />
-              <item name="ShortestTree" type="462c0819:PsiDirectoryNode" />
-              <item name="Tree.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
-            </path>
-            <path>
-              <item name="Pacman-EssentialComputingII" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Pacman-EssentialComputingII" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Pacman-EssentialComputingII" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Pacman-EssentialComputingII" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="Maze" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Pacman-EssentialComputingII" type="b2602c69:ProjectViewProjectNode" />
@@ -427,7 +386,7 @@
     <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556529755512" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556530492029" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="dynamic.classpath" value="false" />
@@ -899,14 +858,7 @@
       <workItem from="1556315722295" duration="691000" />
       <workItem from="1556316778779" duration="7756000" />
       <workItem from="1556383668321" duration="1371000" />
-      <workItem from="1556526037078" duration="3689000" />
-    </task>
-    <task id="LOCAL-00152" summary="written javaDoc for the InputManager">
-      <created>1555792924100</created>
-      <option name="number" value="00152" />
-      <option name="presentableId" value="LOCAL-00152" />
-      <option name="project" value="LOCAL" />
-      <updated>1555792924100</updated>
+      <workItem from="1556526037078" duration="4375000" />
     </task>
     <task id="LOCAL-00153" summary="completed a few todo's">
       <created>1555793223291</created>
@@ -1244,13 +1196,17 @@
       <option name="project" value="LOCAL" />
       <updated>1556527030605</updated>
     </task>
-    <option name="localTasksCounter" value="201" />
+    <task id="LOCAL-00201" summary="last edits before handing in. (mostly changes comments)">
+      <created>1556529793290</created>
+      <option name="number" value="00201" />
+      <option name="presentableId" value="LOCAL-00201" />
+      <option name="project" value="LOCAL" />
+      <updated>1556529793290</updated>
+    </task>
+    <option name="localTasksCounter" value="202" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="MovableEntityEqualsTest - 2019.04.27 at 02h 22m 05s.xml">
-      <configuration name="MovableEntityEqualsTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="All_in_snakeFX - 2019.04.27 at 02h 22m 49s.xml">
       <configuration name="All in snakeFX" configurationId="JUnit" />
     </history-entry>
@@ -1278,9 +1234,12 @@
     <history-entry file="All_in_snakeFX - 2019.04.27 at 02h 32m 57s.xml">
       <configuration name="All in snakeFX" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="All_in_snakeFX - 2019.04.29 at 11h 23m 50s.xml">
+      <configuration name="All in snakeFX" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="511016000" />
+    <option name="totallyTimeSpent" value="511702000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1292,8 +1251,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <layout>
       <window_info id="Image Layers" order="0" />
       <window_info id="UI Designer" order="1" />
@@ -1395,7 +1353,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="first working ShortestTree on AI maze" />
     <MESSAGE value="a bit of reorganizing of the files and folders/packages." />
     <MESSAGE value="added a few tests to increase coverage." />
     <MESSAGE value="slimmed down the GUI and renamed to SimpleGUI" />
@@ -1420,7 +1377,8 @@
     <MESSAGE value="fixes a few sonarLint warnings, and updates test and javaDoc to match the fixes" />
     <MESSAGE value="finished with the sonarLint warnings.&#10;Ready for hand-in." />
     <MESSAGE value="added if statement to reduce the size of the tree generated from shortestTree" />
-    <option name="LAST_COMMIT_MESSAGE" value="added if statement to reduce the size of the tree generated from shortestTree" />
+    <MESSAGE value="last edits before handing in. (mostly changes comments)" />
+    <option name="LAST_COMMIT_MESSAGE" value="last edits before handing in. (mostly changes comments)" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -1842,16 +1800,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Movement/ShortestTree/ShortestTree.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="72" column="13" selection-start-line="72" selection-start-column="13" selection-end-line="72" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/CoreLogic/Launcher.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="188">
@@ -1861,6 +1809,16 @@
             <element signature="e#3706#3707#0" expanded="true" />
             <element signature="e#3860#3861#0" expanded="true" />
             <element signature="e#3888#3889#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Movement/ShortestTree/ShortestTree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1037">
+          <caret line="61" column="32" lean-forward="true" selection-start-line="61" selection-start-column="32" selection-end-line="61" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
