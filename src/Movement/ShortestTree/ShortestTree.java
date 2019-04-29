@@ -62,9 +62,19 @@ public class ShortestTree implements IMover {
         tree.add(startPosition);
         queue.add(startPosition);
         nearby(startPosition);
+
+        int counter = 1;
         while (!queue.isEmpty()) {
-            nearby(queue.getNext());
+            Position pos = queue.getNext();
+            nearby(pos);
+            counter++;
+
+            // limits the size of the tree, by stopping the population of the tree when the target is added.
+            // 319 position without this if statement.
+            // dynamic size with this if statement, starts at 210 positions.
+            if (pos.equals(targetPos)) break;
         }
+        System.out.println(counter);
     }
 
     /**
